@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  AXE 1 — Livres de classe & magazines (J1.4, exemplaire Soldat/Tireur d'élite).
+  - Livre de classe : pose le cvar de classe (consomme un slot) + rang de départ.
+  - Magazine de classe : lecture gatée par le cvar (= "lisible seulement par la classe"),
+    ranger un perk de classe ("points de compétence gagnés par les livres").
+  Le gating loot (drop seulement pour la classe) sera ajouté en J1.4b (loot.xml).
+-->
+<configs>
+
+  <append xpath="/items">
+
+    <!-- ===== Livre de classe : Soldat / Tireur d'élite ===== -->
+    <item name="dhsBookClassSoldSnip">
+      <property name="Extends" value="schematicMaster"/>
+      <property name="CustomIcon" value="schematicMaster"/>
+      <property name="CustomIconTint" value="6699ff"/>
+      <property name="Stacknumber" value="1"/>
+      <property name="DescriptionKey" value="dhsBookClassSoldSnipDesc"/>
+      <!-- Lecture : nécessite un slot de classe libre ; pose le cvar + rang de départ + consomme le slot. -->
+      <effect_group tiered="false">
+        <requirement name="CVarCompare" cvar="dhsClassSlotFree" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClsSoldSnip" operation="set" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassSlotFree" operation="set" value="0"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassActiveForeign" operation="set" value="31"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassSoldSnipMarksman" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+      </effect_group>
+    </item>
+
+    <!-- ===== Magazine de classe : Manuel de terrain du tireur ===== -->
+    <item name="dhsMagSoldSnipFieldManual">
+      <property name="Extends" value="schematicMaster"/>
+      <property name="CustomIcon" value="schematicMaster"/>
+      <property name="CustomIconTint" value="88cc88"/>
+      <property name="Stacknumber" value="20"/>
+      <property name="EconomicValue" value="120"/>
+      <property name="DescriptionKey" value="dhsMagSoldSnipFieldManualDesc"/>
+      <property name="Group" value="Books,BooksOnly,TCReading"/>
+      <property name="Tags" value="dhsCsmSoldSnip,csm"/>
+      <!-- Lecture EFFECTIVE seulement si la classe est débloquée (gate de lecture). -->
+      <effect_group tiered="false">
+        <requirement name="CVarCompare" cvar="dhsClsSoldSnip" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassSoldSnipMarksman" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+      </effect_group>
+    </item>
+
+  </append>
+
+</configs>

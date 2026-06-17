@@ -1,0 +1,52 @@
+Key,english,french
+dhsAttClassesName,Classes,Classes
+dhsAttClassesDesc,Class specializations,Spécialisations de classe
+dhsSkillClassCommonName,Survivor,Survivant
+dhsSkillClassCommonDesc,Common skills available to everyone,Compétences communes à tous
+dhsSkillClassEngiMechName,Mechanic,Mécanicien
+dhsSkillClassEngiMechDesc,Vehicles and robotics specialist,Spécialiste véhicules et robotique
+dhsSkillClassEngiElecName,Electrician,Électricien
+dhsSkillClassEngiElecDesc,Electricity and traps specialist,Spécialiste électricité et pièges
+dhsSkillClassMedicSurgName,Surgeon,Chirurgien
+dhsSkillClassMedicSurgDesc,Healing and blades specialist,Spécialiste soins et lames
+dhsSkillClassMedicChemName,Chemist,Chimiste
+dhsSkillClassMedicChemDesc,Chemistry and thrown weapons specialist,Spécialiste chimie et armes de jet
+dhsSkillClassSoldSnipName,Marksman,Tireur d'élite
+dhsSkillClassSoldSnipDesc,Rifle specialist,Spécialiste des fusils
+dhsSkillClassSoldAsltName,Assault,Assaut
+dhsSkillClassSoldAsltDesc,Automatic weapons and explosives specialist,Spécialiste armes auto et explosifs
+dhsSkillClassSurvHuntName,Hunter,Chasseur
+dhsSkillClassSurvHuntDesc,Bows and crossbows specialist,Spécialiste arcs et arbalètes
+dhsSkillClassSurvHerbName,Herbalist,Herboriste
+dhsSkillClassSurvHerbDesc,Foraging and spears specialist,Spécialiste cueillette et lances
+dhsSkillClassBuilArchName,Architect,Architecte
+dhsSkillClassBuilArchDesc,Fortifications specialist,Spécialiste fortifications
+dhsSkillClassBuilArtiName,Artisan,Artisan
+dhsSkillClassBuilArtiDesc,Workstations and crafting specialist,Spécialiste ateliers et artisanat
+dhsSkillClassScoutTracName,Tracker,Pisteur
+dhsSkillClassScoutTracDesc,Mobility and handguns specialist,Spécialiste mobilité et pistolets
+dhsSkillClassScoutInfiName,Infiltrator,Infiltrateur
+dhsSkillClassScoutInfiDesc,Stealth and looting specialist,Spécialiste furtivité et pillage
+dhsSkillClassFarmAgriName,Farmer,Agriculteur
+dhsSkillClassFarmAgriDesc,Crops and shotgun specialist,Spécialiste cultures et fusil à pompe
+dhsSkillClassFarmCookName,Cook,Cuisinier
+dhsSkillClassFarmCookDesc,Cooking and team buffs specialist,Spécialiste cuisine et buffs d'équipe
+dhsPerkCommonToughnessName,Toughness,Robustesse
+dhsPerkCommonToughnessDesc,Reduces physical damage taken.,Réduit les dégâts physiques subis.
+dhsPerkCommonForagerName,Forager,Cueilleur
+dhsPerkCommonForagerDesc,Harvest more food from animals and wild plants.,Récolte plus de nourriture sur les animaux et plantes sauvages.
+dhsPerkCommonEnduranceName,Endurance,Endurance
+dhsPerkCommonEnduranceDesc,Reduces stamina loss from actions.,Réduit la perte d'endurance des actions.
+dhsPerkSoldSnipMarksmanName,Marksmanship,Adresse au tir
+dhsPerkSoldSnipMarksmanDesc,Increases rifle damage.,Augmente les dégâts des fusils.
+dhsPerkSoldSnipSteadyAimName,Steady Aim,Visée stable
+dhsPerkSoldSnipSteadyAimDesc,Improves rifle handling and reduces aimed spread.,Améliore la maniabilité des fusils et réduit la dispersion en visée.
+dhsPerkSoldSnipRapidReloadName,Rapid Reload,Rechargement rapide
+dhsPerkSoldSnipRapidReloadDesc,Reloads rifles faster.,Recharge les fusils plus vite.
+dhsPerkSoldSnipExecutionerName,Executioner,Bourreau
+dhsPerkSoldSnipExecutionerDesc,Increases rifle dismemberment chance.,Augmente les chances de démembrement au fusil.
+dhsReqClassSoldSnip,Requires the Marksman class,Nécessite la classe Tireur d'élite
+dhsBookClassSoldSnip,Class Manual: Marksman,Manuel de classe : Tireur d'élite
+dhsBookClassSoldSnipDesc,Read to become a Marksman. Grants the basic rifle skill and unlocks the class progression.,À lire pour devenir Tireur d'élite. Octroie la compétence de base au fusil et débloque la progression de classe.
+dhsMagSoldSnipFieldManual,Marksman Field Manual,Manuel de terrain du tireur
+dhsMagSoldSnipFieldManualDesc,A Marksman magazine. Only useful to members of the Marksman class.,Un magazine de Tireur d'élite. Utile uniquement aux membres de cette classe.

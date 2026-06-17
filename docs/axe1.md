@@ -115,12 +115,26 @@ But : socle jouable early-game quelle que soit la classe (ne casse pas le early-
 - **Sélection initiale** : `game_first_spawn` (gameevent) → quête de sélection → octroi des livres de classe disponibles ; le joueur en lit un.
 - **Complétion → slots** : `ClassManager` (C#) surveille perks max + magazines lus → pose `dhsCls<Code>Done`, débloque la sœur, `dhsClassSlotFree=1`.
 
-## 5. Statut
+## 5. Convention de scoping des bonus d'arme
+Les `passive_effect` de combat sont scopés via les **tags d'arme prouvés par le vanilla**
+(et non les tags de loot type `rifleSkill`) :
+| Catégorie | Tag de scoping | | Catégorie | Tag de scoping |
+|---|---|---|---|---|
+| Fusils | `perkDeadEye` | | Mitrailleuses | `perkMachineGunner` |
+| Fusils à pompe | `perkBoomstick` | | Pistolets | `perkGunslinger` |
+| (les autres seront vérifiés par sous-classe au moment de l'implémentation) | | | | |
+
+L'exclusivité vient du **gate `CVarCompare`** sur l'achat du perk, pas du tag.
+
+## 6. Statut
 - [x] Taxonomie + convention (J1.1)
 - [x] Squelette progression (attClasses + skills) (J1.1)
-- [x] Conception complète des 14 classes (ce doc) ← **à valider**
-- [ ] Classe de base « Survivant » (perks points)
-- [ ] 1 sous-classe exemplaire de bout en bout (perks + magazines + livre + kit + loc)
+- [x] Conception complète des 14 classes (J1.2, validé)
+- [x] Classe de base « Survivant » : 3 perks (Robustesse, Cueilleur, Endurance) — points de niveau (J1.3)
+- [x] Sous-classe exemplaire Soldat/Tireur : 4 perks gatés `CVarCompare` + livre de classe + magazine class-gated + localisation (J1.4a)
+- [ ] J1.4b : loot-gating des magazines de classe (drop seulement pour la classe) + recette signature
 - [ ] Réplication aux 13 autres
 - [ ] Quête de sélection + `game_first_spawn`
 - [ ] `ClassManager` C# (complétion → slots, séquentiel)
+
+> Validation **runtime** (chargement serveur sans erreur de patch, comportement des gates) à faire à un jalon de test dédié.
