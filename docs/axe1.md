@@ -1,66 +1,126 @@
-# AXE 1 — Classes & spécialisations
+# AXE 1 — Classes & spécialisations (conception complète)
 
-## Objectif
-Donner au joueur une identité de départ et une progression orientée métier, avec des
-compétences exclusives à sa voie, intégrée aux skill points + magazines natifs.
+## 1. Modèle de progression (validé / affiné le 2026-06-18)
 
-## Modèle de progression (option A hybride, validé)
-- **Identité** : un « livre de classe » (item magazine consommable) par sous-branche. Le lire
-  pose le cvar de classe, octroie les perks de base et un kit de départ minimal.
-- **Moyen de progression** : **skill points natifs** (1/niveau). Les compétences exclusives sont
-  des **perks** sous des skills custom, dont l'achat est **bloqué** tant que le cvar de classe
-  n'est pas posé (`requirement name="CVarCompare"` dans `level_requirements` — confirmé
-  fonctionnel par décompilation de `ProgressionFromXml` → `RequirementBase.ParseRequirementGroup`).
-- **Prérequis croisés** : via `requirement name="ProgressionLevel" progression_name="perkX"`
-  dans `level_requirements` (blocage dur à l'achat, peut se croiser : C exige A et/ou B).
-- **Compétences communes** : perks accessibles à toutes les classes (pas de gate cvar).
-- **Complétion 100 %** : toutes les compétences exclusives d'une classe au max → détecté en
-  **C#** (`ClassManager`) → pose le cvar de complétion + libère un slot pour une 2ᵉ classe.
-- **Séquentiel** : pas de progression simultanée ; la 2ᵉ classe ne s'ouvre qu'après complétion.
+### Deux tracks complémentaires
+| Track | Source | Sert à |
+|---|---|---|
+| **Points de niveau** (natif, 1/niveau) | montée de niveau | Classe de **base** (commune) + ranger les **perks** de sa sous-classe perso |
+| **Livres de classe** (magazines class-gated) | loot **uniquement** des classes débloquées | débloquer les **capacités/recettes signature** de la sous-classe (modèle magazine natif) |
 
-## Branches & sous-branches (codes internes)
-| # | Branche | Sous-branche | Code sous-branche |
-|---|---|---|---|
-| 1 | Ingénieur | Mécanicien | `EngiMech` |
-| 1 | Ingénieur | Électricien | `EngiElec` |
-| 2 | Médecin | Chirurgien | `MedicSurg` |
-| 2 | Médecin | Chimiste/Pharmacien | `MedicChem` |
-| 3 | Soldat | Tireur d'élite | `SoldSnip` |
-| 3 | Soldat | Assaut (close-combat) | `SoldAslt` |
-| 4 | Survivaliste | Chasseur/Traqueur | `SurvHunt` |
-| 4 | Survivaliste | Herboriste/Cueilleur | `SurvHerb` |
-| 5 | Bâtisseur | Architecte (fortifications) | `BuilArch` |
-| 5 | Bâtisseur | Artisan (ateliers/mobilier) | `BuilArti` |
-| 6 | Éclaireur | Pisteur | `ScoutTrac` |
-| 6 | Éclaireur | Infiltrateur/Pilleur | `ScoutInfi` |
-| 7 | Fermier | Agriculteur | `FarmAgri` |
-| 7 | Fermier | Cuisinier | `FarmCook` |
+- **Classe de base « Survivant »** : tout le monde l'a. Perks génériques (survie, port, endurance, combat de base) payés aux **points de niveau**. Pas de gate.
+- **Sous-classe perso** : choisie via un **livre de classe** (item). Le lire pose `dhsCls<Code>=1`, octroie les perks de base de la voie + un **kit minimal**.
+  - **Perks exclusifs** (points de niveau) : bonus passifs gatés `CVarCompare cvar="dhsCls<Code>"` → inaccessibles aux autres voies. **AUCUN prérequis bloquant** entre eux (ordre libre).
+  - **Capacités/recettes signature** (magazines) : les magazines de la classe ne **droppent** (`LootProb` gaté cvar) et ne se **lisent** (effect_group `requirement` cvar) que si la classe est débloquée. Les lire débloque le gear/les recettes exclusives.
+- **Arme/gear signature** : chaque sous-classe « possède » un créneau d'arme/outil avec des bonus **exclusifs** (même les classes support ont un créneau de combat).
+- **Calibrage** : volume (nb de perks × rangs + nb de magazines) dimensionné pour **compléter une sous-classe vers le niveau 45-55**.
 
-## Convention de nommage (préfixe `dhs` = Dead Hot Summer)
+### Complétion & multi-classe
+- **Complétion d'une sous-classe** = tous ses perks exclusifs au max **ET** tous ses magazines lus. Détecté en **C# (`ClassManager`)** → pose `dhsCls<Code>Done=1`.
+- À la complétion :
+  1. déblocage de la **sous-classe sœur** de la même branche principale (ses livres deviennent lootables/lisibles, ses perks achetables) ;
+  2. `dhsClassSlotFree=1` → droit de **démarrer une sous-classe d'une autre branche** (nouveau livre de classe utilisable).
+- Garde-fou : tant qu'une sous-classe « étrangère » est en cours et non complétée, on ne peut pas en démarrer une 3ᵉ (séquentiel entre branches ; la sœur de la branche déjà maîtrisée est offerte en bonus).
 
-### Progression (progression.xml)
-- Attribut hôte caché : `attClasses`.
-- Skill commun : `skillClassCommon`.
-- Skill par sous-branche : `skillClass<Code>` (ex. `skillClassSoldSnip`).
-- Perks exclusifs : `perkClass<Code><Nom>` (ex. `perkClassSoldSnipDeadeye`).
-- Perks communs : `perkClassCommon<Nom>`.
+### CVars (persistants, préfixe `dhs`)
+- `dhsCls<Code>` (0/1) : sous-classe débloquée (gate loot/lecture/perks). Ex. `dhsClsFarmAgri`.
+- `dhsCls<Code>Done` (0/1) : sous-classe complétée.
+- `dhsClassSlotFree` (0/1) : droit de démarrer une nouvelle branche.
+- `dhsClassActiveForeign` (code) : sous-classe étrangère en cours (garde-fou séquentiel).
+- `dhsClassDoneCount` (int) : nb de sous-classes complétées (stats/UI).
 
-### CVars joueur (persistants → pas de préfixe `_`)
-- Choix de classe (1 par sous-branche, 0/1) : `dhsCls<Code>` (ex. `dhsClsSoldSnip`).
-  Posé à 1 par le livre de classe ; sert de gate `CVarCompare` aux perks exclusifs.
-- Complétion d'une sous-branche (0/1) : `dhsCls<Code>Done` (posé par `ClassManager`).
-- Nombre de classes complétées : `dhsClassDoneCount`.
-- Slot libre pour une nouvelle classe (0/1) : `dhsClassSlotFree` (1 au départ ; remis à 1
-  après complétion ; remis à 0 quand une classe est en cours).
-- Classe en cours (code, pour le garde-fou séquentiel) : `dhsClassActive` (0 = aucune).
+## 2. Classe de base — « Survivant » (commune, points de niveau)
+Perks génériques, non exclusifs (skill `skillClassCommon`) : capacité de port, endurance/sprint,
+récupération de vie, dépeçage/récolte de base, résistance environnement, vitesse de craft de base.
+But : socle jouable early-game quelle que soit la classe (ne casse pas le early-game).
 
-> Un perk exclusif est gaté par `CVarCompare cvar="dhsCls<Code>" operation="Equals" value="1"`,
-> ce qui le rend inaccessible à toute autre voie. Comme le cvar reste à 1 même sur la 2ᵉ classe,
-> les deux voies complétées restent jouables.
+## 3. Les 14 sous-classes (identité + signature exclusive)
 
-## Statut
-- [x] Taxonomie + convention (ce doc)
-- [ ] Squelette progression (attClasses + skills)
-- [ ] Perks communs + exclusifs (gate cvar + prérequis croisés)
-- [ ] Livres de classe + magazines + quête de sélection + kits
-- [ ] `ClassManager` C# (complétion → slot, séquentiel)
+> Légende : **Signature** = arme/gear exclusif (bonus que SEULE cette classe obtient) · **Perks** = bonus passifs (points) · **Magazines** = capacités/recettes débloquées par lecture (class-gated).
+
+### 1. Ingénieur
+- **Mécanicien (`EngiMech`)** — robotique & véhicules.
+  - Signature : **tourelles/drones de récup' + véhicules**. Bonus exclusifs robotiques & véhicule.
+  - Perks : dégâts/portée tourelles, durée drone, vitesse/conso véhicule, réparations à moindre coût.
+  - Magazines : recettes tourelle/drone améliorés, mods véhicule exclusifs.
+- **Électricien (`EngiElec`)** — électricité & pièges.
+  - Signature : **pièges électriques** (barbelés électrifiés, blade traps câblés) + matraque (stun).
+  - Perks : dégâts pièges, efficacité énergie, portée fils, recharge batteries.
+  - Magazines : recettes pièges/relais/solaire exclusives.
+
+### 2. Médecin
+- **Chirurgien (`MedicSurg`)** — soin & lames.
+  - Signature : **lames/scalpel** (saignement) + soin.
+  - Perks : efficacité soins, vitesse de pansement, retrait de debuffs, dégâts saignement lames.
+  - Magazines : recettes trousses trauma / bandages avancés exclusives.
+- **Chimiste/Pharmacien (`MedicChem`)** — chimie & jet.
+  - Signature : **armes de jet chimiques** (cocktails, gaz, contact) + drogues.
+  - Perks : durée/effet drogues, dégâts incendiaires/chimiques jetés, maîtrise station chimique.
+  - Magazines : recettes stims de combat / drogues supérieures exclusives.
+
+### 3. Soldat
+- **Tireur d'élite (`SoldSnip`)** — fusils marksman.
+  - Signature : **fusils (marksman/sniper)**.
+  - Perks : dégâts/headshot, stabilité visée, vitesse rechargement, lunette.
+  - Magazines : recettes munitions AP / fusil exclusif.
+- **Assaut (`SoldAslt`)** — armes auto & explosifs.
+  - Signature : **mitrailleuses (full-auto)** + grenades/explosifs.
+  - Perks : contrôle recul, chargeurs tambour, dégâts explosifs, mobilité run-and-gun.
+  - Magazines : recettes chargeurs/explosifs exclusives.
+
+### 4. Survivaliste
+- **Chasseur/Traqueur (`SurvHunt`)** — arcs & arbalètes.
+  - Signature : **arcs/arbalètes** (l'exemple utilisateur) + chasse.
+  - Perks : dégâts arc/arbalète, vitesse d'armement, pistage animaux, +viande/peaux.
+  - Magazines : recettes **flèches/carreaux spéciaux** exclusifs, arc/arbalète signature.
+- **Herboriste/Cueilleur (`SurvHerb`)** — plantes & lances.
+  - Signature : **lances** (+ poison) + cueillette.
+  - Perks : rendement cueillette, dégâts poison lances, résistances naturelles.
+  - Magazines : recettes remèdes/tisanes/poisons exclusifs.
+
+### 5. Bâtisseur
+- **Architecte (`BuilArch`)** — fortifications. *(contact AXE 2 : augmente le score de défense de base)*
+  - Signature : **masses (démolition)** + blocs renforcés.
+  - Perks : +PV blocs, upgrade/réparation moins chers, dégâts masse.
+  - Magazines : recettes blocs renforcés/défensifs exclusifs.
+- **Artisan (`BuilArti`)** — ateliers & robotique mêlée.
+  - Signature : **masse de récup' robotique (junk sledge)** + ateliers.
+  - Perks : qualité de craft, vitesse ateliers, coûts réduits, stockage.
+  - Magazines : recettes upgrades d'ateliers / mobilier exclusifs.
+
+### 6. Éclaireur
+- **Pisteur (`ScoutTrac`)** — mobilité & pistolets.
+  - Signature : **pistolets (gunslinger)** + mobilité.
+  - Perks : vitesse course/endurance, révélation carte, détection loot/trésor, dégâts pistolet.
+  - Magazines : recettes pistolet/munitions exclusives.
+- **Infiltrateur/Pilleur (`ScoutInfi`)** — furtivité & poings.
+  - Signature : **armes de poing/knuckles** furtives + silencieux.
+  - Perks : dégâts furtifs, discrétion, crochetage coffres, meilleur loot.
+  - Magazines : recettes silencieux / outils de crochetage exclusifs.
+
+### 7. Fermier
+- **Agriculteur (`FarmAgri`)** — cultures & fusil à pompe.
+  - Signature : **fusil à pompe (pump)** — l'exemple utilisateur — + agriculture.
+  - Perks : rendement/croissance cultures, dégâts/portée pompe, recharge pompe.
+  - Magazines : recettes **pompe signature + cartouches spéciales** exclusives, graines haut-rendement.
+- **Cuisinier (`FarmCook`)** — cuisine & gourdins.
+  - Signature : **gourdins/contondant** (« ustensiles ») + cuisine d'équipe.
+  - Perks : qualité buffs nourriture (effets d'équipe), dégâts contondant, conservation aliments.
+  - Magazines : recettes **repas uniques à buffs d'équipe** exclusifs.
+
+## 4. Acquisition & gating (résumé technique)
+- **Livre de classe** (item magazine) par sous-classe : lecture → `ModifyCVar dhsCls<Code>=1` + perks de base + kit. Le livre n'est obtenable qu'au choix de classe (quête de sélection / récompense), pas en loot libre.
+- **Magazines de classe** : `LootProb` (loot.xml/items via passive_effect tags) gaté `CVarCompare dhsCls<Code>` → ne droppent que pour les classes débloquées ; effet de lecture gaté par le même cvar → lisibles seulement par la classe.
+- **Perks exclusifs** : `level_requirements` = `CVarCompare dhsCls<Code> Equals 1` (+ éventuellement `PlayerLevel` pour le rythme, **jamais** de `ProgressionLevel` d'un autre perk → pas de blocage croisé).
+- **Sélection initiale** : `game_first_spawn` (gameevent) → quête de sélection → octroi des livres de classe disponibles ; le joueur en lit un.
+- **Complétion → slots** : `ClassManager` (C#) surveille perks max + magazines lus → pose `dhsCls<Code>Done`, débloque la sœur, `dhsClassSlotFree=1`.
+
+## 5. Statut
+- [x] Taxonomie + convention (J1.1)
+- [x] Squelette progression (attClasses + skills) (J1.1)
+- [x] Conception complète des 14 classes (ce doc) ← **à valider**
+- [ ] Classe de base « Survivant » (perks points)
+- [ ] 1 sous-classe exemplaire de bout en bout (perks + magazines + livre + kit + loc)
+- [ ] Réplication aux 13 autres
+- [ ] Quête de sélection + `game_first_spawn`
+- [ ] `ClassManager` C# (complétion → slots, séquentiel)
