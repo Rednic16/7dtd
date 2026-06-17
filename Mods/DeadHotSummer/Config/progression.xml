@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  AXE 1 — Squelette de progression des classes (J1).
+  Attribut hôte caché `attClasses` + skill commun + 1 skill par sous-branche.
+  Les perks (communs/exclusifs) seront ajoutés sous ces skills à l'étape suivante.
+  Convention & cvars : voir docs/axe1.md.
+-->
+<configs>
+
+  <!-- Attribut hôte caché (calqué sur attGeneralPerks) -->
+  <append xpath="/progression/attributes">
+    <attribute name="attClasses" name_key="dhsAttClassesName" desc_key="dhsAttClassesDesc" icon="ui_game_symbol_modded" min_level="0" max_level="0" base_skill_point_cost="1" hidden="true">
+      <level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+    </attribute>
+  </append>
+
+  <!-- Skills hôtes des perks de classe -->
+  <append xpath="/progression/skills">
+    <!-- Compétences communes (toutes classes) -->
+    <skill name="skillClassCommon" parent="attClasses" name_key="dhsSkillClassCommonName" desc_key="dhsSkillClassCommonDesc" icon="ui_game_symbol_modded"><effect_group/></skill>
+
+    <!-- 1. Ingénieur -->
+    <skill name="skillClassEngiMech" parent="attClasses" name_key="dhsSkillClassEngiMechName" desc_key="dhsSkillClassEngiMechDesc" icon="ui_game_symbol_wrench"><effect_group/></skill>
+    <skill name="skillClassEngiElec" parent="attClasses" name_key="dhsSkillClassEngiElecName" desc_key="dhsSkillClassEngiElecDesc" icon="ui_game_symbol_electric_generator"><effect_group/></skill>
+
+    <!-- 2. Médecin -->
+    <skill name="skillClassMedicSurg" parent="attClasses" name_key="dhsSkillClassMedicSurgName" desc_key="dhsSkillClassMedicSurgDesc" icon="ui_game_symbol_medical"><effect_group/></skill>
+    <skill name="skillClassMedicChem" parent="attClasses" name_key="dhsSkillClassMedicChemName" desc_key="dhsSkillClassMedicChemDesc" icon="ui_game_symbol_medical"><effect_group/></skill>
+
+    <!-- 3. Soldat -->
+    <skill name="skillClassSoldSnip" parent="attClasses" name_key="dhsSkillClassSoldSnipName" desc_key="dhsSkillClassSoldSnipDesc" icon="ui_game_symbol_long_shot"><effect_group/></skill>
+    <skill name="skillClassSoldAslt" parent="attClasses" name_key="dhsSkillClassSoldAsltName" desc_key="dhsSkillClassSoldAsltDesc" icon="ui_game_symbol_rifle"><effect_group/></skill>
+
+    <!-- 4. Survivaliste -->
+    <skill name="skillClassSurvHunt" parent="attClasses" name_key="dhsSkillClassSurvHuntName" desc_key="dhsSkillClassSurvHuntDesc" icon="ui_game_symbol_animal_tracker"><effect_group/></skill>
+    <skill name="skillClassSurvHerb" parent="attClasses" name_key="dhsSkillClassSurvHerbName" desc_key="dhsSkillClassSurvHerbDesc" icon="ui_game_symbol_crops"><effect_group/></skill>
+
+    <!-- 5. Bâtisseur -->
+    <skill name="skillClassBuilArch" parent="attClasses" name_key="dhsSkillClassBuilArchName" desc_key="dhsSkillClassBuilArchDesc" icon="ui_game_symbol_hammer"><effect_group/></skill>
+    <skill name="skillClassBuilArti" parent="attClasses" name_key="dhsSkillClassBuilArtiName" desc_key="dhsSkillClassBuilArtiDesc" icon="ui_game_symbol_workbench"><effect_group/></skill>
+
+    <!-- 6. Éclaireur -->
+    <skill name="skillClassScoutTrac" parent="attClasses" name_key="dhsSkillClassScoutTracName" desc_key="dhsSkillClassScoutTracDesc" icon="ui_game_symbol_stealth"><effect_group/></skill>
+    <skill name="skillClassScoutInfi" parent="attClasses" name_key="dhsSkillClassScoutInfiName" desc_key="dhsSkillClassScoutInfiDesc" icon="ui_game_symbol_stealth2"><effect_group/></skill>
+
+    <!-- 7. Fermier -->
+    <skill name="skillClassFarmAgri" parent="attClasses" name_key="dhsSkillClassFarmAgriName" desc_key="dhsSkillClassFarmAgriDesc" icon="ui_game_symbol_crops"><effect_group/></skill>
+    <skill name="skillClassFarmCook" parent="attClasses" name_key="dhsSkillClassFarmCookName" desc_key="dhsSkillClassFarmCookDesc" icon="ui_game_symbol_fork"><effect_group/></skill>
+  </append>
+
+</configs>
