@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  AXE 1 — Loot-gating des magazines de classe (J1.4b).
+  Les entrées de loot supportent <requirement> (LootContainer.getProbability:
+  "if (!_item.HasRequirements(_player)) return 0f;"). On gate donc le drop par le
+  cvar de classe : un magazine de classe ne droppe QUE pour un joueur de cette classe.
+  NB: la syntaxe des requirements de loot utilise class="..." (et non name="...").
+-->
+<configs>
+
+  <!-- Magazine Tireur d'élite : présent dans le pool de magazines, gaté au cvar de classe. -->
+  <append xpath="/lootcontainers/lootgroup[@name='perkBooks']">
+    <item name="dhsMagSoldSnipFieldManual">
+      <requirement class="CVar" cvar="dhsClsSoldSnip" operation="EQ" value="1"/>
+    </item>
+  </append>
+
+</configs>
