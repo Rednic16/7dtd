@@ -1,51 +1,426 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-  AXE 1 — Livres de classe & magazines (J1.4, exemplaire Soldat/Tireur d'élite).
-  - Livre de classe : pose le cvar de classe (consomme un slot) + rang de départ.
-  - Magazine de classe : lecture gatée par le cvar (= "lisible seulement par la classe"),
-    ranger un perk de classe ("points de compétence gagnés par les livres").
-  Le gating loot (drop seulement pour la classe) sera ajouté en J1.4b (loot.xml).
--->
+<!-- GENERE par tools/gen_axe1_classes.py — ne pas editer a la main. -->
 <configs>
-
   <append xpath="/items">
-
-    <!-- ===== Livre de classe : Soldat / Tireur d'élite ===== -->
+    <item name="dhsBookClassEngiMech">
+      <property name="Extends" value="schematicMaster"/>
+      <property name="CustomIcon" value="schematicMaster"/>
+      <property name="CustomIconTint" value="6699ff"/>
+      <property name="Stacknumber" value="1"/>
+      <property name="DescriptionKey" value="dhsBookClassEngiMechDesc"/>
+      <effect_group tiered="false">
+        <requirement name="CVarCompare" cvar="dhsClassSlotFree" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClsEngiMech" operation="set" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassSlotFree" operation="set" value="0"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassActiveForeign" operation="set" value="11"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassEngiMechMastery" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+      </effect_group>
+    </item>
+    <item name="dhsMagEngiMech">
+      <property name="Extends" value="schematicMaster"/>
+      <property name="CustomIcon" value="schematicMaster"/>
+      <property name="CustomIconTint" value="88cc88"/>
+      <property name="Stacknumber" value="20"/>
+      <property name="EconomicValue" value="120"/>
+      <property name="DescriptionKey" value="dhsMagEngiMechDesc"/>
+      <property name="Group" value="Books,BooksOnly,TCReading"/>
+      <property name="Tags" value="dhsCsmEngiMech,csm"/>
+      <effect_group tiered="false">
+        <requirement name="CVarCompare" cvar="dhsClsEngiMech" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassEngiMechMastery" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+      </effect_group>
+    </item>
+    <item name="dhsBookClassEngiElec">
+      <property name="Extends" value="schematicMaster"/>
+      <property name="CustomIcon" value="schematicMaster"/>
+      <property name="CustomIconTint" value="6699ff"/>
+      <property name="Stacknumber" value="1"/>
+      <property name="DescriptionKey" value="dhsBookClassEngiElecDesc"/>
+      <effect_group tiered="false">
+        <requirement name="CVarCompare" cvar="dhsClassSlotFree" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClsEngiElec" operation="set" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassSlotFree" operation="set" value="0"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassActiveForeign" operation="set" value="12"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassEngiElecMastery" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+      </effect_group>
+    </item>
+    <item name="dhsMagEngiElec">
+      <property name="Extends" value="schematicMaster"/>
+      <property name="CustomIcon" value="schematicMaster"/>
+      <property name="CustomIconTint" value="88cc88"/>
+      <property name="Stacknumber" value="20"/>
+      <property name="EconomicValue" value="120"/>
+      <property name="DescriptionKey" value="dhsMagEngiElecDesc"/>
+      <property name="Group" value="Books,BooksOnly,TCReading"/>
+      <property name="Tags" value="dhsCsmEngiElec,csm"/>
+      <effect_group tiered="false">
+        <requirement name="CVarCompare" cvar="dhsClsEngiElec" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassEngiElecMastery" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+      </effect_group>
+    </item>
+    <item name="dhsBookClassMedicSurg">
+      <property name="Extends" value="schematicMaster"/>
+      <property name="CustomIcon" value="schematicMaster"/>
+      <property name="CustomIconTint" value="6699ff"/>
+      <property name="Stacknumber" value="1"/>
+      <property name="DescriptionKey" value="dhsBookClassMedicSurgDesc"/>
+      <effect_group tiered="false">
+        <requirement name="CVarCompare" cvar="dhsClassSlotFree" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClsMedicSurg" operation="set" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassSlotFree" operation="set" value="0"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassActiveForeign" operation="set" value="21"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassMedicSurgMastery" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+      </effect_group>
+    </item>
+    <item name="dhsMagMedicSurg">
+      <property name="Extends" value="schematicMaster"/>
+      <property name="CustomIcon" value="schematicMaster"/>
+      <property name="CustomIconTint" value="88cc88"/>
+      <property name="Stacknumber" value="20"/>
+      <property name="EconomicValue" value="120"/>
+      <property name="DescriptionKey" value="dhsMagMedicSurgDesc"/>
+      <property name="Group" value="Books,BooksOnly,TCReading"/>
+      <property name="Tags" value="dhsCsmMedicSurg,csm"/>
+      <effect_group tiered="false">
+        <requirement name="CVarCompare" cvar="dhsClsMedicSurg" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassMedicSurgMastery" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+      </effect_group>
+    </item>
+    <item name="dhsBookClassMedicChem">
+      <property name="Extends" value="schematicMaster"/>
+      <property name="CustomIcon" value="schematicMaster"/>
+      <property name="CustomIconTint" value="6699ff"/>
+      <property name="Stacknumber" value="1"/>
+      <property name="DescriptionKey" value="dhsBookClassMedicChemDesc"/>
+      <effect_group tiered="false">
+        <requirement name="CVarCompare" cvar="dhsClassSlotFree" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClsMedicChem" operation="set" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassSlotFree" operation="set" value="0"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassActiveForeign" operation="set" value="22"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassMedicChemMastery" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+      </effect_group>
+    </item>
+    <item name="dhsMagMedicChem">
+      <property name="Extends" value="schematicMaster"/>
+      <property name="CustomIcon" value="schematicMaster"/>
+      <property name="CustomIconTint" value="88cc88"/>
+      <property name="Stacknumber" value="20"/>
+      <property name="EconomicValue" value="120"/>
+      <property name="DescriptionKey" value="dhsMagMedicChemDesc"/>
+      <property name="Group" value="Books,BooksOnly,TCReading"/>
+      <property name="Tags" value="dhsCsmMedicChem,csm"/>
+      <effect_group tiered="false">
+        <requirement name="CVarCompare" cvar="dhsClsMedicChem" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassMedicChemMastery" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+      </effect_group>
+    </item>
     <item name="dhsBookClassSoldSnip">
       <property name="Extends" value="schematicMaster"/>
       <property name="CustomIcon" value="schematicMaster"/>
       <property name="CustomIconTint" value="6699ff"/>
       <property name="Stacknumber" value="1"/>
       <property name="DescriptionKey" value="dhsBookClassSoldSnipDesc"/>
-      <!-- Lecture : nécessite un slot de classe libre ; pose le cvar + rang de départ + consomme le slot. -->
       <effect_group tiered="false">
         <requirement name="CVarCompare" cvar="dhsClassSlotFree" operation="Equals" value="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClsSoldSnip" operation="set" value="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassSlotFree" operation="set" value="0"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassActiveForeign" operation="set" value="31"/>
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassSoldSnipMarksman" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassSoldSnipMastery" level="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
       </effect_group>
     </item>
-
-    <!-- ===== Magazine de classe : Manuel de terrain du tireur ===== -->
-    <item name="dhsMagSoldSnipFieldManual">
+    <item name="dhsMagSoldSnip">
       <property name="Extends" value="schematicMaster"/>
       <property name="CustomIcon" value="schematicMaster"/>
       <property name="CustomIconTint" value="88cc88"/>
       <property name="Stacknumber" value="20"/>
       <property name="EconomicValue" value="120"/>
-      <property name="DescriptionKey" value="dhsMagSoldSnipFieldManualDesc"/>
+      <property name="DescriptionKey" value="dhsMagSoldSnipDesc"/>
       <property name="Group" value="Books,BooksOnly,TCReading"/>
       <property name="Tags" value="dhsCsmSoldSnip,csm"/>
-      <!-- Lecture EFFECTIVE seulement si la classe est débloquée (gate de lecture). -->
       <effect_group tiered="false">
         <requirement name="CVarCompare" cvar="dhsClsSoldSnip" operation="Equals" value="1"/>
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassSoldSnipMarksman" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassSoldSnipMastery" level="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
       </effect_group>
     </item>
-
+    <item name="dhsBookClassSoldAslt">
+      <property name="Extends" value="schematicMaster"/>
+      <property name="CustomIcon" value="schematicMaster"/>
+      <property name="CustomIconTint" value="6699ff"/>
+      <property name="Stacknumber" value="1"/>
+      <property name="DescriptionKey" value="dhsBookClassSoldAsltDesc"/>
+      <effect_group tiered="false">
+        <requirement name="CVarCompare" cvar="dhsClassSlotFree" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClsSoldAslt" operation="set" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassSlotFree" operation="set" value="0"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassActiveForeign" operation="set" value="32"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassSoldAsltMastery" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+      </effect_group>
+    </item>
+    <item name="dhsMagSoldAslt">
+      <property name="Extends" value="schematicMaster"/>
+      <property name="CustomIcon" value="schematicMaster"/>
+      <property name="CustomIconTint" value="88cc88"/>
+      <property name="Stacknumber" value="20"/>
+      <property name="EconomicValue" value="120"/>
+      <property name="DescriptionKey" value="dhsMagSoldAsltDesc"/>
+      <property name="Group" value="Books,BooksOnly,TCReading"/>
+      <property name="Tags" value="dhsCsmSoldAslt,csm"/>
+      <effect_group tiered="false">
+        <requirement name="CVarCompare" cvar="dhsClsSoldAslt" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassSoldAsltMastery" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+      </effect_group>
+    </item>
+    <item name="dhsBookClassSurvHunt">
+      <property name="Extends" value="schematicMaster"/>
+      <property name="CustomIcon" value="schematicMaster"/>
+      <property name="CustomIconTint" value="6699ff"/>
+      <property name="Stacknumber" value="1"/>
+      <property name="DescriptionKey" value="dhsBookClassSurvHuntDesc"/>
+      <effect_group tiered="false">
+        <requirement name="CVarCompare" cvar="dhsClassSlotFree" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClsSurvHunt" operation="set" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassSlotFree" operation="set" value="0"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassActiveForeign" operation="set" value="41"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassSurvHuntMastery" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+      </effect_group>
+    </item>
+    <item name="dhsMagSurvHunt">
+      <property name="Extends" value="schematicMaster"/>
+      <property name="CustomIcon" value="schematicMaster"/>
+      <property name="CustomIconTint" value="88cc88"/>
+      <property name="Stacknumber" value="20"/>
+      <property name="EconomicValue" value="120"/>
+      <property name="DescriptionKey" value="dhsMagSurvHuntDesc"/>
+      <property name="Group" value="Books,BooksOnly,TCReading"/>
+      <property name="Tags" value="dhsCsmSurvHunt,csm"/>
+      <effect_group tiered="false">
+        <requirement name="CVarCompare" cvar="dhsClsSurvHunt" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassSurvHuntMastery" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+      </effect_group>
+    </item>
+    <item name="dhsBookClassSurvHerb">
+      <property name="Extends" value="schematicMaster"/>
+      <property name="CustomIcon" value="schematicMaster"/>
+      <property name="CustomIconTint" value="6699ff"/>
+      <property name="Stacknumber" value="1"/>
+      <property name="DescriptionKey" value="dhsBookClassSurvHerbDesc"/>
+      <effect_group tiered="false">
+        <requirement name="CVarCompare" cvar="dhsClassSlotFree" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClsSurvHerb" operation="set" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassSlotFree" operation="set" value="0"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassActiveForeign" operation="set" value="42"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassSurvHerbMastery" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+      </effect_group>
+    </item>
+    <item name="dhsMagSurvHerb">
+      <property name="Extends" value="schematicMaster"/>
+      <property name="CustomIcon" value="schematicMaster"/>
+      <property name="CustomIconTint" value="88cc88"/>
+      <property name="Stacknumber" value="20"/>
+      <property name="EconomicValue" value="120"/>
+      <property name="DescriptionKey" value="dhsMagSurvHerbDesc"/>
+      <property name="Group" value="Books,BooksOnly,TCReading"/>
+      <property name="Tags" value="dhsCsmSurvHerb,csm"/>
+      <effect_group tiered="false">
+        <requirement name="CVarCompare" cvar="dhsClsSurvHerb" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassSurvHerbMastery" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+      </effect_group>
+    </item>
+    <item name="dhsBookClassBuilArch">
+      <property name="Extends" value="schematicMaster"/>
+      <property name="CustomIcon" value="schematicMaster"/>
+      <property name="CustomIconTint" value="6699ff"/>
+      <property name="Stacknumber" value="1"/>
+      <property name="DescriptionKey" value="dhsBookClassBuilArchDesc"/>
+      <effect_group tiered="false">
+        <requirement name="CVarCompare" cvar="dhsClassSlotFree" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClsBuilArch" operation="set" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassSlotFree" operation="set" value="0"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassActiveForeign" operation="set" value="51"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassBuilArchMastery" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+      </effect_group>
+    </item>
+    <item name="dhsMagBuilArch">
+      <property name="Extends" value="schematicMaster"/>
+      <property name="CustomIcon" value="schematicMaster"/>
+      <property name="CustomIconTint" value="88cc88"/>
+      <property name="Stacknumber" value="20"/>
+      <property name="EconomicValue" value="120"/>
+      <property name="DescriptionKey" value="dhsMagBuilArchDesc"/>
+      <property name="Group" value="Books,BooksOnly,TCReading"/>
+      <property name="Tags" value="dhsCsmBuilArch,csm"/>
+      <effect_group tiered="false">
+        <requirement name="CVarCompare" cvar="dhsClsBuilArch" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassBuilArchMastery" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+      </effect_group>
+    </item>
+    <item name="dhsBookClassBuilArti">
+      <property name="Extends" value="schematicMaster"/>
+      <property name="CustomIcon" value="schematicMaster"/>
+      <property name="CustomIconTint" value="6699ff"/>
+      <property name="Stacknumber" value="1"/>
+      <property name="DescriptionKey" value="dhsBookClassBuilArtiDesc"/>
+      <effect_group tiered="false">
+        <requirement name="CVarCompare" cvar="dhsClassSlotFree" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClsBuilArti" operation="set" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassSlotFree" operation="set" value="0"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassActiveForeign" operation="set" value="52"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassBuilArtiHarvest" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+      </effect_group>
+    </item>
+    <item name="dhsMagBuilArti">
+      <property name="Extends" value="schematicMaster"/>
+      <property name="CustomIcon" value="schematicMaster"/>
+      <property name="CustomIconTint" value="88cc88"/>
+      <property name="Stacknumber" value="20"/>
+      <property name="EconomicValue" value="120"/>
+      <property name="DescriptionKey" value="dhsMagBuilArtiDesc"/>
+      <property name="Group" value="Books,BooksOnly,TCReading"/>
+      <property name="Tags" value="dhsCsmBuilArti,csm"/>
+      <effect_group tiered="false">
+        <requirement name="CVarCompare" cvar="dhsClsBuilArti" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassBuilArtiHarvest" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+      </effect_group>
+    </item>
+    <item name="dhsBookClassScoutTrac">
+      <property name="Extends" value="schematicMaster"/>
+      <property name="CustomIcon" value="schematicMaster"/>
+      <property name="CustomIconTint" value="6699ff"/>
+      <property name="Stacknumber" value="1"/>
+      <property name="DescriptionKey" value="dhsBookClassScoutTracDesc"/>
+      <effect_group tiered="false">
+        <requirement name="CVarCompare" cvar="dhsClassSlotFree" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClsScoutTrac" operation="set" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassSlotFree" operation="set" value="0"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassActiveForeign" operation="set" value="61"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassScoutTracMastery" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+      </effect_group>
+    </item>
+    <item name="dhsMagScoutTrac">
+      <property name="Extends" value="schematicMaster"/>
+      <property name="CustomIcon" value="schematicMaster"/>
+      <property name="CustomIconTint" value="88cc88"/>
+      <property name="Stacknumber" value="20"/>
+      <property name="EconomicValue" value="120"/>
+      <property name="DescriptionKey" value="dhsMagScoutTracDesc"/>
+      <property name="Group" value="Books,BooksOnly,TCReading"/>
+      <property name="Tags" value="dhsCsmScoutTrac,csm"/>
+      <effect_group tiered="false">
+        <requirement name="CVarCompare" cvar="dhsClsScoutTrac" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassScoutTracMastery" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+      </effect_group>
+    </item>
+    <item name="dhsBookClassScoutInfi">
+      <property name="Extends" value="schematicMaster"/>
+      <property name="CustomIcon" value="schematicMaster"/>
+      <property name="CustomIconTint" value="6699ff"/>
+      <property name="Stacknumber" value="1"/>
+      <property name="DescriptionKey" value="dhsBookClassScoutInfiDesc"/>
+      <effect_group tiered="false">
+        <requirement name="CVarCompare" cvar="dhsClassSlotFree" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClsScoutInfi" operation="set" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassSlotFree" operation="set" value="0"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassActiveForeign" operation="set" value="62"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassScoutInfiMastery" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+      </effect_group>
+    </item>
+    <item name="dhsMagScoutInfi">
+      <property name="Extends" value="schematicMaster"/>
+      <property name="CustomIcon" value="schematicMaster"/>
+      <property name="CustomIconTint" value="88cc88"/>
+      <property name="Stacknumber" value="20"/>
+      <property name="EconomicValue" value="120"/>
+      <property name="DescriptionKey" value="dhsMagScoutInfiDesc"/>
+      <property name="Group" value="Books,BooksOnly,TCReading"/>
+      <property name="Tags" value="dhsCsmScoutInfi,csm"/>
+      <effect_group tiered="false">
+        <requirement name="CVarCompare" cvar="dhsClsScoutInfi" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassScoutInfiMastery" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+      </effect_group>
+    </item>
+    <item name="dhsBookClassFarmAgri">
+      <property name="Extends" value="schematicMaster"/>
+      <property name="CustomIcon" value="schematicMaster"/>
+      <property name="CustomIconTint" value="6699ff"/>
+      <property name="Stacknumber" value="1"/>
+      <property name="DescriptionKey" value="dhsBookClassFarmAgriDesc"/>
+      <effect_group tiered="false">
+        <requirement name="CVarCompare" cvar="dhsClassSlotFree" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClsFarmAgri" operation="set" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassSlotFree" operation="set" value="0"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassActiveForeign" operation="set" value="71"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassFarmAgriMastery" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+      </effect_group>
+    </item>
+    <item name="dhsMagFarmAgri">
+      <property name="Extends" value="schematicMaster"/>
+      <property name="CustomIcon" value="schematicMaster"/>
+      <property name="CustomIconTint" value="88cc88"/>
+      <property name="Stacknumber" value="20"/>
+      <property name="EconomicValue" value="120"/>
+      <property name="DescriptionKey" value="dhsMagFarmAgriDesc"/>
+      <property name="Group" value="Books,BooksOnly,TCReading"/>
+      <property name="Tags" value="dhsCsmFarmAgri,csm"/>
+      <effect_group tiered="false">
+        <requirement name="CVarCompare" cvar="dhsClsFarmAgri" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassFarmAgriMastery" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+      </effect_group>
+    </item>
+    <item name="dhsBookClassFarmCook">
+      <property name="Extends" value="schematicMaster"/>
+      <property name="CustomIcon" value="schematicMaster"/>
+      <property name="CustomIconTint" value="6699ff"/>
+      <property name="Stacknumber" value="1"/>
+      <property name="DescriptionKey" value="dhsBookClassFarmCookDesc"/>
+      <effect_group tiered="false">
+        <requirement name="CVarCompare" cvar="dhsClassSlotFree" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClsFarmCook" operation="set" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassSlotFree" operation="set" value="0"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassActiveForeign" operation="set" value="72"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassFarmCookMastery" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+      </effect_group>
+    </item>
+    <item name="dhsMagFarmCook">
+      <property name="Extends" value="schematicMaster"/>
+      <property name="CustomIcon" value="schematicMaster"/>
+      <property name="CustomIconTint" value="88cc88"/>
+      <property name="Stacknumber" value="20"/>
+      <property name="EconomicValue" value="120"/>
+      <property name="DescriptionKey" value="dhsMagFarmCookDesc"/>
+      <property name="Group" value="Books,BooksOnly,TCReading"/>
+      <property name="Tags" value="dhsCsmFarmCook,csm"/>
+      <effect_group tiered="false">
+        <requirement name="CVarCompare" cvar="dhsClsFarmCook" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassFarmCookMastery" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+      </effect_group>
+    </item>
   </append>
-
 </configs>

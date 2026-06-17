@@ -131,10 +131,20 @@ L'exclusivité vient du **gate `CVarCompare`** sur l'achat du perk, pas du tag.
 - [x] Squelette progression (attClasses + skills) (J1.1)
 - [x] Conception complète des 14 classes (J1.2, validé)
 - [x] Classe de base « Survivant » : 3 perks (Robustesse, Cueilleur, Endurance) — points de niveau (J1.3)
-- [x] Sous-classe exemplaire Soldat/Tireur : 4 perks gatés `CVarCompare` + livre de classe + magazine class-gated + localisation (J1.4a)
-- [ ] J1.4b : loot-gating des magazines de classe (drop seulement pour la classe) + recette signature
-- [ ] Réplication aux 13 autres
-- [ ] Quête de sélection + `game_first_spawn`
-- [ ] `ClassManager` C# (complétion → slots, séquentiel)
+- [x] Sous-classe exemplaire Soldat/Tireur (J1.4a)
+- [x] Loot-gating des magazines via `requirement class="CVar"` (J1.4b)
+- [x] **Les 14 sous-classes** générées (J1.5) via `tools/gen_axe1_classes.py` (source unique) :
+      42 perks (3 base + 39 classes), 14 livres + 14 magazines, 14 loot-gates, localisation EN+FR.
+      Tags d'armes vérifiés vanilla. **Validé au runtime** (serveur V3.0.0 b252, 0 erreur).
+- [ ] Recette/gear signature exclusif par classe (J1.5b) — au-delà des perks scopés
+- [ ] Quête de sélection + `game_first_spawn` + init `dhsClassSlotFree` (J1.6)
+- [ ] `ClassManager` C# (complétion → slots, séquentiel) (J1.7)
+
+### Note d'implémentation
+Le contenu des classes est **généré** depuis `tools/gen_axe1_classes.py` (table de classes =
+source de vérité). Ne pas éditer les `Config/{progression,items,loot}.xml` + `Localization.txt`
+à la main : modifier le générateur puis relancer `python3 tools/gen_axe1_classes.py`.
+Chaque sous-classe : 2-3 perks exclusifs (dégâts/maniement/effet) scopés au tag d'arme signature,
+gatés `CVarCompare dhsCls<Code>`, rythmés par `PlayerLevel` (1/12/24/36/48 → fin ~45-55).
 
 > Validation **runtime** (chargement serveur sans erreur de patch, comportement des gates) à faire à un jalon de test dédié.

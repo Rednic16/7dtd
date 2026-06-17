@@ -3,50 +3,185 @@ dhsAttClassesName,Classes,Classes
 dhsAttClassesDesc,Class specializations,Spécialisations de classe
 dhsSkillClassCommonName,Survivor,Survivant
 dhsSkillClassCommonDesc,Common skills available to everyone,Compétences communes à tous
-dhsSkillClassEngiMechName,Mechanic,Mécanicien
-dhsSkillClassEngiMechDesc,Vehicles and robotics specialist,Spécialiste véhicules et robotique
-dhsSkillClassEngiElecName,Electrician,Électricien
-dhsSkillClassEngiElecDesc,Electricity and traps specialist,Spécialiste électricité et pièges
-dhsSkillClassMedicSurgName,Surgeon,Chirurgien
-dhsSkillClassMedicSurgDesc,Healing and blades specialist,Spécialiste soins et lames
-dhsSkillClassMedicChemName,Chemist,Chimiste
-dhsSkillClassMedicChemDesc,Chemistry and thrown weapons specialist,Spécialiste chimie et armes de jet
-dhsSkillClassSoldSnipName,Marksman,Tireur d'élite
-dhsSkillClassSoldSnipDesc,Rifle specialist,Spécialiste des fusils
-dhsSkillClassSoldAsltName,Assault,Assaut
-dhsSkillClassSoldAsltDesc,Automatic weapons and explosives specialist,Spécialiste armes auto et explosifs
-dhsSkillClassSurvHuntName,Hunter,Chasseur
-dhsSkillClassSurvHuntDesc,Bows and crossbows specialist,Spécialiste arcs et arbalètes
-dhsSkillClassSurvHerbName,Herbalist,Herboriste
-dhsSkillClassSurvHerbDesc,Foraging and spears specialist,Spécialiste cueillette et lances
-dhsSkillClassBuilArchName,Architect,Architecte
-dhsSkillClassBuilArchDesc,Fortifications specialist,Spécialiste fortifications
-dhsSkillClassBuilArtiName,Artisan,Artisan
-dhsSkillClassBuilArtiDesc,Workstations and crafting specialist,Spécialiste ateliers et artisanat
-dhsSkillClassScoutTracName,Tracker,Pisteur
-dhsSkillClassScoutTracDesc,Mobility and handguns specialist,Spécialiste mobilité et pistolets
-dhsSkillClassScoutInfiName,Infiltrator,Infiltrateur
-dhsSkillClassScoutInfiDesc,Stealth and looting specialist,Spécialiste furtivité et pillage
-dhsSkillClassFarmAgriName,Farmer,Agriculteur
-dhsSkillClassFarmAgriDesc,Crops and shotgun specialist,Spécialiste cultures et fusil à pompe
-dhsSkillClassFarmCookName,Cook,Cuisinier
-dhsSkillClassFarmCookDesc,Cooking and team buffs specialist,Spécialiste cuisine et buffs d'équipe
 dhsPerkCommonToughnessName,Toughness,Robustesse
 dhsPerkCommonToughnessDesc,Reduces physical damage taken.,Réduit les dégâts physiques subis.
 dhsPerkCommonForagerName,Forager,Cueilleur
 dhsPerkCommonForagerDesc,Harvest more food from animals and wild plants.,Récolte plus de nourriture sur les animaux et plantes sauvages.
 dhsPerkCommonEnduranceName,Endurance,Endurance
 dhsPerkCommonEnduranceDesc,Reduces stamina loss from actions.,Réduit la perte d'endurance des actions.
-dhsPerkSoldSnipMarksmanName,Marksmanship,Adresse au tir
-dhsPerkSoldSnipMarksmanDesc,Increases rifle damage.,Augmente les dégâts des fusils.
-dhsPerkSoldSnipSteadyAimName,Steady Aim,Visée stable
-dhsPerkSoldSnipSteadyAimDesc,Improves rifle handling and reduces aimed spread.,Améliore la maniabilité des fusils et réduit la dispersion en visée.
-dhsPerkSoldSnipRapidReloadName,Rapid Reload,Rechargement rapide
-dhsPerkSoldSnipRapidReloadDesc,Reloads rifles faster.,Recharge les fusils plus vite.
-dhsPerkSoldSnipExecutionerName,Executioner,Bourreau
-dhsPerkSoldSnipExecutionerDesc,Increases rifle dismemberment chance.,Augmente les chances de démembrement au fusil.
+dhsSkillClassEngiMechName,Mechanic,Mécanicien
+dhsSkillClassEngiMechDesc,Mechanic specialization,Spécialisation Mécanicien
+dhsReqClassEngiMech,Requires the Mechanic class,Nécessite la classe Mécanicien
+dhsBookClassEngiMech,Class Manual: Mechanic,Manuel de classe : Mécanicien
+dhsBookClassEngiMechDesc,Read to become a Mechanic. Grants the basic class skill and unlocks the class progression.,À lire pour devenir Mécanicien. Octroie la compétence de base et débloque la progression de classe.
+dhsMagEngiMech,Mechanic Manual,Manuel : Mécanicien
+dhsMagEngiMechDesc,A Mechanic magazine. Only useful to members of this class.,Un magazine de Mécanicien. Utile uniquement aux membres de cette classe.
+dhsPerkEngiMechMasteryName,Mechanic Mastery,Mécanicien : Maîtrise
+dhsPerkEngiMechMasteryDesc,Improves your mechanic specialization.,Améliore votre spécialisation Mécanicien.
+dhsPerkEngiMechHandlingName,Mechanic Handling,Mécanicien : Maniement
+dhsPerkEngiMechHandlingDesc,Improves your mechanic specialization.,Améliore votre spécialisation Mécanicien.
+dhsSkillClassEngiElecName,Electrician,Électricien
+dhsSkillClassEngiElecDesc,Electrician specialization,Spécialisation Électricien
+dhsReqClassEngiElec,Requires the Electrician class,Nécessite la classe Électricien
+dhsBookClassEngiElec,Class Manual: Electrician,Manuel de classe : Électricien
+dhsBookClassEngiElecDesc,Read to become a Electrician. Grants the basic class skill and unlocks the class progression.,À lire pour devenir Électricien. Octroie la compétence de base et débloque la progression de classe.
+dhsMagEngiElec,Electrician Manual,Manuel : Électricien
+dhsMagEngiElecDesc,A Electrician magazine. Only useful to members of this class.,Un magazine de Électricien. Utile uniquement aux membres de cette classe.
+dhsPerkEngiElecMasteryName,Electrician Mastery,Électricien : Maîtrise
+dhsPerkEngiElecMasteryDesc,Improves your electrician specialization.,Améliore votre spécialisation Électricien.
+dhsPerkEngiElecHandlingName,Electrician Handling,Électricien : Maniement
+dhsPerkEngiElecHandlingDesc,Improves your electrician specialization.,Améliore votre spécialisation Électricien.
+dhsPerkEngiElecDismemberName,Electrician Brutality,Électricien : Brutalité
+dhsPerkEngiElecDismemberDesc,Improves your electrician specialization.,Améliore votre spécialisation Électricien.
+dhsSkillClassMedicSurgName,Surgeon,Chirurgien
+dhsSkillClassMedicSurgDesc,Surgeon specialization,Spécialisation Chirurgien
+dhsReqClassMedicSurg,Requires the Surgeon class,Nécessite la classe Chirurgien
+dhsBookClassMedicSurg,Class Manual: Surgeon,Manuel de classe : Chirurgien
+dhsBookClassMedicSurgDesc,Read to become a Surgeon. Grants the basic class skill and unlocks the class progression.,À lire pour devenir Chirurgien. Octroie la compétence de base et débloque la progression de classe.
+dhsMagMedicSurg,Surgeon Manual,Manuel : Chirurgien
+dhsMagMedicSurgDesc,A Surgeon magazine. Only useful to members of this class.,Un magazine de Chirurgien. Utile uniquement aux membres de cette classe.
+dhsPerkMedicSurgMasteryName,Surgeon Mastery,Chirurgien : Maîtrise
+dhsPerkMedicSurgMasteryDesc,Improves your surgeon specialization.,Améliore votre spécialisation Chirurgien.
+dhsPerkMedicSurgHandlingName,Surgeon Handling,Chirurgien : Maniement
+dhsPerkMedicSurgHandlingDesc,Improves your surgeon specialization.,Améliore votre spécialisation Chirurgien.
+dhsPerkMedicSurgDismemberName,Surgeon Brutality,Chirurgien : Brutalité
+dhsPerkMedicSurgDismemberDesc,Improves your surgeon specialization.,Améliore votre spécialisation Chirurgien.
+dhsSkillClassMedicChemName,Chemist,Chimiste
+dhsSkillClassMedicChemDesc,Chemist specialization,Spécialisation Chimiste
+dhsReqClassMedicChem,Requires the Chemist class,Nécessite la classe Chimiste
+dhsBookClassMedicChem,Class Manual: Chemist,Manuel de classe : Chimiste
+dhsBookClassMedicChemDesc,Read to become a Chemist. Grants the basic class skill and unlocks the class progression.,À lire pour devenir Chimiste. Octroie la compétence de base et débloque la progression de classe.
+dhsMagMedicChem,Chemist Manual,Manuel : Chimiste
+dhsMagMedicChemDesc,A Chemist magazine. Only useful to members of this class.,Un magazine de Chimiste. Utile uniquement aux membres de cette classe.
+dhsPerkMedicChemMasteryName,Chemist Mastery,Chimiste : Maîtrise
+dhsPerkMedicChemMasteryDesc,Improves your chemist specialization.,Améliore votre spécialisation Chimiste.
+dhsPerkMedicChemHandlingName,Chemist Handling,Chimiste : Maniement
+dhsPerkMedicChemHandlingDesc,Improves your chemist specialization.,Améliore votre spécialisation Chimiste.
+dhsSkillClassSoldSnipName,Marksman,Tireur d'élite
+dhsSkillClassSoldSnipDesc,Marksman specialization,Spécialisation Tireur d'élite
 dhsReqClassSoldSnip,Requires the Marksman class,Nécessite la classe Tireur d'élite
 dhsBookClassSoldSnip,Class Manual: Marksman,Manuel de classe : Tireur d'élite
-dhsBookClassSoldSnipDesc,Read to become a Marksman. Grants the basic rifle skill and unlocks the class progression.,À lire pour devenir Tireur d'élite. Octroie la compétence de base au fusil et débloque la progression de classe.
-dhsMagSoldSnipFieldManual,Marksman Field Manual,Manuel de terrain du tireur
-dhsMagSoldSnipFieldManualDesc,A Marksman magazine. Only useful to members of the Marksman class.,Un magazine de Tireur d'élite. Utile uniquement aux membres de cette classe.
+dhsBookClassSoldSnipDesc,Read to become a Marksman. Grants the basic class skill and unlocks the class progression.,À lire pour devenir Tireur d'élite. Octroie la compétence de base et débloque la progression de classe.
+dhsMagSoldSnip,Marksman Manual,Manuel : Tireur d'élite
+dhsMagSoldSnipDesc,A Marksman magazine. Only useful to members of this class.,Un magazine de Tireur d'élite. Utile uniquement aux membres de cette classe.
+dhsPerkSoldSnipMasteryName,Marksman Mastery,Tireur d'élite : Maîtrise
+dhsPerkSoldSnipMasteryDesc,Improves your marksman specialization.,Améliore votre spécialisation Tireur d'élite.
+dhsPerkSoldSnipHandlingName,Marksman Handling,Tireur d'élite : Maniement
+dhsPerkSoldSnipHandlingDesc,Improves your marksman specialization.,Améliore votre spécialisation Tireur d'élite.
+dhsPerkSoldSnipReloadName,Marksman Rapid Reload,Tireur d'élite : Rechargement rapide
+dhsPerkSoldSnipReloadDesc,Improves your marksman specialization.,Améliore votre spécialisation Tireur d'élite.
+dhsSkillClassSoldAsltName,Assault,Assaut
+dhsSkillClassSoldAsltDesc,Assault specialization,Spécialisation Assaut
+dhsReqClassSoldAslt,Requires the Assault class,Nécessite la classe Assaut
+dhsBookClassSoldAslt,Class Manual: Assault,Manuel de classe : Assaut
+dhsBookClassSoldAsltDesc,Read to become a Assault. Grants the basic class skill and unlocks the class progression.,À lire pour devenir Assaut. Octroie la compétence de base et débloque la progression de classe.
+dhsMagSoldAslt,Assault Manual,Manuel : Assaut
+dhsMagSoldAsltDesc,A Assault magazine. Only useful to members of this class.,Un magazine de Assaut. Utile uniquement aux membres de cette classe.
+dhsPerkSoldAsltMasteryName,Assault Mastery,Assaut : Maîtrise
+dhsPerkSoldAsltMasteryDesc,Improves your assault specialization.,Améliore votre spécialisation Assaut.
+dhsPerkSoldAsltHandlingName,Assault Handling,Assaut : Maniement
+dhsPerkSoldAsltHandlingDesc,Improves your assault specialization.,Améliore votre spécialisation Assaut.
+dhsPerkSoldAsltReloadName,Assault Rapid Reload,Assaut : Rechargement rapide
+dhsPerkSoldAsltReloadDesc,Improves your assault specialization.,Améliore votre spécialisation Assaut.
+dhsSkillClassSurvHuntName,Hunter,Chasseur
+dhsSkillClassSurvHuntDesc,Hunter specialization,Spécialisation Chasseur
+dhsReqClassSurvHunt,Requires the Hunter class,Nécessite la classe Chasseur
+dhsBookClassSurvHunt,Class Manual: Hunter,Manuel de classe : Chasseur
+dhsBookClassSurvHuntDesc,Read to become a Hunter. Grants the basic class skill and unlocks the class progression.,À lire pour devenir Chasseur. Octroie la compétence de base et débloque la progression de classe.
+dhsMagSurvHunt,Hunter Manual,Manuel : Chasseur
+dhsMagSurvHuntDesc,A Hunter magazine. Only useful to members of this class.,Un magazine de Chasseur. Utile uniquement aux membres de cette classe.
+dhsPerkSurvHuntMasteryName,Hunter Mastery,Chasseur : Maîtrise
+dhsPerkSurvHuntMasteryDesc,Improves your hunter specialization.,Améliore votre spécialisation Chasseur.
+dhsPerkSurvHuntHandlingName,Hunter Handling,Chasseur : Maniement
+dhsPerkSurvHuntHandlingDesc,Improves your hunter specialization.,Améliore votre spécialisation Chasseur.
+dhsPerkSurvHuntReloadName,Hunter Quick Draw,Chasseur : Armement rapide
+dhsPerkSurvHuntReloadDesc,Improves your hunter specialization.,Améliore votre spécialisation Chasseur.
+dhsSkillClassSurvHerbName,Herbalist,Herboriste
+dhsSkillClassSurvHerbDesc,Herbalist specialization,Spécialisation Herboriste
+dhsReqClassSurvHerb,Requires the Herbalist class,Nécessite la classe Herboriste
+dhsBookClassSurvHerb,Class Manual: Herbalist,Manuel de classe : Herboriste
+dhsBookClassSurvHerbDesc,Read to become a Herbalist. Grants the basic class skill and unlocks the class progression.,À lire pour devenir Herboriste. Octroie la compétence de base et débloque la progression de classe.
+dhsMagSurvHerb,Herbalist Manual,Manuel : Herboriste
+dhsMagSurvHerbDesc,A Herbalist magazine. Only useful to members of this class.,Un magazine de Herboriste. Utile uniquement aux membres de cette classe.
+dhsPerkSurvHerbMasteryName,Herbalist Mastery,Herboriste : Maîtrise
+dhsPerkSurvHerbMasteryDesc,Improves your herbalist specialization.,Améliore votre spécialisation Herboriste.
+dhsPerkSurvHerbHandlingName,Herbalist Handling,Herboriste : Maniement
+dhsPerkSurvHerbHandlingDesc,Improves your herbalist specialization.,Améliore votre spécialisation Herboriste.
+dhsPerkSurvHerbDismemberName,Herbalist Brutality,Herboriste : Brutalité
+dhsPerkSurvHerbDismemberDesc,Improves your herbalist specialization.,Améliore votre spécialisation Herboriste.
+dhsSkillClassBuilArchName,Architect,Architecte
+dhsSkillClassBuilArchDesc,Architect specialization,Spécialisation Architecte
+dhsReqClassBuilArch,Requires the Architect class,Nécessite la classe Architecte
+dhsBookClassBuilArch,Class Manual: Architect,Manuel de classe : Architecte
+dhsBookClassBuilArchDesc,Read to become a Architect. Grants the basic class skill and unlocks the class progression.,À lire pour devenir Architecte. Octroie la compétence de base et débloque la progression de classe.
+dhsMagBuilArch,Architect Manual,Manuel : Architecte
+dhsMagBuilArchDesc,A Architect magazine. Only useful to members of this class.,Un magazine de Architecte. Utile uniquement aux membres de cette classe.
+dhsPerkBuilArchMasteryName,Architect Mastery,Architecte : Maîtrise
+dhsPerkBuilArchMasteryDesc,Improves your architect specialization.,Améliore votre spécialisation Architecte.
+dhsPerkBuilArchHandlingName,Architect Handling,Architecte : Maniement
+dhsPerkBuilArchHandlingDesc,Improves your architect specialization.,Améliore votre spécialisation Architecte.
+dhsPerkBuilArchDismemberName,Architect Brutality,Architecte : Brutalité
+dhsPerkBuilArchDismemberDesc,Improves your architect specialization.,Améliore votre spécialisation Architecte.
+dhsSkillClassBuilArtiName,Artisan,Artisan
+dhsSkillClassBuilArtiDesc,Artisan specialization,Spécialisation Artisan
+dhsReqClassBuilArti,Requires the Artisan class,Nécessite la classe Artisan
+dhsBookClassBuilArti,Class Manual: Artisan,Manuel de classe : Artisan
+dhsBookClassBuilArtiDesc,Read to become a Artisan. Grants the basic class skill and unlocks the class progression.,À lire pour devenir Artisan. Octroie la compétence de base et débloque la progression de classe.
+dhsMagBuilArti,Artisan Manual,Manuel : Artisan
+dhsMagBuilArtiDesc,A Artisan magazine. Only useful to members of this class.,Un magazine de Artisan. Utile uniquement aux membres de cette classe.
+dhsPerkBuilArtiHarvestName,Artisan Harvesting,Artisan : Récolte
+dhsPerkBuilArtiHarvestDesc,Improves your artisan specialization.,Améliore votre spécialisation Artisan.
+dhsPerkBuilArtiStaminaName,Artisan Endurance,Artisan : Endurance
+dhsPerkBuilArtiStaminaDesc,Improves your artisan specialization.,Améliore votre spécialisation Artisan.
+dhsSkillClassScoutTracName,Tracker,Pisteur
+dhsSkillClassScoutTracDesc,Tracker specialization,Spécialisation Pisteur
+dhsReqClassScoutTrac,Requires the Tracker class,Nécessite la classe Pisteur
+dhsBookClassScoutTrac,Class Manual: Tracker,Manuel de classe : Pisteur
+dhsBookClassScoutTracDesc,Read to become a Tracker. Grants the basic class skill and unlocks the class progression.,À lire pour devenir Pisteur. Octroie la compétence de base et débloque la progression de classe.
+dhsMagScoutTrac,Tracker Manual,Manuel : Pisteur
+dhsMagScoutTracDesc,A Tracker magazine. Only useful to members of this class.,Un magazine de Pisteur. Utile uniquement aux membres de cette classe.
+dhsPerkScoutTracMasteryName,Tracker Mastery,Pisteur : Maîtrise
+dhsPerkScoutTracMasteryDesc,Improves your tracker specialization.,Améliore votre spécialisation Pisteur.
+dhsPerkScoutTracHandlingName,Tracker Handling,Pisteur : Maniement
+dhsPerkScoutTracHandlingDesc,Improves your tracker specialization.,Améliore votre spécialisation Pisteur.
+dhsPerkScoutTracReloadName,Tracker Rapid Reload,Pisteur : Rechargement rapide
+dhsPerkScoutTracReloadDesc,Improves your tracker specialization.,Améliore votre spécialisation Pisteur.
+dhsSkillClassScoutInfiName,Infiltrator,Infiltrateur
+dhsSkillClassScoutInfiDesc,Infiltrator specialization,Spécialisation Infiltrateur
+dhsReqClassScoutInfi,Requires the Infiltrator class,Nécessite la classe Infiltrateur
+dhsBookClassScoutInfi,Class Manual: Infiltrator,Manuel de classe : Infiltrateur
+dhsBookClassScoutInfiDesc,Read to become a Infiltrator. Grants the basic class skill and unlocks the class progression.,À lire pour devenir Infiltrateur. Octroie la compétence de base et débloque la progression de classe.
+dhsMagScoutInfi,Infiltrator Manual,Manuel : Infiltrateur
+dhsMagScoutInfiDesc,A Infiltrator magazine. Only useful to members of this class.,Un magazine de Infiltrateur. Utile uniquement aux membres de cette classe.
+dhsPerkScoutInfiMasteryName,Infiltrator Mastery,Infiltrateur : Maîtrise
+dhsPerkScoutInfiMasteryDesc,Improves your infiltrator specialization.,Améliore votre spécialisation Infiltrateur.
+dhsPerkScoutInfiHandlingName,Infiltrator Handling,Infiltrateur : Maniement
+dhsPerkScoutInfiHandlingDesc,Improves your infiltrator specialization.,Améliore votre spécialisation Infiltrateur.
+dhsPerkScoutInfiDismemberName,Infiltrator Brutality,Infiltrateur : Brutalité
+dhsPerkScoutInfiDismemberDesc,Improves your infiltrator specialization.,Améliore votre spécialisation Infiltrateur.
+dhsSkillClassFarmAgriName,Farmer,Agriculteur
+dhsSkillClassFarmAgriDesc,Farmer specialization,Spécialisation Agriculteur
+dhsReqClassFarmAgri,Requires the Farmer class,Nécessite la classe Agriculteur
+dhsBookClassFarmAgri,Class Manual: Farmer,Manuel de classe : Agriculteur
+dhsBookClassFarmAgriDesc,Read to become a Farmer. Grants the basic class skill and unlocks the class progression.,À lire pour devenir Agriculteur. Octroie la compétence de base et débloque la progression de classe.
+dhsMagFarmAgri,Farmer Manual,Manuel : Agriculteur
+dhsMagFarmAgriDesc,A Farmer magazine. Only useful to members of this class.,Un magazine de Agriculteur. Utile uniquement aux membres de cette classe.
+dhsPerkFarmAgriMasteryName,Farmer Mastery,Agriculteur : Maîtrise
+dhsPerkFarmAgriMasteryDesc,Improves your farmer specialization.,Améliore votre spécialisation Agriculteur.
+dhsPerkFarmAgriHandlingName,Farmer Handling,Agriculteur : Maniement
+dhsPerkFarmAgriHandlingDesc,Improves your farmer specialization.,Améliore votre spécialisation Agriculteur.
+dhsPerkFarmAgriReloadName,Farmer Rapid Reload,Agriculteur : Rechargement rapide
+dhsPerkFarmAgriReloadDesc,Improves your farmer specialization.,Améliore votre spécialisation Agriculteur.
+dhsSkillClassFarmCookName,Cook,Cuisinier
+dhsSkillClassFarmCookDesc,Cook specialization,Spécialisation Cuisinier
+dhsReqClassFarmCook,Requires the Cook class,Nécessite la classe Cuisinier
+dhsBookClassFarmCook,Class Manual: Cook,Manuel de classe : Cuisinier
+dhsBookClassFarmCookDesc,Read to become a Cook. Grants the basic class skill and unlocks the class progression.,À lire pour devenir Cuisinier. Octroie la compétence de base et débloque la progression de classe.
+dhsMagFarmCook,Cook Manual,Manuel : Cuisinier
+dhsMagFarmCookDesc,A Cook magazine. Only useful to members of this class.,Un magazine de Cuisinier. Utile uniquement aux membres de cette classe.
+dhsPerkFarmCookMasteryName,Cook Mastery,Cuisinier : Maîtrise
+dhsPerkFarmCookMasteryDesc,Improves your cook specialization.,Améliore votre spécialisation Cuisinier.
+dhsPerkFarmCookHandlingName,Cook Handling,Cuisinier : Maniement
+dhsPerkFarmCookHandlingDesc,Improves your cook specialization.,Améliore votre spécialisation Cuisinier.
+dhsPerkFarmCookDismemberName,Cook Brutality,Cuisinier : Brutalité
+dhsPerkFarmCookDismemberDesc,Improves your cook specialization.,Améliore votre spécialisation Cuisinier.

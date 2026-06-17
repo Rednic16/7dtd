@@ -1,143 +1,448 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-  AXE 1 — Squelette de progression des classes (J1).
-  Attribut hôte caché `attClasses` + skill commun + 1 skill par sous-branche.
-  Les perks (communs/exclusifs) seront ajoutés sous ces skills à l'étape suivante.
-  Convention & cvars : voir docs/axe1.md.
--->
+<!-- GENERE par tools/gen_axe1_classes.py — ne pas editer a la main. -->
 <configs>
-
-  <!-- Attribut hôte caché (calqué sur attGeneralPerks) -->
   <append xpath="/progression/attributes">
     <attribute name="attClasses" name_key="dhsAttClassesName" desc_key="dhsAttClassesDesc" icon="ui_game_symbol_modded" min_level="0" max_level="0" base_skill_point_cost="1" hidden="true">
       <level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
     </attribute>
   </append>
-
-  <!-- Skills hôtes des perks de classe -->
   <append xpath="/progression/skills">
-    <!-- Compétences communes (toutes classes) -->
     <skill name="skillClassCommon" parent="attClasses" name_key="dhsSkillClassCommonName" desc_key="dhsSkillClassCommonDesc" icon="ui_game_symbol_modded"><effect_group/></skill>
-
-    <!-- 1. Ingénieur -->
     <skill name="skillClassEngiMech" parent="attClasses" name_key="dhsSkillClassEngiMechName" desc_key="dhsSkillClassEngiMechDesc" icon="ui_game_symbol_wrench"><effect_group/></skill>
     <skill name="skillClassEngiElec" parent="attClasses" name_key="dhsSkillClassEngiElecName" desc_key="dhsSkillClassEngiElecDesc" icon="ui_game_symbol_electric_generator"><effect_group/></skill>
-
-    <!-- 2. Médecin -->
     <skill name="skillClassMedicSurg" parent="attClasses" name_key="dhsSkillClassMedicSurgName" desc_key="dhsSkillClassMedicSurgDesc" icon="ui_game_symbol_medical"><effect_group/></skill>
     <skill name="skillClassMedicChem" parent="attClasses" name_key="dhsSkillClassMedicChemName" desc_key="dhsSkillClassMedicChemDesc" icon="ui_game_symbol_medical"><effect_group/></skill>
-
-    <!-- 3. Soldat -->
     <skill name="skillClassSoldSnip" parent="attClasses" name_key="dhsSkillClassSoldSnipName" desc_key="dhsSkillClassSoldSnipDesc" icon="ui_game_symbol_long_shot"><effect_group/></skill>
     <skill name="skillClassSoldAslt" parent="attClasses" name_key="dhsSkillClassSoldAsltName" desc_key="dhsSkillClassSoldAsltDesc" icon="ui_game_symbol_rifle"><effect_group/></skill>
-
-    <!-- 4. Survivaliste -->
     <skill name="skillClassSurvHunt" parent="attClasses" name_key="dhsSkillClassSurvHuntName" desc_key="dhsSkillClassSurvHuntDesc" icon="ui_game_symbol_animal_tracker"><effect_group/></skill>
     <skill name="skillClassSurvHerb" parent="attClasses" name_key="dhsSkillClassSurvHerbName" desc_key="dhsSkillClassSurvHerbDesc" icon="ui_game_symbol_crops"><effect_group/></skill>
-
-    <!-- 5. Bâtisseur -->
     <skill name="skillClassBuilArch" parent="attClasses" name_key="dhsSkillClassBuilArchName" desc_key="dhsSkillClassBuilArchDesc" icon="ui_game_symbol_hammer"><effect_group/></skill>
     <skill name="skillClassBuilArti" parent="attClasses" name_key="dhsSkillClassBuilArtiName" desc_key="dhsSkillClassBuilArtiDesc" icon="ui_game_symbol_workbench"><effect_group/></skill>
-
-    <!-- 6. Éclaireur -->
     <skill name="skillClassScoutTrac" parent="attClasses" name_key="dhsSkillClassScoutTracName" desc_key="dhsSkillClassScoutTracDesc" icon="ui_game_symbol_stealth"><effect_group/></skill>
     <skill name="skillClassScoutInfi" parent="attClasses" name_key="dhsSkillClassScoutInfiName" desc_key="dhsSkillClassScoutInfiDesc" icon="ui_game_symbol_stealth2"><effect_group/></skill>
-
-    <!-- 7. Fermier -->
     <skill name="skillClassFarmAgri" parent="attClasses" name_key="dhsSkillClassFarmAgriName" desc_key="dhsSkillClassFarmAgriDesc" icon="ui_game_symbol_crops"><effect_group/></skill>
     <skill name="skillClassFarmCook" parent="attClasses" name_key="dhsSkillClassFarmCookName" desc_key="dhsSkillClassFarmCookDesc" icon="ui_game_symbol_fork"><effect_group/></skill>
   </append>
-
-  <!-- ============================================================ -->
-  <!-- PERKS                                                         -->
-  <!-- ============================================================ -->
   <append xpath="/progression/perks">
-
-    <!-- ===== Classe de base "Survivant" (commune, points de niveau) ===== -->
-    <!-- Accessibles à tous : level_requirements = PlayerLevel uniquement (pas de gate de classe). -->
-
     <perk name="perkClassCommonToughness" parent="skillClassCommon" name_key="dhsPerkCommonToughnessName" desc_key="dhsPerkCommonToughnessDesc" icon="ui_game_symbol_armor_iron" max_level="5">
       <level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
-      <level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="6"/></level_requirements>
-      <level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="12"/></level_requirements>
-      <level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="20"/></level_requirements>
-      <level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="30"/></level_requirements>
+      <level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="12"/></level_requirements>
+      <level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="24"/></level_requirements>
+      <level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="36"/></level_requirements>
+      <level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
       <effect_group>
         <passive_effect name="PhysicalDamageResist" operation="base_add" level="1,5" value="2,10"/>
       </effect_group>
     </perk>
-
     <perk name="perkClassCommonForager" parent="skillClassCommon" name_key="dhsPerkCommonForagerName" desc_key="dhsPerkCommonForagerDesc" icon="ui_game_symbol_hand" max_level="5">
       <level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
-      <level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="6"/></level_requirements>
-      <level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="12"/></level_requirements>
-      <level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="20"/></level_requirements>
-      <level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="30"/></level_requirements>
+      <level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="12"/></level_requirements>
+      <level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="24"/></level_requirements>
+      <level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="36"/></level_requirements>
+      <level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
       <effect_group>
         <passive_effect name="HarvestCount" operation="perc_add" level="1,5" value=".1,.5" tags="butcherHarvest,wildCropsHarvest"/>
       </effect_group>
     </perk>
-
     <perk name="perkClassCommonEndurance" parent="skillClassCommon" name_key="dhsPerkCommonEnduranceName" desc_key="dhsPerkCommonEnduranceDesc" icon="ui_game_symbol_run" max_level="5">
       <level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
-      <level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="6"/></level_requirements>
-      <level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="12"/></level_requirements>
-      <level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="20"/></level_requirements>
-      <level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="30"/></level_requirements>
+      <level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="12"/></level_requirements>
+      <level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="24"/></level_requirements>
+      <level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="36"/></level_requirements>
+      <level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
       <effect_group>
         <passive_effect name="StaminaLoss" operation="perc_add" level="1,5" value="-.05,-.25"/>
       </effect_group>
     </perk>
-
-    <!-- ===== Sous-classe EXEMPLAIRE : Soldat / Tireur d'élite (SoldSnip) ===== -->
-    <!-- Exclusifs : gate CVarCompare dhsClsSoldSnip (inaccessibles aux autres voies). -->
-    <!-- PAS de prérequis croisés. Rythme via PlayerLevel. Bonus scopés tags="rifleSkill". -->
-
-    <perk name="perkClassSoldSnipMarksman" parent="skillClassSoldSnip" name_key="dhsPerkSoldSnipMarksmanName" desc_key="dhsPerkSoldSnipMarksmanDesc" icon="ui_game_symbol_long_shot" max_level="5">
+    <perk name="perkClassEngiMechMastery" parent="skillClassEngiMech" name_key="dhsPerkEngiMechMasteryName" desc_key="dhsPerkEngiMechMasteryDesc" icon="ui_game_symbol_wrench" max_level="5">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsEngiMech" operation="Equals" value="1" desc_key="dhsReqClassEngiMech"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
+      <level_requirements level="2"><requirement name="CVarCompare" cvar="dhsClsEngiMech" operation="Equals" value="1" desc_key="dhsReqClassEngiMech"/><requirement name="PlayerLevel" operation="GTE" value="12"/></level_requirements>
+      <level_requirements level="3"><requirement name="CVarCompare" cvar="dhsClsEngiMech" operation="Equals" value="1" desc_key="dhsReqClassEngiMech"/><requirement name="PlayerLevel" operation="GTE" value="24"/></level_requirements>
+      <level_requirements level="4"><requirement name="CVarCompare" cvar="dhsClsEngiMech" operation="Equals" value="1" desc_key="dhsReqClassEngiMech"/><requirement name="PlayerLevel" operation="GTE" value="36"/></level_requirements>
+      <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsEngiMech" operation="Equals" value="1" desc_key="dhsReqClassEngiMech"/><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
+      <effect_group>
+        <passive_effect name="EntityDamage" operation="perc_add" level="1,5" value=".08,.40" tags="perkTurrets"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassEngiMechHandling" parent="skillClassEngiMech" name_key="dhsPerkEngiMechHandlingName" desc_key="dhsPerkEngiMechHandlingDesc" icon="ui_game_symbol_wrench" max_level="5">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsEngiMech" operation="Equals" value="1" desc_key="dhsReqClassEngiMech"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
+      <level_requirements level="2"><requirement name="CVarCompare" cvar="dhsClsEngiMech" operation="Equals" value="1" desc_key="dhsReqClassEngiMech"/><requirement name="PlayerLevel" operation="GTE" value="12"/></level_requirements>
+      <level_requirements level="3"><requirement name="CVarCompare" cvar="dhsClsEngiMech" operation="Equals" value="1" desc_key="dhsReqClassEngiMech"/><requirement name="PlayerLevel" operation="GTE" value="24"/></level_requirements>
+      <level_requirements level="4"><requirement name="CVarCompare" cvar="dhsClsEngiMech" operation="Equals" value="1" desc_key="dhsReqClassEngiMech"/><requirement name="PlayerLevel" operation="GTE" value="36"/></level_requirements>
+      <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsEngiMech" operation="Equals" value="1" desc_key="dhsReqClassEngiMech"/><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
+      <effect_group>
+        <passive_effect name="WeaponHandling" operation="perc_add" level="1,5" value=".10,.50" tags="perkTurrets"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassEngiElecMastery" parent="skillClassEngiElec" name_key="dhsPerkEngiElecMasteryName" desc_key="dhsPerkEngiElecMasteryDesc" icon="ui_game_symbol_electric_generator" max_level="5">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsEngiElec" operation="Equals" value="1" desc_key="dhsReqClassEngiElec"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
+      <level_requirements level="2"><requirement name="CVarCompare" cvar="dhsClsEngiElec" operation="Equals" value="1" desc_key="dhsReqClassEngiElec"/><requirement name="PlayerLevel" operation="GTE" value="12"/></level_requirements>
+      <level_requirements level="3"><requirement name="CVarCompare" cvar="dhsClsEngiElec" operation="Equals" value="1" desc_key="dhsReqClassEngiElec"/><requirement name="PlayerLevel" operation="GTE" value="24"/></level_requirements>
+      <level_requirements level="4"><requirement name="CVarCompare" cvar="dhsClsEngiElec" operation="Equals" value="1" desc_key="dhsReqClassEngiElec"/><requirement name="PlayerLevel" operation="GTE" value="36"/></level_requirements>
+      <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsEngiElec" operation="Equals" value="1" desc_key="dhsReqClassEngiElec"/><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
+      <effect_group>
+        <passive_effect name="EntityDamage" operation="perc_add" level="1,5" value=".08,.40" tags="perkElectrocutioner"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassEngiElecHandling" parent="skillClassEngiElec" name_key="dhsPerkEngiElecHandlingName" desc_key="dhsPerkEngiElecHandlingDesc" icon="ui_game_symbol_electric_generator" max_level="5">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsEngiElec" operation="Equals" value="1" desc_key="dhsReqClassEngiElec"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
+      <level_requirements level="2"><requirement name="CVarCompare" cvar="dhsClsEngiElec" operation="Equals" value="1" desc_key="dhsReqClassEngiElec"/><requirement name="PlayerLevel" operation="GTE" value="12"/></level_requirements>
+      <level_requirements level="3"><requirement name="CVarCompare" cvar="dhsClsEngiElec" operation="Equals" value="1" desc_key="dhsReqClassEngiElec"/><requirement name="PlayerLevel" operation="GTE" value="24"/></level_requirements>
+      <level_requirements level="4"><requirement name="CVarCompare" cvar="dhsClsEngiElec" operation="Equals" value="1" desc_key="dhsReqClassEngiElec"/><requirement name="PlayerLevel" operation="GTE" value="36"/></level_requirements>
+      <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsEngiElec" operation="Equals" value="1" desc_key="dhsReqClassEngiElec"/><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
+      <effect_group>
+        <passive_effect name="WeaponHandling" operation="perc_add" level="1,5" value=".10,.50" tags="perkElectrocutioner"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassEngiElecDismember" parent="skillClassEngiElec" name_key="dhsPerkEngiElecDismemberName" desc_key="dhsPerkEngiElecDismemberDesc" icon="ui_game_symbol_electric_generator" max_level="5">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsEngiElec" operation="Equals" value="1" desc_key="dhsReqClassEngiElec"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
+      <level_requirements level="2"><requirement name="CVarCompare" cvar="dhsClsEngiElec" operation="Equals" value="1" desc_key="dhsReqClassEngiElec"/><requirement name="PlayerLevel" operation="GTE" value="12"/></level_requirements>
+      <level_requirements level="3"><requirement name="CVarCompare" cvar="dhsClsEngiElec" operation="Equals" value="1" desc_key="dhsReqClassEngiElec"/><requirement name="PlayerLevel" operation="GTE" value="24"/></level_requirements>
+      <level_requirements level="4"><requirement name="CVarCompare" cvar="dhsClsEngiElec" operation="Equals" value="1" desc_key="dhsReqClassEngiElec"/><requirement name="PlayerLevel" operation="GTE" value="36"/></level_requirements>
+      <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsEngiElec" operation="Equals" value="1" desc_key="dhsReqClassEngiElec"/><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
+      <effect_group>
+        <passive_effect name="DismemberChance" operation="base_add" level="1,5" value=".05,.25" tags="perkElectrocutioner"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassMedicSurgMastery" parent="skillClassMedicSurg" name_key="dhsPerkMedicSurgMasteryName" desc_key="dhsPerkMedicSurgMasteryDesc" icon="ui_game_symbol_medical" max_level="5">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsMedicSurg" operation="Equals" value="1" desc_key="dhsReqClassMedicSurg"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
+      <level_requirements level="2"><requirement name="CVarCompare" cvar="dhsClsMedicSurg" operation="Equals" value="1" desc_key="dhsReqClassMedicSurg"/><requirement name="PlayerLevel" operation="GTE" value="12"/></level_requirements>
+      <level_requirements level="3"><requirement name="CVarCompare" cvar="dhsClsMedicSurg" operation="Equals" value="1" desc_key="dhsReqClassMedicSurg"/><requirement name="PlayerLevel" operation="GTE" value="24"/></level_requirements>
+      <level_requirements level="4"><requirement name="CVarCompare" cvar="dhsClsMedicSurg" operation="Equals" value="1" desc_key="dhsReqClassMedicSurg"/><requirement name="PlayerLevel" operation="GTE" value="36"/></level_requirements>
+      <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsMedicSurg" operation="Equals" value="1" desc_key="dhsReqClassMedicSurg"/><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
+      <effect_group>
+        <passive_effect name="EntityDamage" operation="perc_add" level="1,5" value=".08,.40" tags="perkDeepCuts"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassMedicSurgHandling" parent="skillClassMedicSurg" name_key="dhsPerkMedicSurgHandlingName" desc_key="dhsPerkMedicSurgHandlingDesc" icon="ui_game_symbol_medical" max_level="5">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsMedicSurg" operation="Equals" value="1" desc_key="dhsReqClassMedicSurg"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
+      <level_requirements level="2"><requirement name="CVarCompare" cvar="dhsClsMedicSurg" operation="Equals" value="1" desc_key="dhsReqClassMedicSurg"/><requirement name="PlayerLevel" operation="GTE" value="12"/></level_requirements>
+      <level_requirements level="3"><requirement name="CVarCompare" cvar="dhsClsMedicSurg" operation="Equals" value="1" desc_key="dhsReqClassMedicSurg"/><requirement name="PlayerLevel" operation="GTE" value="24"/></level_requirements>
+      <level_requirements level="4"><requirement name="CVarCompare" cvar="dhsClsMedicSurg" operation="Equals" value="1" desc_key="dhsReqClassMedicSurg"/><requirement name="PlayerLevel" operation="GTE" value="36"/></level_requirements>
+      <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsMedicSurg" operation="Equals" value="1" desc_key="dhsReqClassMedicSurg"/><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
+      <effect_group>
+        <passive_effect name="WeaponHandling" operation="perc_add" level="1,5" value=".10,.50" tags="perkDeepCuts"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassMedicSurgDismember" parent="skillClassMedicSurg" name_key="dhsPerkMedicSurgDismemberName" desc_key="dhsPerkMedicSurgDismemberDesc" icon="ui_game_symbol_medical" max_level="5">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsMedicSurg" operation="Equals" value="1" desc_key="dhsReqClassMedicSurg"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
+      <level_requirements level="2"><requirement name="CVarCompare" cvar="dhsClsMedicSurg" operation="Equals" value="1" desc_key="dhsReqClassMedicSurg"/><requirement name="PlayerLevel" operation="GTE" value="12"/></level_requirements>
+      <level_requirements level="3"><requirement name="CVarCompare" cvar="dhsClsMedicSurg" operation="Equals" value="1" desc_key="dhsReqClassMedicSurg"/><requirement name="PlayerLevel" operation="GTE" value="24"/></level_requirements>
+      <level_requirements level="4"><requirement name="CVarCompare" cvar="dhsClsMedicSurg" operation="Equals" value="1" desc_key="dhsReqClassMedicSurg"/><requirement name="PlayerLevel" operation="GTE" value="36"/></level_requirements>
+      <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsMedicSurg" operation="Equals" value="1" desc_key="dhsReqClassMedicSurg"/><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
+      <effect_group>
+        <passive_effect name="DismemberChance" operation="base_add" level="1,5" value=".05,.25" tags="perkDeepCuts"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassMedicChemMastery" parent="skillClassMedicChem" name_key="dhsPerkMedicChemMasteryName" desc_key="dhsPerkMedicChemMasteryDesc" icon="ui_game_symbol_medical" max_level="5">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsMedicChem" operation="Equals" value="1" desc_key="dhsReqClassMedicChem"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
+      <level_requirements level="2"><requirement name="CVarCompare" cvar="dhsClsMedicChem" operation="Equals" value="1" desc_key="dhsReqClassMedicChem"/><requirement name="PlayerLevel" operation="GTE" value="12"/></level_requirements>
+      <level_requirements level="3"><requirement name="CVarCompare" cvar="dhsClsMedicChem" operation="Equals" value="1" desc_key="dhsReqClassMedicChem"/><requirement name="PlayerLevel" operation="GTE" value="24"/></level_requirements>
+      <level_requirements level="4"><requirement name="CVarCompare" cvar="dhsClsMedicChem" operation="Equals" value="1" desc_key="dhsReqClassMedicChem"/><requirement name="PlayerLevel" operation="GTE" value="36"/></level_requirements>
+      <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsMedicChem" operation="Equals" value="1" desc_key="dhsReqClassMedicChem"/><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
+      <effect_group>
+        <passive_effect name="EntityDamage" operation="perc_add" level="1,5" value=".08,.40" tags="perkDemolitionsExpert"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassMedicChemHandling" parent="skillClassMedicChem" name_key="dhsPerkMedicChemHandlingName" desc_key="dhsPerkMedicChemHandlingDesc" icon="ui_game_symbol_medical" max_level="5">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsMedicChem" operation="Equals" value="1" desc_key="dhsReqClassMedicChem"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
+      <level_requirements level="2"><requirement name="CVarCompare" cvar="dhsClsMedicChem" operation="Equals" value="1" desc_key="dhsReqClassMedicChem"/><requirement name="PlayerLevel" operation="GTE" value="12"/></level_requirements>
+      <level_requirements level="3"><requirement name="CVarCompare" cvar="dhsClsMedicChem" operation="Equals" value="1" desc_key="dhsReqClassMedicChem"/><requirement name="PlayerLevel" operation="GTE" value="24"/></level_requirements>
+      <level_requirements level="4"><requirement name="CVarCompare" cvar="dhsClsMedicChem" operation="Equals" value="1" desc_key="dhsReqClassMedicChem"/><requirement name="PlayerLevel" operation="GTE" value="36"/></level_requirements>
+      <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsMedicChem" operation="Equals" value="1" desc_key="dhsReqClassMedicChem"/><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
+      <effect_group>
+        <passive_effect name="WeaponHandling" operation="perc_add" level="1,5" value=".10,.50" tags="perkDemolitionsExpert"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassSoldSnipMastery" parent="skillClassSoldSnip" name_key="dhsPerkSoldSnipMasteryName" desc_key="dhsPerkSoldSnipMasteryDesc" icon="ui_game_symbol_long_shot" max_level="5">
       <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsSoldSnip" operation="Equals" value="1" desc_key="dhsReqClassSoldSnip"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
-      <level_requirements level="2"><requirement name="CVarCompare" cvar="dhsClsSoldSnip" operation="Equals" value="1" desc_key="dhsReqClassSoldSnip"/><requirement name="PlayerLevel" operation="GTE" value="10"/></level_requirements>
-      <level_requirements level="3"><requirement name="CVarCompare" cvar="dhsClsSoldSnip" operation="Equals" value="1" desc_key="dhsReqClassSoldSnip"/><requirement name="PlayerLevel" operation="GTE" value="20"/></level_requirements>
-      <level_requirements level="4"><requirement name="CVarCompare" cvar="dhsClsSoldSnip" operation="Equals" value="1" desc_key="dhsReqClassSoldSnip"/><requirement name="PlayerLevel" operation="GTE" value="30"/></level_requirements>
-      <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsSoldSnip" operation="Equals" value="1" desc_key="dhsReqClassSoldSnip"/><requirement name="PlayerLevel" operation="GTE" value="40"/></level_requirements>
+      <level_requirements level="2"><requirement name="CVarCompare" cvar="dhsClsSoldSnip" operation="Equals" value="1" desc_key="dhsReqClassSoldSnip"/><requirement name="PlayerLevel" operation="GTE" value="12"/></level_requirements>
+      <level_requirements level="3"><requirement name="CVarCompare" cvar="dhsClsSoldSnip" operation="Equals" value="1" desc_key="dhsReqClassSoldSnip"/><requirement name="PlayerLevel" operation="GTE" value="24"/></level_requirements>
+      <level_requirements level="4"><requirement name="CVarCompare" cvar="dhsClsSoldSnip" operation="Equals" value="1" desc_key="dhsReqClassSoldSnip"/><requirement name="PlayerLevel" operation="GTE" value="36"/></level_requirements>
+      <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsSoldSnip" operation="Equals" value="1" desc_key="dhsReqClassSoldSnip"/><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
       <effect_group>
         <passive_effect name="EntityDamage" operation="perc_add" level="1,5" value=".08,.40" tags="perkDeadEye"/>
       </effect_group>
     </perk>
-
-    <perk name="perkClassSoldSnipSteadyAim" parent="skillClassSoldSnip" name_key="dhsPerkSoldSnipSteadyAimName" desc_key="dhsPerkSoldSnipSteadyAimDesc" icon="ui_game_symbol_marksmanship" max_level="5">
-      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsSoldSnip" operation="Equals" value="1" desc_key="dhsReqClassSoldSnip"/><requirement name="PlayerLevel" operation="GTE" value="3"/></level_requirements>
+    <perk name="perkClassSoldSnipHandling" parent="skillClassSoldSnip" name_key="dhsPerkSoldSnipHandlingName" desc_key="dhsPerkSoldSnipHandlingDesc" icon="ui_game_symbol_long_shot" max_level="5">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsSoldSnip" operation="Equals" value="1" desc_key="dhsReqClassSoldSnip"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
       <level_requirements level="2"><requirement name="CVarCompare" cvar="dhsClsSoldSnip" operation="Equals" value="1" desc_key="dhsReqClassSoldSnip"/><requirement name="PlayerLevel" operation="GTE" value="12"/></level_requirements>
-      <level_requirements level="3"><requirement name="CVarCompare" cvar="dhsClsSoldSnip" operation="Equals" value="1" desc_key="dhsReqClassSoldSnip"/><requirement name="PlayerLevel" operation="GTE" value="22"/></level_requirements>
-      <level_requirements level="4"><requirement name="CVarCompare" cvar="dhsClsSoldSnip" operation="Equals" value="1" desc_key="dhsReqClassSoldSnip"/><requirement name="PlayerLevel" operation="GTE" value="32"/></level_requirements>
-      <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsSoldSnip" operation="Equals" value="1" desc_key="dhsReqClassSoldSnip"/><requirement name="PlayerLevel" operation="GTE" value="42"/></level_requirements>
+      <level_requirements level="3"><requirement name="CVarCompare" cvar="dhsClsSoldSnip" operation="Equals" value="1" desc_key="dhsReqClassSoldSnip"/><requirement name="PlayerLevel" operation="GTE" value="24"/></level_requirements>
+      <level_requirements level="4"><requirement name="CVarCompare" cvar="dhsClsSoldSnip" operation="Equals" value="1" desc_key="dhsReqClassSoldSnip"/><requirement name="PlayerLevel" operation="GTE" value="36"/></level_requirements>
+      <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsSoldSnip" operation="Equals" value="1" desc_key="dhsReqClassSoldSnip"/><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
       <effect_group>
-        <passive_effect name="WeaponHandling" operation="perc_add" level="1,5" value=".1,.5" tags="perkDeadEye"/>
-        <passive_effect name="SpreadMultiplierAiming" operation="perc_add" level="1,5" value="-.05,-.25" tags="perkDeadEye"/>
+        <passive_effect name="WeaponHandling" operation="perc_add" level="1,5" value=".10,.50" tags="perkDeadEye"/>
       </effect_group>
     </perk>
-
-    <perk name="perkClassSoldSnipRapidReload" parent="skillClassSoldSnip" name_key="dhsPerkSoldSnipRapidReloadName" desc_key="dhsPerkSoldSnipRapidReloadDesc" icon="ui_game_symbol_marksmanship" max_level="5">
-      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsSoldSnip" operation="Equals" value="1" desc_key="dhsReqClassSoldSnip"/><requirement name="PlayerLevel" operation="GTE" value="5"/></level_requirements>
-      <level_requirements level="2"><requirement name="CVarCompare" cvar="dhsClsSoldSnip" operation="Equals" value="1" desc_key="dhsReqClassSoldSnip"/><requirement name="PlayerLevel" operation="GTE" value="15"/></level_requirements>
-      <level_requirements level="3"><requirement name="CVarCompare" cvar="dhsClsSoldSnip" operation="Equals" value="1" desc_key="dhsReqClassSoldSnip"/><requirement name="PlayerLevel" operation="GTE" value="25"/></level_requirements>
-      <level_requirements level="4"><requirement name="CVarCompare" cvar="dhsClsSoldSnip" operation="Equals" value="1" desc_key="dhsReqClassSoldSnip"/><requirement name="PlayerLevel" operation="GTE" value="35"/></level_requirements>
-      <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsSoldSnip" operation="Equals" value="1" desc_key="dhsReqClassSoldSnip"/><requirement name="PlayerLevel" operation="GTE" value="45"/></level_requirements>
+    <perk name="perkClassSoldSnipReload" parent="skillClassSoldSnip" name_key="dhsPerkSoldSnipReloadName" desc_key="dhsPerkSoldSnipReloadDesc" icon="ui_game_symbol_long_shot" max_level="5">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsSoldSnip" operation="Equals" value="1" desc_key="dhsReqClassSoldSnip"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
+      <level_requirements level="2"><requirement name="CVarCompare" cvar="dhsClsSoldSnip" operation="Equals" value="1" desc_key="dhsReqClassSoldSnip"/><requirement name="PlayerLevel" operation="GTE" value="12"/></level_requirements>
+      <level_requirements level="3"><requirement name="CVarCompare" cvar="dhsClsSoldSnip" operation="Equals" value="1" desc_key="dhsReqClassSoldSnip"/><requirement name="PlayerLevel" operation="GTE" value="24"/></level_requirements>
+      <level_requirements level="4"><requirement name="CVarCompare" cvar="dhsClsSoldSnip" operation="Equals" value="1" desc_key="dhsReqClassSoldSnip"/><requirement name="PlayerLevel" operation="GTE" value="36"/></level_requirements>
+      <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsSoldSnip" operation="Equals" value="1" desc_key="dhsReqClassSoldSnip"/><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
       <effect_group>
         <passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1,5" value="-.06,-.30" tags="perkDeadEye"/>
       </effect_group>
     </perk>
-
-    <perk name="perkClassSoldSnipExecutioner" parent="skillClassSoldSnip" name_key="dhsPerkSoldSnipExecutionerName" desc_key="dhsPerkSoldSnipExecutionerDesc" icon="ui_game_symbol_map_cursor" max_level="5">
-      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsSoldSnip" operation="Equals" value="1" desc_key="dhsReqClassSoldSnip"/><requirement name="PlayerLevel" operation="GTE" value="8"/></level_requirements>
-      <level_requirements level="2"><requirement name="CVarCompare" cvar="dhsClsSoldSnip" operation="Equals" value="1" desc_key="dhsReqClassSoldSnip"/><requirement name="PlayerLevel" operation="GTE" value="18"/></level_requirements>
-      <level_requirements level="3"><requirement name="CVarCompare" cvar="dhsClsSoldSnip" operation="Equals" value="1" desc_key="dhsReqClassSoldSnip"/><requirement name="PlayerLevel" operation="GTE" value="28"/></level_requirements>
-      <level_requirements level="4"><requirement name="CVarCompare" cvar="dhsClsSoldSnip" operation="Equals" value="1" desc_key="dhsReqClassSoldSnip"/><requirement name="PlayerLevel" operation="GTE" value="38"/></level_requirements>
-      <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsSoldSnip" operation="Equals" value="1" desc_key="dhsReqClassSoldSnip"/><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
+    <perk name="perkClassSoldAsltMastery" parent="skillClassSoldAslt" name_key="dhsPerkSoldAsltMasteryName" desc_key="dhsPerkSoldAsltMasteryDesc" icon="ui_game_symbol_rifle" max_level="5">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsSoldAslt" operation="Equals" value="1" desc_key="dhsReqClassSoldAslt"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
+      <level_requirements level="2"><requirement name="CVarCompare" cvar="dhsClsSoldAslt" operation="Equals" value="1" desc_key="dhsReqClassSoldAslt"/><requirement name="PlayerLevel" operation="GTE" value="12"/></level_requirements>
+      <level_requirements level="3"><requirement name="CVarCompare" cvar="dhsClsSoldAslt" operation="Equals" value="1" desc_key="dhsReqClassSoldAslt"/><requirement name="PlayerLevel" operation="GTE" value="24"/></level_requirements>
+      <level_requirements level="4"><requirement name="CVarCompare" cvar="dhsClsSoldAslt" operation="Equals" value="1" desc_key="dhsReqClassSoldAslt"/><requirement name="PlayerLevel" operation="GTE" value="36"/></level_requirements>
+      <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsSoldAslt" operation="Equals" value="1" desc_key="dhsReqClassSoldAslt"/><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
       <effect_group>
-        <passive_effect name="DismemberChance" operation="base_add" level="1,5" value=".05,.25" tags="perkDeadEye"/>
+        <passive_effect name="EntityDamage" operation="perc_add" level="1,5" value=".08,.40" tags="perkMachineGunner"/>
       </effect_group>
     </perk>
-
+    <perk name="perkClassSoldAsltHandling" parent="skillClassSoldAslt" name_key="dhsPerkSoldAsltHandlingName" desc_key="dhsPerkSoldAsltHandlingDesc" icon="ui_game_symbol_rifle" max_level="5">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsSoldAslt" operation="Equals" value="1" desc_key="dhsReqClassSoldAslt"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
+      <level_requirements level="2"><requirement name="CVarCompare" cvar="dhsClsSoldAslt" operation="Equals" value="1" desc_key="dhsReqClassSoldAslt"/><requirement name="PlayerLevel" operation="GTE" value="12"/></level_requirements>
+      <level_requirements level="3"><requirement name="CVarCompare" cvar="dhsClsSoldAslt" operation="Equals" value="1" desc_key="dhsReqClassSoldAslt"/><requirement name="PlayerLevel" operation="GTE" value="24"/></level_requirements>
+      <level_requirements level="4"><requirement name="CVarCompare" cvar="dhsClsSoldAslt" operation="Equals" value="1" desc_key="dhsReqClassSoldAslt"/><requirement name="PlayerLevel" operation="GTE" value="36"/></level_requirements>
+      <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsSoldAslt" operation="Equals" value="1" desc_key="dhsReqClassSoldAslt"/><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
+      <effect_group>
+        <passive_effect name="WeaponHandling" operation="perc_add" level="1,5" value=".10,.50" tags="perkMachineGunner"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassSoldAsltReload" parent="skillClassSoldAslt" name_key="dhsPerkSoldAsltReloadName" desc_key="dhsPerkSoldAsltReloadDesc" icon="ui_game_symbol_rifle" max_level="5">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsSoldAslt" operation="Equals" value="1" desc_key="dhsReqClassSoldAslt"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
+      <level_requirements level="2"><requirement name="CVarCompare" cvar="dhsClsSoldAslt" operation="Equals" value="1" desc_key="dhsReqClassSoldAslt"/><requirement name="PlayerLevel" operation="GTE" value="12"/></level_requirements>
+      <level_requirements level="3"><requirement name="CVarCompare" cvar="dhsClsSoldAslt" operation="Equals" value="1" desc_key="dhsReqClassSoldAslt"/><requirement name="PlayerLevel" operation="GTE" value="24"/></level_requirements>
+      <level_requirements level="4"><requirement name="CVarCompare" cvar="dhsClsSoldAslt" operation="Equals" value="1" desc_key="dhsReqClassSoldAslt"/><requirement name="PlayerLevel" operation="GTE" value="36"/></level_requirements>
+      <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsSoldAslt" operation="Equals" value="1" desc_key="dhsReqClassSoldAslt"/><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
+      <effect_group>
+        <passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1,5" value="-.06,-.30" tags="perkMachineGunner"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassSurvHuntMastery" parent="skillClassSurvHunt" name_key="dhsPerkSurvHuntMasteryName" desc_key="dhsPerkSurvHuntMasteryDesc" icon="ui_game_symbol_animal_tracker" max_level="5">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsSurvHunt" operation="Equals" value="1" desc_key="dhsReqClassSurvHunt"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
+      <level_requirements level="2"><requirement name="CVarCompare" cvar="dhsClsSurvHunt" operation="Equals" value="1" desc_key="dhsReqClassSurvHunt"/><requirement name="PlayerLevel" operation="GTE" value="12"/></level_requirements>
+      <level_requirements level="3"><requirement name="CVarCompare" cvar="dhsClsSurvHunt" operation="Equals" value="1" desc_key="dhsReqClassSurvHunt"/><requirement name="PlayerLevel" operation="GTE" value="24"/></level_requirements>
+      <level_requirements level="4"><requirement name="CVarCompare" cvar="dhsClsSurvHunt" operation="Equals" value="1" desc_key="dhsReqClassSurvHunt"/><requirement name="PlayerLevel" operation="GTE" value="36"/></level_requirements>
+      <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsSurvHunt" operation="Equals" value="1" desc_key="dhsReqClassSurvHunt"/><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
+      <effect_group>
+        <passive_effect name="EntityDamage" operation="perc_add" level="1,5" value=".08,.40" tags="perkArchery"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassSurvHuntHandling" parent="skillClassSurvHunt" name_key="dhsPerkSurvHuntHandlingName" desc_key="dhsPerkSurvHuntHandlingDesc" icon="ui_game_symbol_animal_tracker" max_level="5">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsSurvHunt" operation="Equals" value="1" desc_key="dhsReqClassSurvHunt"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
+      <level_requirements level="2"><requirement name="CVarCompare" cvar="dhsClsSurvHunt" operation="Equals" value="1" desc_key="dhsReqClassSurvHunt"/><requirement name="PlayerLevel" operation="GTE" value="12"/></level_requirements>
+      <level_requirements level="3"><requirement name="CVarCompare" cvar="dhsClsSurvHunt" operation="Equals" value="1" desc_key="dhsReqClassSurvHunt"/><requirement name="PlayerLevel" operation="GTE" value="24"/></level_requirements>
+      <level_requirements level="4"><requirement name="CVarCompare" cvar="dhsClsSurvHunt" operation="Equals" value="1" desc_key="dhsReqClassSurvHunt"/><requirement name="PlayerLevel" operation="GTE" value="36"/></level_requirements>
+      <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsSurvHunt" operation="Equals" value="1" desc_key="dhsReqClassSurvHunt"/><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
+      <effect_group>
+        <passive_effect name="WeaponHandling" operation="perc_add" level="1,5" value=".10,.50" tags="perkArchery"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassSurvHuntReload" parent="skillClassSurvHunt" name_key="dhsPerkSurvHuntReloadName" desc_key="dhsPerkSurvHuntReloadDesc" icon="ui_game_symbol_animal_tracker" max_level="5">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsSurvHunt" operation="Equals" value="1" desc_key="dhsReqClassSurvHunt"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
+      <level_requirements level="2"><requirement name="CVarCompare" cvar="dhsClsSurvHunt" operation="Equals" value="1" desc_key="dhsReqClassSurvHunt"/><requirement name="PlayerLevel" operation="GTE" value="12"/></level_requirements>
+      <level_requirements level="3"><requirement name="CVarCompare" cvar="dhsClsSurvHunt" operation="Equals" value="1" desc_key="dhsReqClassSurvHunt"/><requirement name="PlayerLevel" operation="GTE" value="24"/></level_requirements>
+      <level_requirements level="4"><requirement name="CVarCompare" cvar="dhsClsSurvHunt" operation="Equals" value="1" desc_key="dhsReqClassSurvHunt"/><requirement name="PlayerLevel" operation="GTE" value="36"/></level_requirements>
+      <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsSurvHunt" operation="Equals" value="1" desc_key="dhsReqClassSurvHunt"/><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
+      <effect_group>
+        <passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1,5" value="-.06,-.30" tags="perkArchery"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassSurvHerbMastery" parent="skillClassSurvHerb" name_key="dhsPerkSurvHerbMasteryName" desc_key="dhsPerkSurvHerbMasteryDesc" icon="ui_game_symbol_crops" max_level="5">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsSurvHerb" operation="Equals" value="1" desc_key="dhsReqClassSurvHerb"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
+      <level_requirements level="2"><requirement name="CVarCompare" cvar="dhsClsSurvHerb" operation="Equals" value="1" desc_key="dhsReqClassSurvHerb"/><requirement name="PlayerLevel" operation="GTE" value="12"/></level_requirements>
+      <level_requirements level="3"><requirement name="CVarCompare" cvar="dhsClsSurvHerb" operation="Equals" value="1" desc_key="dhsReqClassSurvHerb"/><requirement name="PlayerLevel" operation="GTE" value="24"/></level_requirements>
+      <level_requirements level="4"><requirement name="CVarCompare" cvar="dhsClsSurvHerb" operation="Equals" value="1" desc_key="dhsReqClassSurvHerb"/><requirement name="PlayerLevel" operation="GTE" value="36"/></level_requirements>
+      <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsSurvHerb" operation="Equals" value="1" desc_key="dhsReqClassSurvHerb"/><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
+      <effect_group>
+        <passive_effect name="EntityDamage" operation="perc_add" level="1,5" value=".08,.40" tags="perkJavelinMaster"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassSurvHerbHandling" parent="skillClassSurvHerb" name_key="dhsPerkSurvHerbHandlingName" desc_key="dhsPerkSurvHerbHandlingDesc" icon="ui_game_symbol_crops" max_level="5">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsSurvHerb" operation="Equals" value="1" desc_key="dhsReqClassSurvHerb"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
+      <level_requirements level="2"><requirement name="CVarCompare" cvar="dhsClsSurvHerb" operation="Equals" value="1" desc_key="dhsReqClassSurvHerb"/><requirement name="PlayerLevel" operation="GTE" value="12"/></level_requirements>
+      <level_requirements level="3"><requirement name="CVarCompare" cvar="dhsClsSurvHerb" operation="Equals" value="1" desc_key="dhsReqClassSurvHerb"/><requirement name="PlayerLevel" operation="GTE" value="24"/></level_requirements>
+      <level_requirements level="4"><requirement name="CVarCompare" cvar="dhsClsSurvHerb" operation="Equals" value="1" desc_key="dhsReqClassSurvHerb"/><requirement name="PlayerLevel" operation="GTE" value="36"/></level_requirements>
+      <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsSurvHerb" operation="Equals" value="1" desc_key="dhsReqClassSurvHerb"/><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
+      <effect_group>
+        <passive_effect name="WeaponHandling" operation="perc_add" level="1,5" value=".10,.50" tags="perkJavelinMaster"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassSurvHerbDismember" parent="skillClassSurvHerb" name_key="dhsPerkSurvHerbDismemberName" desc_key="dhsPerkSurvHerbDismemberDesc" icon="ui_game_symbol_crops" max_level="5">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsSurvHerb" operation="Equals" value="1" desc_key="dhsReqClassSurvHerb"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
+      <level_requirements level="2"><requirement name="CVarCompare" cvar="dhsClsSurvHerb" operation="Equals" value="1" desc_key="dhsReqClassSurvHerb"/><requirement name="PlayerLevel" operation="GTE" value="12"/></level_requirements>
+      <level_requirements level="3"><requirement name="CVarCompare" cvar="dhsClsSurvHerb" operation="Equals" value="1" desc_key="dhsReqClassSurvHerb"/><requirement name="PlayerLevel" operation="GTE" value="24"/></level_requirements>
+      <level_requirements level="4"><requirement name="CVarCompare" cvar="dhsClsSurvHerb" operation="Equals" value="1" desc_key="dhsReqClassSurvHerb"/><requirement name="PlayerLevel" operation="GTE" value="36"/></level_requirements>
+      <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsSurvHerb" operation="Equals" value="1" desc_key="dhsReqClassSurvHerb"/><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
+      <effect_group>
+        <passive_effect name="DismemberChance" operation="base_add" level="1,5" value=".05,.25" tags="perkJavelinMaster"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassBuilArchMastery" parent="skillClassBuilArch" name_key="dhsPerkBuilArchMasteryName" desc_key="dhsPerkBuilArchMasteryDesc" icon="ui_game_symbol_hammer" max_level="5">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsBuilArch" operation="Equals" value="1" desc_key="dhsReqClassBuilArch"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
+      <level_requirements level="2"><requirement name="CVarCompare" cvar="dhsClsBuilArch" operation="Equals" value="1" desc_key="dhsReqClassBuilArch"/><requirement name="PlayerLevel" operation="GTE" value="12"/></level_requirements>
+      <level_requirements level="3"><requirement name="CVarCompare" cvar="dhsClsBuilArch" operation="Equals" value="1" desc_key="dhsReqClassBuilArch"/><requirement name="PlayerLevel" operation="GTE" value="24"/></level_requirements>
+      <level_requirements level="4"><requirement name="CVarCompare" cvar="dhsClsBuilArch" operation="Equals" value="1" desc_key="dhsReqClassBuilArch"/><requirement name="PlayerLevel" operation="GTE" value="36"/></level_requirements>
+      <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsBuilArch" operation="Equals" value="1" desc_key="dhsReqClassBuilArch"/><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
+      <effect_group>
+        <passive_effect name="EntityDamage" operation="perc_add" level="1,5" value=".08,.40" tags="perkSkullCrusher"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassBuilArchHandling" parent="skillClassBuilArch" name_key="dhsPerkBuilArchHandlingName" desc_key="dhsPerkBuilArchHandlingDesc" icon="ui_game_symbol_hammer" max_level="5">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsBuilArch" operation="Equals" value="1" desc_key="dhsReqClassBuilArch"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
+      <level_requirements level="2"><requirement name="CVarCompare" cvar="dhsClsBuilArch" operation="Equals" value="1" desc_key="dhsReqClassBuilArch"/><requirement name="PlayerLevel" operation="GTE" value="12"/></level_requirements>
+      <level_requirements level="3"><requirement name="CVarCompare" cvar="dhsClsBuilArch" operation="Equals" value="1" desc_key="dhsReqClassBuilArch"/><requirement name="PlayerLevel" operation="GTE" value="24"/></level_requirements>
+      <level_requirements level="4"><requirement name="CVarCompare" cvar="dhsClsBuilArch" operation="Equals" value="1" desc_key="dhsReqClassBuilArch"/><requirement name="PlayerLevel" operation="GTE" value="36"/></level_requirements>
+      <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsBuilArch" operation="Equals" value="1" desc_key="dhsReqClassBuilArch"/><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
+      <effect_group>
+        <passive_effect name="WeaponHandling" operation="perc_add" level="1,5" value=".10,.50" tags="perkSkullCrusher"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassBuilArchDismember" parent="skillClassBuilArch" name_key="dhsPerkBuilArchDismemberName" desc_key="dhsPerkBuilArchDismemberDesc" icon="ui_game_symbol_hammer" max_level="5">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsBuilArch" operation="Equals" value="1" desc_key="dhsReqClassBuilArch"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
+      <level_requirements level="2"><requirement name="CVarCompare" cvar="dhsClsBuilArch" operation="Equals" value="1" desc_key="dhsReqClassBuilArch"/><requirement name="PlayerLevel" operation="GTE" value="12"/></level_requirements>
+      <level_requirements level="3"><requirement name="CVarCompare" cvar="dhsClsBuilArch" operation="Equals" value="1" desc_key="dhsReqClassBuilArch"/><requirement name="PlayerLevel" operation="GTE" value="24"/></level_requirements>
+      <level_requirements level="4"><requirement name="CVarCompare" cvar="dhsClsBuilArch" operation="Equals" value="1" desc_key="dhsReqClassBuilArch"/><requirement name="PlayerLevel" operation="GTE" value="36"/></level_requirements>
+      <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsBuilArch" operation="Equals" value="1" desc_key="dhsReqClassBuilArch"/><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
+      <effect_group>
+        <passive_effect name="DismemberChance" operation="base_add" level="1,5" value=".05,.25" tags="perkSkullCrusher"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassBuilArtiHarvest" parent="skillClassBuilArti" name_key="dhsPerkBuilArtiHarvestName" desc_key="dhsPerkBuilArtiHarvestDesc" icon="ui_game_symbol_workbench" max_level="5">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsBuilArti" operation="Equals" value="1" desc_key="dhsReqClassBuilArti"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
+      <level_requirements level="2"><requirement name="CVarCompare" cvar="dhsClsBuilArti" operation="Equals" value="1" desc_key="dhsReqClassBuilArti"/><requirement name="PlayerLevel" operation="GTE" value="12"/></level_requirements>
+      <level_requirements level="3"><requirement name="CVarCompare" cvar="dhsClsBuilArti" operation="Equals" value="1" desc_key="dhsReqClassBuilArti"/><requirement name="PlayerLevel" operation="GTE" value="24"/></level_requirements>
+      <level_requirements level="4"><requirement name="CVarCompare" cvar="dhsClsBuilArti" operation="Equals" value="1" desc_key="dhsReqClassBuilArti"/><requirement name="PlayerLevel" operation="GTE" value="36"/></level_requirements>
+      <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsBuilArti" operation="Equals" value="1" desc_key="dhsReqClassBuilArti"/><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
+      <effect_group>
+        <passive_effect name="HarvestCount" operation="perc_add" level="1,5" value=".10,.50" tags="perkMiner"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassBuilArtiStamina" parent="skillClassBuilArti" name_key="dhsPerkBuilArtiStaminaName" desc_key="dhsPerkBuilArtiStaminaDesc" icon="ui_game_symbol_workbench" max_level="5">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsBuilArti" operation="Equals" value="1" desc_key="dhsReqClassBuilArti"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
+      <level_requirements level="2"><requirement name="CVarCompare" cvar="dhsClsBuilArti" operation="Equals" value="1" desc_key="dhsReqClassBuilArti"/><requirement name="PlayerLevel" operation="GTE" value="12"/></level_requirements>
+      <level_requirements level="3"><requirement name="CVarCompare" cvar="dhsClsBuilArti" operation="Equals" value="1" desc_key="dhsReqClassBuilArti"/><requirement name="PlayerLevel" operation="GTE" value="24"/></level_requirements>
+      <level_requirements level="4"><requirement name="CVarCompare" cvar="dhsClsBuilArti" operation="Equals" value="1" desc_key="dhsReqClassBuilArti"/><requirement name="PlayerLevel" operation="GTE" value="36"/></level_requirements>
+      <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsBuilArti" operation="Equals" value="1" desc_key="dhsReqClassBuilArti"/><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
+      <effect_group>
+        <passive_effect name="StaminaLoss" operation="perc_add" level="1,5" value="-.05,-.25"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassScoutTracMastery" parent="skillClassScoutTrac" name_key="dhsPerkScoutTracMasteryName" desc_key="dhsPerkScoutTracMasteryDesc" icon="ui_game_symbol_stealth" max_level="5">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsScoutTrac" operation="Equals" value="1" desc_key="dhsReqClassScoutTrac"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
+      <level_requirements level="2"><requirement name="CVarCompare" cvar="dhsClsScoutTrac" operation="Equals" value="1" desc_key="dhsReqClassScoutTrac"/><requirement name="PlayerLevel" operation="GTE" value="12"/></level_requirements>
+      <level_requirements level="3"><requirement name="CVarCompare" cvar="dhsClsScoutTrac" operation="Equals" value="1" desc_key="dhsReqClassScoutTrac"/><requirement name="PlayerLevel" operation="GTE" value="24"/></level_requirements>
+      <level_requirements level="4"><requirement name="CVarCompare" cvar="dhsClsScoutTrac" operation="Equals" value="1" desc_key="dhsReqClassScoutTrac"/><requirement name="PlayerLevel" operation="GTE" value="36"/></level_requirements>
+      <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsScoutTrac" operation="Equals" value="1" desc_key="dhsReqClassScoutTrac"/><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
+      <effect_group>
+        <passive_effect name="EntityDamage" operation="perc_add" level="1,5" value=".08,.40" tags="perkGunslinger"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassScoutTracHandling" parent="skillClassScoutTrac" name_key="dhsPerkScoutTracHandlingName" desc_key="dhsPerkScoutTracHandlingDesc" icon="ui_game_symbol_stealth" max_level="5">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsScoutTrac" operation="Equals" value="1" desc_key="dhsReqClassScoutTrac"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
+      <level_requirements level="2"><requirement name="CVarCompare" cvar="dhsClsScoutTrac" operation="Equals" value="1" desc_key="dhsReqClassScoutTrac"/><requirement name="PlayerLevel" operation="GTE" value="12"/></level_requirements>
+      <level_requirements level="3"><requirement name="CVarCompare" cvar="dhsClsScoutTrac" operation="Equals" value="1" desc_key="dhsReqClassScoutTrac"/><requirement name="PlayerLevel" operation="GTE" value="24"/></level_requirements>
+      <level_requirements level="4"><requirement name="CVarCompare" cvar="dhsClsScoutTrac" operation="Equals" value="1" desc_key="dhsReqClassScoutTrac"/><requirement name="PlayerLevel" operation="GTE" value="36"/></level_requirements>
+      <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsScoutTrac" operation="Equals" value="1" desc_key="dhsReqClassScoutTrac"/><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
+      <effect_group>
+        <passive_effect name="WeaponHandling" operation="perc_add" level="1,5" value=".10,.50" tags="perkGunslinger"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassScoutTracReload" parent="skillClassScoutTrac" name_key="dhsPerkScoutTracReloadName" desc_key="dhsPerkScoutTracReloadDesc" icon="ui_game_symbol_stealth" max_level="5">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsScoutTrac" operation="Equals" value="1" desc_key="dhsReqClassScoutTrac"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
+      <level_requirements level="2"><requirement name="CVarCompare" cvar="dhsClsScoutTrac" operation="Equals" value="1" desc_key="dhsReqClassScoutTrac"/><requirement name="PlayerLevel" operation="GTE" value="12"/></level_requirements>
+      <level_requirements level="3"><requirement name="CVarCompare" cvar="dhsClsScoutTrac" operation="Equals" value="1" desc_key="dhsReqClassScoutTrac"/><requirement name="PlayerLevel" operation="GTE" value="24"/></level_requirements>
+      <level_requirements level="4"><requirement name="CVarCompare" cvar="dhsClsScoutTrac" operation="Equals" value="1" desc_key="dhsReqClassScoutTrac"/><requirement name="PlayerLevel" operation="GTE" value="36"/></level_requirements>
+      <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsScoutTrac" operation="Equals" value="1" desc_key="dhsReqClassScoutTrac"/><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
+      <effect_group>
+        <passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1,5" value="-.06,-.30" tags="perkGunslinger"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassScoutInfiMastery" parent="skillClassScoutInfi" name_key="dhsPerkScoutInfiMasteryName" desc_key="dhsPerkScoutInfiMasteryDesc" icon="ui_game_symbol_stealth2" max_level="5">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsScoutInfi" operation="Equals" value="1" desc_key="dhsReqClassScoutInfi"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
+      <level_requirements level="2"><requirement name="CVarCompare" cvar="dhsClsScoutInfi" operation="Equals" value="1" desc_key="dhsReqClassScoutInfi"/><requirement name="PlayerLevel" operation="GTE" value="12"/></level_requirements>
+      <level_requirements level="3"><requirement name="CVarCompare" cvar="dhsClsScoutInfi" operation="Equals" value="1" desc_key="dhsReqClassScoutInfi"/><requirement name="PlayerLevel" operation="GTE" value="24"/></level_requirements>
+      <level_requirements level="4"><requirement name="CVarCompare" cvar="dhsClsScoutInfi" operation="Equals" value="1" desc_key="dhsReqClassScoutInfi"/><requirement name="PlayerLevel" operation="GTE" value="36"/></level_requirements>
+      <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsScoutInfi" operation="Equals" value="1" desc_key="dhsReqClassScoutInfi"/><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
+      <effect_group>
+        <passive_effect name="EntityDamage" operation="perc_add" level="1,5" value=".08,.40" tags="perkBrawler"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassScoutInfiHandling" parent="skillClassScoutInfi" name_key="dhsPerkScoutInfiHandlingName" desc_key="dhsPerkScoutInfiHandlingDesc" icon="ui_game_symbol_stealth2" max_level="5">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsScoutInfi" operation="Equals" value="1" desc_key="dhsReqClassScoutInfi"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
+      <level_requirements level="2"><requirement name="CVarCompare" cvar="dhsClsScoutInfi" operation="Equals" value="1" desc_key="dhsReqClassScoutInfi"/><requirement name="PlayerLevel" operation="GTE" value="12"/></level_requirements>
+      <level_requirements level="3"><requirement name="CVarCompare" cvar="dhsClsScoutInfi" operation="Equals" value="1" desc_key="dhsReqClassScoutInfi"/><requirement name="PlayerLevel" operation="GTE" value="24"/></level_requirements>
+      <level_requirements level="4"><requirement name="CVarCompare" cvar="dhsClsScoutInfi" operation="Equals" value="1" desc_key="dhsReqClassScoutInfi"/><requirement name="PlayerLevel" operation="GTE" value="36"/></level_requirements>
+      <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsScoutInfi" operation="Equals" value="1" desc_key="dhsReqClassScoutInfi"/><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
+      <effect_group>
+        <passive_effect name="WeaponHandling" operation="perc_add" level="1,5" value=".10,.50" tags="perkBrawler"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassScoutInfiDismember" parent="skillClassScoutInfi" name_key="dhsPerkScoutInfiDismemberName" desc_key="dhsPerkScoutInfiDismemberDesc" icon="ui_game_symbol_stealth2" max_level="5">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsScoutInfi" operation="Equals" value="1" desc_key="dhsReqClassScoutInfi"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
+      <level_requirements level="2"><requirement name="CVarCompare" cvar="dhsClsScoutInfi" operation="Equals" value="1" desc_key="dhsReqClassScoutInfi"/><requirement name="PlayerLevel" operation="GTE" value="12"/></level_requirements>
+      <level_requirements level="3"><requirement name="CVarCompare" cvar="dhsClsScoutInfi" operation="Equals" value="1" desc_key="dhsReqClassScoutInfi"/><requirement name="PlayerLevel" operation="GTE" value="24"/></level_requirements>
+      <level_requirements level="4"><requirement name="CVarCompare" cvar="dhsClsScoutInfi" operation="Equals" value="1" desc_key="dhsReqClassScoutInfi"/><requirement name="PlayerLevel" operation="GTE" value="36"/></level_requirements>
+      <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsScoutInfi" operation="Equals" value="1" desc_key="dhsReqClassScoutInfi"/><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
+      <effect_group>
+        <passive_effect name="DismemberChance" operation="base_add" level="1,5" value=".05,.25" tags="perkBrawler"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassFarmAgriMastery" parent="skillClassFarmAgri" name_key="dhsPerkFarmAgriMasteryName" desc_key="dhsPerkFarmAgriMasteryDesc" icon="ui_game_symbol_crops" max_level="5">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsFarmAgri" operation="Equals" value="1" desc_key="dhsReqClassFarmAgri"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
+      <level_requirements level="2"><requirement name="CVarCompare" cvar="dhsClsFarmAgri" operation="Equals" value="1" desc_key="dhsReqClassFarmAgri"/><requirement name="PlayerLevel" operation="GTE" value="12"/></level_requirements>
+      <level_requirements level="3"><requirement name="CVarCompare" cvar="dhsClsFarmAgri" operation="Equals" value="1" desc_key="dhsReqClassFarmAgri"/><requirement name="PlayerLevel" operation="GTE" value="24"/></level_requirements>
+      <level_requirements level="4"><requirement name="CVarCompare" cvar="dhsClsFarmAgri" operation="Equals" value="1" desc_key="dhsReqClassFarmAgri"/><requirement name="PlayerLevel" operation="GTE" value="36"/></level_requirements>
+      <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsFarmAgri" operation="Equals" value="1" desc_key="dhsReqClassFarmAgri"/><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
+      <effect_group>
+        <passive_effect name="EntityDamage" operation="perc_add" level="1,5" value=".08,.40" tags="perkBoomstick"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassFarmAgriHandling" parent="skillClassFarmAgri" name_key="dhsPerkFarmAgriHandlingName" desc_key="dhsPerkFarmAgriHandlingDesc" icon="ui_game_symbol_crops" max_level="5">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsFarmAgri" operation="Equals" value="1" desc_key="dhsReqClassFarmAgri"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
+      <level_requirements level="2"><requirement name="CVarCompare" cvar="dhsClsFarmAgri" operation="Equals" value="1" desc_key="dhsReqClassFarmAgri"/><requirement name="PlayerLevel" operation="GTE" value="12"/></level_requirements>
+      <level_requirements level="3"><requirement name="CVarCompare" cvar="dhsClsFarmAgri" operation="Equals" value="1" desc_key="dhsReqClassFarmAgri"/><requirement name="PlayerLevel" operation="GTE" value="24"/></level_requirements>
+      <level_requirements level="4"><requirement name="CVarCompare" cvar="dhsClsFarmAgri" operation="Equals" value="1" desc_key="dhsReqClassFarmAgri"/><requirement name="PlayerLevel" operation="GTE" value="36"/></level_requirements>
+      <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsFarmAgri" operation="Equals" value="1" desc_key="dhsReqClassFarmAgri"/><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
+      <effect_group>
+        <passive_effect name="WeaponHandling" operation="perc_add" level="1,5" value=".10,.50" tags="perkBoomstick"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassFarmAgriReload" parent="skillClassFarmAgri" name_key="dhsPerkFarmAgriReloadName" desc_key="dhsPerkFarmAgriReloadDesc" icon="ui_game_symbol_crops" max_level="5">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsFarmAgri" operation="Equals" value="1" desc_key="dhsReqClassFarmAgri"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
+      <level_requirements level="2"><requirement name="CVarCompare" cvar="dhsClsFarmAgri" operation="Equals" value="1" desc_key="dhsReqClassFarmAgri"/><requirement name="PlayerLevel" operation="GTE" value="12"/></level_requirements>
+      <level_requirements level="3"><requirement name="CVarCompare" cvar="dhsClsFarmAgri" operation="Equals" value="1" desc_key="dhsReqClassFarmAgri"/><requirement name="PlayerLevel" operation="GTE" value="24"/></level_requirements>
+      <level_requirements level="4"><requirement name="CVarCompare" cvar="dhsClsFarmAgri" operation="Equals" value="1" desc_key="dhsReqClassFarmAgri"/><requirement name="PlayerLevel" operation="GTE" value="36"/></level_requirements>
+      <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsFarmAgri" operation="Equals" value="1" desc_key="dhsReqClassFarmAgri"/><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
+      <effect_group>
+        <passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1,5" value="-.06,-.30" tags="perkBoomstick"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassFarmCookMastery" parent="skillClassFarmCook" name_key="dhsPerkFarmCookMasteryName" desc_key="dhsPerkFarmCookMasteryDesc" icon="ui_game_symbol_fork" max_level="5">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsFarmCook" operation="Equals" value="1" desc_key="dhsReqClassFarmCook"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
+      <level_requirements level="2"><requirement name="CVarCompare" cvar="dhsClsFarmCook" operation="Equals" value="1" desc_key="dhsReqClassFarmCook"/><requirement name="PlayerLevel" operation="GTE" value="12"/></level_requirements>
+      <level_requirements level="3"><requirement name="CVarCompare" cvar="dhsClsFarmCook" operation="Equals" value="1" desc_key="dhsReqClassFarmCook"/><requirement name="PlayerLevel" operation="GTE" value="24"/></level_requirements>
+      <level_requirements level="4"><requirement name="CVarCompare" cvar="dhsClsFarmCook" operation="Equals" value="1" desc_key="dhsReqClassFarmCook"/><requirement name="PlayerLevel" operation="GTE" value="36"/></level_requirements>
+      <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsFarmCook" operation="Equals" value="1" desc_key="dhsReqClassFarmCook"/><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
+      <effect_group>
+        <passive_effect name="EntityDamage" operation="perc_add" level="1,5" value=".08,.40" tags="perkPummelPete"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassFarmCookHandling" parent="skillClassFarmCook" name_key="dhsPerkFarmCookHandlingName" desc_key="dhsPerkFarmCookHandlingDesc" icon="ui_game_symbol_fork" max_level="5">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsFarmCook" operation="Equals" value="1" desc_key="dhsReqClassFarmCook"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
+      <level_requirements level="2"><requirement name="CVarCompare" cvar="dhsClsFarmCook" operation="Equals" value="1" desc_key="dhsReqClassFarmCook"/><requirement name="PlayerLevel" operation="GTE" value="12"/></level_requirements>
+      <level_requirements level="3"><requirement name="CVarCompare" cvar="dhsClsFarmCook" operation="Equals" value="1" desc_key="dhsReqClassFarmCook"/><requirement name="PlayerLevel" operation="GTE" value="24"/></level_requirements>
+      <level_requirements level="4"><requirement name="CVarCompare" cvar="dhsClsFarmCook" operation="Equals" value="1" desc_key="dhsReqClassFarmCook"/><requirement name="PlayerLevel" operation="GTE" value="36"/></level_requirements>
+      <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsFarmCook" operation="Equals" value="1" desc_key="dhsReqClassFarmCook"/><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
+      <effect_group>
+        <passive_effect name="WeaponHandling" operation="perc_add" level="1,5" value=".10,.50" tags="perkPummelPete"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassFarmCookDismember" parent="skillClassFarmCook" name_key="dhsPerkFarmCookDismemberName" desc_key="dhsPerkFarmCookDismemberDesc" icon="ui_game_symbol_fork" max_level="5">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsFarmCook" operation="Equals" value="1" desc_key="dhsReqClassFarmCook"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
+      <level_requirements level="2"><requirement name="CVarCompare" cvar="dhsClsFarmCook" operation="Equals" value="1" desc_key="dhsReqClassFarmCook"/><requirement name="PlayerLevel" operation="GTE" value="12"/></level_requirements>
+      <level_requirements level="3"><requirement name="CVarCompare" cvar="dhsClsFarmCook" operation="Equals" value="1" desc_key="dhsReqClassFarmCook"/><requirement name="PlayerLevel" operation="GTE" value="24"/></level_requirements>
+      <level_requirements level="4"><requirement name="CVarCompare" cvar="dhsClsFarmCook" operation="Equals" value="1" desc_key="dhsReqClassFarmCook"/><requirement name="PlayerLevel" operation="GTE" value="36"/></level_requirements>
+      <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsFarmCook" operation="Equals" value="1" desc_key="dhsReqClassFarmCook"/><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
+      <effect_group>
+        <passive_effect name="DismemberChance" operation="base_add" level="1,5" value=".05,.25" tags="perkPummelPete"/>
+      </effect_group>
+    </perk>
   </append>
-
 </configs>
