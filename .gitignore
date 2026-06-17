@@ -1,0 +1,37 @@
+# ============================================================================
+#  7DTD repo = dossier d'install du jeu. On ne versionne QUE le mod + sources.
+#  Tout le reste (jeu, données vanilla, binaires, saves) est ignoré.
+# ============================================================================
+
+# --- Tout ignorer par défaut, puis ré-autoriser explicitement le mod ---
+/*
+!/.gitignore
+!/README.md
+!/Mods/
+!/src/
+!/docs/
+
+# --- Dans Mods/, ne garder que notre mod ---
+/Mods/*
+!/Mods/DeadHotSummer/
+
+# --- Artefacts de build C# ---
+**/bin/
+**/obj/
+*.user
+*.suo
+*.csproj.user
+
+# --- Ne PAS committer les DLL du jeu si jamais copiées dans le mod ---
+/Mods/DeadHotSummer/Assembly-CSharp.dll
+/Mods/DeadHotSummer/0Harmony.dll
+/Mods/DeadHotSummer/UnityEngine*.dll
+/Mods/DeadHotSummer/Mono.*.dll
+
+# --- OS / éditeurs ---
+.DS_Store
+.vs/
+.vscode/
+.idea/
+*.swp
+output_log*.txt

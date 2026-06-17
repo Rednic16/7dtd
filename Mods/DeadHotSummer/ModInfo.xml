@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="DeadHotSummer" />
+	<DisplayName value="Dead Hot Summer" />
+	<Description value="Systeme de classes/specialisations + pillards humains (factions, territoires, raids) pour 7DTD V3.0. Requiert EAC desactive (mod C#/Harmony)." />
+	<Author value="Rednic16" />
+	<Version value="0.1.0" />
+	<Website value="https://github.com/Rednic16/7dtd" />
+</xml>
