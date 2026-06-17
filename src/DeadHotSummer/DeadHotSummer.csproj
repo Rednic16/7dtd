@@ -1,0 +1,62 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Mod DLL "Dead Hot Summer" pour 7 Days to Die V3.0 (Unity 2022.3 Mono).
+    Cible netstandard2.1 (profil chargé par le Mono du jeu).
+    Les DLL du jeu sont référencées localement (Private=false) et NE SONT PAS copiées
+    dans la sortie ni versionnées (voir .gitignore).
+  -->
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <LangVersion>9.0</LangVersion>
+    <AssemblyName>DeadHotSummer</AssemblyName>
+    <RootNamespace>DeadHotSummer</RootNamespace>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <Deterministic>true</Deterministic>
+    <DebugType>portable</DebugType>
+    <!-- Sortie directe dans le dossier du mod chargé par le serveur -->
+    <OutDir>$(MSBuildProjectDirectory)/../../Mods/DeadHotSummer/</OutDir>
+    <!-- Empêche le SDK de copier les dépendances (DLL du jeu) à côté -->
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+    <!-- Pas de .deps.json : inutile pour un mod chargé par le Mono d'Unity -->
+    <GenerateDependencyFile>false</GenerateDependencyFile>
+  </PropertyGroup>
+
+  <!-- Chemin vers les assemblies gérées du jeu (non versionnées) -->
+  <PropertyGroup>
+    <GameManaged>$(MSBuildProjectDirectory)/../../7DaysToDie_Data/Managed</GameManaged>
+    <TfpHarmony>$(MSBuildProjectDirectory)/../../Mods/0_TFP_Harmony</TfpHarmony>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(GameManaged)/Assembly-CSharp.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>$(GameManaged)/Assembly-CSharp-firstpass.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>$(TfpHarmony)/0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="LogLibrary">
+      <HintPath>$(GameManaged)/LogLibrary.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>$(GameManaged)/UnityEngine.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(GameManaged)/UnityEngine.CoreModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+</Project>
