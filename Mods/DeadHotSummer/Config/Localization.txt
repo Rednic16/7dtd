@@ -1,6 +1,7 @@
 Key,english,french
 dhsAttClassesName,Classes,Classes
 dhsAttClassesDesc,Class specializations,Spécialisations de classe
+attClasses,Classes,Classes
 dhsSkillClassCommonName,Survivor,Survivant
 dhsSkillClassCommonDesc,Common skills available to everyone,Compétences communes à tous
 dhsPerkCommonToughnessName,Toughness,Robustesse

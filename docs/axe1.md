@@ -140,6 +140,19 @@ L'exclusivité vient du **gate `CVarCompare`** sur l'achat du perk, pas du tag.
 - [ ] Quête de sélection + `game_first_spawn` + init `dhsClassSlotFree` (J1.6)
 - [ ] `ClassManager` C# (complétion → slots, séquentiel) (J1.7)
 
+### Remplacement du système vanilla (J1.5c)
+Décision validée : **nos classes remplacent les attributs vanilla**. Implémentation **bas risque** :
+- Patch Harmony `SkillCategoryPatch` : la fenêtre Compétences saute les attributs `Hidden` →
+  les 5 attributs vanilla (Perception/Force/Fortitude/Agilité/Intellect) + General disparaissent ;
+  restent visibles **Classes** (attClasses) + **Books** + **Crafting**.
+- `progression.xml` : `setattribute hidden=true` sur les 5 attributs vanilla ; `attClasses` rendu visible.
+- **Auto-grant inutile** : vérifié par décompilation/grep que le craft est piloté par les
+  **crafting skills (magazines, attCrafting)** — `RecipeTagUnlocked` = 135× sous crafting_skills,
+  1× seulement sous un perk (`perkLockPicking`). Masquer les attributs ne casse ni recipes (0 réf),
+  ni items (0), seulement 1 buff mineur + le craft de crochets. **Donc pas de double-dip** : nos
+  classes sont la **seule** source de bonus de combat. (Re-loger `perkLockPicking` dans une classe = TODO mineur.)
+- Books/Crafting restent visibles (systèmes magazines nécessaires). Option : masquer aussi Books si voulu.
+
 ### Note d'implémentation
 Le contenu des classes est **généré** depuis `tools/gen_axe1_classes.py` (table de classes =
 source de vérité). Ne pas éditer les `Config/{progression,items,loot}.xml` + `Localization.txt`

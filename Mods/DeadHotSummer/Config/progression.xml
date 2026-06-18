@@ -2,10 +2,14 @@
 <!-- GENERE par tools/gen_axe1_classes.py — ne pas editer a la main. -->
 <configs>
   <append xpath="/progression/attributes">
-    <attribute name="attClasses" name_key="dhsAttClassesName" desc_key="dhsAttClassesDesc" icon="ui_game_symbol_modded" min_level="0" max_level="0" base_skill_point_cost="1" hidden="true">
-      <level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-    </attribute>
+    <attribute name="attClasses" name_key="dhsAttClassesName" desc_key="dhsAttClassesDesc" icon="ui_game_symbol_modded" min_level="0" max_level="0" base_skill_point_cost="0"/>
   </append>
+  <!-- Masquage des attributs vanilla : nos classes les remplacent -->
+  <setattribute name="hidden" xpath="/progression/attributes/attribute[@name='attPerception']">true</setattribute>
+  <setattribute name="hidden" xpath="/progression/attributes/attribute[@name='attStrength']">true</setattribute>
+  <setattribute name="hidden" xpath="/progression/attributes/attribute[@name='attFortitude']">true</setattribute>
+  <setattribute name="hidden" xpath="/progression/attributes/attribute[@name='attAgility']">true</setattribute>
+  <setattribute name="hidden" xpath="/progression/attributes/attribute[@name='attIntellect']">true</setattribute>
   <append xpath="/progression/skills">
     <skill name="skillClassCommon" parent="attClasses" name_key="dhsSkillClassCommonName" desc_key="dhsSkillClassCommonDesc" icon="ui_game_symbol_modded"><effect_group/></skill>
     <skill name="skillClassEngiMech" parent="attClasses" name_key="dhsSkillClassEngiMechName" desc_key="dhsSkillClassEngiMechDesc" icon="ui_game_symbol_wrench"><effect_group/></skill>
