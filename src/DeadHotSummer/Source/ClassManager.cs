@@ -118,19 +118,34 @@ namespace DeadHotSummer
             }
         }
 
+        // Une sous-classe est complète quand TOUS ses perks (toutes sous-branches confondues)
+        // sont au max. Les perks sont nommés perkClass<code><suffixe> ; on matche par préfixe
+        // (Name est en minuscules côté moteur). Couvre désormais les sous-branches multiples.
         private static bool AllPerksMaxed(EntityPlayer player, string code)
         {
-            string skill = "skillClass" + code;
+            string prefix = ("perkClass" + code).ToLowerInvariant();
             bool any = false;
             foreach (KeyValuePair<string, ProgressionClass> kvp in Progression.ProgressionClasses)
             {
                 ProgressionClass pc = kvp.Value;
-                if (pc.ParentName != skill) continue;
+                if (!pc.IsPerk || pc.Name == null || !pc.Name.StartsWith(prefix)) continue;
                 any = true;
                 ProgressionValue pv = player.Progression.GetProgressionValue(pc.Name);
                 if (pv == null || pv.Level < pc.MaxLevel) return false;
             }
             return any;
+        }
+
+        // Retrouve le code de classe à partir d'un nom de perk (minuscules), ou null si ce
+        // n'est pas un perk de classe. Utilisé par le patch d'achat (pool de points strict).
+        public static string CodeFromPerkName(string lowerPerkName)
+        {
+            if (string.IsNullOrEmpty(lowerPerkName) || !lowerPerkName.StartsWith("perkclass")) return null;
+            foreach ((string code, string _) in Classes)
+            {
+                if (lowerPerkName.StartsWith(("perkClass" + code).ToLowerInvariant())) return code;
+            }
+            return null;
         }
     }
 }
