@@ -19,7 +19,7 @@
         <passive_effect name="StaminaChangeOT" operation="perc_add" value=".25"/>
       </effect_group>
     </buff>
-    <buff name="dhsBuffTonic" name_key="dhsBuffTonicName" description_key="dhsBuffTonicDesc" icon="ui_game_symbol_stamina" icon_color="255,170,85">
+    <buff name="dhsBuffTonic" name_key="dhsBuffTonicName" description_key="dhsBuffTonicDesc" icon="ui_game_symbol_cardio" icon_color="255,170,85">
       <duration value="600"/>
       <stack_type value="replace"/>
       <effect_group>

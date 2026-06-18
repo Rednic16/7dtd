@@ -125,7 +125,7 @@ def attr_of_branch(bk): return "attClass" + bk
 #   stat  : perk scalé (5 niv par défaut). tags="" = non scopé.
 #   unlock: perk max 1 débloquant une/des recette(s) signature (par NOM).
 # ============================================================================
-def stat(suf, en, fr, eff, op, v1, vmax, nlev, tags, ed, fd, icon="ui_game_symbol_skill_points"):
+def stat(suf, en, fr, eff, op, v1, vmax, nlev, tags, ed, fd, icon="ui_game_symbol_character"):
     return {"k":"stat","suf":suf,"en":en,"fr":fr,"eff":eff,"op":op,"v1":v1,"vmax":vmax,
             "n":nlev,"tags":tags,"ed":ed,"fd":fd,"icon":icon}
 def unlock(suf, en, fr, icon, recipes, auto, palier, ed, fd):
@@ -156,22 +156,22 @@ FARM_AGRI = [
         stat("Green","Green Thumb","Main verte","HarvestCount","perc_add",".15",".75",5,"cropHarvest,wildCropsHarvest",
              "Harvest much more from crops and wild plants.","Récolte bien plus sur cultures et plantes sauvages.","ui_game_symbol_crops"),
         stat("Butcher","Homesteader","Éleveur","HarvestCount","perc_add",".10",".50",5,"butcherHarvest",
-             "Harvest more meat and resources from animals.","Récolte plus de viande/ressources sur les animaux.","ui_game_symbol_meat"),
+             "Harvest more meat and resources from animals.","Récolte plus de viande/ressources sur les animaux.","ui_game_symbol_deep_cuts"),
         stat("FastCraft","Farmhand","Tâcheron","CraftingTime","perc_add","-.10","-.50",5,"dhsCraftFarmAgri",
-             "Crafts your Farmer recipes faster.","Fabrique vos recettes d'Agriculteur plus vite.","ui_game_symbol_crafting"),
+             "Crafts your Farmer recipes faster.","Fabrique vos recettes d'Agriculteur plus vite.","ui_game_symbol_workbench"),
         unlock("Preserve","Cannery","Conserverie","ui_game_symbol_fork","dhsFoodPreserves",False,24,
                "Unlocks cooking Farmer's Preserves (long-lasting filling food).",
                "Débloque la cuisson des Conserves du fermier (nourriture copieuse qui se garde)."),
         stat("Belly","Big Eater","Estomac solide","FoodMax","base_add","5","25",5,"",
-             "Increases your maximum food.","Augmente votre nourriture maximale.","ui_game_symbol_food"),
+             "Increases your maximum food.","Augmente votre nourriture maximale.","ui_game_symbol_stomach"),
         stat("XP","Early Riser","Lève-tôt","PlayerExpGain","perc_add",".02",".10",5,"",
-             "Increases all experience gained.","Augmente toute l'expérience gagnée.","ui_game_symbol_xp"),
+             "Increases all experience gained.","Augmente toute l'expérience gagnée.","ui_game_symbol_adventure"),
         stat("StamRegen","Field Stamina","Souffle paysan","StaminaChangeOT","perc_add",".05",".25",5,"",
-             "Recovers stamina faster.","Récupère l'endurance plus vite.","ui_game_symbol_stamina"),
+             "Recovers stamina faster.","Récupère l'endurance plus vite.","ui_game_symbol_cardio"),
     ]),
     ("Provider","Provider","Subsistance","ui_game_symbol_campfire", [
         stat("Stam","Hardy","Endurance paysanne","StaminaLoss","perc_add","-.06","-.30",5,"",
-             "Reduces stamina spent on actions.","Réduit l'endurance dépensée par les actions.","ui_game_symbol_stamina"),
+             "Reduces stamina spent on actions.","Réduit l'endurance dépensée par les actions.","ui_game_symbol_cardio"),
         stat("Carry","Pack Mule","Bête de somme","CarryCapacity","base_add","1","3",3,"",
              "Adds carry capacity slots.","Ajoute des emplacements de portage.","ui_game_symbol_backpack"),
         stat("Tough","Weathered","Coriace","PhysicalDamageResist","base_add","1","5",5,"",
@@ -179,9 +179,9 @@ FARM_AGRI = [
         stat("Resist","Sturdy","Constitution","GeneralDamageResist","base_add","1","3",3,"",
              "Reduces all damage taken slightly.","Réduit légèrement tous les dégâts subis.","ui_game_symbol_armor_iron"),
         stat("HP","Strong Back","Robuste","HealthMax","base_add","5","25",5,"",
-             "Increases your maximum health.","Augmente votre santé maximale.","ui_game_symbol_health"),
+             "Increases your maximum health.","Augmente votre santé maximale.","ui_game_symbol_healing_factor"),
         stat("Buff","Iron Gut","Estomac d'acier","BuffResistance","base_add","1","3",3,"",
-             "Resists negative status effects.","Résiste aux effets négatifs.","ui_game_symbol_buff"),
+             "Resists negative status effects.","Résiste aux effets négatifs.","ui_game_symbol_light_armor2"),
     ]),
 ]
 
@@ -195,7 +195,7 @@ FARM_COOK = [
         stat("Dismember","Tenderizer","Attendrisseur","DismemberChance","base_add",".05",".25",5,"perkPummelPete",
              "Increases dismemberment with clubs.","Augmente le démembrement au gourdin.","ui_game_symbol_hammer"),
         stat("Stam","Conditioning","Conditionnement","StaminaLoss","perc_add","-.06","-.30",5,"perkPummelPete",
-             "Reduces stamina spent attacking.","Réduit l'endurance dépensée en attaquant.","ui_game_symbol_stamina"),
+             "Reduces stamina spent attacking.","Réduit l'endurance dépensée en attaquant.","ui_game_symbol_cardio"),
         stat("Block","Meat Mallet","Massue","BlockDamage","perc_add",".10",".50",5,"perkPummelPete",
              "Increases block damage with clubs.","Augmente les dégâts aux blocs au gourdin.","ui_game_symbol_hammer"),
         stat("Armor","Bonecrusher","Broyeur d'armure","TargetArmor","perc_add","-.06","-.30",5,"perkPummelPete",
@@ -205,7 +205,7 @@ FARM_COOK = [
         stat("FastCook","Sous-Chef","Marmiton","CraftingTime","perc_add","-.10","-.50",5,"dhsCraftFarmCook",
              "Cooks your Cook recipes faster.","Cuisine vos recettes de Cuisinier plus vite.","ui_game_symbol_fork"),
         stat("Gourmet","Gourmet","Gourmet","FoodMax","base_add","5","25",5,"",
-             "Increases your maximum food.","Augmente votre nourriture maximale.","ui_game_symbol_food"),
+             "Increases your maximum food.","Augmente votre nourriture maximale.","ui_game_symbol_stomach"),
         unlock("Feast","Cook's Kitchen","Cuisine du chef","ui_game_symbol_fork","dhsFoodFeast",True,1,
                "Unlocks cooking the Team Feast: a shared meal that buffs nearby allies.",
                "Débloque la cuisson du Festin d'équipe : un plat qui buff les alliés proches."),
@@ -216,9 +216,9 @@ FARM_COOK = [
                "Unlocks cooking the Grand Feast: a stronger team meal.",
                "Débloque la cuisson du Grand festin : un repas d'équipe renforcé."),
         stat("Butcher","Butcher","Boucher","HarvestCount","perc_add",".10",".50",5,"butcherHarvest",
-             "Harvest more meat from animals.","Récolte plus de viande sur les animaux.","ui_game_symbol_meat"),
+             "Harvest more meat from animals.","Récolte plus de viande sur les animaux.","ui_game_symbol_deep_cuts"),
         stat("XP","Quick Learner","Apprenti rapide","PlayerExpGain","perc_add",".02",".10",5,"",
-             "Increases all experience gained.","Augmente toute l'expérience gagnée.","ui_game_symbol_xp"),
+             "Increases all experience gained.","Augmente toute l'expérience gagnée.","ui_game_symbol_adventure"),
     ]),
     ("Support","Support","Soutien d'équipe","ui_game_symbol_medical", [
         stat("Tough","Hearty","Robustesse","PhysicalDamageResist","base_add","1","5",5,"",
@@ -226,15 +226,15 @@ FARM_COOK = [
         stat("Resist","Bulwark","Garde","GeneralDamageResist","base_add","1","3",3,"",
              "Reduces all damage taken slightly.","Réduit légèrement tous les dégâts subis.","ui_game_symbol_armor_iron"),
         stat("HP","Big Boned","Solide gaillard","HealthMax","base_add","5","25",5,"",
-             "Increases your maximum health.","Augmente votre santé maximale.","ui_game_symbol_health"),
+             "Increases your maximum health.","Augmente votre santé maximale.","ui_game_symbol_healing_factor"),
         stat("Carry","Porter","Porteur","CarryCapacity","base_add","1","3",3,"",
              "Adds carry capacity slots.","Ajoute des emplacements de portage.","ui_game_symbol_backpack"),
         stat("StamRegen","Second Wind","Second souffle","StaminaChangeOT","perc_add",".05",".25",5,"",
-             "Recovers stamina faster.","Récupère l'endurance plus vite.","ui_game_symbol_stamina"),
+             "Recovers stamina faster.","Récupère l'endurance plus vite.","ui_game_symbol_cardio"),
         stat("Buff","Cast Iron","Estomac d'acier","BuffResistance","base_add","1","3",3,"",
-             "Resists negative status effects.","Résiste aux effets négatifs.","ui_game_symbol_buff"),
+             "Resists negative status effects.","Résiste aux effets négatifs.","ui_game_symbol_light_armor2"),
         stat("Meneur","Quartermaster","Intendant","PlayerExpGain","perc_add",".02",".10",5,"",
-             "Increases all experience gained.","Augmente toute l'expérience gagnée.","ui_game_symbol_xp"),
+             "Increases all experience gained.","Augmente toute l'expérience gagnée.","ui_game_symbol_adventure"),
     ]),
 ]
 
@@ -375,7 +375,7 @@ CRAFTABLES = {
         "buffs": [
             _team_buff("dhsBuffFeast","dhsBuffFeastName","dhsBuffFeastDesc","ui_game_symbol_fork","255,153,51","5","-.15",None),
             _team_buff("dhsBuffFeastGrand","dhsBuffFeastGrandName","dhsBuffFeastGrandDesc","ui_game_symbol_fork","255,204,51","8","-.25",".25"),
-            _team_buff("dhsBuffTonic","dhsBuffTonicName","dhsBuffTonicDesc","ui_game_symbol_stamina","255,170,85","2","-.15",".35"),
+            _team_buff("dhsBuffTonic","dhsBuffTonicName","dhsBuffTonicDesc","ui_game_symbol_cardio","255,170,85","2","-.15",".35"),
         ],
         "loc": [
             ("dhsFoodFeast","Team Feast","Festin d'équipe"),
