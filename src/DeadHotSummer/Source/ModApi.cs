@@ -25,6 +25,7 @@ namespace DeadHotSummer
             // 2) Hooks ModEvents (handlers = void H(ref SXxxData)).
             ModEvents.GameStartDone.RegisterHandler(OnGameStartDone);
             ModEvents.PlayerSpawnedInWorld.RegisterHandler(OnPlayerSpawnedInWorld);
+            ModEvents.GameUpdate.RegisterHandler(OnGameUpdate);
 
             ModLog.Out("InitMod terminé — Harmony + ModEvents enregistrés");
         }
@@ -32,14 +33,19 @@ namespace DeadHotSummer
         private static void OnGameStartDone(ref ModEvents.SGameStartDoneData _data)
         {
             ModLog.Out("GameStartDone — monde prêt");
-            // J3+ : initialiser TerritoryManager / CampManager / RaidManager ici.
+            // J3+ : initialiser TerritoryManager / CampManager / RaidManager ici (AXE 2).
         }
 
         private static void OnPlayerSpawnedInWorld(ref ModEvents.SPlayerSpawnedInWorldData _data)
         {
-            // RespawnType permet de distinguer le tout premier spawn (sélection de classe, AXE 1).
-            ModLog.Out($"PlayerSpawnedInWorld — entityId={_data.EntityId} respawn={_data.RespawnType}");
-            // J1 : déclencher le flux de sélection de classe au premier spawn.
+            // AXE 1 : au 1er spawn -> ouvre un slot de classe + remet les livres de classe.
+            ClassManager.OnPlayerSpawned(_data.EntityId);
+        }
+
+        private static void OnGameUpdate(ref ModEvents.SGameUpdateData _data)
+        {
+            // AXE 1 : détection périodique (throttlée) de complétion de classe.
+            ClassManager.OnGameUpdate();
         }
     }
 }
