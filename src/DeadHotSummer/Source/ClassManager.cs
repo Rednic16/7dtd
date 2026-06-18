@@ -19,7 +19,6 @@ namespace DeadHotSummer
         private const string CvSlotFree = "dhsClassSlotFree";
         private const string CvDoneCount = "dhsClassDoneCount";
         private const string CvBooksOut = "dhsBooksOut"; // 1 = les livres de choix sont en circulation
-        private const float CheckIntervalSec = 10f;
 
         // 14 sous-classes : code -> sous-classe sœur (même branche principale).
         private static readonly (string code, string sibling)[] Classes =
@@ -33,9 +32,7 @@ namespace DeadHotSummer
             ("FarmAgri","FarmCook"), ("FarmCook","FarmAgri"),
         };
 
-        private static float nextCheck;
-
-        // ---- Premier spawn : init slot + réconciliation des livres ----
+        // ---- Premier spawn : init slot + réconciliation des livres (événement) ----
         public static void OnPlayerSpawned(int entityId)
         {
             World world = GameManager.Instance?.World;
@@ -48,7 +45,16 @@ namespace DeadHotSummer
                 player.Buffs.SetCustomVar(CvSlotFree, 1f);
                 ModLog.Out($"Joueur {entityId}: 1er spawn -> slot de classe ouvert");
             }
-            ReconcileBooks(player);
+            OnClassEvent(player);
+        }
+
+        // ---- Point d'entrée ÉVÉNEMENTIEL (lecture livre/magazine de classe) ----
+        // Appelé directement sur la chaîne de l'action (pas de job périodique).
+        public static void OnClassEvent(EntityPlayer player)
+        {
+            if (player == null || player.Buffs == null) return;
+            CheckCompletion(player);  // une complétion peut rouvrir un slot...
+            ReconcileBooks(player);   // ...donc on réconcilie les livres juste après.
         }
 
         // Slot libre -> les livres de choix sont disponibles ; slot consommé -> on supprime
@@ -91,22 +97,6 @@ namespace DeadHotSummer
                 ItemValue iv = ItemClass.GetItem("dhsBookClass" + code);
                 if (iv == null || iv.IsEmpty()) continue;
                 player.bag.DecItem(iv, 999);
-            }
-        }
-
-        // ---- Tick throttlé : détection de complétion pour les joueurs en ligne ----
-        public static void OnGameUpdate()
-        {
-            if (Time.time < nextCheck) return;
-            nextCheck = Time.time + CheckIntervalSec;
-
-            World world = GameManager.Instance?.World;
-            if (world == null) return;
-            List<EntityPlayer> players = world.Players.list;
-            for (int i = 0; i < players.Count; i++)
-            {
-                CheckCompletion(players[i]);
-                ReconcileBooks(players[i]); // donne/supprime les livres selon l'état du slot
             }
         }
 

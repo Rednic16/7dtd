@@ -25,7 +25,9 @@ namespace DeadHotSummer
             // 2) Hooks ModEvents (handlers = void H(ref SXxxData)).
             ModEvents.GameStartDone.RegisterHandler(OnGameStartDone);
             ModEvents.PlayerSpawnedInWorld.RegisterHandler(OnPlayerSpawnedInWorld);
-            ModEvents.GameUpdate.RegisterHandler(OnGameUpdate);
+            // Pas de hook GameUpdate : la logique de classe est ÉVÉNEMENTIELLE
+            // (déclenchée par la lecture des livres/magazines via MinEventActionDhsClassEvent),
+            // pas de job périodique qui tourne en permanence.
 
             ModLog.Out("InitMod terminé — Harmony + ModEvents enregistrés");
         }
@@ -38,14 +40,8 @@ namespace DeadHotSummer
 
         private static void OnPlayerSpawnedInWorld(ref ModEvents.SPlayerSpawnedInWorldData _data)
         {
-            // AXE 1 : au 1er spawn -> ouvre un slot de classe + remet les livres de classe.
+            // AXE 1 : au 1er spawn -> ouvre un slot de classe + réconcilie les livres.
             ClassManager.OnPlayerSpawned(_data.EntityId);
-        }
-
-        private static void OnGameUpdate(ref ModEvents.SGameUpdateData _data)
-        {
-            // AXE 1 : détection périodique (throttlée) de complétion de classe.
-            ClassManager.OnGameUpdate();
         }
     }
 }
