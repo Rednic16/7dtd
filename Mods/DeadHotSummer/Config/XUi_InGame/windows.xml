@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  AXE 1 — Correctif UI (J1.5b).
+  La fenêtre des compétences (windowSkillList) construit sa barre de catégories via
+  XUiC_CategoryList.SetupCategoriesByWorkstation("skills") : elle fait CategoryButtons[num]
+  pour CHAQUE attribut (IsAttribute), SANS borne. La grille "categories" a cols="8"
+  (8 slots) = exactement les 8 attributs vanilla. Notre attribut attClasses ajoute une
+  9e catégorie -> CategoryButtons[8] hors limites -> ArgumentOutOfRangeException à l'ouverture.
+  Fix : porter la grille à 9 colonnes (9x43=387px, tient dans le conteneur de 410px).
+-->
+<configs>
+  <setattribute name="cols" xpath="/windows/window[@name='windowSkillList']//grid[@name='categories']">9</setattribute>
+</configs>
