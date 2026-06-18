@@ -13,7 +13,7 @@
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClsEngiMech" operation="set" value="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassSlotFree" operation="set" value="0"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassActiveForeign" operation="set" value="11"/>
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassEngiMechMastery" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassEngiMechDamage" level="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
       </effect_group>
@@ -29,7 +29,7 @@
       <property name="Tags" value="dhsCsmEngiMech,csm"/>
       <effect_group tiered="false">
         <requirement name="CVarCompare" cvar="dhsClsEngiMech" operation="Equals" value="1"/>
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassEngiMechMastery" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassEngiMechDamage" level="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
       </effect_group>
@@ -45,7 +45,7 @@
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClsEngiElec" operation="set" value="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassSlotFree" operation="set" value="0"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassActiveForeign" operation="set" value="12"/>
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassEngiElecMastery" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassEngiElecDamage" level="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
       </effect_group>
@@ -61,7 +61,7 @@
       <property name="Tags" value="dhsCsmEngiElec,csm"/>
       <effect_group tiered="false">
         <requirement name="CVarCompare" cvar="dhsClsEngiElec" operation="Equals" value="1"/>
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassEngiElecMastery" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassEngiElecDamage" level="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
       </effect_group>
@@ -77,7 +77,7 @@
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClsMedicSurg" operation="set" value="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassSlotFree" operation="set" value="0"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassActiveForeign" operation="set" value="21"/>
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassMedicSurgMastery" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassMedicSurgDamage" level="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
       </effect_group>
@@ -93,7 +93,7 @@
       <property name="Tags" value="dhsCsmMedicSurg,csm"/>
       <effect_group tiered="false">
         <requirement name="CVarCompare" cvar="dhsClsMedicSurg" operation="Equals" value="1"/>
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassMedicSurgMastery" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassMedicSurgDamage" level="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
       </effect_group>
@@ -109,7 +109,7 @@
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClsMedicChem" operation="set" value="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassSlotFree" operation="set" value="0"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassActiveForeign" operation="set" value="22"/>
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassMedicChemMastery" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassMedicChemDamage" level="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
       </effect_group>
@@ -125,7 +125,7 @@
       <property name="Tags" value="dhsCsmMedicChem,csm"/>
       <effect_group tiered="false">
         <requirement name="CVarCompare" cvar="dhsClsMedicChem" operation="Equals" value="1"/>
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassMedicChemMastery" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassMedicChemDamage" level="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
       </effect_group>
@@ -141,7 +141,7 @@
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClsSoldSnip" operation="set" value="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassSlotFree" operation="set" value="0"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassActiveForeign" operation="set" value="31"/>
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassSoldSnipMastery" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassSoldSnipDamage" level="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
       </effect_group>
@@ -157,7 +157,7 @@
       <property name="Tags" value="dhsCsmSoldSnip,csm"/>
       <effect_group tiered="false">
         <requirement name="CVarCompare" cvar="dhsClsSoldSnip" operation="Equals" value="1"/>
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassSoldSnipMastery" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassSoldSnipDamage" level="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
       </effect_group>
@@ -173,7 +173,7 @@
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClsSoldAslt" operation="set" value="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassSlotFree" operation="set" value="0"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassActiveForeign" operation="set" value="32"/>
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassSoldAsltMastery" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassSoldAsltDamage" level="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
       </effect_group>
@@ -189,7 +189,7 @@
       <property name="Tags" value="dhsCsmSoldAslt,csm"/>
       <effect_group tiered="false">
         <requirement name="CVarCompare" cvar="dhsClsSoldAslt" operation="Equals" value="1"/>
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassSoldAsltMastery" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassSoldAsltDamage" level="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
       </effect_group>
@@ -205,7 +205,7 @@
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClsSurvHunt" operation="set" value="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassSlotFree" operation="set" value="0"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassActiveForeign" operation="set" value="41"/>
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassSurvHuntMastery" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassSurvHuntDamage" level="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
       </effect_group>
@@ -221,7 +221,7 @@
       <property name="Tags" value="dhsCsmSurvHunt,csm"/>
       <effect_group tiered="false">
         <requirement name="CVarCompare" cvar="dhsClsSurvHunt" operation="Equals" value="1"/>
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassSurvHuntMastery" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassSurvHuntDamage" level="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
       </effect_group>
@@ -237,7 +237,7 @@
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClsSurvHerb" operation="set" value="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassSlotFree" operation="set" value="0"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassActiveForeign" operation="set" value="42"/>
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassSurvHerbMastery" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassSurvHerbDamage" level="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
       </effect_group>
@@ -253,7 +253,7 @@
       <property name="Tags" value="dhsCsmSurvHerb,csm"/>
       <effect_group tiered="false">
         <requirement name="CVarCompare" cvar="dhsClsSurvHerb" operation="Equals" value="1"/>
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassSurvHerbMastery" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassSurvHerbDamage" level="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
       </effect_group>
@@ -269,7 +269,7 @@
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClsBuilArch" operation="set" value="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassSlotFree" operation="set" value="0"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassActiveForeign" operation="set" value="51"/>
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassBuilArchMastery" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassBuilArchDamage" level="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
       </effect_group>
@@ -285,7 +285,7 @@
       <property name="Tags" value="dhsCsmBuilArch,csm"/>
       <effect_group tiered="false">
         <requirement name="CVarCompare" cvar="dhsClsBuilArch" operation="Equals" value="1"/>
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassBuilArchMastery" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassBuilArchDamage" level="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
       </effect_group>
@@ -333,7 +333,7 @@
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClsScoutTrac" operation="set" value="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassSlotFree" operation="set" value="0"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassActiveForeign" operation="set" value="61"/>
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassScoutTracMastery" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassScoutTracDamage" level="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
       </effect_group>
@@ -349,7 +349,7 @@
       <property name="Tags" value="dhsCsmScoutTrac,csm"/>
       <effect_group tiered="false">
         <requirement name="CVarCompare" cvar="dhsClsScoutTrac" operation="Equals" value="1"/>
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassScoutTracMastery" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassScoutTracDamage" level="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
       </effect_group>
@@ -365,7 +365,7 @@
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClsScoutInfi" operation="set" value="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassSlotFree" operation="set" value="0"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassActiveForeign" operation="set" value="62"/>
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassScoutInfiMastery" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassScoutInfiDamage" level="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
       </effect_group>
@@ -381,7 +381,7 @@
       <property name="Tags" value="dhsCsmScoutInfi,csm"/>
       <effect_group tiered="false">
         <requirement name="CVarCompare" cvar="dhsClsScoutInfi" operation="Equals" value="1"/>
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassScoutInfiMastery" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassScoutInfiDamage" level="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
       </effect_group>
@@ -397,7 +397,7 @@
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClsFarmAgri" operation="set" value="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassSlotFree" operation="set" value="0"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassActiveForeign" operation="set" value="71"/>
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassFarmAgriMastery" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassFarmAgriDamage" level="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
       </effect_group>
@@ -413,7 +413,7 @@
       <property name="Tags" value="dhsCsmFarmAgri,csm"/>
       <effect_group tiered="false">
         <requirement name="CVarCompare" cvar="dhsClsFarmAgri" operation="Equals" value="1"/>
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassFarmAgriMastery" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassFarmAgriDamage" level="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
       </effect_group>
@@ -429,7 +429,7 @@
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClsFarmCook" operation="set" value="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassSlotFree" operation="set" value="0"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassActiveForeign" operation="set" value="72"/>
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassFarmCookMastery" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassFarmCookDamage" level="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
       </effect_group>
@@ -445,7 +445,7 @@
       <property name="Tags" value="dhsCsmFarmCook,csm"/>
       <effect_group tiered="false">
         <requirement name="CVarCompare" cvar="dhsClsFarmCook" operation="Equals" value="1"/>
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassFarmCookMastery" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassFarmCookDamage" level="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
       </effect_group>

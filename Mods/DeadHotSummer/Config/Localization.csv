@@ -1,0 +1,237 @@
+Key,english,french
+attclasscommon,Survivor,Survivant
+attclassengineer,Engineer,Ingénieur
+attclassmedic,Medic,Médecin
+attclasssoldier,Soldier,Soldat
+attclasssurvivalist,Survivalist,Survivaliste
+attclassbuilder,Builder,Bâtisseur
+attclassscout,Scout,Éclaireur
+attclassfarmer,Farmer,Fermier
+dhsAttClassCommonName,Survivor,Survivant
+dhsAttClassCommonDesc,Common skills for everyone,Compétences communes à tous
+dhsattClassEngineerName,Engineer,Ingénieur
+dhsattClassEngineerDesc,Engineer branch,Branche Ingénieur
+dhsattClassMedicName,Medic,Médecin
+dhsattClassMedicDesc,Medic branch,Branche Médecin
+dhsattClassSoldierName,Soldier,Soldat
+dhsattClassSoldierDesc,Soldier branch,Branche Soldat
+dhsattClassSurvivalistName,Survivalist,Survivaliste
+dhsattClassSurvivalistDesc,Survivalist branch,Branche Survivaliste
+dhsattClassBuilderName,Builder,Bâtisseur
+dhsattClassBuilderDesc,Builder branch,Branche Bâtisseur
+dhsattClassScoutName,Scout,Éclaireur
+dhsattClassScoutDesc,Scout branch,Branche Éclaireur
+dhsattClassFarmerName,Farmer,Fermier
+dhsattClassFarmerDesc,Farmer branch,Branche Fermier
+dhsSkillClassCommonName,Survivor,Survivant
+dhsSkillClassCommonDesc,Common skills available to everyone,Compétences communes à tous
+dhsPerkCommonToughnessName,Toughness,Robustesse
+dhsPerkCommonToughnessDesc,Reduces physical damage taken.,Réduit les dégâts physiques subis.
+dhsPerkCommonForagerName,Forager,Cueilleur
+dhsPerkCommonForagerDesc,Harvest more food from animals and wild plants.,Récolte plus de nourriture sur les animaux et plantes sauvages.
+dhsPerkCommonEnduranceName,Endurance,Endurance
+dhsPerkCommonEnduranceDesc,Reduces stamina loss from actions.,Réduit la perte d'endurance des actions.
+dhsSkillClassEngiMechName,Mechanic,Mécanicien
+dhsSkillClassEngiMechDesc,"Specializes in vehicles, junk turrets and drones.","Spécialisé dans les véhicules, tourelles et drones de récup'."
+dhsReqClassEngiMech,Requires the Mechanic class,Nécessite la classe Mécanicien
+dhsBookClassEngiMech,Class Manual: Mechanic,Manuel de classe : Mécanicien
+dhsBookClassEngiMechDesc,"Become a Mechanic: master vehicles, junk turrets and drones. Reading it unlocks the Mechanic skill tree and grants a starting point.","Devenez Mécanicien : maîtrisez les véhicules, tourelles et drones de récup'. La lecture débloque l'arbre Mécanicien et octroie un point de départ."
+dhsMagEngiMech,Mechanic Manual,Manuel : Mécanicien
+dhsMagEngiMechDesc,A Mechanic magazine. Reading it advances the Mechanic class. Useful only to members of this class.,Un magazine de Mécanicien. Le lire fait progresser la classe Mécanicien. Utile uniquement à cette classe.
+dhsPerkEngiMechDamageName,Mechanic: Damage,Mécanicien : Dégâts
+dhsPerkEngiMechDamageDesc,Increases robotics/turret damage.,Augmente les dégâts robotiques/tourelles.
+dhsPerkEngiMechHandlingName,Mechanic: Handling,Mécanicien : Maniement
+dhsPerkEngiMechHandlingDesc,Improves robotics handling.,Améliore la maniabilité robotique.
+dhsPerkEngiMechReloadName,Mechanic: Maintenance,Mécanicien : Maintenance
+dhsPerkEngiMechReloadDesc,Reloads/services robotics faster.,Recharge/entretient la robotique plus vite.
+dhsSkillClassEngiElecName,Electrician,Électricien
+dhsSkillClassEngiElecDesc,"Specializes in electricity, traps and the stun baton.","Spécialisé dans l'électricité, les pièges et la matraque."
+dhsReqClassEngiElec,Requires the Electrician class,Nécessite la classe Électricien
+dhsBookClassEngiElec,Class Manual: Electrician,Manuel de classe : Électricien
+dhsBookClassEngiElecDesc,"Become a Electrician: master electricity, traps and the stun baton. Reading it unlocks the Electrician skill tree and grants a starting point.","Devenez Électricien : maîtrisez l'électricité, les pièges et la matraque. La lecture débloque l'arbre Électricien et octroie un point de départ."
+dhsMagEngiElec,Electrician Manual,Manuel : Électricien
+dhsMagEngiElecDesc,A Electrician magazine. Reading it advances the Electrician class. Useful only to members of this class.,Un magazine de Électricien. Le lire fait progresser la classe Électricien. Utile uniquement à cette classe.
+dhsPerkEngiElecDamageName,Electrician: Damage,Électricien : Dégâts
+dhsPerkEngiElecDamageDesc,Increases your class melee damage.,Augmente les dégâts de mêlée de classe.
+dhsPerkEngiElecHandlingName,Electrician: Handling,Électricien : Maniement
+dhsPerkEngiElecHandlingDesc,Improves melee handling.,Améliore la maniabilité en mêlée.
+dhsPerkEngiElecDismemberName,Electrician: Brutality,Électricien : Brutalité
+dhsPerkEngiElecDismemberDesc,Increases dismemberment chance.,Augmente les chances de démembrement.
+dhsPerkEngiElecStaminaName,Electrician: Conditioning,Électricien : Conditionnement
+dhsPerkEngiElecStaminaDesc,Reduces stamina spent attacking.,Réduit l'endurance dépensée en attaquant.
+dhsSkillClassMedicSurgName,Surgeon,Chirurgien
+dhsSkillClassMedicSurgDesc,Specializes in healing and bladed weapons.,Spécialisé dans les soins et les armes blanches.
+dhsReqClassMedicSurg,Requires the Surgeon class,Nécessite la classe Chirurgien
+dhsBookClassMedicSurg,Class Manual: Surgeon,Manuel de classe : Chirurgien
+dhsBookClassMedicSurgDesc,Become a Surgeon: master healing and bladed weapons. Reading it unlocks the Surgeon skill tree and grants a starting point.,Devenez Chirurgien : maîtrisez les soins et les armes blanches. La lecture débloque l'arbre Chirurgien et octroie un point de départ.
+dhsMagMedicSurg,Surgeon Manual,Manuel : Chirurgien
+dhsMagMedicSurgDesc,A Surgeon magazine. Reading it advances the Surgeon class. Useful only to members of this class.,Un magazine de Chirurgien. Le lire fait progresser la classe Chirurgien. Utile uniquement à cette classe.
+dhsPerkMedicSurgDamageName,Surgeon: Damage,Chirurgien : Dégâts
+dhsPerkMedicSurgDamageDesc,Increases your class melee damage.,Augmente les dégâts de mêlée de classe.
+dhsPerkMedicSurgHandlingName,Surgeon: Handling,Chirurgien : Maniement
+dhsPerkMedicSurgHandlingDesc,Improves melee handling.,Améliore la maniabilité en mêlée.
+dhsPerkMedicSurgDismemberName,Surgeon: Brutality,Chirurgien : Brutalité
+dhsPerkMedicSurgDismemberDesc,Increases dismemberment chance.,Augmente les chances de démembrement.
+dhsPerkMedicSurgStaminaName,Surgeon: Conditioning,Chirurgien : Conditionnement
+dhsPerkMedicSurgStaminaDesc,Reduces stamina spent attacking.,Réduit l'endurance dépensée en attaquant.
+dhsSkillClassMedicChemName,Chemist,Chimiste
+dhsSkillClassMedicChemDesc,"Specializes in chemistry, drugs and thrown weapons.","Spécialisé dans la chimie, les drogues et les armes de jet."
+dhsReqClassMedicChem,Requires the Chemist class,Nécessite la classe Chimiste
+dhsBookClassMedicChem,Class Manual: Chemist,Manuel de classe : Chimiste
+dhsBookClassMedicChemDesc,"Become a Chemist: master chemistry, drugs and thrown weapons. Reading it unlocks the Chemist skill tree and grants a starting point.","Devenez Chimiste : maîtrisez la chimie, les drogues et les armes de jet. La lecture débloque l'arbre Chimiste et octroie un point de départ."
+dhsMagMedicChem,Chemist Manual,Manuel : Chimiste
+dhsMagMedicChemDesc,A Chemist magazine. Reading it advances the Chemist class. Useful only to members of this class.,Un magazine de Chimiste. Le lire fait progresser la classe Chimiste. Utile uniquement à cette classe.
+dhsPerkMedicChemDamageName,Chemist: Damage,Chimiste : Dégâts
+dhsPerkMedicChemDamageDesc,Increases thrown weapon damage.,Augmente les dégâts des armes de jet.
+dhsPerkMedicChemHandlingName,Chemist: Handling,Chimiste : Maniement
+dhsPerkMedicChemHandlingDesc,Improves thrown weapon handling.,Améliore la maniabilité des armes de jet.
+dhsPerkMedicChemVelocityName,Chemist: Strong Arm,Chimiste : Bon bras
+dhsPerkMedicChemVelocityDesc,Throws farther and faster.,Lance plus loin et plus vite.
+dhsSkillClassSoldSnipName,Marksman,Tireur d'élite
+dhsSkillClassSoldSnipDesc,Specializes in marksman rifles.,Spécialisé dans les fusils de précision.
+dhsReqClassSoldSnip,Requires the Marksman class,Nécessite la classe Tireur d'élite
+dhsBookClassSoldSnip,Class Manual: Marksman,Manuel de classe : Tireur d'élite
+dhsBookClassSoldSnipDesc,Become a Marksman: master marksman rifles. Reading it unlocks the Marksman skill tree and grants a starting point.,Devenez Tireur d'élite : maîtrisez les fusils de précision. La lecture débloque l'arbre Tireur d'élite et octroie un point de départ.
+dhsMagSoldSnip,Marksman Manual,Manuel : Tireur d'élite
+dhsMagSoldSnipDesc,A Marksman magazine. Reading it advances the Marksman class. Useful only to members of this class.,Un magazine de Tireur d'élite. Le lire fait progresser la classe Tireur d'élite. Utile uniquement à cette classe.
+dhsPerkSoldSnipDamageName,Marksman: Damage,Tireur d'élite : Dégâts
+dhsPerkSoldSnipDamageDesc,Increases your class weapon damage.,Augmente les dégâts de l'arme de classe.
+dhsPerkSoldSnipHandlingName,Marksman: Handling,Tireur d'élite : Maniement
+dhsPerkSoldSnipHandlingDesc,"Improves aim, reload feel and weapon handling.",Améliore la prise en main et la maniabilité.
+dhsPerkSoldSnipReloadName,Marksman: Fast Reload,Tireur d'élite : Rechargement rapide
+dhsPerkSoldSnipReloadDesc,Reloads your class weapon faster.,Recharge l'arme de classe plus vite.
+dhsPerkSoldSnipAimName,Marksman: Precision,Tireur d'élite : Précision
+dhsPerkSoldSnipAimDesc,Reduces aimed spread for tighter shots.,Réduit la dispersion en visée.
+dhsSkillClassSoldAsltName,Assault,Assaut
+dhsSkillClassSoldAsltDesc,Specializes in machine guns and sustained fire.,Spécialisé dans les mitrailleuses et le tir nourri.
+dhsReqClassSoldAslt,Requires the Assault class,Nécessite la classe Assaut
+dhsBookClassSoldAslt,Class Manual: Assault,Manuel de classe : Assaut
+dhsBookClassSoldAsltDesc,Become a Assault: master machine guns and sustained fire. Reading it unlocks the Assault skill tree and grants a starting point.,Devenez Assaut : maîtrisez les mitrailleuses et le tir nourri. La lecture débloque l'arbre Assaut et octroie un point de départ.
+dhsMagSoldAslt,Assault Manual,Manuel : Assaut
+dhsMagSoldAsltDesc,A Assault magazine. Reading it advances the Assault class. Useful only to members of this class.,Un magazine de Assaut. Le lire fait progresser la classe Assaut. Utile uniquement à cette classe.
+dhsPerkSoldAsltDamageName,Assault: Damage,Assaut : Dégâts
+dhsPerkSoldAsltDamageDesc,Increases your class weapon damage.,Augmente les dégâts de l'arme de classe.
+dhsPerkSoldAsltHandlingName,Assault: Handling,Assaut : Maniement
+dhsPerkSoldAsltHandlingDesc,"Improves aim, reload feel and weapon handling.",Améliore la prise en main et la maniabilité.
+dhsPerkSoldAsltReloadName,Assault: Fast Reload,Assaut : Rechargement rapide
+dhsPerkSoldAsltReloadDesc,Reloads your class weapon faster.,Recharge l'arme de classe plus vite.
+dhsPerkSoldAsltAimName,Assault: Precision,Assaut : Précision
+dhsPerkSoldAsltAimDesc,Reduces aimed spread for tighter shots.,Réduit la dispersion en visée.
+dhsSkillClassSurvHuntName,Hunter,Chasseur
+dhsSkillClassSurvHuntDesc,"Specializes in bows, crossbows and hunting.","Spécialisé dans les arcs, arbalètes et la chasse."
+dhsReqClassSurvHunt,Requires the Hunter class,Nécessite la classe Chasseur
+dhsBookClassSurvHunt,Class Manual: Hunter,Manuel de classe : Chasseur
+dhsBookClassSurvHuntDesc,"Become a Hunter: master bows, crossbows and hunting. Reading it unlocks the Hunter skill tree and grants a starting point.","Devenez Chasseur : maîtrisez les arcs, arbalètes et la chasse. La lecture débloque l'arbre Chasseur et octroie un point de départ."
+dhsMagSurvHunt,Hunter Manual,Manuel : Chasseur
+dhsMagSurvHuntDesc,A Hunter magazine. Reading it advances the Hunter class. Useful only to members of this class.,Un magazine de Chasseur. Le lire fait progresser la classe Chasseur. Utile uniquement à cette classe.
+dhsPerkSurvHuntDamageName,Hunter: Damage,Chasseur : Dégâts
+dhsPerkSurvHuntDamageDesc,Increases bow/crossbow damage.,Augmente les dégâts arc/arbalète.
+dhsPerkSurvHuntHandlingName,Hunter: Handling,Chasseur : Maniement
+dhsPerkSurvHuntHandlingDesc,Improves bow/crossbow handling.,Améliore la maniabilité arc/arbalète.
+dhsPerkSurvHuntDrawName,Hunter: Quick Draw,Chasseur : Armement rapide
+dhsPerkSurvHuntDrawDesc,Nocks and reloads arrows/bolts faster.,Encoche et recharge flèches/carreaux plus vite.
+dhsPerkSurvHuntVelocityName,Hunter: Power Shot,Chasseur : Tir puissant
+dhsPerkSurvHuntVelocityDesc,Increases projectile velocity and range.,Augmente la vitesse et la portée des projectiles.
+dhsSkillClassSurvHerbName,Herbalist,Herboriste
+dhsSkillClassSurvHerbDesc,"Specializes in foraging, remedies and spears.","Spécialisé dans la cueillette, les remèdes et les lances."
+dhsReqClassSurvHerb,Requires the Herbalist class,Nécessite la classe Herboriste
+dhsBookClassSurvHerb,Class Manual: Herbalist,Manuel de classe : Herboriste
+dhsBookClassSurvHerbDesc,"Become a Herbalist: master foraging, remedies and spears. Reading it unlocks the Herbalist skill tree and grants a starting point.","Devenez Herboriste : maîtrisez la cueillette, les remèdes et les lances. La lecture débloque l'arbre Herboriste et octroie un point de départ."
+dhsMagSurvHerb,Herbalist Manual,Manuel : Herboriste
+dhsMagSurvHerbDesc,A Herbalist magazine. Reading it advances the Herbalist class. Useful only to members of this class.,Un magazine de Herboriste. Le lire fait progresser la classe Herboriste. Utile uniquement à cette classe.
+dhsPerkSurvHerbDamageName,Herbalist: Damage,Herboriste : Dégâts
+dhsPerkSurvHerbDamageDesc,Increases your class melee damage.,Augmente les dégâts de mêlée de classe.
+dhsPerkSurvHerbHandlingName,Herbalist: Handling,Herboriste : Maniement
+dhsPerkSurvHerbHandlingDesc,Improves melee handling.,Améliore la maniabilité en mêlée.
+dhsPerkSurvHerbDismemberName,Herbalist: Brutality,Herboriste : Brutalité
+dhsPerkSurvHerbDismemberDesc,Increases dismemberment chance.,Augmente les chances de démembrement.
+dhsPerkSurvHerbStaminaName,Herbalist: Conditioning,Herboriste : Conditionnement
+dhsPerkSurvHerbStaminaDesc,Reduces stamina spent attacking.,Réduit l'endurance dépensée en attaquant.
+dhsSkillClassBuilArchName,Architect,Architecte
+dhsSkillClassBuilArchDesc,Specializes in fortifications and sledgehammers.,Spécialisé dans les fortifications et les masses.
+dhsReqClassBuilArch,Requires the Architect class,Nécessite la classe Architecte
+dhsBookClassBuilArch,Class Manual: Architect,Manuel de classe : Architecte
+dhsBookClassBuilArchDesc,Become a Architect: master fortifications and sledgehammers. Reading it unlocks the Architect skill tree and grants a starting point.,Devenez Architecte : maîtrisez les fortifications et les masses. La lecture débloque l'arbre Architecte et octroie un point de départ.
+dhsMagBuilArch,Architect Manual,Manuel : Architecte
+dhsMagBuilArchDesc,A Architect magazine. Reading it advances the Architect class. Useful only to members of this class.,Un magazine de Architecte. Le lire fait progresser la classe Architecte. Utile uniquement à cette classe.
+dhsPerkBuilArchDamageName,Architect: Damage,Architecte : Dégâts
+dhsPerkBuilArchDamageDesc,Increases your class melee damage.,Augmente les dégâts de mêlée de classe.
+dhsPerkBuilArchHandlingName,Architect: Handling,Architecte : Maniement
+dhsPerkBuilArchHandlingDesc,Improves melee handling.,Améliore la maniabilité en mêlée.
+dhsPerkBuilArchDismemberName,Architect: Brutality,Architecte : Brutalité
+dhsPerkBuilArchDismemberDesc,Increases dismemberment chance.,Augmente les chances de démembrement.
+dhsPerkBuilArchStaminaName,Architect: Conditioning,Architecte : Conditionnement
+dhsPerkBuilArchStaminaDesc,Reduces stamina spent attacking.,Réduit l'endurance dépensée en attaquant.
+dhsSkillClassBuilArtiName,Artisan,Artisan
+dhsSkillClassBuilArtiDesc,"Specializes in workstations, tools and crafting.","Spécialisé dans les ateliers, outils et l'artisanat."
+dhsReqClassBuilArti,Requires the Artisan class,Nécessite la classe Artisan
+dhsBookClassBuilArti,Class Manual: Artisan,Manuel de classe : Artisan
+dhsBookClassBuilArtiDesc,"Become a Artisan: master workstations, tools and crafting. Reading it unlocks the Artisan skill tree and grants a starting point.","Devenez Artisan : maîtrisez les ateliers, outils et l'artisanat. La lecture débloque l'arbre Artisan et octroie un point de départ."
+dhsMagBuilArti,Artisan Manual,Manuel : Artisan
+dhsMagBuilArtiDesc,A Artisan magazine. Reading it advances the Artisan class. Useful only to members of this class.,Un magazine de Artisan. Le lire fait progresser la classe Artisan. Utile uniquement à cette classe.
+dhsPerkBuilArtiHarvestName,Artisan: Harvesting,Artisan : Récolte
+dhsPerkBuilArtiHarvestDesc,Harvests more resources with class tools.,Récolte plus de ressources avec les outils de classe.
+dhsPerkBuilArtiBlockName,Artisan: Power Tools,Artisan : Outils puissants
+dhsPerkBuilArtiBlockDesc,Increases block/harvest damage with tools.,Augmente les dégâts aux blocs avec les outils.
+dhsPerkBuilArtiStaminaName,Artisan: Conditioning,Artisan : Conditionnement
+dhsPerkBuilArtiStaminaDesc,Reduces stamina spent using tools.,Réduit l'endurance dépensée avec les outils.
+dhsSkillClassScoutTracName,Tracker,Pisteur
+dhsSkillClassScoutTracDesc,"Specializes in mobility, exploration and handguns.","Spécialisé dans la mobilité, l'exploration et les pistolets."
+dhsReqClassScoutTrac,Requires the Tracker class,Nécessite la classe Pisteur
+dhsBookClassScoutTrac,Class Manual: Tracker,Manuel de classe : Pisteur
+dhsBookClassScoutTracDesc,"Become a Tracker: master mobility, exploration and handguns. Reading it unlocks the Tracker skill tree and grants a starting point.","Devenez Pisteur : maîtrisez la mobilité, l'exploration et les pistolets. La lecture débloque l'arbre Pisteur et octroie un point de départ."
+dhsMagScoutTrac,Tracker Manual,Manuel : Pisteur
+dhsMagScoutTracDesc,A Tracker magazine. Reading it advances the Tracker class. Useful only to members of this class.,Un magazine de Pisteur. Le lire fait progresser la classe Pisteur. Utile uniquement à cette classe.
+dhsPerkScoutTracDamageName,Tracker: Damage,Pisteur : Dégâts
+dhsPerkScoutTracDamageDesc,Increases your class weapon damage.,Augmente les dégâts de l'arme de classe.
+dhsPerkScoutTracHandlingName,Tracker: Handling,Pisteur : Maniement
+dhsPerkScoutTracHandlingDesc,"Improves aim, reload feel and weapon handling.",Améliore la prise en main et la maniabilité.
+dhsPerkScoutTracReloadName,Tracker: Fast Reload,Pisteur : Rechargement rapide
+dhsPerkScoutTracReloadDesc,Reloads your class weapon faster.,Recharge l'arme de classe plus vite.
+dhsPerkScoutTracAimName,Tracker: Precision,Pisteur : Précision
+dhsPerkScoutTracAimDesc,Reduces aimed spread for tighter shots.,Réduit la dispersion en visée.
+dhsSkillClassScoutInfiName,Infiltrator,Infiltrateur
+dhsSkillClassScoutInfiDesc,"Specializes in stealth, looting and fist weapons.","Spécialisé dans la furtivité, le pillage et les armes de poing."
+dhsReqClassScoutInfi,Requires the Infiltrator class,Nécessite la classe Infiltrateur
+dhsBookClassScoutInfi,Class Manual: Infiltrator,Manuel de classe : Infiltrateur
+dhsBookClassScoutInfiDesc,"Become a Infiltrator: master stealth, looting and fist weapons. Reading it unlocks the Infiltrator skill tree and grants a starting point.","Devenez Infiltrateur : maîtrisez la furtivité, le pillage et les armes de poing. La lecture débloque l'arbre Infiltrateur et octroie un point de départ."
+dhsMagScoutInfi,Infiltrator Manual,Manuel : Infiltrateur
+dhsMagScoutInfiDesc,A Infiltrator magazine. Reading it advances the Infiltrator class. Useful only to members of this class.,Un magazine de Infiltrateur. Le lire fait progresser la classe Infiltrateur. Utile uniquement à cette classe.
+dhsPerkScoutInfiDamageName,Infiltrator: Damage,Infiltrateur : Dégâts
+dhsPerkScoutInfiDamageDesc,Increases your class melee damage.,Augmente les dégâts de mêlée de classe.
+dhsPerkScoutInfiHandlingName,Infiltrator: Handling,Infiltrateur : Maniement
+dhsPerkScoutInfiHandlingDesc,Improves melee handling.,Améliore la maniabilité en mêlée.
+dhsPerkScoutInfiDismemberName,Infiltrator: Brutality,Infiltrateur : Brutalité
+dhsPerkScoutInfiDismemberDesc,Increases dismemberment chance.,Augmente les chances de démembrement.
+dhsPerkScoutInfiStaminaName,Infiltrator: Conditioning,Infiltrateur : Conditionnement
+dhsPerkScoutInfiStaminaDesc,Reduces stamina spent attacking.,Réduit l'endurance dépensée en attaquant.
+dhsSkillClassFarmAgriName,Farmer,Agriculteur
+dhsSkillClassFarmAgriDesc,Specializes in crops and the pump shotgun.,Spécialisé dans les cultures et le fusil à pompe.
+dhsReqClassFarmAgri,Requires the Farmer class,Nécessite la classe Agriculteur
+dhsBookClassFarmAgri,Class Manual: Farmer,Manuel de classe : Agriculteur
+dhsBookClassFarmAgriDesc,Become a Farmer: master crops and the pump shotgun. Reading it unlocks the Farmer skill tree and grants a starting point.,Devenez Agriculteur : maîtrisez les cultures et le fusil à pompe. La lecture débloque l'arbre Agriculteur et octroie un point de départ.
+dhsMagFarmAgri,Farmer Manual,Manuel : Agriculteur
+dhsMagFarmAgriDesc,A Farmer magazine. Reading it advances the Farmer class. Useful only to members of this class.,Un magazine de Agriculteur. Le lire fait progresser la classe Agriculteur. Utile uniquement à cette classe.
+dhsPerkFarmAgriDamageName,Farmer: Damage,Agriculteur : Dégâts
+dhsPerkFarmAgriDamageDesc,Increases your class weapon damage.,Augmente les dégâts de l'arme de classe.
+dhsPerkFarmAgriHandlingName,Farmer: Handling,Agriculteur : Maniement
+dhsPerkFarmAgriHandlingDesc,"Improves aim, reload feel and weapon handling.",Améliore la prise en main et la maniabilité.
+dhsPerkFarmAgriReloadName,Farmer: Fast Reload,Agriculteur : Rechargement rapide
+dhsPerkFarmAgriReloadDesc,Reloads your class weapon faster.,Recharge l'arme de classe plus vite.
+dhsPerkFarmAgriAimName,Farmer: Precision,Agriculteur : Précision
+dhsPerkFarmAgriAimDesc,Reduces aimed spread for tighter shots.,Réduit la dispersion en visée.
+dhsSkillClassFarmCookName,Cook,Cuisinier
+dhsSkillClassFarmCookDesc,"Specializes in cooking, team buffs and clubs.","Spécialisé dans la cuisine, les buffs d'équipe et les gourdins."
+dhsReqClassFarmCook,Requires the Cook class,Nécessite la classe Cuisinier
+dhsBookClassFarmCook,Class Manual: Cook,Manuel de classe : Cuisinier
+dhsBookClassFarmCookDesc,"Become a Cook: master cooking, team buffs and clubs. Reading it unlocks the Cook skill tree and grants a starting point.","Devenez Cuisinier : maîtrisez la cuisine, les buffs d'équipe et les gourdins. La lecture débloque l'arbre Cuisinier et octroie un point de départ."
+dhsMagFarmCook,Cook Manual,Manuel : Cuisinier
+dhsMagFarmCookDesc,A Cook magazine. Reading it advances the Cook class. Useful only to members of this class.,Un magazine de Cuisinier. Le lire fait progresser la classe Cuisinier. Utile uniquement à cette classe.
+dhsPerkFarmCookDamageName,Cook: Damage,Cuisinier : Dégâts
+dhsPerkFarmCookDamageDesc,Increases your class melee damage.,Augmente les dégâts de mêlée de classe.
+dhsPerkFarmCookHandlingName,Cook: Handling,Cuisinier : Maniement
+dhsPerkFarmCookHandlingDesc,Improves melee handling.,Améliore la maniabilité en mêlée.
+dhsPerkFarmCookDismemberName,Cook: Brutality,Cuisinier : Brutalité
+dhsPerkFarmCookDismemberDesc,Increases dismemberment chance.,Augmente les chances de démembrement.
+dhsPerkFarmCookStaminaName,Cook: Conditioning,Cuisinier : Conditionnement
+dhsPerkFarmCookStaminaDesc,Reduces stamina spent attacking.,Réduit l'endurance dépensée en attaquant.

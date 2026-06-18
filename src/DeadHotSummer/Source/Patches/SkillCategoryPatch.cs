@@ -38,18 +38,14 @@ namespace DeadHotSummer
             foreach (KeyValuePair<string, ProgressionClass> kvp in Progression.ProgressionClasses)
             {
                 ProgressionClass pc = kvp.Value;
-                if (!pc.IsAttribute || pc.Hidden)
-                {
-                    continue; // saute les attributs vanilla masqués
-                }
-                if (!XUiM_Recipes.CraftingProgression && pc.Name == "attcrafting")
-                {
-                    continue;
-                }
-                if (num >= __instance.CategoryButtons.Count)
-                {
-                    break; // sécurité : ne jamais dépasser le nombre de slots
-                }
+                if (!pc.IsAttribute) continue;
+                // Allowlist : on n'affiche QUE nos catégories de classe (attClass*) + Crafting.
+                // Tout le reste (5 attributs vanilla, General, Books) est masqué de la fenêtre.
+                // NB: ProgressionClass.Name est en minuscules côté moteur.
+                bool show = pc.Name != null && (pc.Name.StartsWith("attclass") || pc.Name == "attcrafting");
+                if (!show) continue;
+                if (!XUiM_Recipes.CraftingProgression && pc.Name == "attcrafting") continue;
+                if (num >= __instance.CategoryButtons.Count) break; // sécurité (jamais hors slots)
                 __instance.SetCategoryEntry(num, pc.Name, pc.Icon, Localization.Get(pc.Name));
                 num++;
             }

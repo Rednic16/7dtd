@@ -79,14 +79,15 @@ namespace DeadHotSummer
 
         private static void GiveClassBooks(EntityPlayer player)
         {
-            GameManager gm = GameManager.Instance;
-            if (gm == null) return;
+            if (player.bag == null) return;
             foreach ((string code, string _) in Classes)
             {
                 if (player.Buffs.GetCustomVar("dhsCls" + code) >= 1f) continue; // classe déjà débloquée
                 ItemValue iv = ItemClass.GetItem("dhsBookClass" + code);
                 if (iv == null || iv.IsEmpty()) continue;
-                gm.ItemDropServer(new ItemStack(iv, 1), player.position, new Vector3(0.6f, 0.3f, 0.6f), player.entityId, 300f);
+                // Directement dans le sac (bag.AddItem -> onBackpackChanged -> sync client),
+                // pas de drop au sol.
+                player.bag.AddItem(new ItemStack(iv, 1));
             }
         }
 

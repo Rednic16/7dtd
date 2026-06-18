@@ -140,7 +140,19 @@ L'exclusivité vient du **gate `CVarCompare`** sur l'achat du perk, pas du tag.
 - [ ] Quête de sélection + `game_first_spawn` + init `dhsClassSlotFree` (J1.6)
 - [ ] `ClassManager` C# (complétion → slots, séquentiel) (J1.7)
 
-### Remplacement du système vanilla (J1.5c)
+### Structure UI : 7 onglets de branche (J1.10)
+- **8 catégories visibles** = Survivant (`attClassCommon`) + **7 branches** (`attClass<Branche>` :
+  Engineer/Medic/Soldier/Survivalist/Builder/Scout/Farmer) + **Crafting**. Chaque onglet de branche
+  contient ses **2 sous-classes** (skills), ex. Fermier → Agriculteur + Cuisinier.
+- `SkillCategoryPatch` (Harmony) = **allowlist** : affiche uniquement `attclass*` + `attcrafting`,
+  masque les 5 attributs vanilla + General + Books. (`ProgressionClass.Name` est en minuscules ;
+  clés de loc des catégories en minuscules : `attclassfarmer`, …)
+- **Localisation** : fichier = **`Config/Localization.csv`** (V3.0 charge `.csv`, PAS `.txt` —
+  `Localization.LoadPatchDictionaries` lit `<mod>/Config/Localization.csv`). EN+FR, virgules quotées.
+- Livres remis **directement dans le sac** (`bag.AddItem`), supprimés via `bag.DecItem`.
+- Perks/sous-classe : 4 (armes à feu/arcs/mêlée) ou 3 (jet/robotique/outils), effets variés + descriptions claires.
+
+### Remplacement du système vanilla (J1.5c, remplacé par J1.10 ci-dessus)
 Décision validée : **nos classes remplacent les attributs vanilla**. Implémentation **bas risque** :
 - Patch Harmony `SkillCategoryPatch` : la fenêtre Compétences saute les attributs `Hidden` →
   les 5 attributs vanilla (Perception/Force/Fortitude/Agilité/Intellect) + General disparaissent ;
