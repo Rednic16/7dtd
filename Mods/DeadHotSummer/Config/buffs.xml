@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- GENERE par tools/gen_axe1_classes.py — buffs signature de classe. -->
+<configs>
+  <append xpath="/buffs">
+    <buff name="dhsBuffFeast" name_key="dhsBuffFeastName" description_key="dhsBuffFeastDesc" icon="ui_game_symbol_fork" icon_color="255,153,51">
+      <duration value="600"/>
+      <stack_type value="replace"/>
+      <effect_group>
+        <passive_effect name="PhysicalDamageResist" operation="base_add" value="15"/>
+        <passive_effect name="StaminaLoss" operation="perc_add" value="-.15"/>
+      </effect_group>
+    </buff>
+  </append>
+</configs>

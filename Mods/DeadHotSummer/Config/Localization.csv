@@ -220,6 +220,12 @@ dhsPerkFarmAgriReloadName,Farmer: Fast Reload,Agriculteur : Rechargement rapide
 dhsPerkFarmAgriReloadDesc,Reloads your class weapon faster.,Recharge l'arme de classe plus vite.
 dhsPerkFarmAgriAimName,Farmer: Precision,Agriculteur : Précision
 dhsPerkFarmAgriAimDesc,Reduces aimed spread for tighter shots.,Réduit la dispersion en visée.
+dhsPerkFarmAgriGreenThumbName,Farmer: Green Thumb,Agriculteur : Main verte
+dhsPerkFarmAgriGreenThumbDesc,Harvest significantly more from your own crops.,Récolte nettement plus sur vos propres cultures.
+dhsPerkFarmAgriArsenalName,Farmer's Arsenal,Arsenal du fermier
+dhsPerkFarmAgriArsenalDesc,Unlocks crafting Farmer Slugs (heavy shotgun slugs) at a workbench.,Débloque la fabrication de Cartouches de fermier (balles lourdes) à l'établi.
+dhsAmmoFarmerSlug,Farmer Slug,Cartouche de fermier
+dhsAmmoFarmerSlugDesc,A heavy hand-packed shotgun slug that hits much harder than a standard slug. Crafted only by Farmers.,"Une lourde cartouche à balle montée main, bien plus puissante qu'une balle standard. Fabriquée uniquement par les Agriculteurs."
 dhsSkillClassFarmCookName,Cook,Cuisinier
 dhsSkillClassFarmCookDesc,"Specializes in cooking, team buffs and clubs.","Spécialisé dans la cuisine, les buffs d'équipe et les gourdins."
 dhsReqClassFarmCook,Requires the Cook class,Nécessite la classe Cuisinier
@@ -235,3 +241,11 @@ dhsPerkFarmCookDismemberName,Cook: Brutality,Cuisinier : Brutalité
 dhsPerkFarmCookDismemberDesc,Increases dismemberment chance.,Augmente les chances de démembrement.
 dhsPerkFarmCookStaminaName,Cook: Conditioning,Cuisinier : Conditionnement
 dhsPerkFarmCookStaminaDesc,Reduces stamina spent attacking.,Réduit l'endurance dépensée en attaquant.
+dhsPerkFarmCookWellFedName,Cook: Hearty Cook,Cuisinier : Fin gourmet
+dhsPerkFarmCookWellFedDesc,Your own body better withstands punishment (passive toughness).,Votre corps encaisse mieux les coups (robustesse passive).
+dhsPerkFarmCookKitchenName,Cook's Kitchen,Cuisine du chef
+dhsPerkFarmCookKitchenDesc,Unlocks cooking the Team Feast: a shared meal that buffs nearby allies.,Débloque la cuisson du Festin d'équipe : un plat qui buff les alliés proches.
+dhsFoodFeast,Team Feast,Festin d'équipe
+dhsFoodFeastDesc,A hearty shared meal. Eating it feeds you well and buffs nearby allies. Cooked only by Cooks.,Un copieux repas partagé. Le manger vous rassasie et buff les alliés proches. Cuisiné uniquement par les Cuisiniers.
+dhsBuffFeastName,Team Feast,Festin d'équipe
+dhsBuffFeastDesc,Well fed by a Cook: reduced damage taken and stamina use.,Bien nourri par un Cuisinier : dégâts subis et endurance dépensée réduits.

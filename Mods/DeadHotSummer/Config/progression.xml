@@ -445,6 +445,18 @@
       <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsFarmAgri" operation="Equals" value="1" desc_key="dhsReqClassFarmAgri"/><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
       <effect_group><passive_effect name="SpreadMultiplierAiming" operation="perc_add" level="1,5" value="-.06,-.30" tags="perkBoomstick"/></effect_group>
     </perk>
+    <perk name="perkClassFarmAgriGreenThumb" parent="skillClassFarmAgri" name_key="dhsPerkFarmAgriGreenThumbName" desc_key="dhsPerkFarmAgriGreenThumbDesc" icon="ui_game_symbol_crops" max_level="5">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsFarmAgri" operation="Equals" value="1" desc_key="dhsReqClassFarmAgri"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
+      <level_requirements level="2"><requirement name="CVarCompare" cvar="dhsClsFarmAgri" operation="Equals" value="1" desc_key="dhsReqClassFarmAgri"/><requirement name="PlayerLevel" operation="GTE" value="12"/></level_requirements>
+      <level_requirements level="3"><requirement name="CVarCompare" cvar="dhsClsFarmAgri" operation="Equals" value="1" desc_key="dhsReqClassFarmAgri"/><requirement name="PlayerLevel" operation="GTE" value="24"/></level_requirements>
+      <level_requirements level="4"><requirement name="CVarCompare" cvar="dhsClsFarmAgri" operation="Equals" value="1" desc_key="dhsReqClassFarmAgri"/><requirement name="PlayerLevel" operation="GTE" value="36"/></level_requirements>
+      <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsFarmAgri" operation="Equals" value="1" desc_key="dhsReqClassFarmAgri"/><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
+      <effect_group><passive_effect name="HarvestCount" operation="perc_add" level="1,5" value=".15,.75" tags="cropHarvest,wildCropsHarvest"/></effect_group>
+    </perk>
+    <perk name="perkClassFarmAgriArsenal" parent="skillClassFarmAgri" name_key="dhsPerkFarmAgriArsenalName" desc_key="dhsPerkFarmAgriArsenalDesc" icon="ui_game_symbol_shotgun" max_level="1" base_skill_point_cost="0">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsFarmAgri" operation="Equals" value="1" desc_key="dhsReqClassFarmAgri"/></level_requirements>
+      <effect_group><passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="dhsAmmoFarmerSlug"/></effect_group>
+    </perk>
     <perk name="perkClassFarmCookDamage" parent="skillClassFarmCook" name_key="dhsPerkFarmCookDamageName" desc_key="dhsPerkFarmCookDamageDesc" icon="ui_game_symbol_fork" max_level="5">
       <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsFarmCook" operation="Equals" value="1" desc_key="dhsReqClassFarmCook"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
       <level_requirements level="2"><requirement name="CVarCompare" cvar="dhsClsFarmCook" operation="Equals" value="1" desc_key="dhsReqClassFarmCook"/><requirement name="PlayerLevel" operation="GTE" value="12"/></level_requirements>
@@ -476,6 +488,18 @@
       <level_requirements level="4"><requirement name="CVarCompare" cvar="dhsClsFarmCook" operation="Equals" value="1" desc_key="dhsReqClassFarmCook"/><requirement name="PlayerLevel" operation="GTE" value="36"/></level_requirements>
       <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsFarmCook" operation="Equals" value="1" desc_key="dhsReqClassFarmCook"/><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
       <effect_group><passive_effect name="StaminaLoss" operation="perc_add" level="1,5" value="-.06,-.30"/></effect_group>
+    </perk>
+    <perk name="perkClassFarmCookWellFed" parent="skillClassFarmCook" name_key="dhsPerkFarmCookWellFedName" desc_key="dhsPerkFarmCookWellFedDesc" icon="ui_game_symbol_fork" max_level="5">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsFarmCook" operation="Equals" value="1" desc_key="dhsReqClassFarmCook"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
+      <level_requirements level="2"><requirement name="CVarCompare" cvar="dhsClsFarmCook" operation="Equals" value="1" desc_key="dhsReqClassFarmCook"/><requirement name="PlayerLevel" operation="GTE" value="12"/></level_requirements>
+      <level_requirements level="3"><requirement name="CVarCompare" cvar="dhsClsFarmCook" operation="Equals" value="1" desc_key="dhsReqClassFarmCook"/><requirement name="PlayerLevel" operation="GTE" value="24"/></level_requirements>
+      <level_requirements level="4"><requirement name="CVarCompare" cvar="dhsClsFarmCook" operation="Equals" value="1" desc_key="dhsReqClassFarmCook"/><requirement name="PlayerLevel" operation="GTE" value="36"/></level_requirements>
+      <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsFarmCook" operation="Equals" value="1" desc_key="dhsReqClassFarmCook"/><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
+      <effect_group><passive_effect name="PhysicalDamageResist" operation="base_add" level="1,5" value="1,5"/></effect_group>
+    </perk>
+    <perk name="perkClassFarmCookKitchen" parent="skillClassFarmCook" name_key="dhsPerkFarmCookKitchenName" desc_key="dhsPerkFarmCookKitchenDesc" icon="ui_game_symbol_fork" max_level="1" base_skill_point_cost="0">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsFarmCook" operation="Equals" value="1" desc_key="dhsReqClassFarmCook"/></level_requirements>
+      <effect_group><passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="dhsFoodFeast"/></effect_group>
     </perk>
   </append>
 </configs>

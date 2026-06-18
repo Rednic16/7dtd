@@ -10,6 +10,7 @@
 !/Mods/
 !/src/
 !/docs/
+!/tools/
 
 # --- Dans Mods/, ne garder que notre mod ---
 /Mods/*

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- GENERE par tools/gen_axe1_classes.py — recettes signature de classe. -->
+<configs>
+  <append xpath="/recipes">
+    <recipe name="dhsAmmoFarmerSlug" count="2" craft_area="workbench" craft_time="4" tags="learnable,workbenchCrafting"><ingredient name="ammoShotgunShell" count="3"/><ingredient name="resourceGunPowder" count="4"/><ingredient name="resourceForgedIron" count="1"/></recipe>
+    <recipe name="dhsFoodFeast" count="1" craft_area="campfire" craft_tool="toolCookingPot" craft_time="30" tags="learnable"><ingredient name="foodGrilledMeat" count="3"/><ingredient name="foodCropPotato" count="3"/><ingredient name="foodCropCorn" count="3"/><ingredient name="resourceAnimalFat" count="2"/><ingredient name="drinkJarBoiledWater" count="2"/></recipe>
+  </append>
+</configs>
