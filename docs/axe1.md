@@ -153,6 +153,13 @@ Décision validée : **nos classes remplacent les attributs vanilla**. Implémen
   classes sont la **seule** source de bonus de combat. (Re-loger `perkLockPicking` dans une classe = TODO mineur.)
 - Books/Crafting restent visibles (systèmes magazines nécessaires). Option : masquer aussi Books si voulu.
 
+### Sélection & livres (ClassManager, J1.6/J1.7/J1.8)
+- 1er spawn : `dhsClassSlotFree=1` ; **réconciliation des livres** (idempotente via `dhsBooksOut`).
+- Slot libre → on **donne** les livres des classes non encore débloquées ; slot consommé (classe lue)
+  → on **supprime** les livres restants du sac (`bag.DecItem`) au tick suivant (≤10 s).
+- Complétion d'une sous-classe → débloque la sœur + rouvre un slot → les livres des autres branches
+  réapparaissent pour choisir la suivante (séquentiel).
+
 ### Note d'implémentation
 Le contenu des classes est **généré** depuis `tools/gen_axe1_classes.py` (table de classes =
 source de vérité). Ne pas éditer les `Config/{progression,items,loot}.xml` + `Localization.txt`

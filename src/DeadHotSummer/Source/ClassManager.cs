@@ -18,6 +18,7 @@ namespace DeadHotSummer
         private const string CvInit = "dhsInit";
         private const string CvSlotFree = "dhsClassSlotFree";
         private const string CvDoneCount = "dhsClassDoneCount";
+        private const string CvBooksOut = "dhsBooksOut"; // 1 = les livres de choix sont en circulation
         private const float CheckIntervalSec = 10f;
 
         // 14 sous-classes : code -> sous-classe sœur (même branche principale).
@@ -34,7 +35,7 @@ namespace DeadHotSummer
 
         private static float nextCheck;
 
-        // ---- Premier spawn : init slot + remise des livres de classe ----
+        // ---- Premier spawn : init slot + réconciliation des livres ----
         public static void OnPlayerSpawned(int entityId)
         {
             World world = GameManager.Instance?.World;
@@ -45,8 +46,28 @@ namespace DeadHotSummer
             {
                 player.Buffs.SetCustomVar(CvInit, 1f);
                 player.Buffs.SetCustomVar(CvSlotFree, 1f);
+                ModLog.Out($"Joueur {entityId}: 1er spawn -> slot de classe ouvert");
+            }
+            ReconcileBooks(player);
+        }
+
+        // Slot libre -> les livres de choix sont disponibles ; slot consommé -> on supprime
+        // les livres restants (inutilisables). Idempotent via le cvar dhsBooksOut.
+        private static void ReconcileBooks(EntityPlayer player)
+        {
+            if (player == null || player.Buffs == null || player.bag == null) return;
+            bool slotFree = player.Buffs.GetCustomVar(CvSlotFree) >= 1f;
+            bool booksOut = player.Buffs.GetCustomVar(CvBooksOut) >= 1f;
+            if (slotFree && !booksOut)
+            {
                 GiveClassBooks(player);
-                ModLog.Out($"Joueur {entityId}: 1er spawn -> slot de classe ouvert + 14 livres remis");
+                player.Buffs.SetCustomVar(CvBooksOut, 1f);
+            }
+            else if (!slotFree && booksOut)
+            {
+                RemoveClassBooks(player);
+                player.Buffs.SetCustomVar(CvBooksOut, 0f);
+                ModLog.Out($"Joueur {player.entityId}: livres de classe inutilisables supprimés");
             }
         }
 
@@ -56,9 +77,20 @@ namespace DeadHotSummer
             if (gm == null) return;
             foreach ((string code, string _) in Classes)
             {
+                if (player.Buffs.GetCustomVar("dhsCls" + code) >= 1f) continue; // classe déjà débloquée
                 ItemValue iv = ItemClass.GetItem("dhsBookClass" + code);
                 if (iv == null || iv.IsEmpty()) continue;
                 gm.ItemDropServer(new ItemStack(iv, 1), player.position, new Vector3(0.6f, 0.3f, 0.6f), player.entityId, 300f);
+            }
+        }
+
+        private static void RemoveClassBooks(EntityPlayer player)
+        {
+            foreach ((string code, string _) in Classes)
+            {
+                ItemValue iv = ItemClass.GetItem("dhsBookClass" + code);
+                if (iv == null || iv.IsEmpty()) continue;
+                player.bag.DecItem(iv, 999);
             }
         }
 
@@ -74,6 +106,7 @@ namespace DeadHotSummer
             for (int i = 0; i < players.Count; i++)
             {
                 CheckCompletion(players[i]);
+                ReconcileBooks(players[i]); // donne/supprime les livres selon l'état du slot
             }
         }
 
