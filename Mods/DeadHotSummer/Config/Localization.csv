@@ -71,6 +71,8 @@ dhsPerkEngiMechSigTurretName,Atelier robotique,Atelier robotique
 dhsPerkEngiMechSigTurretDesc,Débloque la fabrication des Munitions de tourelle haute vélocité.,Débloque la fabrication des Munitions de tourelle haute vélocité.
 dhsSkillClassEngiMechSpecName,Mécanicien — Spécialité,Mécanicien — Spécialité
 dhsSkillClassEngiMechSpecDesc,Sous-branche Mécanicien : Spécialité.,Sous-branche Mécanicien : Spécialité.
+dhsPerkEngiMechWreckerName,Ferrailleur,Ferrailleur
+dhsPerkEngiMechWreckerDesc,Récupère plus de pièces mécaniques en démontant.,Récupère plus de pièces mécaniques en démontant.
 dhsPerkEngiMechToughName,Robustesse,Robustesse
 dhsPerkEngiMechToughDesc,Réduit les dégâts physiques subis.,Réduit les dégâts physiques subis.
 dhsPerkEngiMechHPName,Vitalité,Vitalité
@@ -122,6 +124,8 @@ dhsPerkEngiElecSigCellName,Génie électrique,Génie électrique
 dhsPerkEngiElecSigCellDesc,Débloque la fabrication de la Cellule d'énergie renforcée.,Débloque la fabrication de la Cellule d'énergie renforcée.
 dhsSkillClassEngiElecSpecName,Électricien — Spécialité,Électricien — Spécialité
 dhsSkillClassEngiElecSpecDesc,Sous-branche Électricien : Spécialité.,Sous-branche Électricien : Spécialité.
+dhsPerkEngiElecDismantlerName,Démonteur,Démonteur
+dhsPerkEngiElecDismantlerDesc,Récupère plus de composants en démontant.,Récupère plus de composants en démontant.
 dhsPerkEngiElecToughName,Robustesse,Robustesse
 dhsPerkEngiElecToughDesc,Réduit les dégâts physiques subis.,Réduit les dégâts physiques subis.
 dhsPerkEngiElecHPName,Vitalité,Vitalité
@@ -383,6 +387,8 @@ dhsPerkSurvHuntSigArrowName,Carquois du chasseur,Carquois du chasseur
 dhsPerkSurvHuntSigArrowDesc,Débloque la fabrication des Flèches de chasse.,Débloque la fabrication des Flèches de chasse.
 dhsSkillClassSurvHuntSpecName,Chasseur — Spécialité,Chasseur — Spécialité
 dhsSkillClassSurvHuntSpecDesc,Sous-branche Chasseur : Spécialité.,Sous-branche Chasseur : Spécialité.
+dhsPerkSurvHuntSkinnerName,Dépeceur,Dépeceur
+dhsPerkSurvHuntSkinnerDesc,"Récolte plus de viande, de cuir et d'os sur les animaux.","Récolte plus de viande, de cuir et d'os sur les animaux."
 dhsPerkSurvHuntToughName,Robustesse,Robustesse
 dhsPerkSurvHuntToughDesc,Réduit les dégâts physiques subis.,Réduit les dégâts physiques subis.
 dhsPerkSurvHuntHPName,Vitalité,Vitalité
@@ -436,6 +442,8 @@ dhsPerkSurvHerbSigBrewName,Herboristerie,Herboristerie
 dhsPerkSurvHerbSigBrewDesc,Débloque la préparation de la Décoction d'herboriste.,Débloque la préparation de la Décoction d'herboriste.
 dhsSkillClassSurvHerbSpecName,Herboriste — Spécialité,Herboriste — Spécialité
 dhsSkillClassSurvHerbSpecDesc,Sous-branche Herboriste : Spécialité.,Sous-branche Herboriste : Spécialité.
+dhsPerkSurvHerbGathererName,Cueilleur émérite,Cueilleur émérite
+dhsPerkSurvHerbGathererDesc,Récolte plus sur les plantes sauvages.,Récolte plus sur les plantes sauvages.
 dhsPerkSurvHerbToughName,Robustesse,Robustesse
 dhsPerkSurvHerbToughDesc,Réduit les dégâts physiques subis.,Réduit les dégâts physiques subis.
 dhsPerkSurvHerbHPName,Vitalité,Vitalité
@@ -489,6 +497,8 @@ dhsPerkBuilArchCraftXPName,Apprentissage,Apprentissage
 dhsPerkBuilArchCraftXPDesc,Augmente toute l'expérience gagnée.,Augmente toute l'expérience gagnée.
 dhsSkillClassBuilArchSpecName,Architecte — Spécialité,Architecte — Spécialité
 dhsSkillClassBuilArchSpecDesc,Sous-branche Architecte : Spécialité.,Sous-branche Architecte : Spécialité.
+dhsPerkBuilArchQuarrymanName,Carrier,Carrier
+dhsPerkBuilArchQuarrymanDesc,Récolte plus de minerai et de bois en exploitant les ressources.,Récolte plus de minerai et de bois en exploitant les ressources.
 dhsPerkBuilArchToughName,Robustesse,Robustesse
 dhsPerkBuilArchToughDesc,Réduit les dégâts physiques subis.,Réduit les dégâts physiques subis.
 dhsPerkBuilArchHPName,Vitalité,Vitalité
@@ -538,6 +548,8 @@ dhsPerkBuilArtiSigKitName,Atelier d'artisan,Atelier d'artisan
 dhsPerkBuilArtiSigKitDesc,Débloque la fabrication de la Trousse de réparation pro.,Débloque la fabrication de la Trousse de réparation pro.
 dhsSkillClassBuilArtiSpecName,Artisan — Spécialité,Artisan — Spécialité
 dhsSkillClassBuilArtiSpecDesc,Sous-branche Artisan : Spécialité.,Sous-branche Artisan : Spécialité.
+dhsPerkBuilArtiScrapperName,Récupérateur,Récupérateur
+dhsPerkBuilArtiScrapperDesc,Récupère plus de ressources en démontant et récupérant.,Récupère plus de ressources en démontant et récupérant.
 dhsPerkBuilArtiToughName,Robustesse,Robustesse
 dhsPerkBuilArtiToughDesc,Réduit les dégâts physiques subis.,Réduit les dégâts physiques subis.
 dhsPerkBuilArtiHPName,Vitalité,Vitalité
@@ -644,6 +656,8 @@ dhsPerkScoutInfiSigStimName,Pharmacopée du rôdeur,Pharmacopée du rôdeur
 dhsPerkScoutInfiSigStimDesc,Débloque la préparation du Stimulant du rôdeur.,Débloque la préparation du Stimulant du rôdeur.
 dhsSkillClassScoutInfiSpecName,Infiltrateur — Spécialité,Infiltrateur — Spécialité
 dhsSkillClassScoutInfiSpecDesc,Sous-branche Infiltrateur : Spécialité.,Sous-branche Infiltrateur : Spécialité.
+dhsPerkScoutInfiLooterName,Pillard,Pillard
+dhsPerkScoutInfiLooterDesc,Récupère plus de ressources en fouillant et démontant.,Récupère plus de ressources en fouillant et démontant.
 dhsPerkScoutInfiToughName,Robustesse,Robustesse
 dhsPerkScoutInfiToughDesc,Réduit les dégâts physiques subis.,Réduit les dégâts physiques subis.
 dhsPerkScoutInfiHPName,Vitalité,Vitalité

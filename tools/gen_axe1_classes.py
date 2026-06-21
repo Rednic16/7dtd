@@ -287,6 +287,17 @@ DOMAIN = {
     "MedicChem": ("chemStationCrafting","chimie et explosifs"),
 }
 
+# Perk thématique de récolte par sous-classe (tags HarvestCount vérifiés) -> identité distinctive.
+THEME = {
+    "SurvHunt":  ("Skinner","Dépeceur","Récolte plus de viande, de cuir et d'os sur les animaux.","butcherHarvest"),
+    "SurvHerb":  ("Gatherer","Cueilleur émérite","Récolte plus sur les plantes sauvages.","wildCropsHarvest"),
+    "BuilArch":  ("Quarryman","Carrier","Récolte plus de minerai et de bois en exploitant les ressources.","oreWoodHarvest"),
+    "BuilArti":  ("Scrapper","Récupérateur","Récupère plus de ressources en démontant et récupérant.","salvageHarvest"),
+    "ScoutInfi": ("Looter","Pillard","Récupère plus de ressources en fouillant et démontant.","salvageHarvest"),
+    "EngiMech":  ("Wrecker","Ferrailleur","Récupère plus de pièces mécaniques en démontant.","salvageHarvest"),
+    "EngiElec":  ("Dismantler","Démonteur","Récupère plus de composants en démontant.","salvageHarvest"),
+}
+
 def build_domain_subbranches(code):
     """Construit ~20 perks (3 sous-branches : Arme / Métier / Spécialité) pour une sous-classe
     à partir de son arme (WEAPON_TIERS) et de son domaine de craft (DOMAIN). Tout en français."""
@@ -349,6 +360,11 @@ def build_domain_subbranches(code):
         stat("Buff","Tempérament","Tempérament","BuffResistance","base_add","1","3",3,"",
              "Résiste aux effets négatifs.","Résiste aux effets négatifs.","ui_game_symbol_light_armor2"),
     ]
+    th = THEME.get(code)
+    if th:
+        tsuf, tnm, tdesc, thtag = th
+        spec.insert(0, stat(tsuf, tnm, tnm, "HarvestCount", "perc_add", ".10", ".50", 5, thtag,
+                            tdesc, tdesc, "ui_game_symbol_pack_mule"))
     return [("Arme", "Arme", "Arme", wic, arme),
             ("Metier", "Métier", "Métier", "ui_game_symbol_workbench", metier),
             ("Spec", "Spécialité", "Spécialité", "ui_game_symbol_character", spec)]
