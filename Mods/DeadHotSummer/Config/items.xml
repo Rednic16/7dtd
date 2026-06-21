@@ -51,6 +51,7 @@
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassActiveForeign" operation="set" value="12"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsPtsEngiElec" operation="add" value="3"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassEngiElecAtelierI" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassEngiElecSigCell" level="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
       </effect_group>
@@ -68,6 +69,7 @@
         <requirement name="CVarCompare" cvar="dhsClsEngiElec" operation="Equals" value="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsPtsEngiElec" operation="add" value="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassEngiElecAtelierI" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassEngiElecSigCell" level="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
       </effect_group>
@@ -335,6 +337,7 @@
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassActiveForeign" operation="set" value="52"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsPtsBuilArti" operation="add" value="3"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassBuilArtiAtelierI" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassBuilArtiSigKit" level="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
       </effect_group>
@@ -352,6 +355,7 @@
         <requirement name="CVarCompare" cvar="dhsClsBuilArti" operation="Equals" value="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsPtsBuilArti" operation="add" value="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassBuilArtiAtelierI" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassBuilArtiSigKit" level="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
       </effect_group>
@@ -505,6 +509,12 @@
         <passive_effect name="EntityDamage" operation="perc_add" value=".4" tags="perkTurrets"/>
       </effect_group>
     </item>
+    <item name="dhsBatteryHD">
+      <property name="Extends" value="carBattery"/>
+      <property name="CustomIcon" value="carBattery"/>
+      <property name="CustomIconTint" value="66e0ff"/>
+      <property name="DescriptionKey" value="dhsBatteryHDDesc"/>
+    </item>
     <item name="dhsMedSurgeryKit">
       <property name="Extends" value="medicalFirstAidKit"/>
       <property name="CustomIcon" value="medicalFirstAidKit"/>
@@ -556,6 +566,12 @@
       <effect_group name="dhsDecoction" tiered="false">
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="dhsBuffHerbal"/>
       </effect_group>
+    </item>
+    <item name="dhsRepairKitPro">
+      <property name="Extends" value="resourceRepairKit"/>
+      <property name="CustomIcon" value="resourceRepairKit"/>
+      <property name="CustomIconTint" value="ffdd66"/>
+      <property name="DescriptionKey" value="dhsRepairKitProDesc"/>
     </item>
     <item name="dhsAmmoLight">
       <property name="Extends" value="ammo9mmBulletHP"/>

@@ -118,6 +118,8 @@ dhsPerkEngiElecAtelierIName,Atelier : électricité et pièges,Atelier : électr
 dhsPerkEngiElecAtelierIDesc,Débloque la fabrication de votre spécialité : électricité et pièges.,Débloque la fabrication de votre spécialité : électricité et pièges.
 dhsPerkEngiElecCraftXPName,Apprentissage,Apprentissage
 dhsPerkEngiElecCraftXPDesc,Augmente toute l'expérience gagnée.,Augmente toute l'expérience gagnée.
+dhsPerkEngiElecSigCellName,Génie électrique,Génie électrique
+dhsPerkEngiElecSigCellDesc,Débloque la fabrication de la Cellule d'énergie renforcée.,Débloque la fabrication de la Cellule d'énergie renforcée.
 dhsSkillClassEngiElecSpecName,Électricien — Spécialité,Électricien — Spécialité
 dhsSkillClassEngiElecSpecDesc,Sous-branche Électricien : Spécialité.,Sous-branche Électricien : Spécialité.
 dhsPerkEngiElecToughName,Robustesse,Robustesse
@@ -134,6 +136,8 @@ dhsPerkEngiElecResistName,Constitution,Constitution
 dhsPerkEngiElecResistDesc,Réduit légèrement tous les dégâts subis.,Réduit légèrement tous les dégâts subis.
 dhsPerkEngiElecBuffName,Tempérament,Tempérament
 dhsPerkEngiElecBuffDesc,Résiste aux effets négatifs.,Résiste aux effets négatifs.
+dhsBatteryHD,Cellule d'énergie renforcée,Cellule d'énergie renforcée
+dhsBatteryHDDesc,Batterie haute capacité pour pièges et installations électriques. Fabriquée uniquement par l'Électricien.,Batterie haute capacité pour pièges et installations électriques. Fabriquée uniquement par l'Électricien.
 dhsReqClassMedicSurg,Nécessite la classe Chirurgien,Nécessite la classe Chirurgien
 dhsBookClassMedicSurg,Manuel de classe : Chirurgien,Manuel de classe : Chirurgien
 dhsBookClassMedicSurgDesc,"Devenez Chirurgien : maîtrisez les soins et les armes blanches. La lecture choisit la classe Chirurgien, débloque son craft signature et octroie quelques points de classe.","Devenez Chirurgien : maîtrisez les soins et les armes blanches. La lecture choisit la classe Chirurgien, débloque son craft signature et octroie quelques points de classe."
@@ -530,6 +534,8 @@ dhsPerkBuilArtiAtelierIIName,Maîtrise : outils et équipement,Maîtrise : outil
 dhsPerkBuilArtiAtelierIIDesc,Débloque la fabrication avancée de votre spécialité : outils et équipement.,Débloque la fabrication avancée de votre spécialité : outils et équipement.
 dhsPerkBuilArtiCraftXPName,Apprentissage,Apprentissage
 dhsPerkBuilArtiCraftXPDesc,Augmente toute l'expérience gagnée.,Augmente toute l'expérience gagnée.
+dhsPerkBuilArtiSigKitName,Atelier d'artisan,Atelier d'artisan
+dhsPerkBuilArtiSigKitDesc,Débloque la fabrication de la Trousse de réparation pro.,Débloque la fabrication de la Trousse de réparation pro.
 dhsSkillClassBuilArtiSpecName,Artisan — Spécialité,Artisan — Spécialité
 dhsSkillClassBuilArtiSpecDesc,Sous-branche Artisan : Spécialité.,Sous-branche Artisan : Spécialité.
 dhsPerkBuilArtiToughName,Robustesse,Robustesse
@@ -546,6 +552,8 @@ dhsPerkBuilArtiResistName,Constitution,Constitution
 dhsPerkBuilArtiResistDesc,Réduit légèrement tous les dégâts subis.,Réduit légèrement tous les dégâts subis.
 dhsPerkBuilArtiBuffName,Tempérament,Tempérament
 dhsPerkBuilArtiBuffDesc,Résiste aux effets négatifs.,Résiste aux effets négatifs.
+dhsRepairKitPro,Trousse de réparation pro,Trousse de réparation pro
+dhsRepairKitProDesc,"Trousse d'artisan complète, idéale pour entretenir armes, outils et véhicules. Fabriquée uniquement par l'Artisan.","Trousse d'artisan complète, idéale pour entretenir armes, outils et véhicules. Fabriquée uniquement par l'Artisan."
 dhsReqClassScoutTrac,Nécessite la classe Pisteur,Nécessite la classe Pisteur
 dhsBookClassScoutTrac,Manuel de classe : Pisteur,Manuel de classe : Pisteur
 dhsBookClassScoutTracDesc,"Devenez Pisteur : maîtrisez la mobilité, l'exploration et les pistolets. La lecture choisit la classe Pisteur, débloque son craft signature et octroie quelques points de classe.","Devenez Pisteur : maîtrisez la mobilité, l'exploration et les pistolets. La lecture choisit la classe Pisteur, débloque son craft signature et octroie quelques points de classe."

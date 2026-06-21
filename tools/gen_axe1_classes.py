@@ -658,6 +658,34 @@ CRAFTABLES = {
         "sigperks": [unlock("SigStim","Pharmacopée du rôdeur","Pharmacopée du rôdeur","ui_game_symbol_stealth","dhsDrugProwler",True,1,
                             "Débloque la préparation du Stimulant du rôdeur.","Débloque la préparation du Stimulant du rôdeur.")],
     },
+    "EngiElec": {
+        "items": ['''    <item name="dhsBatteryHD">
+      <property name="Extends" value="carBattery"/>
+      <property name="CustomIcon" value="carBattery"/>
+      <property name="CustomIconTint" value="66e0ff"/>
+      <property name="DescriptionKey" value="dhsBatteryHDDesc"/>
+    </item>'''],
+        "recipes": ['<recipe name="dhsBatteryHD" count="1" craft_area="workbench" craft_time="20" tags="learnable,workbenchCrafting,perkAdvancedEngineering"><ingredient name="resourceElectricParts" count="3"/><ingredient name="resourceForgedIron" count="3"/><ingredient name="resourceDuctTape" count="2"/></recipe>'],
+        "buffs": [],
+        "loc": [("dhsBatteryHD","Cellule d'énergie renforcée","Cellule d'énergie renforcée"),
+                ("dhsBatteryHDDesc","Batterie haute capacité pour pièges et installations électriques. Fabriquée uniquement par l'Électricien.","Batterie haute capacité pour pièges et installations électriques. Fabriquée uniquement par l'Électricien.")],
+        "sigperks": [unlock("SigCell","Génie électrique","Génie électrique","ui_game_symbol_electric_generator","dhsBatteryHD",True,1,
+                            "Débloque la fabrication de la Cellule d'énergie renforcée.","Débloque la fabrication de la Cellule d'énergie renforcée.")],
+    },
+    "BuilArti": {
+        "items": ['''    <item name="dhsRepairKitPro">
+      <property name="Extends" value="resourceRepairKit"/>
+      <property name="CustomIcon" value="resourceRepairKit"/>
+      <property name="CustomIconTint" value="ffdd66"/>
+      <property name="DescriptionKey" value="dhsRepairKitProDesc"/>
+    </item>'''],
+        "recipes": ['<recipe name="dhsRepairKitPro" count="2" craft_area="workbench" craft_time="10" tags="learnable,workbenchCrafting,craftingHarvestingTools"><ingredient name="resourceForgedIron" count="3"/><ingredient name="resourceMechanicalParts" count="2"/><ingredient name="resourceDuctTape" count="1"/></recipe>'],
+        "buffs": [],
+        "loc": [("dhsRepairKitPro","Trousse de réparation pro","Trousse de réparation pro"),
+                ("dhsRepairKitProDesc","Trousse d'artisan complète, idéale pour entretenir armes, outils et véhicules. Fabriquée uniquement par l'Artisan.","Trousse d'artisan complète, idéale pour entretenir armes, outils et véhicules. Fabriquée uniquement par l'Artisan.")],
+        "sigperks": [unlock("SigKit","Atelier d'artisan","Atelier d'artisan","ui_game_symbol_workbench","dhsRepairKitPro",True,1,
+                            "Débloque la fabrication de la Trousse de réparation pro.","Débloque la fabrication de la Trousse de réparation pro.")],
+    },
 }
 
 def craft(code): return CRAFTABLES.get(code)

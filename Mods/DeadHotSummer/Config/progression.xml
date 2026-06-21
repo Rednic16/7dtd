@@ -307,6 +307,10 @@
       <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsEngiElec" operation="Equals" value="1" desc_key="dhsReqClassEngiElec"/><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
       <effect_group><passive_effect name="PlayerExpGain" operation="perc_add" level="1,5" value=".02,.10"/></effect_group>
     </perk>
+    <perk name="perkClassEngiElecSigCell" parent="skillClassEngiElecMetier" name_key="dhsPerkEngiElecSigCellName" desc_key="dhsPerkEngiElecSigCellDesc" icon="ui_game_symbol_electric_generator" max_level="1" base_skill_point_cost="0">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsEngiElec" operation="Equals" value="1" desc_key="dhsReqClassEngiElec"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
+      <effect_group><passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="dhsBatteryHD"/></effect_group>
+    </perk>
     <perk name="perkClassEngiElecTough" parent="skillClassEngiElecSpec" name_key="dhsPerkEngiElecToughName" desc_key="dhsPerkEngiElecToughDesc" icon="ui_game_symbol_armor_iron" max_level="5">
       <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsEngiElec" operation="Equals" value="1" desc_key="dhsReqClassEngiElec"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
       <level_requirements level="2"><requirement name="CVarCompare" cvar="dhsClsEngiElec" operation="Equals" value="1" desc_key="dhsReqClassEngiElec"/><requirement name="PlayerLevel" operation="GTE" value="12"/></level_requirements>
@@ -1414,6 +1418,10 @@
       <level_requirements level="4"><requirement name="CVarCompare" cvar="dhsClsBuilArti" operation="Equals" value="1" desc_key="dhsReqClassBuilArti"/><requirement name="PlayerLevel" operation="GTE" value="36"/></level_requirements>
       <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsBuilArti" operation="Equals" value="1" desc_key="dhsReqClassBuilArti"/><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
       <effect_group><passive_effect name="PlayerExpGain" operation="perc_add" level="1,5" value=".02,.10"/></effect_group>
+    </perk>
+    <perk name="perkClassBuilArtiSigKit" parent="skillClassBuilArtiMetier" name_key="dhsPerkBuilArtiSigKitName" desc_key="dhsPerkBuilArtiSigKitDesc" icon="ui_game_symbol_workbench" max_level="1" base_skill_point_cost="0">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsBuilArti" operation="Equals" value="1" desc_key="dhsReqClassBuilArti"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
+      <effect_group><passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="dhsRepairKitPro"/></effect_group>
     </perk>
     <perk name="perkClassBuilArtiTough" parent="skillClassBuilArtiSpec" name_key="dhsPerkBuilArtiToughName" desc_key="dhsPerkBuilArtiToughDesc" icon="ui_game_symbol_armor_iron" max_level="5">
       <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsBuilArti" operation="Equals" value="1" desc_key="dhsReqClassBuilArti"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
