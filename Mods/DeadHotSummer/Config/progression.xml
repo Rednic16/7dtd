@@ -441,6 +441,10 @@
       <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsMedicSurg" operation="Equals" value="1" desc_key="dhsReqClassMedicSurg"/><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
       <effect_group><passive_effect name="PlayerExpGain" operation="perc_add" level="1,5" value=".02,.10"/></effect_group>
     </perk>
+    <perk name="perkClassMedicSurgSigKit" parent="skillClassMedicSurgMetier" name_key="dhsPerkMedicSurgSigKitName" desc_key="dhsPerkMedicSurgSigKitDesc" icon="ui_game_symbol_medical" max_level="1" base_skill_point_cost="0">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsMedicSurg" operation="Equals" value="1" desc_key="dhsReqClassMedicSurg"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
+      <effect_group><passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="dhsMedSurgeryKit"/></effect_group>
+    </perk>
     <perk name="perkClassMedicSurgTough" parent="skillClassMedicSurgSpec" name_key="dhsPerkMedicSurgToughName" desc_key="dhsPerkMedicSurgToughDesc" icon="ui_game_symbol_armor_iron" max_level="5">
       <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsMedicSurg" operation="Equals" value="1" desc_key="dhsReqClassMedicSurg"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
       <level_requirements level="2"><requirement name="CVarCompare" cvar="dhsClsMedicSurg" operation="Equals" value="1" desc_key="dhsReqClassMedicSurg"/><requirement name="PlayerLevel" operation="GTE" value="12"/></level_requirements>
@@ -566,6 +570,10 @@
       <level_requirements level="4"><requirement name="CVarCompare" cvar="dhsClsMedicChem" operation="Equals" value="1" desc_key="dhsReqClassMedicChem"/><requirement name="PlayerLevel" operation="GTE" value="36"/></level_requirements>
       <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsMedicChem" operation="Equals" value="1" desc_key="dhsReqClassMedicChem"/><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
       <effect_group><passive_effect name="PlayerExpGain" operation="perc_add" level="1,5" value=".02,.10"/></effect_group>
+    </perk>
+    <perk name="perkClassMedicChemSigBomb" parent="skillClassMedicChemMetier" name_key="dhsPerkMedicChemSigBombName" desc_key="dhsPerkMedicChemSigBombDesc" icon="ui_game_symbol_science" max_level="1" base_skill_point_cost="0">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsMedicChem" operation="Equals" value="1" desc_key="dhsReqClassMedicChem"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
+      <effect_group><passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="dhsThrownFirebomb"/></effect_group>
     </perk>
     <perk name="perkClassMedicChemTough" parent="skillClassMedicChemSpec" name_key="dhsPerkMedicChemToughName" desc_key="dhsPerkMedicChemToughDesc" icon="ui_game_symbol_armor_iron" max_level="5">
       <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsMedicChem" operation="Equals" value="1" desc_key="dhsReqClassMedicChem"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
@@ -705,6 +713,10 @@
       <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsSoldSnip" operation="Equals" value="1" desc_key="dhsReqClassSoldSnip"/><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
       <effect_group><passive_effect name="PlayerExpGain" operation="perc_add" level="1,5" value=".02,.10"/></effect_group>
     </perk>
+    <perk name="perkClassSoldSnipSigAmmo" parent="skillClassSoldSnipMetier" name_key="dhsPerkSoldSnipSigAmmoName" desc_key="dhsPerkSoldSnipSigAmmoDesc" icon="ui_game_symbol_long_shot" max_level="1" base_skill_point_cost="0">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsSoldSnip" operation="Equals" value="1" desc_key="dhsReqClassSoldSnip"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
+      <effect_group><passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="dhsAmmoMatchAP"/></effect_group>
+    </perk>
     <perk name="perkClassSoldSnipTough" parent="skillClassSoldSnipSpec" name_key="dhsPerkSoldSnipToughName" desc_key="dhsPerkSoldSnipToughDesc" icon="ui_game_symbol_armor_iron" max_level="5">
       <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsSoldSnip" operation="Equals" value="1" desc_key="dhsReqClassSoldSnip"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
       <level_requirements level="2"><requirement name="CVarCompare" cvar="dhsClsSoldSnip" operation="Equals" value="1" desc_key="dhsReqClassSoldSnip"/><requirement name="PlayerLevel" operation="GTE" value="12"/></level_requirements>
@@ -842,6 +854,10 @@
       <level_requirements level="4"><requirement name="CVarCompare" cvar="dhsClsSoldAslt" operation="Equals" value="1" desc_key="dhsReqClassSoldAslt"/><requirement name="PlayerLevel" operation="GTE" value="36"/></level_requirements>
       <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsSoldAslt" operation="Equals" value="1" desc_key="dhsReqClassSoldAslt"/><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
       <effect_group><passive_effect name="PlayerExpGain" operation="perc_add" level="1,5" value=".02,.10"/></effect_group>
+    </perk>
+    <perk name="perkClassSoldAsltSigAmmo" parent="skillClassSoldAsltMetier" name_key="dhsPerkSoldAsltSigAmmoName" desc_key="dhsPerkSoldAsltSigAmmoDesc" icon="ui_game_symbol_rifle" max_level="1" base_skill_point_cost="0">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsSoldAslt" operation="Equals" value="1" desc_key="dhsReqClassSoldAslt"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
+      <effect_group><passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="dhsAmmoBattle"/></effect_group>
     </perk>
     <perk name="perkClassSoldAsltTough" parent="skillClassSoldAsltSpec" name_key="dhsPerkSoldAsltToughName" desc_key="dhsPerkSoldAsltToughDesc" icon="ui_game_symbol_armor_iron" max_level="5">
       <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsSoldAslt" operation="Equals" value="1" desc_key="dhsReqClassSoldAslt"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
@@ -981,6 +997,10 @@
       <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsSurvHunt" operation="Equals" value="1" desc_key="dhsReqClassSurvHunt"/><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
       <effect_group><passive_effect name="PlayerExpGain" operation="perc_add" level="1,5" value=".02,.10"/></effect_group>
     </perk>
+    <perk name="perkClassSurvHuntSigArrow" parent="skillClassSurvHuntMetier" name_key="dhsPerkSurvHuntSigArrowName" desc_key="dhsPerkSurvHuntSigArrowDesc" icon="ui_game_symbol_archery" max_level="1" base_skill_point_cost="0">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsSurvHunt" operation="Equals" value="1" desc_key="dhsReqClassSurvHunt"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
+      <effect_group><passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="dhsAmmoHuntArrow"/></effect_group>
+    </perk>
     <perk name="perkClassSurvHuntTough" parent="skillClassSurvHuntSpec" name_key="dhsPerkSurvHuntToughName" desc_key="dhsPerkSurvHuntToughDesc" icon="ui_game_symbol_armor_iron" max_level="5">
       <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsSurvHunt" operation="Equals" value="1" desc_key="dhsReqClassSurvHunt"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
       <level_requirements level="2"><requirement name="CVarCompare" cvar="dhsClsSurvHunt" operation="Equals" value="1" desc_key="dhsReqClassSurvHunt"/><requirement name="PlayerLevel" operation="GTE" value="12"/></level_requirements>
@@ -1118,6 +1138,10 @@
       <level_requirements level="4"><requirement name="CVarCompare" cvar="dhsClsSurvHerb" operation="Equals" value="1" desc_key="dhsReqClassSurvHerb"/><requirement name="PlayerLevel" operation="GTE" value="36"/></level_requirements>
       <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsSurvHerb" operation="Equals" value="1" desc_key="dhsReqClassSurvHerb"/><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
       <effect_group><passive_effect name="PlayerExpGain" operation="perc_add" level="1,5" value=".02,.10"/></effect_group>
+    </perk>
+    <perk name="perkClassSurvHerbSigBrew" parent="skillClassSurvHerbMetier" name_key="dhsPerkSurvHerbSigBrewName" desc_key="dhsPerkSurvHerbSigBrewDesc" icon="ui_game_symbol_crops" max_level="1" base_skill_point_cost="0">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsSurvHerb" operation="Equals" value="1" desc_key="dhsReqClassSurvHerb"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
+      <effect_group><passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="dhsDrinkDecoction"/></effect_group>
     </perk>
     <perk name="perkClassSurvHerbTough" parent="skillClassSurvHerbSpec" name_key="dhsPerkSurvHerbToughName" desc_key="dhsPerkSurvHerbToughDesc" icon="ui_game_symbol_armor_iron" max_level="5">
       <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsSurvHerb" operation="Equals" value="1" desc_key="dhsReqClassSurvHerb"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
@@ -1524,6 +1548,10 @@
       <level_requirements level="4"><requirement name="CVarCompare" cvar="dhsClsScoutTrac" operation="Equals" value="1" desc_key="dhsReqClassScoutTrac"/><requirement name="PlayerLevel" operation="GTE" value="36"/></level_requirements>
       <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsScoutTrac" operation="Equals" value="1" desc_key="dhsReqClassScoutTrac"/><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
       <effect_group><passive_effect name="PlayerExpGain" operation="perc_add" level="1,5" value=".02,.10"/></effect_group>
+    </perk>
+    <perk name="perkClassScoutTracSigAmmo" parent="skillClassScoutTracMetier" name_key="dhsPerkScoutTracSigAmmoName" desc_key="dhsPerkScoutTracSigAmmoDesc" icon="ui_game_symbol_run" max_level="1" base_skill_point_cost="0">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsScoutTrac" operation="Equals" value="1" desc_key="dhsReqClassScoutTrac"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
+      <effect_group><passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="dhsAmmoLight"/></effect_group>
     </perk>
     <perk name="perkClassScoutTracTough" parent="skillClassScoutTracSpec" name_key="dhsPerkScoutTracToughName" desc_key="dhsPerkScoutTracToughDesc" icon="ui_game_symbol_armor_iron" max_level="5">
       <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsScoutTrac" operation="Equals" value="1" desc_key="dhsReqClassScoutTrac"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>

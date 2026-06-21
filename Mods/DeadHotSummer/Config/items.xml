@@ -83,6 +83,7 @@
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassActiveForeign" operation="set" value="21"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsPtsMedicSurg" operation="add" value="3"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassMedicSurgAtelierI" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassMedicSurgSigKit" level="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
       </effect_group>
@@ -100,6 +101,7 @@
         <requirement name="CVarCompare" cvar="dhsClsMedicSurg" operation="Equals" value="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsPtsMedicSurg" operation="add" value="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassMedicSurgAtelierI" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassMedicSurgSigKit" level="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
       </effect_group>
@@ -117,6 +119,7 @@
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassActiveForeign" operation="set" value="22"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsPtsMedicChem" operation="add" value="3"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassMedicChemAtelierI" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassMedicChemSigBomb" level="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
       </effect_group>
@@ -134,6 +137,7 @@
         <requirement name="CVarCompare" cvar="dhsClsMedicChem" operation="Equals" value="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsPtsMedicChem" operation="add" value="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassMedicChemAtelierI" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassMedicChemSigBomb" level="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
       </effect_group>
@@ -151,6 +155,7 @@
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassActiveForeign" operation="set" value="31"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsPtsSoldSnip" operation="add" value="3"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassSoldSnipAtelierI" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassSoldSnipSigAmmo" level="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
       </effect_group>
@@ -168,6 +173,7 @@
         <requirement name="CVarCompare" cvar="dhsClsSoldSnip" operation="Equals" value="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsPtsSoldSnip" operation="add" value="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassSoldSnipAtelierI" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassSoldSnipSigAmmo" level="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
       </effect_group>
@@ -185,6 +191,7 @@
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassActiveForeign" operation="set" value="32"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsPtsSoldAslt" operation="add" value="3"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassSoldAsltAtelierI" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassSoldAsltSigAmmo" level="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
       </effect_group>
@@ -202,6 +209,7 @@
         <requirement name="CVarCompare" cvar="dhsClsSoldAslt" operation="Equals" value="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsPtsSoldAslt" operation="add" value="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassSoldAsltAtelierI" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassSoldAsltSigAmmo" level="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
       </effect_group>
@@ -219,6 +227,7 @@
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassActiveForeign" operation="set" value="41"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsPtsSurvHunt" operation="add" value="3"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassSurvHuntAtelierI" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassSurvHuntSigArrow" level="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
       </effect_group>
@@ -236,6 +245,7 @@
         <requirement name="CVarCompare" cvar="dhsClsSurvHunt" operation="Equals" value="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsPtsSurvHunt" operation="add" value="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassSurvHuntAtelierI" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassSurvHuntSigArrow" level="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
       </effect_group>
@@ -253,6 +263,7 @@
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassActiveForeign" operation="set" value="42"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsPtsSurvHerb" operation="add" value="3"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassSurvHerbAtelierI" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassSurvHerbSigBrew" level="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
       </effect_group>
@@ -270,6 +281,7 @@
         <requirement name="CVarCompare" cvar="dhsClsSurvHerb" operation="Equals" value="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsPtsSurvHerb" operation="add" value="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassSurvHerbAtelierI" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassSurvHerbSigBrew" level="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
       </effect_group>
@@ -355,6 +367,7 @@
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassActiveForeign" operation="set" value="61"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsPtsScoutTrac" operation="add" value="3"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassScoutTracAtelierI" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassScoutTracSigAmmo" level="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
       </effect_group>
@@ -372,6 +385,7 @@
         <requirement name="CVarCompare" cvar="dhsClsScoutTrac" operation="Equals" value="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsPtsScoutTrac" operation="add" value="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassScoutTracAtelierI" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassScoutTracSigAmmo" level="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
       </effect_group>
@@ -476,6 +490,67 @@
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassFarmCookFeast" level="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
+      </effect_group>
+    </item>
+    <item name="dhsMedSurgeryKit">
+      <property name="Extends" value="medicalFirstAidKit"/>
+      <property name="CustomIcon" value="medicalFirstAidKit"/>
+      <property name="CustomIconTint" value="ff6688"/>
+      <property name="DescriptionKey" value="dhsMedSurgeryKitDesc"/>
+    </item>
+    <item name="dhsThrownFirebomb">
+      <property name="Extends" value="thrownAmmoMolotovCocktail"/>
+      <property name="CustomIcon" value="thrownAmmoMolotovCocktail"/>
+      <property name="CustomIconTint" value="ff6633"/>
+      <property name="DescriptionKey" value="dhsThrownFirebombDesc"/>
+      <effect_group name="dhsFirebomb" tiered="false">
+        <passive_effect name="EntityDamage" operation="perc_add" value=".4" tags="perkDemolitionsExpert"/>
+      </effect_group>
+    </item>
+    <item name="dhsAmmoMatchAP">
+      <property name="Extends" value="ammo762mmBulletAP"/>
+      <property name="CustomIcon" value="ammo762mmBulletAP"/>
+      <property name="CustomIconTint" value="cce066"/>
+      <property name="DescriptionKey" value="dhsAmmoMatchAPDesc"/>
+      <effect_group name="dhsMatchAP" tiered="false">
+        <passive_effect name="EntityDamage" operation="perc_add" value=".35" tags="perkDeadEye"/>
+        <passive_effect name="BlockDamage" operation="perc_add" value=".3" tags="perkDeadEye"/>
+      </effect_group>
+    </item>
+    <item name="dhsAmmoBattle">
+      <property name="Extends" value="ammo762mmBulletBall"/>
+      <property name="CustomIcon" value="ammo762mmBulletBall"/>
+      <property name="CustomIconTint" value="e09966"/>
+      <property name="DescriptionKey" value="dhsAmmoBattleDesc"/>
+      <effect_group name="dhsBattle" tiered="false">
+        <passive_effect name="EntityDamage" operation="perc_add" value=".30" tags="perkMachineGunner"/>
+      </effect_group>
+    </item>
+    <item name="dhsAmmoHuntArrow">
+      <property name="Extends" value="ammoArrowIron"/>
+      <property name="CustomIcon" value="ammoArrowIron"/>
+      <property name="CustomIconTint" value="66cc66"/>
+      <property name="DescriptionKey" value="dhsAmmoHuntArrowDesc"/>
+      <effect_group name="dhsHuntArrow" tiered="false">
+        <passive_effect name="EntityDamage" operation="perc_add" value=".5" tags="perkArchery"/>
+      </effect_group>
+    </item>
+    <item name="dhsDrinkDecoction">
+      <property name="Extends" value="drinkJarRedTea"/>
+      <property name="CustomIcon" value="drinkJarRedTea"/>
+      <property name="CustomIconTint" value="88dd88"/>
+      <property name="DescriptionKey" value="dhsDrinkDecoctionDesc"/>
+      <effect_group name="dhsDecoction" tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="dhsBuffHerbal"/>
+      </effect_group>
+    </item>
+    <item name="dhsAmmoLight">
+      <property name="Extends" value="ammo9mmBulletHP"/>
+      <property name="CustomIcon" value="ammo9mmBulletHP"/>
+      <property name="CustomIconTint" value="66cce0"/>
+      <property name="DescriptionKey" value="dhsAmmoLightDesc"/>
+      <effect_group name="dhsLight" tiered="false">
+        <passive_effect name="EntityDamage" operation="perc_add" value=".30" tags="perkGunslinger"/>
       </effect_group>
     </item>
     <item name="dhsAmmoFarmerSlug">

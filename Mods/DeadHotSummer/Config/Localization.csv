@@ -163,6 +163,8 @@ dhsPerkMedicSurgAtelierIIName,Maîtrise : médecine,Maîtrise : médecine
 dhsPerkMedicSurgAtelierIIDesc,Débloque la fabrication avancée de votre spécialité : médecine.,Débloque la fabrication avancée de votre spécialité : médecine.
 dhsPerkMedicSurgCraftXPName,Apprentissage,Apprentissage
 dhsPerkMedicSurgCraftXPDesc,Augmente toute l'expérience gagnée.,Augmente toute l'expérience gagnée.
+dhsPerkMedicSurgSigKitName,Bloc opératoire,Bloc opératoire
+dhsPerkMedicSurgSigKitDesc,Débloque la fabrication de la Trousse de chirurgie.,Débloque la fabrication de la Trousse de chirurgie.
 dhsSkillClassMedicSurgSpecName,Chirurgien — Spécialité,Chirurgien — Spécialité
 dhsSkillClassMedicSurgSpecDesc,Sous-branche Chirurgien : Spécialité.,Sous-branche Chirurgien : Spécialité.
 dhsPerkMedicSurgToughName,Robustesse,Robustesse
@@ -179,6 +181,8 @@ dhsPerkMedicSurgResistName,Constitution,Constitution
 dhsPerkMedicSurgResistDesc,Réduit légèrement tous les dégâts subis.,Réduit légèrement tous les dégâts subis.
 dhsPerkMedicSurgBuffName,Tempérament,Tempérament
 dhsPerkMedicSurgBuffDesc,Résiste aux effets négatifs.,Résiste aux effets négatifs.
+dhsMedSurgeryKit,Trousse de chirurgie,Trousse de chirurgie
+dhsMedSurgeryKitDesc,Trousse de soins complète de qualité hospitalière. Fabriquée uniquement par le Chirurgien.,Trousse de soins complète de qualité hospitalière. Fabriquée uniquement par le Chirurgien.
 dhsReqClassMedicChem,Nécessite la classe Chimiste,Nécessite la classe Chimiste
 dhsBookClassMedicChem,Manuel de classe : Chimiste,Manuel de classe : Chimiste
 dhsBookClassMedicChemDesc,"Devenez Chimiste : maîtrisez la chimie, les drogues et les armes de jet. La lecture choisit la classe Chimiste, débloque son craft signature et octroie quelques points de classe.","Devenez Chimiste : maîtrisez la chimie, les drogues et les armes de jet. La lecture choisit la classe Chimiste, débloque son craft signature et octroie quelques points de classe."
@@ -208,6 +212,8 @@ dhsPerkMedicChemAtelierIName,Atelier : chimie et explosifs,Atelier : chimie et e
 dhsPerkMedicChemAtelierIDesc,Débloque la fabrication de votre spécialité : chimie et explosifs.,Débloque la fabrication de votre spécialité : chimie et explosifs.
 dhsPerkMedicChemCraftXPName,Apprentissage,Apprentissage
 dhsPerkMedicChemCraftXPDesc,Augmente toute l'expérience gagnée.,Augmente toute l'expérience gagnée.
+dhsPerkMedicChemSigBombName,Cocktails du chimiste,Cocktails du chimiste
+dhsPerkMedicChemSigBombDesc,Débloque la fabrication des Cocktails incendiaires du chimiste.,Débloque la fabrication des Cocktails incendiaires du chimiste.
 dhsSkillClassMedicChemSpecName,Chimiste — Spécialité,Chimiste — Spécialité
 dhsSkillClassMedicChemSpecDesc,Sous-branche Chimiste : Spécialité.,Sous-branche Chimiste : Spécialité.
 dhsPerkMedicChemToughName,Robustesse,Robustesse
@@ -224,6 +230,8 @@ dhsPerkMedicChemResistName,Constitution,Constitution
 dhsPerkMedicChemResistDesc,Réduit légèrement tous les dégâts subis.,Réduit légèrement tous les dégâts subis.
 dhsPerkMedicChemBuffName,Tempérament,Tempérament
 dhsPerkMedicChemBuffDesc,Résiste aux effets négatifs.,Résiste aux effets négatifs.
+dhsThrownFirebomb,Cocktail incendiaire du chimiste,Cocktail incendiaire du chimiste
+dhsThrownFirebombDesc,Cocktail incendiaire renforcé à la chimie : bien plus dévastateur. Fabriqué uniquement par le Chimiste.,Cocktail incendiaire renforcé à la chimie : bien plus dévastateur. Fabriqué uniquement par le Chimiste.
 dhsReqClassSoldSnip,Nécessite la classe Tireur d'élite,Nécessite la classe Tireur d'élite
 dhsBookClassSoldSnip,Manuel de classe : Tireur d'élite,Manuel de classe : Tireur d'élite
 dhsBookClassSoldSnipDesc,"Devenez Tireur d'élite : maîtrisez les fusils de précision. La lecture choisit la classe Tireur d'élite, débloque son craft signature et octroie quelques points de classe.","Devenez Tireur d'élite : maîtrisez les fusils de précision. La lecture choisit la classe Tireur d'élite, débloque son craft signature et octroie quelques points de classe."
@@ -257,6 +265,8 @@ dhsPerkSoldSnipAtelierIIName,Maîtrise : fusils de précision,Maîtrise : fusils
 dhsPerkSoldSnipAtelierIIDesc,Débloque la fabrication avancée de votre spécialité : fusils de précision.,Débloque la fabrication avancée de votre spécialité : fusils de précision.
 dhsPerkSoldSnipCraftXPName,Apprentissage,Apprentissage
 dhsPerkSoldSnipCraftXPDesc,Augmente toute l'expérience gagnée.,Augmente toute l'expérience gagnée.
+dhsPerkSoldSnipSigAmmoName,Munitions de précision,Munitions de précision
+dhsPerkSoldSnipSigAmmoDesc,Débloque la fabrication des Cartouches de match perforantes.,Débloque la fabrication des Cartouches de match perforantes.
 dhsSkillClassSoldSnipSpecName,Tireur d'élite — Spécialité,Tireur d'élite — Spécialité
 dhsSkillClassSoldSnipSpecDesc,Sous-branche Tireur d'élite : Spécialité.,Sous-branche Tireur d'élite : Spécialité.
 dhsPerkSoldSnipToughName,Robustesse,Robustesse
@@ -273,6 +283,8 @@ dhsPerkSoldSnipResistName,Constitution,Constitution
 dhsPerkSoldSnipResistDesc,Réduit légèrement tous les dégâts subis.,Réduit légèrement tous les dégâts subis.
 dhsPerkSoldSnipBuffName,Tempérament,Tempérament
 dhsPerkSoldSnipBuffDesc,Résiste aux effets négatifs.,Résiste aux effets négatifs.
+dhsAmmoMatchAP,Cartouche de match perforante,Cartouche de match perforante
+dhsAmmoMatchAPDesc,Munition de précision montée main : dégâts et perforation accrus. Fabriquée uniquement par le Tireur d'élite.,Munition de précision montée main : dégâts et perforation accrus. Fabriquée uniquement par le Tireur d'élite.
 dhsReqClassSoldAslt,Nécessite la classe Assaut,Nécessite la classe Assaut
 dhsBookClassSoldAslt,Manuel de classe : Assaut,Manuel de classe : Assaut
 dhsBookClassSoldAsltDesc,"Devenez Assaut : maîtrisez les mitrailleuses et le tir nourri. La lecture choisit la classe Assaut, débloque son craft signature et octroie quelques points de classe.","Devenez Assaut : maîtrisez les mitrailleuses et le tir nourri. La lecture choisit la classe Assaut, débloque son craft signature et octroie quelques points de classe."
@@ -306,6 +318,8 @@ dhsPerkSoldAsltAtelierIIName,Maîtrise : armes automatiques,Maîtrise : armes au
 dhsPerkSoldAsltAtelierIIDesc,Débloque la fabrication avancée de votre spécialité : armes automatiques.,Débloque la fabrication avancée de votre spécialité : armes automatiques.
 dhsPerkSoldAsltCraftXPName,Apprentissage,Apprentissage
 dhsPerkSoldAsltCraftXPDesc,Augmente toute l'expérience gagnée.,Augmente toute l'expérience gagnée.
+dhsPerkSoldAsltSigAmmoName,Munitions de combat,Munitions de combat
+dhsPerkSoldAsltSigAmmoDesc,Débloque la fabrication des Cartouches de combat.,Débloque la fabrication des Cartouches de combat.
 dhsSkillClassSoldAsltSpecName,Assaut — Spécialité,Assaut — Spécialité
 dhsSkillClassSoldAsltSpecDesc,Sous-branche Assaut : Spécialité.,Sous-branche Assaut : Spécialité.
 dhsPerkSoldAsltToughName,Robustesse,Robustesse
@@ -322,6 +336,8 @@ dhsPerkSoldAsltResistName,Constitution,Constitution
 dhsPerkSoldAsltResistDesc,Réduit légèrement tous les dégâts subis.,Réduit légèrement tous les dégâts subis.
 dhsPerkSoldAsltBuffName,Tempérament,Tempérament
 dhsPerkSoldAsltBuffDesc,Résiste aux effets négatifs.,Résiste aux effets négatifs.
+dhsAmmoBattle,Cartouche de combat,Cartouche de combat
+dhsAmmoBattleDesc,Munition de combat surchargée pour le tir nourri. Fabriquée uniquement par l'Assaut.,Munition de combat surchargée pour le tir nourri. Fabriquée uniquement par l'Assaut.
 dhsReqClassSurvHunt,Nécessite la classe Chasseur,Nécessite la classe Chasseur
 dhsBookClassSurvHunt,Manuel de classe : Chasseur,Manuel de classe : Chasseur
 dhsBookClassSurvHuntDesc,"Devenez Chasseur : maîtrisez les arcs, arbalètes et la chasse. La lecture choisit la classe Chasseur, débloque son craft signature et octroie quelques points de classe.","Devenez Chasseur : maîtrisez les arcs, arbalètes et la chasse. La lecture choisit la classe Chasseur, débloque son craft signature et octroie quelques points de classe."
@@ -355,6 +371,8 @@ dhsPerkSurvHuntAtelierIIName,Maîtrise : arcs et chasse,Maîtrise : arcs et chas
 dhsPerkSurvHuntAtelierIIDesc,Débloque la fabrication avancée de votre spécialité : arcs et chasse.,Débloque la fabrication avancée de votre spécialité : arcs et chasse.
 dhsPerkSurvHuntCraftXPName,Apprentissage,Apprentissage
 dhsPerkSurvHuntCraftXPDesc,Augmente toute l'expérience gagnée.,Augmente toute l'expérience gagnée.
+dhsPerkSurvHuntSigArrowName,Carquois du chasseur,Carquois du chasseur
+dhsPerkSurvHuntSigArrowDesc,Débloque la fabrication des Flèches de chasse.,Débloque la fabrication des Flèches de chasse.
 dhsSkillClassSurvHuntSpecName,Chasseur — Spécialité,Chasseur — Spécialité
 dhsSkillClassSurvHuntSpecDesc,Sous-branche Chasseur : Spécialité.,Sous-branche Chasseur : Spécialité.
 dhsPerkSurvHuntToughName,Robustesse,Robustesse
@@ -371,6 +389,8 @@ dhsPerkSurvHuntResistName,Constitution,Constitution
 dhsPerkSurvHuntResistDesc,Réduit légèrement tous les dégâts subis.,Réduit légèrement tous les dégâts subis.
 dhsPerkSurvHuntBuffName,Tempérament,Tempérament
 dhsPerkSurvHuntBuffDesc,Résiste aux effets négatifs.,Résiste aux effets négatifs.
+dhsAmmoHuntArrow,Flèche de chasse,Flèche de chasse
+dhsAmmoHuntArrowDesc,"Flèche lourde de chasseur, bien plus pénétrante sur le gibier et les morts. Fabriquée uniquement par le Chasseur.","Flèche lourde de chasseur, bien plus pénétrante sur le gibier et les morts. Fabriquée uniquement par le Chasseur."
 dhsReqClassSurvHerb,Nécessite la classe Herboriste,Nécessite la classe Herboriste
 dhsBookClassSurvHerb,Manuel de classe : Herboriste,Manuel de classe : Herboriste
 dhsBookClassSurvHerbDesc,"Devenez Herboriste : maîtrisez la cueillette, les remèdes et les lances. La lecture choisit la classe Herboriste, débloque son craft signature et octroie quelques points de classe.","Devenez Herboriste : maîtrisez la cueillette, les remèdes et les lances. La lecture choisit la classe Herboriste, débloque son craft signature et octroie quelques points de classe."
@@ -404,6 +424,8 @@ dhsPerkSurvHerbAtelierIIName,Maîtrise : remèdes naturels,Maîtrise : remèdes 
 dhsPerkSurvHerbAtelierIIDesc,Débloque la fabrication avancée de votre spécialité : remèdes naturels.,Débloque la fabrication avancée de votre spécialité : remèdes naturels.
 dhsPerkSurvHerbCraftXPName,Apprentissage,Apprentissage
 dhsPerkSurvHerbCraftXPDesc,Augmente toute l'expérience gagnée.,Augmente toute l'expérience gagnée.
+dhsPerkSurvHerbSigBrewName,Herboristerie,Herboristerie
+dhsPerkSurvHerbSigBrewDesc,Débloque la préparation de la Décoction d'herboriste.,Débloque la préparation de la Décoction d'herboriste.
 dhsSkillClassSurvHerbSpecName,Herboriste — Spécialité,Herboriste — Spécialité
 dhsSkillClassSurvHerbSpecDesc,Sous-branche Herboriste : Spécialité.,Sous-branche Herboriste : Spécialité.
 dhsPerkSurvHerbToughName,Robustesse,Robustesse
@@ -420,6 +442,10 @@ dhsPerkSurvHerbResistName,Constitution,Constitution
 dhsPerkSurvHerbResistDesc,Réduit légèrement tous les dégâts subis.,Réduit légèrement tous les dégâts subis.
 dhsPerkSurvHerbBuffName,Tempérament,Tempérament
 dhsPerkSurvHerbBuffDesc,Résiste aux effets négatifs.,Résiste aux effets négatifs.
+dhsDrinkDecoction,Décoction d'herboriste,Décoction d'herboriste
+dhsDrinkDecoctionDesc,Tisane fortifiante : régule l'endurance et endurcit le corps. Préparée uniquement par l'Herboriste.,Tisane fortifiante : régule l'endurance et endurcit le corps. Préparée uniquement par l'Herboriste.
+dhsBuffHerbalName,Décoction d'herboriste,Décoction d'herboriste
+dhsBuffHerbalDesc,Revigoré par une décoction : endurance et résistance améliorées.,Revigoré par une décoction : endurance et résistance améliorées.
 dhsReqClassBuilArch,Nécessite la classe Architecte,Nécessite la classe Architecte
 dhsBookClassBuilArch,Manuel de classe : Architecte,Manuel de classe : Architecte
 dhsBookClassBuilArchDesc,"Devenez Architecte : maîtrisez les fortifications et les masses. La lecture choisit la classe Architecte, débloque son craft signature et octroie quelques points de classe.","Devenez Architecte : maîtrisez les fortifications et les masses. La lecture choisit la classe Architecte, débloque son craft signature et octroie quelques points de classe."
@@ -549,6 +575,8 @@ dhsPerkScoutTracAtelierIIName,Maîtrise : pistolets,Maîtrise : pistolets
 dhsPerkScoutTracAtelierIIDesc,Débloque la fabrication avancée de votre spécialité : pistolets.,Débloque la fabrication avancée de votre spécialité : pistolets.
 dhsPerkScoutTracCraftXPName,Apprentissage,Apprentissage
 dhsPerkScoutTracCraftXPDesc,Augmente toute l'expérience gagnée.,Augmente toute l'expérience gagnée.
+dhsPerkScoutTracSigAmmoName,Munitions du pisteur,Munitions du pisteur
+dhsPerkScoutTracSigAmmoDesc,Débloque la fabrication des Balles légères du pisteur.,Débloque la fabrication des Balles légères du pisteur.
 dhsSkillClassScoutTracSpecName,Pisteur — Spécialité,Pisteur — Spécialité
 dhsSkillClassScoutTracSpecDesc,Sous-branche Pisteur : Spécialité.,Sous-branche Pisteur : Spécialité.
 dhsPerkScoutTracToughName,Robustesse,Robustesse
@@ -565,6 +593,8 @@ dhsPerkScoutTracResistName,Constitution,Constitution
 dhsPerkScoutTracResistDesc,Réduit légèrement tous les dégâts subis.,Réduit légèrement tous les dégâts subis.
 dhsPerkScoutTracBuffName,Tempérament,Tempérament
 dhsPerkScoutTracBuffDesc,Résiste aux effets négatifs.,Résiste aux effets négatifs.
+dhsAmmoLight,Balle légère du pisteur,Balle légère du pisteur
+dhsAmmoLightDesc,"Balle de pistolet allégée, dégâts accrus pour le tir rapide. Fabriquée uniquement par le Pisteur.","Balle de pistolet allégée, dégâts accrus pour le tir rapide. Fabriquée uniquement par le Pisteur."
 dhsReqClassScoutInfi,Nécessite la classe Infiltrateur,Nécessite la classe Infiltrateur
 dhsBookClassScoutInfi,Manuel de classe : Infiltrateur,Manuel de classe : Infiltrateur
 dhsBookClassScoutInfiDesc,"Devenez Infiltrateur : maîtrisez la furtivité, le pillage et les armes de poing. La lecture choisit la classe Infiltrateur, débloque son craft signature et octroie quelques points de classe.","Devenez Infiltrateur : maîtrisez la furtivité, le pillage et les armes de poing. La lecture choisit la classe Infiltrateur, débloque son craft signature et octroie quelques points de classe."

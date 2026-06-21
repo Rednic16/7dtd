@@ -327,6 +327,11 @@ def build_domain_subbranches(code):
                              f"Débloque la fabrication avancée de votre spécialité : {domFR}."))
     metier.append(stat("CraftXP","Apprentissage","Apprentissage","PlayerExpGain","perc_add",".02",".10",5,"",
                        "Augmente toute l'expérience gagnée.","Augmente toute l'expérience gagnée.","ui_game_symbol_adventure"))
+    # Perks de déblocage des crafts SIGNATURE exclusifs (depuis CRAFTABLES), si définis.
+    cr = CRAFTABLES.get(code)
+    if cr:
+        for sp in cr.get("sigperks", []):
+            metier.append(sp)
     # --- Sous-branche SPÉCIALITÉ (stats thématiques) ---
     spec = [
         stat("Tough","Robustesse","Robustesse","PhysicalDamageResist","base_add","1","5",5,"",
@@ -501,6 +506,126 @@ CRAFTABLES = {
             ("dhsBuffTonicDesc","Energized by a Cook's tonic: faster stamina recovery and less stamina use.",
              "Revigoré par le tonique du chef : récupération d'endurance accélérée, moins d'endurance dépensée."),
         ],
+    },
+    # ---- Signatures des sous-classes "domaine" (munitions/medical/jet/boisson via Extends) ----
+    "SoldSnip": {
+        "items": ['''    <item name="dhsAmmoMatchAP">
+      <property name="Extends" value="ammo762mmBulletAP"/>
+      <property name="CustomIcon" value="ammo762mmBulletAP"/>
+      <property name="CustomIconTint" value="cce066"/>
+      <property name="DescriptionKey" value="dhsAmmoMatchAPDesc"/>
+      <effect_group name="dhsMatchAP" tiered="false">
+        <passive_effect name="EntityDamage" operation="perc_add" value=".35" tags="perkDeadEye"/>
+        <passive_effect name="BlockDamage" operation="perc_add" value=".3" tags="perkDeadEye"/>
+      </effect_group>
+    </item>'''],
+        "recipes": ['<recipe name="dhsAmmoMatchAP" count="6" craft_area="workbench" craft_time="4" tags="learnable,workbenchCrafting,perkDeadEye"><ingredient name="resourceGunPowder" count="5"/><ingredient name="resourceForgedIron" count="2"/></recipe>'],
+        "buffs": [],
+        "loc": [("dhsAmmoMatchAP","Cartouche de match perforante","Cartouche de match perforante"),
+                ("dhsAmmoMatchAPDesc","Munition de précision montée main : dégâts et perforation accrus. Fabriquée uniquement par le Tireur d'élite.","Munition de précision montée main : dégâts et perforation accrus. Fabriquée uniquement par le Tireur d'élite.")],
+        "sigperks": [unlock("SigAmmo","Munitions de précision","Munitions de précision","ui_game_symbol_long_shot","dhsAmmoMatchAP",True,1,
+                            "Débloque la fabrication des Cartouches de match perforantes.","Débloque la fabrication des Cartouches de match perforantes.")],
+    },
+    "SoldAslt": {
+        "items": ['''    <item name="dhsAmmoBattle">
+      <property name="Extends" value="ammo762mmBulletBall"/>
+      <property name="CustomIcon" value="ammo762mmBulletBall"/>
+      <property name="CustomIconTint" value="e09966"/>
+      <property name="DescriptionKey" value="dhsAmmoBattleDesc"/>
+      <effect_group name="dhsBattle" tiered="false">
+        <passive_effect name="EntityDamage" operation="perc_add" value=".30" tags="perkMachineGunner"/>
+      </effect_group>
+    </item>'''],
+        "recipes": ['<recipe name="dhsAmmoBattle" count="10" craft_area="workbench" craft_time="4" tags="learnable,workbenchCrafting,perkMachineGunner"><ingredient name="resourceGunPowder" count="6"/><ingredient name="resourceForgedIron" count="2"/></recipe>'],
+        "buffs": [],
+        "loc": [("dhsAmmoBattle","Cartouche de combat","Cartouche de combat"),
+                ("dhsAmmoBattleDesc","Munition de combat surchargée pour le tir nourri. Fabriquée uniquement par l'Assaut.","Munition de combat surchargée pour le tir nourri. Fabriquée uniquement par l'Assaut.")],
+        "sigperks": [unlock("SigAmmo","Munitions de combat","Munitions de combat","ui_game_symbol_rifle","dhsAmmoBattle",True,1,
+                            "Débloque la fabrication des Cartouches de combat.","Débloque la fabrication des Cartouches de combat.")],
+    },
+    "ScoutTrac": {
+        "items": ['''    <item name="dhsAmmoLight">
+      <property name="Extends" value="ammo9mmBulletHP"/>
+      <property name="CustomIcon" value="ammo9mmBulletHP"/>
+      <property name="CustomIconTint" value="66cce0"/>
+      <property name="DescriptionKey" value="dhsAmmoLightDesc"/>
+      <effect_group name="dhsLight" tiered="false">
+        <passive_effect name="EntityDamage" operation="perc_add" value=".30" tags="perkGunslinger"/>
+      </effect_group>
+    </item>'''],
+        "recipes": ['<recipe name="dhsAmmoLight" count="10" craft_area="workbench" craft_time="3" tags="learnable,workbenchCrafting,perkGunslinger"><ingredient name="resourceGunPowder" count="4"/><ingredient name="resourceForgedIron" count="1"/></recipe>'],
+        "buffs": [],
+        "loc": [("dhsAmmoLight","Balle légère du pisteur","Balle légère du pisteur"),
+                ("dhsAmmoLightDesc","Balle de pistolet allégée, dégâts accrus pour le tir rapide. Fabriquée uniquement par le Pisteur.","Balle de pistolet allégée, dégâts accrus pour le tir rapide. Fabriquée uniquement par le Pisteur.")],
+        "sigperks": [unlock("SigAmmo","Munitions du pisteur","Munitions du pisteur","ui_game_symbol_run","dhsAmmoLight",True,1,
+                            "Débloque la fabrication des Balles légères du pisteur.","Débloque la fabrication des Balles légères du pisteur.")],
+    },
+    "SurvHunt": {
+        "items": ['''    <item name="dhsAmmoHuntArrow">
+      <property name="Extends" value="ammoArrowIron"/>
+      <property name="CustomIcon" value="ammoArrowIron"/>
+      <property name="CustomIconTint" value="66cc66"/>
+      <property name="DescriptionKey" value="dhsAmmoHuntArrowDesc"/>
+      <effect_group name="dhsHuntArrow" tiered="false">
+        <passive_effect name="EntityDamage" operation="perc_add" value=".5" tags="perkArchery"/>
+      </effect_group>
+    </item>'''],
+        "recipes": ['<recipe name="dhsAmmoHuntArrow" count="4" craft_area="workbench" craft_time="3" tags="learnable,workbenchCrafting,perkArchery"><ingredient name="ammoArrowIron" count="4"/><ingredient name="resourceForgedIron" count="1"/></recipe>'],
+        "buffs": [],
+        "loc": [("dhsAmmoHuntArrow","Flèche de chasse","Flèche de chasse"),
+                ("dhsAmmoHuntArrowDesc","Flèche lourde de chasseur, bien plus pénétrante sur le gibier et les morts. Fabriquée uniquement par le Chasseur.","Flèche lourde de chasseur, bien plus pénétrante sur le gibier et les morts. Fabriquée uniquement par le Chasseur.")],
+        "sigperks": [unlock("SigArrow","Carquois du chasseur","Carquois du chasseur","ui_game_symbol_archery","dhsAmmoHuntArrow",True,1,
+                            "Débloque la fabrication des Flèches de chasse.","Débloque la fabrication des Flèches de chasse.")],
+    },
+    "MedicChem": {
+        "items": ['''    <item name="dhsThrownFirebomb">
+      <property name="Extends" value="thrownAmmoMolotovCocktail"/>
+      <property name="CustomIcon" value="thrownAmmoMolotovCocktail"/>
+      <property name="CustomIconTint" value="ff6633"/>
+      <property name="DescriptionKey" value="dhsThrownFirebombDesc"/>
+      <effect_group name="dhsFirebomb" tiered="false">
+        <passive_effect name="EntityDamage" operation="perc_add" value=".4" tags="perkDemolitionsExpert"/>
+      </effect_group>
+    </item>'''],
+        "recipes": ['<recipe name="dhsThrownFirebomb" count="2" craft_area="chemistryStation" craft_time="10" tags="learnable,chemStationCrafting,perkDemolitionsExpert"><ingredient name="resourceGunPowder" count="3"/><ingredient name="resourceOil" count="2"/><ingredient name="drinkJarBoiledWater" count="1"/></recipe>'],
+        "buffs": [],
+        "loc": [("dhsThrownFirebomb","Cocktail incendiaire du chimiste","Cocktail incendiaire du chimiste"),
+                ("dhsThrownFirebombDesc","Cocktail incendiaire renforcé à la chimie : bien plus dévastateur. Fabriqué uniquement par le Chimiste.","Cocktail incendiaire renforcé à la chimie : bien plus dévastateur. Fabriqué uniquement par le Chimiste.")],
+        "sigperks": [unlock("SigBomb","Cocktails du chimiste","Cocktails du chimiste","ui_game_symbol_science","dhsThrownFirebomb",True,1,
+                            "Débloque la fabrication des Cocktails incendiaires du chimiste.","Débloque la fabrication des Cocktails incendiaires du chimiste.")],
+    },
+    "MedicSurg": {
+        "items": ['''    <item name="dhsMedSurgeryKit">
+      <property name="Extends" value="medicalFirstAidKit"/>
+      <property name="CustomIcon" value="medicalFirstAidKit"/>
+      <property name="CustomIconTint" value="ff6688"/>
+      <property name="DescriptionKey" value="dhsMedSurgeryKitDesc"/>
+    </item>'''],
+        "recipes": ['<recipe name="dhsMedSurgeryKit" count="1" craft_area="workbench" craft_time="20" tags="learnable,workbenchCrafting,craftingMedical"><ingredient name="medicalFirstAidBandage" count="1"/><ingredient name="medicalSplint" count="1"/><ingredient name="drinkJarBoiledWater" count="1"/></recipe>'],
+        "buffs": [],
+        "loc": [("dhsMedSurgeryKit","Trousse de chirurgie","Trousse de chirurgie"),
+                ("dhsMedSurgeryKitDesc","Trousse de soins complète de qualité hospitalière. Fabriquée uniquement par le Chirurgien.","Trousse de soins complète de qualité hospitalière. Fabriquée uniquement par le Chirurgien.")],
+        "sigperks": [unlock("SigKit","Bloc opératoire","Bloc opératoire","ui_game_symbol_medical","dhsMedSurgeryKit",True,1,
+                            "Débloque la fabrication de la Trousse de chirurgie.","Débloque la fabrication de la Trousse de chirurgie.")],
+    },
+    "SurvHerb": {
+        "items": ['''    <item name="dhsDrinkDecoction">
+      <property name="Extends" value="drinkJarRedTea"/>
+      <property name="CustomIcon" value="drinkJarRedTea"/>
+      <property name="CustomIconTint" value="88dd88"/>
+      <property name="DescriptionKey" value="dhsDrinkDecoctionDesc"/>
+      <effect_group name="dhsDecoction" tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="dhsBuffHerbal"/>
+      </effect_group>
+    </item>'''],
+        "recipes": ['<recipe name="dhsDrinkDecoction" count="2" craft_area="campfire" craft_tool="toolCookingPot" craft_time="15" tags="learnable,craftingMedical"><ingredient name="drinkJarBoiledWater" count="2"/><ingredient name="resourceYuccaFibers" count="3"/></recipe>'],
+        "buffs": [_team_buff("dhsBuffHerbal","dhsBuffHerbalName","dhsBuffHerbalDesc","ui_game_symbol_healing_factor","136,221,136","3","-.10",".20")],
+        "loc": [("dhsDrinkDecoction","Décoction d'herboriste","Décoction d'herboriste"),
+                ("dhsDrinkDecoctionDesc","Tisane fortifiante : régule l'endurance et endurcit le corps. Préparée uniquement par l'Herboriste.","Tisane fortifiante : régule l'endurance et endurcit le corps. Préparée uniquement par l'Herboriste."),
+                ("dhsBuffHerbalName","Décoction d'herboriste","Décoction d'herboriste"),
+                ("dhsBuffHerbalDesc","Revigoré par une décoction : endurance et résistance améliorées.","Revigoré par une décoction : endurance et résistance améliorées.")],
+        "sigperks": [unlock("SigBrew","Herboristerie","Herboristerie","ui_game_symbol_crops","dhsDrinkDecoction",True,1,
+                            "Débloque la préparation de la Décoction d'herboriste.","Débloque la préparation de la Décoction d'herboriste.")],
     },
 }
 
