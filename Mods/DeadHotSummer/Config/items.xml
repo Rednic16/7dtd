@@ -15,6 +15,7 @@
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassActiveForeign" operation="set" value="11"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsPtsEngiMech" operation="add" value="3"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassEngiMechAtelierI" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassEngiMechSigTurret" level="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
       </effect_group>
@@ -32,6 +33,7 @@
         <requirement name="CVarCompare" cvar="dhsClsEngiMech" operation="Equals" value="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsPtsEngiMech" operation="add" value="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassEngiMechAtelierI" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassEngiMechSigTurret" level="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
       </effect_group>
@@ -403,6 +405,7 @@
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassActiveForeign" operation="set" value="62"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsPtsScoutInfi" operation="add" value="3"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassScoutInfiAtelierI" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassScoutInfiSigStim" level="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
       </effect_group>
@@ -420,6 +423,7 @@
         <requirement name="CVarCompare" cvar="dhsClsScoutInfi" operation="Equals" value="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsPtsScoutInfi" operation="add" value="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassScoutInfiAtelierI" level="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkClassScoutInfiSigStim" level="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
       </effect_group>
@@ -492,6 +496,15 @@
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
       </effect_group>
     </item>
+    <item name="dhsAmmoTurretHV">
+      <property name="Extends" value="ammoJunkTurretShell"/>
+      <property name="CustomIcon" value="ammoJunkTurretShell"/>
+      <property name="CustomIconTint" value="ffcc66"/>
+      <property name="DescriptionKey" value="dhsAmmoTurretHVDesc"/>
+      <effect_group name="dhsTurretHV" tiered="false">
+        <passive_effect name="EntityDamage" operation="perc_add" value=".4" tags="perkTurrets"/>
+      </effect_group>
+    </item>
     <item name="dhsMedSurgeryKit">
       <property name="Extends" value="medicalFirstAidKit"/>
       <property name="CustomIcon" value="medicalFirstAidKit"/>
@@ -552,6 +565,12 @@
       <effect_group name="dhsLight" tiered="false">
         <passive_effect name="EntityDamage" operation="perc_add" value=".30" tags="perkGunslinger"/>
       </effect_group>
+    </item>
+    <item name="dhsDrugProwler">
+      <property name="Extends" value="drugCovertCats"/>
+      <property name="CustomIcon" value="drugCovertCats"/>
+      <property name="CustomIconTint" value="aa88ff"/>
+      <property name="DescriptionKey" value="dhsDrugProwlerDesc"/>
     </item>
     <item name="dhsAmmoFarmerSlug">
       <property name="Extends" value="ammoShotgunSlug"/>

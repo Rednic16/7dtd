@@ -67,6 +67,8 @@ dhsPerkEngiMechAtelierIIName,Maîtrise : véhicules et robotique,Maîtrise : vé
 dhsPerkEngiMechAtelierIIDesc,Débloque la fabrication avancée de votre spécialité : véhicules et robotique.,Débloque la fabrication avancée de votre spécialité : véhicules et robotique.
 dhsPerkEngiMechCraftXPName,Apprentissage,Apprentissage
 dhsPerkEngiMechCraftXPDesc,Augmente toute l'expérience gagnée.,Augmente toute l'expérience gagnée.
+dhsPerkEngiMechSigTurretName,Atelier robotique,Atelier robotique
+dhsPerkEngiMechSigTurretDesc,Débloque la fabrication des Munitions de tourelle haute vélocité.,Débloque la fabrication des Munitions de tourelle haute vélocité.
 dhsSkillClassEngiMechSpecName,Mécanicien — Spécialité,Mécanicien — Spécialité
 dhsSkillClassEngiMechSpecDesc,Sous-branche Mécanicien : Spécialité.,Sous-branche Mécanicien : Spécialité.
 dhsPerkEngiMechToughName,Robustesse,Robustesse
@@ -83,6 +85,8 @@ dhsPerkEngiMechResistName,Constitution,Constitution
 dhsPerkEngiMechResistDesc,Réduit légèrement tous les dégâts subis.,Réduit légèrement tous les dégâts subis.
 dhsPerkEngiMechBuffName,Tempérament,Tempérament
 dhsPerkEngiMechBuffDesc,Résiste aux effets négatifs.,Résiste aux effets négatifs.
+dhsAmmoTurretHV,Munition de tourelle haute vélocité,Munition de tourelle haute vélocité
+dhsAmmoTurretHVDesc,Munition optimisée pour tourelles et drones : dégâts robotiques accrus. Fabriquée uniquement par le Mécanicien.,Munition optimisée pour tourelles et drones : dégâts robotiques accrus. Fabriquée uniquement par le Mécanicien.
 dhsReqClassEngiElec,Nécessite la classe Électricien,Nécessite la classe Électricien
 dhsBookClassEngiElec,Manuel de classe : Électricien,Manuel de classe : Électricien
 dhsBookClassEngiElecDesc,"Devenez Électricien : maîtrisez l'électricité, les pièges et la matraque. La lecture choisit la classe Électricien, débloque son craft signature et octroie quelques points de classe.","Devenez Électricien : maîtrisez l'électricité, les pièges et la matraque. La lecture choisit la classe Électricien, débloque son craft signature et octroie quelques points de classe."
@@ -628,6 +632,8 @@ dhsPerkScoutInfiAtelierIIName,Maîtrise : armes de poing et pillage,Maîtrise : 
 dhsPerkScoutInfiAtelierIIDesc,Débloque la fabrication avancée de votre spécialité : armes de poing et pillage.,Débloque la fabrication avancée de votre spécialité : armes de poing et pillage.
 dhsPerkScoutInfiCraftXPName,Apprentissage,Apprentissage
 dhsPerkScoutInfiCraftXPDesc,Augmente toute l'expérience gagnée.,Augmente toute l'expérience gagnée.
+dhsPerkScoutInfiSigStimName,Pharmacopée du rôdeur,Pharmacopée du rôdeur
+dhsPerkScoutInfiSigStimDesc,Débloque la préparation du Stimulant du rôdeur.,Débloque la préparation du Stimulant du rôdeur.
 dhsSkillClassScoutInfiSpecName,Infiltrateur — Spécialité,Infiltrateur — Spécialité
 dhsSkillClassScoutInfiSpecDesc,Sous-branche Infiltrateur : Spécialité.,Sous-branche Infiltrateur : Spécialité.
 dhsPerkScoutInfiToughName,Robustesse,Robustesse
@@ -644,6 +650,8 @@ dhsPerkScoutInfiResistName,Constitution,Constitution
 dhsPerkScoutInfiResistDesc,Réduit légèrement tous les dégâts subis.,Réduit légèrement tous les dégâts subis.
 dhsPerkScoutInfiBuffName,Tempérament,Tempérament
 dhsPerkScoutInfiBuffDesc,Résiste aux effets négatifs.,Résiste aux effets négatifs.
+dhsDrugProwler,Stimulant du rôdeur,Stimulant du rôdeur
+dhsDrugProwlerDesc,Stimulant maison qui aiguise la furtivité et les réflexes. Préparé uniquement par l'Infiltrateur.,Stimulant maison qui aiguise la furtivité et les réflexes. Préparé uniquement par l'Infiltrateur.
 dhsReqClassFarmAgri,Nécessite la classe Agriculteur,Nécessite la classe Agriculteur
 dhsBookClassFarmAgri,Manuel de classe : Agriculteur,Manuel de classe : Agriculteur
 dhsBookClassFarmAgriDesc,"Devenez Agriculteur : maîtrisez les cultures et le fusil à pompe. La lecture choisit la classe Agriculteur, débloque son craft signature et octroie quelques points de classe.","Devenez Agriculteur : maîtrisez les cultures et le fusil à pompe. La lecture choisit la classe Agriculteur, débloque son craft signature et octroie quelques points de classe."

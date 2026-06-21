@@ -627,6 +627,37 @@ CRAFTABLES = {
         "sigperks": [unlock("SigBrew","Herboristerie","Herboristerie","ui_game_symbol_crops","dhsDrinkDecoction",True,1,
                             "Débloque la préparation de la Décoction d'herboriste.","Débloque la préparation de la Décoction d'herboriste.")],
     },
+    "EngiMech": {
+        "items": ['''    <item name="dhsAmmoTurretHV">
+      <property name="Extends" value="ammoJunkTurretShell"/>
+      <property name="CustomIcon" value="ammoJunkTurretShell"/>
+      <property name="CustomIconTint" value="ffcc66"/>
+      <property name="DescriptionKey" value="dhsAmmoTurretHVDesc"/>
+      <effect_group name="dhsTurretHV" tiered="false">
+        <passive_effect name="EntityDamage" operation="perc_add" value=".4" tags="perkTurrets"/>
+      </effect_group>
+    </item>'''],
+        "recipes": ['<recipe name="dhsAmmoTurretHV" count="20" craft_area="workbench" craft_time="5" tags="learnable,workbenchCrafting,perkTurrets"><ingredient name="resourceGunPowder" count="6"/><ingredient name="resourceForgedIron" count="3"/></recipe>'],
+        "buffs": [],
+        "loc": [("dhsAmmoTurretHV","Munition de tourelle haute vélocité","Munition de tourelle haute vélocité"),
+                ("dhsAmmoTurretHVDesc","Munition optimisée pour tourelles et drones : dégâts robotiques accrus. Fabriquée uniquement par le Mécanicien.","Munition optimisée pour tourelles et drones : dégâts robotiques accrus. Fabriquée uniquement par le Mécanicien.")],
+        "sigperks": [unlock("SigTurret","Atelier robotique","Atelier robotique","ui_game_symbol_wrench","dhsAmmoTurretHV",True,1,
+                            "Débloque la fabrication des Munitions de tourelle haute vélocité.","Débloque la fabrication des Munitions de tourelle haute vélocité.")],
+    },
+    "ScoutInfi": {
+        "items": ['''    <item name="dhsDrugProwler">
+      <property name="Extends" value="drugCovertCats"/>
+      <property name="CustomIcon" value="drugCovertCats"/>
+      <property name="CustomIconTint" value="aa88ff"/>
+      <property name="DescriptionKey" value="dhsDrugProwlerDesc"/>
+    </item>'''],
+        "recipes": ['<recipe name="dhsDrugProwler" count="2" craft_area="campfire" craft_tool="toolCookingPot" craft_time="12" tags="learnable,perkBrawler"><ingredient name="resourceYuccaFibers" count="3"/><ingredient name="drinkJarBoiledWater" count="1"/></recipe>'],
+        "buffs": [],
+        "loc": [("dhsDrugProwler","Stimulant du rôdeur","Stimulant du rôdeur"),
+                ("dhsDrugProwlerDesc","Stimulant maison qui aiguise la furtivité et les réflexes. Préparé uniquement par l'Infiltrateur.","Stimulant maison qui aiguise la furtivité et les réflexes. Préparé uniquement par l'Infiltrateur.")],
+        "sigperks": [unlock("SigStim","Pharmacopée du rôdeur","Pharmacopée du rôdeur","ui_game_symbol_stealth","dhsDrugProwler",True,1,
+                            "Débloque la préparation du Stimulant du rôdeur.","Débloque la préparation du Stimulant du rôdeur.")],
+    },
 }
 
 def craft(code): return CRAFTABLES.get(code)

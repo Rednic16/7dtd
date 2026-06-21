@@ -169,6 +169,10 @@
       <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsEngiMech" operation="Equals" value="1" desc_key="dhsReqClassEngiMech"/><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
       <effect_group><passive_effect name="PlayerExpGain" operation="perc_add" level="1,5" value=".02,.10"/></effect_group>
     </perk>
+    <perk name="perkClassEngiMechSigTurret" parent="skillClassEngiMechMetier" name_key="dhsPerkEngiMechSigTurretName" desc_key="dhsPerkEngiMechSigTurretDesc" icon="ui_game_symbol_wrench" max_level="1" base_skill_point_cost="0">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsEngiMech" operation="Equals" value="1" desc_key="dhsReqClassEngiMech"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
+      <effect_group><passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="dhsAmmoTurretHV"/></effect_group>
+    </perk>
     <perk name="perkClassEngiMechTough" parent="skillClassEngiMechSpec" name_key="dhsPerkEngiMechToughName" desc_key="dhsPerkEngiMechToughDesc" icon="ui_game_symbol_armor_iron" max_level="5">
       <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsEngiMech" operation="Equals" value="1" desc_key="dhsReqClassEngiMech"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
       <level_requirements level="2"><requirement name="CVarCompare" cvar="dhsClsEngiMech" operation="Equals" value="1" desc_key="dhsReqClassEngiMech"/><requirement name="PlayerLevel" operation="GTE" value="12"/></level_requirements>
@@ -1690,6 +1694,10 @@
       <level_requirements level="4"><requirement name="CVarCompare" cvar="dhsClsScoutInfi" operation="Equals" value="1" desc_key="dhsReqClassScoutInfi"/><requirement name="PlayerLevel" operation="GTE" value="36"/></level_requirements>
       <level_requirements level="5"><requirement name="CVarCompare" cvar="dhsClsScoutInfi" operation="Equals" value="1" desc_key="dhsReqClassScoutInfi"/><requirement name="PlayerLevel" operation="GTE" value="48"/></level_requirements>
       <effect_group><passive_effect name="PlayerExpGain" operation="perc_add" level="1,5" value=".02,.10"/></effect_group>
+    </perk>
+    <perk name="perkClassScoutInfiSigStim" parent="skillClassScoutInfiMetier" name_key="dhsPerkScoutInfiSigStimName" desc_key="dhsPerkScoutInfiSigStimDesc" icon="ui_game_symbol_stealth" max_level="1" base_skill_point_cost="0">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsScoutInfi" operation="Equals" value="1" desc_key="dhsReqClassScoutInfi"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
+      <effect_group><passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="dhsDrugProwler"/></effect_group>
     </perk>
     <perk name="perkClassScoutInfiTough" parent="skillClassScoutInfiSpec" name_key="dhsPerkScoutInfiToughName" desc_key="dhsPerkScoutInfiToughDesc" icon="ui_game_symbol_armor_iron" max_level="5">
       <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsScoutInfi" operation="Equals" value="1" desc_key="dhsReqClassScoutInfi"/><requirement name="PlayerLevel" operation="GTE" value="1"/></level_requirements>
