@@ -188,3 +188,44 @@ Chaque sous-classe : 2-3 perks exclusifs (dégâts/maniement/effet) scopés au t
 gatés `CVarCompare dhsCls<Code>`, rythmés par `PlayerLevel` (1/12/24/36/48 → fin ~45-55).
 
 > Validation **runtime** (chargement serveur sans erreur de patch, comportement des gates) à faire à un jalon de test dédié.
+
+---
+
+## J1.13 — Refonte « identité par les crafts » (2026-06-19)
+
+Objectif (demande utilisateur) : chaque sous-classe doit avoir une **vraie identité** via son **domaine de craft** (bonus qualité/vitesse + déblocages + signatures), pas seulement son arme. **Tout en français**, noms clairs + descriptions complètes.
+
+### Politique de déblocage
+- **Vanilla conservé = filet de sécurité** : les `crafting_skill` natifs (magazines) restent → rien ne casse, les bases restent accessibles à tous.
+- **Survivant (tous)** : perks bon marché (points de niveau) qui débloquent immédiatement les **armes T0** (tuyau/pierre/primitif), **outils T0**, **plats de base**, **recettes d'atelier/forge de base**, + perks de survie. → « établis/forge + plats de base + arme la plus basse de chaque classe pour tout le monde ».
+- **Sous-classe** : identité = **maîtrise d'arme** (sa famille) + **maîtrise d'artisanat** (CraftingTier qualité sur les tiers T1-T3 de son domaine) + **production rapide** (CraftingTime sur le tag de domaine) + **déblocage de domaine** (RecipeTagUnlocked des recettes T1-T3/avancées) + **crafts signature exclusifs** + **stats thématiques**. ~20 perks en 3 sous-branches.
+
+### Mécaniques vérifiées
+- `CraftingTime perc_add` négatif = plus rapide ; accepte les **tags de catégorie** (`perkMasterChef`, `chemStationCrafting`, `salvageScrap`…). ✓
+- `CraftingTier base_add` (qualité) utilise les **noms par tier** (`gunShotgunT2PumpShotgun`…). ✓
+- `RecipeTagUnlocked base_set value=1 tags="<nom de recette>"` débloque la recette (méthode vanilla blindée). Tags de catégorie tentés en complément.
+
+### Carte d'identité (14 sous-classes)
+| Sous-classe | Arme (tag) | Domaine de craft | Signatures |
+|---|---|---|---|
+| **Tireur d'élite** (SoldSnip) | Fusils (perkDeadEye) | Fusils de précision T1-T3 + munitions | Cartouche perforante |
+| **Assaut** (SoldAslt) | Mitrailleuses (perkMachineGunner) | Armes auto T1-T3 + munitions | Chargeur étendu / balles AP |
+| **Pisteur** (ScoutTrac) | Pistolets (perkGunslinger) | Pistolets T1-T3 + mobilité | Balles légères |
+| **Infiltrateur** (ScoutInfi) | Poings (perkBrawler) | Furtivité + pillage + armes de poing | Gants lestés |
+| **Chasseur** (SurvHunt) | Arcs (perkArchery) | Arcs/arbalètes T1-T3 + flèches + dépeçage | Flèche de chasse |
+| **Herboriste** (SurvHerb) | Lances (perkJavelinMaster) | Cueillette + remèdes naturels (thés/teintures) + lances | Décoction de soin |
+| **Architecte** (BuilArch) | Masses (perkSkullCrusher) | Construction/blocs/béton/fortifications | Bloc renforcé / piège |
+| **Artisan** (BuilArti) | Outils (perkMiner) | Outils + armures + ateliers | Outil renforcé |
+| **Mécanicien** (EngiMech) | Robotique (perkTurrets) | Véhicules (perkGreaseMonkey) + robotique | Tourelle améliorée |
+| **Électricien** (EngiElec) | Matraque (perkElectrocutioner) | Électricité/ingénierie (perkAdvancedEngineering) : pièges, câblage, générateurs | Piège électrique |
+| **Chirurgien** (MedicSurg) | Lames (perkDeepCuts) | Médical (trousses, bandages, attelles) | Trousse de chirurgie |
+| **Chimiste** (MedicChem) | Jet (perkDemolitionsExpert) | Chimie (chemStationCrafting) : drogues, explosifs, munitions chimiques | Cocktail explosif |
+| **Agriculteur** (FarmAgri) | Fusil à pompe (perkBoomstick) | Agriculture (perkLivingOffTheLand) : cultures, graines, parcelles | Cartouche/Chevrotine de fermier, Conserves |
+| **Cuisinier** (FarmCook) | Gourdins (perkPummelPete) | Cuisine (perkMasterChef) : tous plats/boissons + buffs d'équipe | Festin, Grand festin, Tonique |
+
+### Structure des perks par sous-classe (~20)
+- **Sous-branche « Arme »** (~6) : Dégâts, Maniement + spécifiques (rechargement/perforation/cadence…) scopés au tag d'arme.
+- **Sous-branche « Métier »** (~7) : Maîtrise (CraftingTier qualité, domaines à qualité), Production rapide (CraftingTime), Déblocage de domaine (RecipeTagUnlocked T1-T3/avancé), 1-3 perks signature, 1 stat de métier (HarvestCount/loot…).
+- **Sous-branche « Spécialité »** (~6) : stats thématiques (PV, endurance, résistances, port, XP, résistance aux effets…).
+
+Progression : magazines = **points de classe** (pool strict, J1.12) ; complétion (tous perks max) → sœur + slot.

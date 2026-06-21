@@ -240,15 +240,119 @@ FARM_COOK = [
 
 SUBCLASS_DEF = {"FarmAgri": FARM_AGRI, "FarmCook": FARM_COOK}
 
+# ============================================================================
+# Identité par les crafts (J1.13) — données de domaine pour les 12 sous-classes
+# non-Fermier (Fermier reste détaillé à la main dans SUBCLASS_DEF).
+# ============================================================================
+# Familles d'armes -> recettes T1-T3 (noms = tags CraftingTier/RecipeTagUnlocked vérifiés).
+WEAPON_TIERS = {
+    "perkDeadEye":          ["gunRifleT1HuntingRifle","gunRifleT2LeverActionRifle","gunRifleT3SniperRifle"],
+    "perkMachineGunner":    ["gunMGT1AK47","gunMGT2TacticalAR","gunMGT3M60"],
+    "perkGunslinger":       ["gunHandgunT1Pistol","gunHandgunT2Magnum44","gunHandgunT3SMG5","gunHandgunT3DesertVulture"],
+    "perkBoomstick":        ["gunShotgunT1DoubleBarrel","gunShotgunT2PumpShotgun","gunShotgunT3AutoShotgun"],
+    "perkArchery":          ["gunBowT1WoodenBow","gunBowT1IronCrossbow","gunBowT3CompoundBow","gunBowT3CompoundCrossbow"],
+    "perkPummelPete":       ["meleeWpnClubT1BaseballBat","meleeWpnClubT3SteelClub"],
+    "perkDeepCuts":         ["meleeWpnBladeT1HuntingKnife","meleeWpnBladeT3Machete"],
+    "perkJavelinMaster":    ["meleeWpnSpearT1IronSpear","meleeWpnSpearT3SteelSpear"],
+    "perkSkullCrusher":     ["meleeWpnSledgeT1IronSledgehammer","meleeWpnSledgeT3SteelSledgehammer"],
+    "perkBrawler":          ["meleeWpnKnucklesT1IronKnuckles","meleeWpnKnucklesT3SteelKnuckles"],
+    "perkElectrocutioner":  ["meleeWpnBatonT2StunBaton"],
+    "perkMiner":            ["meleeToolPickT1IronPickaxe","meleeToolAxeT1IronFireaxe","meleeToolShovelT1IronShovel",
+                             "meleeToolPickT2SteelPickaxe","meleeToolAxeT2SteelAxe","meleeToolShovelT2SteelShovel",
+                             "meleeToolPickT3Auger","meleeToolAxeT3Chainsaw"],
+    "perkTurrets":          ["gunBotT1JunkSledge","gunBotT2JunkTurret","gunBotT3JunkDrone"],
+    "perkDemolitionsExpert":["gunExplosivesT3RocketLauncher"],
+}
+# Armes T0 (tuyau/pierre/primitif) + outils T0 -> débloquées par Survivant (pour TOUS).
+T0_ALL = ["gunHandgunT0PipePistol","gunRifleT0PipeRifle","gunMGT0PipeMachineGun","gunShotgunT0PipeShotgun",
+          "gunBowT0PrimitiveBow","meleeWpnClubT0WoodenClub","meleeWpnBladeT0BoneKnife","meleeWpnSpearT0StoneSpear",
+          "meleeWpnSledgeT0StoneSledgehammer","meleeWpnKnucklesT0LeatherKnuckles","meleeWpnBatonT0PipeBaton",
+          "meleeToolRepairT0StoneAxe","meleeToolShovelT0StoneShovel"]
+# Plats de base + eau -> débloqués par Survivant (pour TOUS).
+BASE_FOODS = ["foodGrilledMeat","foodBoiledMeat","foodCornOnTheCob","foodBakedPotato","drinkJarBoiledWater","foodMeatStew"]
+
+# Domaine de craft par sous-classe : (tag de catégorie pour CraftingTime/déblocage, libellé FR).
+DOMAIN = {
+    "SoldSnip": ("perkDeadEye","fusils de précision"),
+    "SoldAslt": ("perkMachineGunner","armes automatiques"),
+    "ScoutTrac": ("perkGunslinger","pistolets"),
+    "ScoutInfi": ("perkBrawler","armes de poing et pillage"),
+    "SurvHunt": ("perkArchery","arcs et chasse"),
+    "SurvHerb": ("craftingMedical","remèdes naturels"),
+    "BuilArch": ("cementMixerCrafting","construction et fortifications"),
+    "BuilArti": ("craftingHarvestingTools","outils et équipement"),
+    "EngiMech": ("perkGreaseMonkey","véhicules et robotique"),
+    "EngiElec": ("perkAdvancedEngineering","électricité et pièges"),
+    "MedicSurg": ("craftingMedical","médecine"),
+    "MedicChem": ("chemStationCrafting","chimie et explosifs"),
+}
+
+def build_domain_subbranches(code):
+    """Construit ~20 perks (3 sous-branches : Arme / Métier / Spécialité) pour une sous-classe
+    à partir de son arme (WEAPON_TIERS) et de son domaine de craft (DOMAIN). Tout en français."""
+    c,en,fr,tag,kind,fid,icon,efl,ffl = SUB_BY_CODE[code]
+    tiers = WEAPON_TIERS.get(tag, [])
+    catTag, domFR = DOMAIN[code]
+    wic = icon
+    # --- Sous-branche ARME (maîtrise de l'arme de classe) ---
+    arme = []
+    for (suf,pen,pfr,nm,op,v1,v5,scoped,ed,fd) in PERKS[kind]:
+        arme.append(stat(suf,pfr,pfr,nm,op,v1,v5,5, tag if scoped else "", fd, fd, wic))
+    arme.append(stat("Pierce","Perforation","Perforation","TargetArmor","perc_add","-.06","-.30",5,tag,
+                     "Vos attaques ignorent davantage l'armure.","Vos attaques ignorent davantage l'armure.",wic))
+    arme.append(stat("WStam","Aisance","Aisance","StaminaLoss","perc_add","-.05","-.25",5,tag,
+                     "Réduit l'endurance dépensée avec votre arme.","Réduit l'endurance dépensée avec votre arme.",wic))
+    if kind in ("gun","bow"):
+        arme.append(stat("Steady","Stabilité","Stabilité","SpreadMultiplierAiming","perc_add","-.06","-.30",5,tag,
+                         "Réduit la dispersion en visée.","Réduit la dispersion en visée.",wic))
+    else:
+        arme.append(stat("Cleave","Tranchant","Tranchant","DismemberChance","base_add",".04",".20",5,tag,
+                         "Augmente les chances de démembrement.","Augmente les chances de démembrement.",wic))
+    # --- Sous-branche MÉTIER (identité de craft) ---
+    metier = []
+    if tiers:
+        metier.append(stat("Quality","Maîtrise d'artisanat","Maîtrise d'artisanat","CraftingTier","base_add","1","5",5, ",".join(tiers),
+                           f"Améliore la qualité de ce que vous fabriquez ({domFR}).",
+                           f"Améliore la qualité de ce que vous fabriquez ({domFR}).","ui_game_symbol_workbench"))
+    metier.append(stat("Speed","Production rapide","Production rapide","CraftingTime","perc_add","-.10","-.50",5, catTag,
+                       f"Fabrique plus vite ({domFR}).",f"Fabrique plus vite ({domFR}).","ui_game_symbol_workbench"))
+    t1 = tiers[:1]; rest = tiers[1:]
+    atelier_tags = ",".join([t for t in (t1 + [catTag]) if t])
+    metier.append(unlock("AtelierI",f"Atelier : {domFR}",f"Atelier : {domFR}","ui_game_symbol_workbench", atelier_tags, True, 1,
+                         f"Débloque la fabrication de votre spécialité : {domFR}.",
+                         f"Débloque la fabrication de votre spécialité : {domFR}."))
+    if rest:
+        metier.append(unlock("AtelierII",f"Maîtrise : {domFR}",f"Maîtrise : {domFR}","ui_game_symbol_workbench", ",".join(rest), False, 24,
+                             f"Débloque la fabrication avancée de votre spécialité : {domFR}.",
+                             f"Débloque la fabrication avancée de votre spécialité : {domFR}."))
+    metier.append(stat("CraftXP","Apprentissage","Apprentissage","PlayerExpGain","perc_add",".02",".10",5,"",
+                       "Augmente toute l'expérience gagnée.","Augmente toute l'expérience gagnée.","ui_game_symbol_adventure"))
+    # --- Sous-branche SPÉCIALITÉ (stats thématiques) ---
+    spec = [
+        stat("Tough","Robustesse","Robustesse","PhysicalDamageResist","base_add","1","5",5,"",
+             "Réduit les dégâts physiques subis.","Réduit les dégâts physiques subis.","ui_game_symbol_armor_iron"),
+        stat("HP","Vitalité","Vitalité","HealthMax","base_add","5","25",5,"",
+             "Augmente votre santé maximale.","Augmente votre santé maximale.","ui_game_symbol_healing_factor"),
+        stat("Vigor","Endurance","Endurance","StaminaLoss","perc_add","-.06","-.30",5,"",
+             "Réduit l'endurance dépensée par les actions.","Réduit l'endurance dépensée par les actions.","ui_game_symbol_cardio"),
+        stat("StamRegen","Récupération","Récupération","StaminaChangeOT","perc_add",".05",".25",5,"",
+             "Récupère l'endurance plus vite.","Récupère l'endurance plus vite.","ui_game_symbol_cardio"),
+        stat("Carry","Portage","Portage","CarryCapacity","base_add","1","3",3,"",
+             "Ajoute des emplacements de portage.","Ajoute des emplacements de portage.","ui_game_symbol_pack_mule"),
+        stat("Resist","Constitution","Constitution","GeneralDamageResist","base_add","1","3",3,"",
+             "Réduit légèrement tous les dégâts subis.","Réduit légèrement tous les dégâts subis.","ui_game_symbol_armor_iron"),
+        stat("Buff","Tempérament","Tempérament","BuffResistance","base_add","1","3",3,"",
+             "Résiste aux effets négatifs.","Résiste aux effets négatifs.","ui_game_symbol_light_armor2"),
+    ]
+    return [("Arme", "Arme", "Arme", wic, arme),
+            ("Metier", "Métier", "Métier", "ui_game_symbol_workbench", metier),
+            ("Spec", "Spécialité", "Spécialité", "ui_game_symbol_character", spec)]
+
 def subbranches_for(code):
-    """Sous-branches d'une sous-classe : détaillées si définies, sinon template (1 sous-branche)."""
+    """Sous-branches d'une sous-classe : Fermier = détaillé à la main, les 12 autres = domaine."""
     if code in SUBCLASS_DEF:
         return SUBCLASS_DEF[code]
-    c,en,fr,tag,kind,fid,icon,efl,ffl = SUB_BY_CODE[code]
-    perks = []
-    for (suf,pen,pfr,nm,op,v1,v5,scoped,ed,fd) in PERKS[kind]:
-        perks.append(stat(suf,pen,pfr,nm,op,v1,v5,5, tag if scoped else "", ed, fd, icon))
-    return [("Spec", en, fr, icon, perks)]
+    return build_domain_subbranches(code)
 
 def auto_unlock_perks(code):
     out = []
@@ -454,6 +558,12 @@ def gen_progression():
         tagattr = f' tags="{tag}"' if tag else ''
         L.append(f'      <effect_group><passive_effect name="{nm}" operation="{op}" level="1,5" value="{v1},{v5}"{tagattr}/></effect_group>')
         L.append('    </perk>')
+    # Survivant : déblocages de BASE pour TOUS (armes T0/tuyau, outils T0, plats de base). Coût 0.
+    for suf, names, palier in [("Gear", T0_ALL, 1), ("Cuisine", BASE_FOODS, 1)]:
+        L.append(f'    <perk name="perkClassCommon{suf}" parent="skillClassCommon" name_key="dhsPerkCommon{suf}Name" desc_key="dhsPerkCommon{suf}Desc" icon="ui_game_symbol_workbench" max_level="1" base_skill_point_cost="0">')
+        L.append(f'      <level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="{palier}"/></level_requirements>')
+        L.append(f'      <effect_group><passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="{",".join(names)}"/></effect_group>')
+        L.append('    </perk>')
     for code,_sen,_sfr,_tag,_kind,_fid,_sicon,_efl,_ffl in SUBS:
         for sk,_ben,_bfr,_bicon,perks in subbranches_for(code):
             skill = f"skillClass{code}{sk}"
@@ -576,6 +686,10 @@ def gen_loc():
         ("dhsPerkCommonForagerDesc","Harvest more from animals and wild plants.","Récolte plus sur les animaux et plantes sauvages."),
         ("dhsPerkCommonEnduranceName","Endurance","Endurance"),
         ("dhsPerkCommonEnduranceDesc","Reduces stamina loss from actions.","Réduit la perte d'endurance des actions."),
+        ("dhsPerkCommonGearName","Débrouillardise","Débrouillardise"),
+        ("dhsPerkCommonGearDesc","Débloque la fabrication des armes et outils de base (tuyau, pierre) pour tous.","Débloque la fabrication des armes et outils de base (tuyau, pierre) pour tous."),
+        ("dhsPerkCommonCuisineName","Cuisine de survie","Cuisine de survie"),
+        ("dhsPerkCommonCuisineDesc","Débloque la préparation des plats et boissons de base pour tous.","Débloque la préparation des plats et boissons de base pour tous."),
     ]
     for code,en,fr,_tag,_kind,_fid,_sicon,efl,ffl in SUBS:
         rows.append((f"dhsReqClass{code}", f"Requires the {en} class", f"Nécessite la classe {fr}"))
@@ -599,6 +713,9 @@ def gen_loc():
         if cr:
             for (k,e,f) in cr["loc"]:
                 rows.append((k, e, f))
+    # L'utilisateur veut TOUT en français (client en anglais) -> on met le français dans les
+    # DEUX colonnes (english+french) pour garantir l'affichage FR quelle que soit la langue.
+    rows = [rows[0]] + [(k, f, f) for (k, _e, f) in rows[1:]]
     def esc(c):
         if any(ch in c for ch in (",", '"', "\n")):
             return '"' + c.replace('"', '""') + '"'

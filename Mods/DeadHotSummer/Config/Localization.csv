@@ -1,328 +1,736 @@
 Key,english,french
-attclasscommon,Survivor,Survivant
-attclassengineer,Engineer,Ingénieur
-attclassmedic,Medic,Médecin
-attclasssoldier,Soldier,Soldat
-attclasssurvivalist,Survivalist,Survivaliste
-attclassbuilder,Builder,Bâtisseur
-attclassscout,Scout,Éclaireur
-attclassfarmer,Farmer,Fermier
-dhsAttClassCommonName,Survivor,Survivant
-dhsAttClassCommonDesc,Common skills for everyone,Compétences communes à tous
-dhsClassPointsLabel,Class points,Points de classe
-dhsattClassEngineerName,Engineer,Ingénieur
-dhsattClassEngineerDesc,Engineer branch,Branche Ingénieur
-dhsattClassMedicName,Medic,Médecin
-dhsattClassMedicDesc,Medic branch,Branche Médecin
-dhsattClassSoldierName,Soldier,Soldat
-dhsattClassSoldierDesc,Soldier branch,Branche Soldat
-dhsattClassSurvivalistName,Survivalist,Survivaliste
-dhsattClassSurvivalistDesc,Survivalist branch,Branche Survivaliste
-dhsattClassBuilderName,Builder,Bâtisseur
-dhsattClassBuilderDesc,Builder branch,Branche Bâtisseur
-dhsattClassScoutName,Scout,Éclaireur
-dhsattClassScoutDesc,Scout branch,Branche Éclaireur
-dhsattClassFarmerName,Farmer,Fermier
-dhsattClassFarmerDesc,Farmer branch,Branche Fermier
-dhsSkillClassCommonName,Survivor,Survivant
-dhsSkillClassCommonDesc,Common skills available to everyone,Compétences communes à tous
-dhsPerkCommonToughnessName,Toughness,Robustesse
-dhsPerkCommonToughnessDesc,Reduces physical damage taken.,Réduit les dégâts physiques subis.
-dhsPerkCommonForagerName,Forager,Cueilleur
-dhsPerkCommonForagerDesc,Harvest more from animals and wild plants.,Récolte plus sur les animaux et plantes sauvages.
+attclasscommon,Survivant,Survivant
+attclassengineer,Ingénieur,Ingénieur
+attclassmedic,Médecin,Médecin
+attclasssoldier,Soldat,Soldat
+attclasssurvivalist,Survivaliste,Survivaliste
+attclassbuilder,Bâtisseur,Bâtisseur
+attclassscout,Éclaireur,Éclaireur
+attclassfarmer,Fermier,Fermier
+dhsAttClassCommonName,Survivant,Survivant
+dhsAttClassCommonDesc,Compétences communes à tous,Compétences communes à tous
+dhsClassPointsLabel,Points de classe,Points de classe
+dhsattClassEngineerName,Ingénieur,Ingénieur
+dhsattClassEngineerDesc,Branche Ingénieur,Branche Ingénieur
+dhsattClassMedicName,Médecin,Médecin
+dhsattClassMedicDesc,Branche Médecin,Branche Médecin
+dhsattClassSoldierName,Soldat,Soldat
+dhsattClassSoldierDesc,Branche Soldat,Branche Soldat
+dhsattClassSurvivalistName,Survivaliste,Survivaliste
+dhsattClassSurvivalistDesc,Branche Survivaliste,Branche Survivaliste
+dhsattClassBuilderName,Bâtisseur,Bâtisseur
+dhsattClassBuilderDesc,Branche Bâtisseur,Branche Bâtisseur
+dhsattClassScoutName,Éclaireur,Éclaireur
+dhsattClassScoutDesc,Branche Éclaireur,Branche Éclaireur
+dhsattClassFarmerName,Fermier,Fermier
+dhsattClassFarmerDesc,Branche Fermier,Branche Fermier
+dhsSkillClassCommonName,Survivant,Survivant
+dhsSkillClassCommonDesc,Compétences communes à tous,Compétences communes à tous
+dhsPerkCommonToughnessName,Robustesse,Robustesse
+dhsPerkCommonToughnessDesc,Réduit les dégâts physiques subis.,Réduit les dégâts physiques subis.
+dhsPerkCommonForagerName,Cueilleur,Cueilleur
+dhsPerkCommonForagerDesc,Récolte plus sur les animaux et plantes sauvages.,Récolte plus sur les animaux et plantes sauvages.
 dhsPerkCommonEnduranceName,Endurance,Endurance
-dhsPerkCommonEnduranceDesc,Reduces stamina loss from actions.,Réduit la perte d'endurance des actions.
-dhsReqClassEngiMech,Requires the Mechanic class,Nécessite la classe Mécanicien
-dhsBookClassEngiMech,Class Manual: Mechanic,Manuel de classe : Mécanicien
-dhsBookClassEngiMechDesc,"Become a Mechanic: master vehicles, junk turrets and drones. Reading it picks the Mechanic class, unlocks its signature craft and grants a few class points.","Devenez Mécanicien : maîtrisez les véhicules, tourelles et drones de récup'. La lecture choisit la classe Mécanicien, débloque son craft signature et octroie quelques points de classe."
-dhsMagEngiMech,Mechanic Manual,Manuel : Mécanicien
-dhsMagEngiMechDesc,A Mechanic magazine. Reading it grants 1 Mechanic class point to spend in the Mechanic tree. Useful only to members of this class.,Un magazine de Mécanicien. Le lire octroie 1 point de classe Mécanicien à dépenser dans l'arbre Mécanicien. Utile uniquement à cette classe.
-dhsSkillClassEngiMechSpecName,Mechanic — Mechanic,Mécanicien — Mécanicien
-dhsSkillClassEngiMechSpecDesc,Mechanic sub-branch: Mechanic.,Sous-branche Mécanicien : Mécanicien.
-dhsPerkEngiMechDmgName,Damage,Dégâts
-dhsPerkEngiMechDmgDesc,Increases robotics damage.,Augmente les dégâts robotiques.
-dhsPerkEngiMechHandName,Handling,Maniement
-dhsPerkEngiMechHandDesc,Improves handling.,Améliore la maniabilité.
+dhsPerkCommonEnduranceDesc,Réduit la perte d'endurance des actions.,Réduit la perte d'endurance des actions.
+dhsPerkCommonGearName,Débrouillardise,Débrouillardise
+dhsPerkCommonGearDesc,"Débloque la fabrication des armes et outils de base (tuyau, pierre) pour tous.","Débloque la fabrication des armes et outils de base (tuyau, pierre) pour tous."
+dhsPerkCommonCuisineName,Cuisine de survie,Cuisine de survie
+dhsPerkCommonCuisineDesc,Débloque la préparation des plats et boissons de base pour tous.,Débloque la préparation des plats et boissons de base pour tous.
+dhsReqClassEngiMech,Nécessite la classe Mécanicien,Nécessite la classe Mécanicien
+dhsBookClassEngiMech,Manuel de classe : Mécanicien,Manuel de classe : Mécanicien
+dhsBookClassEngiMechDesc,"Devenez Mécanicien : maîtrisez les véhicules, tourelles et drones de récup'. La lecture choisit la classe Mécanicien, débloque son craft signature et octroie quelques points de classe.","Devenez Mécanicien : maîtrisez les véhicules, tourelles et drones de récup'. La lecture choisit la classe Mécanicien, débloque son craft signature et octroie quelques points de classe."
+dhsMagEngiMech,Manuel : Mécanicien,Manuel : Mécanicien
+dhsMagEngiMechDesc,Un magazine de Mécanicien. Le lire octroie 1 point de classe Mécanicien à dépenser dans l'arbre Mécanicien. Utile uniquement à cette classe.,Un magazine de Mécanicien. Le lire octroie 1 point de classe Mécanicien à dépenser dans l'arbre Mécanicien. Utile uniquement à cette classe.
+dhsSkillClassEngiMechArmeName,Mécanicien — Arme,Mécanicien — Arme
+dhsSkillClassEngiMechArmeDesc,Sous-branche Mécanicien : Arme.,Sous-branche Mécanicien : Arme.
+dhsPerkEngiMechDmgName,Dégâts,Dégâts
+dhsPerkEngiMechDmgDesc,Augmente les dégâts robotiques.,Augmente les dégâts robotiques.
+dhsPerkEngiMechHandName,Maniement,Maniement
+dhsPerkEngiMechHandDesc,Améliore la maniabilité.,Améliore la maniabilité.
 dhsPerkEngiMechReloadName,Maintenance,Maintenance
-dhsPerkEngiMechReloadDesc,Services faster.,Entretient plus vite.
-dhsReqClassEngiElec,Requires the Electrician class,Nécessite la classe Électricien
-dhsBookClassEngiElec,Class Manual: Electrician,Manuel de classe : Électricien
-dhsBookClassEngiElecDesc,"Become a Electrician: master electricity, traps and the stun baton. Reading it picks the Electrician class, unlocks its signature craft and grants a few class points.","Devenez Électricien : maîtrisez l'électricité, les pièges et la matraque. La lecture choisit la classe Électricien, débloque son craft signature et octroie quelques points de classe."
-dhsMagEngiElec,Electrician Manual,Manuel : Électricien
-dhsMagEngiElecDesc,A Electrician magazine. Reading it grants 1 Electrician class point to spend in the Electrician tree. Useful only to members of this class.,Un magazine de Électricien. Le lire octroie 1 point de classe Électricien à dépenser dans l'arbre Électricien. Utile uniquement à cette classe.
-dhsSkillClassEngiElecSpecName,Electrician — Electrician,Électricien — Électricien
-dhsSkillClassEngiElecSpecDesc,Electrician sub-branch: Electrician.,Sous-branche Électricien : Électricien.
-dhsPerkEngiElecDmgName,Damage,Dégâts
-dhsPerkEngiElecDmgDesc,Increases melee damage.,Augmente les dégâts de mêlée.
-dhsPerkEngiElecHandName,Handling,Maniement
-dhsPerkEngiElecHandDesc,Improves handling.,Améliore la maniabilité.
-dhsPerkEngiElecDismemberName,Brutality,Brutalité
-dhsPerkEngiElecDismemberDesc,Increases dismemberment.,Augmente le démembrement.
-dhsPerkEngiElecStamName,Conditioning,Conditionnement
-dhsPerkEngiElecStamDesc,Reduces stamina spent.,Réduit l'endurance dépensée.
-dhsReqClassMedicSurg,Requires the Surgeon class,Nécessite la classe Chirurgien
-dhsBookClassMedicSurg,Class Manual: Surgeon,Manuel de classe : Chirurgien
-dhsBookClassMedicSurgDesc,"Become a Surgeon: master healing and bladed weapons. Reading it picks the Surgeon class, unlocks its signature craft and grants a few class points.","Devenez Chirurgien : maîtrisez les soins et les armes blanches. La lecture choisit la classe Chirurgien, débloque son craft signature et octroie quelques points de classe."
-dhsMagMedicSurg,Surgeon Manual,Manuel : Chirurgien
-dhsMagMedicSurgDesc,A Surgeon magazine. Reading it grants 1 Surgeon class point to spend in the Surgeon tree. Useful only to members of this class.,Un magazine de Chirurgien. Le lire octroie 1 point de classe Chirurgien à dépenser dans l'arbre Chirurgien. Utile uniquement à cette classe.
-dhsSkillClassMedicSurgSpecName,Surgeon — Surgeon,Chirurgien — Chirurgien
-dhsSkillClassMedicSurgSpecDesc,Surgeon sub-branch: Surgeon.,Sous-branche Chirurgien : Chirurgien.
-dhsPerkMedicSurgDmgName,Damage,Dégâts
-dhsPerkMedicSurgDmgDesc,Increases melee damage.,Augmente les dégâts de mêlée.
-dhsPerkMedicSurgHandName,Handling,Maniement
-dhsPerkMedicSurgHandDesc,Improves handling.,Améliore la maniabilité.
-dhsPerkMedicSurgDismemberName,Brutality,Brutalité
-dhsPerkMedicSurgDismemberDesc,Increases dismemberment.,Augmente le démembrement.
-dhsPerkMedicSurgStamName,Conditioning,Conditionnement
-dhsPerkMedicSurgStamDesc,Reduces stamina spent.,Réduit l'endurance dépensée.
-dhsReqClassMedicChem,Requires the Chemist class,Nécessite la classe Chimiste
-dhsBookClassMedicChem,Class Manual: Chemist,Manuel de classe : Chimiste
-dhsBookClassMedicChemDesc,"Become a Chemist: master chemistry, drugs and thrown weapons. Reading it picks the Chemist class, unlocks its signature craft and grants a few class points.","Devenez Chimiste : maîtrisez la chimie, les drogues et les armes de jet. La lecture choisit la classe Chimiste, débloque son craft signature et octroie quelques points de classe."
-dhsMagMedicChem,Chemist Manual,Manuel : Chimiste
-dhsMagMedicChemDesc,A Chemist magazine. Reading it grants 1 Chemist class point to spend in the Chemist tree. Useful only to members of this class.,Un magazine de Chimiste. Le lire octroie 1 point de classe Chimiste à dépenser dans l'arbre Chimiste. Utile uniquement à cette classe.
-dhsSkillClassMedicChemSpecName,Chemist — Chemist,Chimiste — Chimiste
-dhsSkillClassMedicChemSpecDesc,Chemist sub-branch: Chemist.,Sous-branche Chimiste : Chimiste.
-dhsPerkMedicChemDmgName,Damage,Dégâts
-dhsPerkMedicChemDmgDesc,Increases thrown damage.,Augmente les dégâts de jet.
-dhsPerkMedicChemHandName,Handling,Maniement
-dhsPerkMedicChemHandDesc,Improves handling.,Améliore la maniabilité.
-dhsPerkMedicChemVeloName,Strong Arm,Bon bras
-dhsPerkMedicChemVeloDesc,Throws farther.,Lance plus loin.
-dhsReqClassSoldSnip,Requires the Marksman class,Nécessite la classe Tireur d'élite
-dhsBookClassSoldSnip,Class Manual: Marksman,Manuel de classe : Tireur d'élite
-dhsBookClassSoldSnipDesc,"Become a Marksman: master marksman rifles. Reading it picks the Marksman class, unlocks its signature craft and grants a few class points.","Devenez Tireur d'élite : maîtrisez les fusils de précision. La lecture choisit la classe Tireur d'élite, débloque son craft signature et octroie quelques points de classe."
-dhsMagSoldSnip,Marksman Manual,Manuel : Tireur d'élite
-dhsMagSoldSnipDesc,A Marksman magazine. Reading it grants 1 Marksman class point to spend in the Marksman tree. Useful only to members of this class.,Un magazine de Tireur d'élite. Le lire octroie 1 point de classe Tireur d'élite à dépenser dans l'arbre Tireur d'élite. Utile uniquement à cette classe.
-dhsSkillClassSoldSnipSpecName,Marksman — Marksman,Tireur d'élite — Tireur d'élite
-dhsSkillClassSoldSnipSpecDesc,Marksman sub-branch: Marksman.,Sous-branche Tireur d'élite : Tireur d'élite.
-dhsPerkSoldSnipDmgName,Damage,Dégâts
-dhsPerkSoldSnipDmgDesc,Increases your class weapon damage.,Augmente les dégâts de l'arme de classe.
-dhsPerkSoldSnipHandName,Handling,Maniement
-dhsPerkSoldSnipHandDesc,Improves weapon handling.,Améliore la maniabilité.
-dhsPerkSoldSnipReloadName,Fast Reload,Rechargement rapide
-dhsPerkSoldSnipReloadDesc,Reloads faster.,Recharge plus vite.
-dhsPerkSoldSnipAimName,Precision,Précision
-dhsPerkSoldSnipAimDesc,Reduces aimed spread.,Réduit la dispersion en visée.
-dhsReqClassSoldAslt,Requires the Assault class,Nécessite la classe Assaut
-dhsBookClassSoldAslt,Class Manual: Assault,Manuel de classe : Assaut
-dhsBookClassSoldAsltDesc,"Become a Assault: master machine guns and sustained fire. Reading it picks the Assault class, unlocks its signature craft and grants a few class points.","Devenez Assaut : maîtrisez les mitrailleuses et le tir nourri. La lecture choisit la classe Assaut, débloque son craft signature et octroie quelques points de classe."
-dhsMagSoldAslt,Assault Manual,Manuel : Assaut
-dhsMagSoldAsltDesc,A Assault magazine. Reading it grants 1 Assault class point to spend in the Assault tree. Useful only to members of this class.,Un magazine de Assaut. Le lire octroie 1 point de classe Assaut à dépenser dans l'arbre Assaut. Utile uniquement à cette classe.
-dhsSkillClassSoldAsltSpecName,Assault — Assault,Assaut — Assaut
-dhsSkillClassSoldAsltSpecDesc,Assault sub-branch: Assault.,Sous-branche Assaut : Assaut.
-dhsPerkSoldAsltDmgName,Damage,Dégâts
-dhsPerkSoldAsltDmgDesc,Increases your class weapon damage.,Augmente les dégâts de l'arme de classe.
-dhsPerkSoldAsltHandName,Handling,Maniement
-dhsPerkSoldAsltHandDesc,Improves weapon handling.,Améliore la maniabilité.
-dhsPerkSoldAsltReloadName,Fast Reload,Rechargement rapide
-dhsPerkSoldAsltReloadDesc,Reloads faster.,Recharge plus vite.
-dhsPerkSoldAsltAimName,Precision,Précision
-dhsPerkSoldAsltAimDesc,Reduces aimed spread.,Réduit la dispersion en visée.
-dhsReqClassSurvHunt,Requires the Hunter class,Nécessite la classe Chasseur
-dhsBookClassSurvHunt,Class Manual: Hunter,Manuel de classe : Chasseur
-dhsBookClassSurvHuntDesc,"Become a Hunter: master bows, crossbows and hunting. Reading it picks the Hunter class, unlocks its signature craft and grants a few class points.","Devenez Chasseur : maîtrisez les arcs, arbalètes et la chasse. La lecture choisit la classe Chasseur, débloque son craft signature et octroie quelques points de classe."
-dhsMagSurvHunt,Hunter Manual,Manuel : Chasseur
-dhsMagSurvHuntDesc,A Hunter magazine. Reading it grants 1 Hunter class point to spend in the Hunter tree. Useful only to members of this class.,Un magazine de Chasseur. Le lire octroie 1 point de classe Chasseur à dépenser dans l'arbre Chasseur. Utile uniquement à cette classe.
-dhsSkillClassSurvHuntSpecName,Hunter — Hunter,Chasseur — Chasseur
-dhsSkillClassSurvHuntSpecDesc,Hunter sub-branch: Hunter.,Sous-branche Chasseur : Chasseur.
-dhsPerkSurvHuntDmgName,Damage,Dégâts
-dhsPerkSurvHuntDmgDesc,Increases bow/crossbow damage.,Augmente les dégâts arc/arbalète.
-dhsPerkSurvHuntHandName,Handling,Maniement
-dhsPerkSurvHuntHandDesc,Improves handling.,Améliore la maniabilité.
-dhsPerkSurvHuntDrawName,Quick Draw,Armement rapide
-dhsPerkSurvHuntDrawDesc,Nocks faster.,Encoche plus vite.
-dhsPerkSurvHuntVeloName,Power Shot,Tir puissant
-dhsPerkSurvHuntVeloDesc,Increases projectile velocity.,Augmente la vitesse des projectiles.
-dhsReqClassSurvHerb,Requires the Herbalist class,Nécessite la classe Herboriste
-dhsBookClassSurvHerb,Class Manual: Herbalist,Manuel de classe : Herboriste
-dhsBookClassSurvHerbDesc,"Become a Herbalist: master foraging, remedies and spears. Reading it picks the Herbalist class, unlocks its signature craft and grants a few class points.","Devenez Herboriste : maîtrisez la cueillette, les remèdes et les lances. La lecture choisit la classe Herboriste, débloque son craft signature et octroie quelques points de classe."
-dhsMagSurvHerb,Herbalist Manual,Manuel : Herboriste
-dhsMagSurvHerbDesc,A Herbalist magazine. Reading it grants 1 Herbalist class point to spend in the Herbalist tree. Useful only to members of this class.,Un magazine de Herboriste. Le lire octroie 1 point de classe Herboriste à dépenser dans l'arbre Herboriste. Utile uniquement à cette classe.
-dhsSkillClassSurvHerbSpecName,Herbalist — Herbalist,Herboriste — Herboriste
-dhsSkillClassSurvHerbSpecDesc,Herbalist sub-branch: Herbalist.,Sous-branche Herboriste : Herboriste.
-dhsPerkSurvHerbDmgName,Damage,Dégâts
-dhsPerkSurvHerbDmgDesc,Increases melee damage.,Augmente les dégâts de mêlée.
-dhsPerkSurvHerbHandName,Handling,Maniement
-dhsPerkSurvHerbHandDesc,Improves handling.,Améliore la maniabilité.
-dhsPerkSurvHerbDismemberName,Brutality,Brutalité
-dhsPerkSurvHerbDismemberDesc,Increases dismemberment.,Augmente le démembrement.
-dhsPerkSurvHerbStamName,Conditioning,Conditionnement
-dhsPerkSurvHerbStamDesc,Reduces stamina spent.,Réduit l'endurance dépensée.
-dhsReqClassBuilArch,Requires the Architect class,Nécessite la classe Architecte
-dhsBookClassBuilArch,Class Manual: Architect,Manuel de classe : Architecte
-dhsBookClassBuilArchDesc,"Become a Architect: master fortifications and sledgehammers. Reading it picks the Architect class, unlocks its signature craft and grants a few class points.","Devenez Architecte : maîtrisez les fortifications et les masses. La lecture choisit la classe Architecte, débloque son craft signature et octroie quelques points de classe."
-dhsMagBuilArch,Architect Manual,Manuel : Architecte
-dhsMagBuilArchDesc,A Architect magazine. Reading it grants 1 Architect class point to spend in the Architect tree. Useful only to members of this class.,Un magazine de Architecte. Le lire octroie 1 point de classe Architecte à dépenser dans l'arbre Architecte. Utile uniquement à cette classe.
-dhsSkillClassBuilArchSpecName,Architect — Architect,Architecte — Architecte
-dhsSkillClassBuilArchSpecDesc,Architect sub-branch: Architect.,Sous-branche Architecte : Architecte.
-dhsPerkBuilArchDmgName,Damage,Dégâts
-dhsPerkBuilArchDmgDesc,Increases melee damage.,Augmente les dégâts de mêlée.
-dhsPerkBuilArchHandName,Handling,Maniement
-dhsPerkBuilArchHandDesc,Improves handling.,Améliore la maniabilité.
-dhsPerkBuilArchDismemberName,Brutality,Brutalité
-dhsPerkBuilArchDismemberDesc,Increases dismemberment.,Augmente le démembrement.
-dhsPerkBuilArchStamName,Conditioning,Conditionnement
-dhsPerkBuilArchStamDesc,Reduces stamina spent.,Réduit l'endurance dépensée.
-dhsReqClassBuilArti,Requires the Artisan class,Nécessite la classe Artisan
-dhsBookClassBuilArti,Class Manual: Artisan,Manuel de classe : Artisan
-dhsBookClassBuilArtiDesc,"Become a Artisan: master workstations, tools and crafting. Reading it picks the Artisan class, unlocks its signature craft and grants a few class points.","Devenez Artisan : maîtrisez les ateliers, outils et l'artisanat. La lecture choisit la classe Artisan, débloque son craft signature et octroie quelques points de classe."
-dhsMagBuilArti,Artisan Manual,Manuel : Artisan
-dhsMagBuilArtiDesc,A Artisan magazine. Reading it grants 1 Artisan class point to spend in the Artisan tree. Useful only to members of this class.,Un magazine de Artisan. Le lire octroie 1 point de classe Artisan à dépenser dans l'arbre Artisan. Utile uniquement à cette classe.
-dhsSkillClassBuilArtiSpecName,Artisan — Artisan,Artisan — Artisan
-dhsSkillClassBuilArtiSpecDesc,Artisan sub-branch: Artisan.,Sous-branche Artisan : Artisan.
-dhsPerkBuilArtiHarvestName,Harvesting,Récolte
-dhsPerkBuilArtiHarvestDesc,Harvests more with tools.,Récolte plus avec les outils.
-dhsPerkBuilArtiBlockName,Power Tools,Outils puissants
-dhsPerkBuilArtiBlockDesc,Increases block damage.,Augmente les dégâts aux blocs.
-dhsPerkBuilArtiStamName,Conditioning,Conditionnement
-dhsPerkBuilArtiStamDesc,Reduces stamina spent.,Réduit l'endurance dépensée.
-dhsReqClassScoutTrac,Requires the Tracker class,Nécessite la classe Pisteur
-dhsBookClassScoutTrac,Class Manual: Tracker,Manuel de classe : Pisteur
-dhsBookClassScoutTracDesc,"Become a Tracker: master mobility, exploration and handguns. Reading it picks the Tracker class, unlocks its signature craft and grants a few class points.","Devenez Pisteur : maîtrisez la mobilité, l'exploration et les pistolets. La lecture choisit la classe Pisteur, débloque son craft signature et octroie quelques points de classe."
-dhsMagScoutTrac,Tracker Manual,Manuel : Pisteur
-dhsMagScoutTracDesc,A Tracker magazine. Reading it grants 1 Tracker class point to spend in the Tracker tree. Useful only to members of this class.,Un magazine de Pisteur. Le lire octroie 1 point de classe Pisteur à dépenser dans l'arbre Pisteur. Utile uniquement à cette classe.
-dhsSkillClassScoutTracSpecName,Tracker — Tracker,Pisteur — Pisteur
-dhsSkillClassScoutTracSpecDesc,Tracker sub-branch: Tracker.,Sous-branche Pisteur : Pisteur.
-dhsPerkScoutTracDmgName,Damage,Dégâts
-dhsPerkScoutTracDmgDesc,Increases your class weapon damage.,Augmente les dégâts de l'arme de classe.
-dhsPerkScoutTracHandName,Handling,Maniement
-dhsPerkScoutTracHandDesc,Improves weapon handling.,Améliore la maniabilité.
-dhsPerkScoutTracReloadName,Fast Reload,Rechargement rapide
-dhsPerkScoutTracReloadDesc,Reloads faster.,Recharge plus vite.
-dhsPerkScoutTracAimName,Precision,Précision
-dhsPerkScoutTracAimDesc,Reduces aimed spread.,Réduit la dispersion en visée.
-dhsReqClassScoutInfi,Requires the Infiltrator class,Nécessite la classe Infiltrateur
-dhsBookClassScoutInfi,Class Manual: Infiltrator,Manuel de classe : Infiltrateur
-dhsBookClassScoutInfiDesc,"Become a Infiltrator: master stealth, looting and fist weapons. Reading it picks the Infiltrator class, unlocks its signature craft and grants a few class points.","Devenez Infiltrateur : maîtrisez la furtivité, le pillage et les armes de poing. La lecture choisit la classe Infiltrateur, débloque son craft signature et octroie quelques points de classe."
-dhsMagScoutInfi,Infiltrator Manual,Manuel : Infiltrateur
-dhsMagScoutInfiDesc,A Infiltrator magazine. Reading it grants 1 Infiltrator class point to spend in the Infiltrator tree. Useful only to members of this class.,Un magazine de Infiltrateur. Le lire octroie 1 point de classe Infiltrateur à dépenser dans l'arbre Infiltrateur. Utile uniquement à cette classe.
-dhsSkillClassScoutInfiSpecName,Infiltrator — Infiltrator,Infiltrateur — Infiltrateur
-dhsSkillClassScoutInfiSpecDesc,Infiltrator sub-branch: Infiltrator.,Sous-branche Infiltrateur : Infiltrateur.
-dhsPerkScoutInfiDmgName,Damage,Dégâts
-dhsPerkScoutInfiDmgDesc,Increases melee damage.,Augmente les dégâts de mêlée.
-dhsPerkScoutInfiHandName,Handling,Maniement
-dhsPerkScoutInfiHandDesc,Improves handling.,Améliore la maniabilité.
-dhsPerkScoutInfiDismemberName,Brutality,Brutalité
-dhsPerkScoutInfiDismemberDesc,Increases dismemberment.,Augmente le démembrement.
-dhsPerkScoutInfiStamName,Conditioning,Conditionnement
-dhsPerkScoutInfiStamDesc,Reduces stamina spent.,Réduit l'endurance dépensée.
-dhsReqClassFarmAgri,Requires the Farmer class,Nécessite la classe Agriculteur
-dhsBookClassFarmAgri,Class Manual: Farmer,Manuel de classe : Agriculteur
-dhsBookClassFarmAgriDesc,"Become a Farmer: master crops and the pump shotgun. Reading it picks the Farmer class, unlocks its signature craft and grants a few class points.","Devenez Agriculteur : maîtrisez les cultures et le fusil à pompe. La lecture choisit la classe Agriculteur, débloque son craft signature et octroie quelques points de classe."
-dhsMagFarmAgri,Farmer Manual,Manuel : Agriculteur
-dhsMagFarmAgriDesc,A Farmer magazine. Reading it grants 1 Farmer class point to spend in the Farmer tree. Useful only to members of this class.,Un magazine de Agriculteur. Le lire octroie 1 point de classe Agriculteur à dépenser dans l'arbre Agriculteur. Utile uniquement à cette classe.
-dhsSkillClassFarmAgriShotgunName,Farmer — Pump Shotgun,Agriculteur — Fusil à pompe
-dhsSkillClassFarmAgriShotgunDesc,Farmer sub-branch: Pump Shotgun.,Sous-branche Agriculteur : Fusil à pompe.
-dhsPerkFarmAgriDmgName,Damage,Dégâts
-dhsPerkFarmAgriDmgDesc,Increases pump shotgun damage.,Augmente les dégâts au fusil à pompe.
-dhsPerkFarmAgriHandName,Handling,Maniement
-dhsPerkFarmAgriHandDesc,Improves shotgun handling.,Améliore la maniabilité du fusil à pompe.
-dhsPerkFarmAgriReloadName,Fast Reload,Rechargement rapide
-dhsPerkFarmAgriReloadDesc,Reloads the shotgun faster.,Recharge le fusil plus vite.
-dhsPerkFarmAgriAimName,Choke,Précision
-dhsPerkFarmAgriAimDesc,Tightens aimed shot spread.,Resserre la gerbe en visée.
-dhsPerkFarmAgriPierceName,Slugger,Perforation
-dhsPerkFarmAgriPierceDesc,Shotgun shots ignore more armor.,Les tirs ignorent davantage l'armure.
-dhsPerkFarmAgriSlugName,Farmer's Arsenal,Arsenal du fermier
-dhsPerkFarmAgriSlugDesc,Unlocks crafting Farmer Slugs (heavy slugs) at a workbench.,Débloque la fabrication de Cartouches de fermier (balles lourdes) à l'établi.
-dhsPerkFarmAgriBuckName,Field Loads,Cartouchière
-dhsPerkFarmAgriBuckDesc,Unlocks crafting Farmer Buckshot (heavy buckshot) at a workbench.,Débloque la fabrication de Chevrotine de fermier (chevrotine lourde) à l'établi.
-dhsSkillClassFarmAgriFarmingName,Farmer — Farming,Agriculteur — Agriculture
-dhsSkillClassFarmAgriFarmingDesc,Farmer sub-branch: Farming.,Sous-branche Agriculteur : Agriculture.
-dhsPerkFarmAgriGreenName,Green Thumb,Main verte
-dhsPerkFarmAgriGreenDesc,Harvest much more from crops and wild plants.,Récolte bien plus sur cultures et plantes sauvages.
-dhsPerkFarmAgriButcherName,Homesteader,Éleveur
-dhsPerkFarmAgriButcherDesc,Harvest more meat and resources from animals.,Récolte plus de viande/ressources sur les animaux.
-dhsPerkFarmAgriFastCraftName,Farmhand,Tâcheron
-dhsPerkFarmAgriFastCraftDesc,Crafts your Farmer recipes faster.,Fabrique vos recettes d'Agriculteur plus vite.
-dhsPerkFarmAgriPreserveName,Cannery,Conserverie
-dhsPerkFarmAgriPreserveDesc,Unlocks cooking Farmer's Preserves (long-lasting filling food).,Débloque la cuisson des Conserves du fermier (nourriture copieuse qui se garde).
-dhsPerkFarmAgriBellyName,Big Eater,Estomac solide
-dhsPerkFarmAgriBellyDesc,Increases your maximum food.,Augmente votre nourriture maximale.
-dhsPerkFarmAgriXPName,Early Riser,Lève-tôt
-dhsPerkFarmAgriXPDesc,Increases all experience gained.,Augmente toute l'expérience gagnée.
-dhsPerkFarmAgriStamRegenName,Field Stamina,Souffle paysan
-dhsPerkFarmAgriStamRegenDesc,Recovers stamina faster.,Récupère l'endurance plus vite.
-dhsSkillClassFarmAgriProviderName,Farmer — Provider,Agriculteur — Subsistance
-dhsSkillClassFarmAgriProviderDesc,Farmer sub-branch: Provider.,Sous-branche Agriculteur : Subsistance.
-dhsPerkFarmAgriStamName,Hardy,Endurance paysanne
-dhsPerkFarmAgriStamDesc,Reduces stamina spent on actions.,Réduit l'endurance dépensée par les actions.
-dhsPerkFarmAgriCarryName,Pack Mule,Bête de somme
-dhsPerkFarmAgriCarryDesc,Adds carry capacity slots.,Ajoute des emplacements de portage.
-dhsPerkFarmAgriToughName,Weathered,Coriace
-dhsPerkFarmAgriToughDesc,Reduces physical damage taken.,Réduit les dégâts physiques subis.
-dhsPerkFarmAgriResistName,Sturdy,Constitution
-dhsPerkFarmAgriResistDesc,Reduces all damage taken slightly.,Réduit légèrement tous les dégâts subis.
-dhsPerkFarmAgriHPName,Strong Back,Robuste
-dhsPerkFarmAgriHPDesc,Increases your maximum health.,Augmente votre santé maximale.
-dhsPerkFarmAgriBuffName,Iron Gut,Estomac d'acier
-dhsPerkFarmAgriBuffDesc,Resists negative status effects.,Résiste aux effets négatifs.
-dhsAmmoFarmerSlug,Farmer Slug,Cartouche de fermier
-dhsAmmoFarmerSlugDesc,A heavy hand-packed slug that hits much harder than a standard slug. Crafted only by Farmers.,"Une lourde balle montée main, bien plus puissante qu'une balle standard. Fabriquée uniquement par les Agriculteurs."
-dhsAmmoFarmerBuck,Farmer Buckshot,Chevrotine de fermier
-dhsAmmoFarmerBuckDesc,Heavy hand-packed buckshot for close work. Crafted only by Farmers.,Lourde chevrotine montée main pour le combat rapproché. Fabriquée uniquement par les Agriculteurs.
-dhsFoodPreserves,Farmer's Preserves,Conserves du fermier
-dhsFoodPreservesDesc,"Home-canned food: filling, keeps well, stacks deep. Cooked only by Farmers.","Conserve maison : copieuse, se garde longtemps, s'empile. Cuisinée uniquement par les Agriculteurs."
-dhsReqClassFarmCook,Requires the Cook class,Nécessite la classe Cuisinier
-dhsBookClassFarmCook,Class Manual: Cook,Manuel de classe : Cuisinier
-dhsBookClassFarmCookDesc,"Become a Cook: master cooking, team buffs and clubs. Reading it picks the Cook class, unlocks its signature craft and grants a few class points.","Devenez Cuisinier : maîtrisez la cuisine, les buffs d'équipe et les gourdins. La lecture choisit la classe Cuisinier, débloque son craft signature et octroie quelques points de classe."
-dhsMagFarmCook,Cook Manual,Manuel : Cuisinier
-dhsMagFarmCookDesc,A Cook magazine. Reading it grants 1 Cook class point to spend in the Cook tree. Useful only to members of this class.,Un magazine de Cuisinier. Le lire octroie 1 point de classe Cuisinier à dépenser dans l'arbre Cuisinier. Utile uniquement à cette classe.
-dhsSkillClassFarmCookClubName,Cook — Club,Cuisinier — Gourdin
-dhsSkillClassFarmCookClubDesc,Cook sub-branch: Club.,Sous-branche Cuisinier : Gourdin.
-dhsPerkFarmCookDmgName,Damage,Dégâts
-dhsPerkFarmCookDmgDesc,Increases club damage.,Augmente les dégâts au gourdin.
-dhsPerkFarmCookHandName,Handling,Maniement
-dhsPerkFarmCookHandDesc,Improves club handling.,Améliore la maniabilité du gourdin.
-dhsPerkFarmCookDismemberName,Tenderizer,Attendrisseur
-dhsPerkFarmCookDismemberDesc,Increases dismemberment with clubs.,Augmente le démembrement au gourdin.
-dhsPerkFarmCookStamName,Conditioning,Conditionnement
-dhsPerkFarmCookStamDesc,Reduces stamina spent attacking.,Réduit l'endurance dépensée en attaquant.
-dhsPerkFarmCookBlockName,Meat Mallet,Massue
-dhsPerkFarmCookBlockDesc,Increases block damage with clubs.,Augmente les dégâts aux blocs au gourdin.
-dhsPerkFarmCookArmorName,Bonecrusher,Broyeur d'armure
-dhsPerkFarmCookArmorDesc,Club hits ignore more armor.,Les coups ignorent davantage l'armure.
-dhsSkillClassFarmCookKitchenName,Cook — Kitchen,Cuisinier — Cuisine
-dhsSkillClassFarmCookKitchenDesc,Cook sub-branch: Kitchen.,Sous-branche Cuisinier : Cuisine.
-dhsPerkFarmCookFastCookName,Sous-Chef,Marmiton
-dhsPerkFarmCookFastCookDesc,Cooks your Cook recipes faster.,Cuisine vos recettes de Cuisinier plus vite.
+dhsPerkEngiMechReloadDesc,Entretient plus vite.,Entretient plus vite.
+dhsPerkEngiMechPierceName,Perforation,Perforation
+dhsPerkEngiMechPierceDesc,Vos attaques ignorent davantage l'armure.,Vos attaques ignorent davantage l'armure.
+dhsPerkEngiMechWStamName,Aisance,Aisance
+dhsPerkEngiMechWStamDesc,Réduit l'endurance dépensée avec votre arme.,Réduit l'endurance dépensée avec votre arme.
+dhsPerkEngiMechCleaveName,Tranchant,Tranchant
+dhsPerkEngiMechCleaveDesc,Augmente les chances de démembrement.,Augmente les chances de démembrement.
+dhsSkillClassEngiMechMetierName,Mécanicien — Métier,Mécanicien — Métier
+dhsSkillClassEngiMechMetierDesc,Sous-branche Mécanicien : Métier.,Sous-branche Mécanicien : Métier.
+dhsPerkEngiMechQualityName,Maîtrise d'artisanat,Maîtrise d'artisanat
+dhsPerkEngiMechQualityDesc,Améliore la qualité de ce que vous fabriquez (véhicules et robotique).,Améliore la qualité de ce que vous fabriquez (véhicules et robotique).
+dhsPerkEngiMechSpeedName,Production rapide,Production rapide
+dhsPerkEngiMechSpeedDesc,Fabrique plus vite (véhicules et robotique).,Fabrique plus vite (véhicules et robotique).
+dhsPerkEngiMechAtelierIName,Atelier : véhicules et robotique,Atelier : véhicules et robotique
+dhsPerkEngiMechAtelierIDesc,Débloque la fabrication de votre spécialité : véhicules et robotique.,Débloque la fabrication de votre spécialité : véhicules et robotique.
+dhsPerkEngiMechAtelierIIName,Maîtrise : véhicules et robotique,Maîtrise : véhicules et robotique
+dhsPerkEngiMechAtelierIIDesc,Débloque la fabrication avancée de votre spécialité : véhicules et robotique.,Débloque la fabrication avancée de votre spécialité : véhicules et robotique.
+dhsPerkEngiMechCraftXPName,Apprentissage,Apprentissage
+dhsPerkEngiMechCraftXPDesc,Augmente toute l'expérience gagnée.,Augmente toute l'expérience gagnée.
+dhsSkillClassEngiMechSpecName,Mécanicien — Spécialité,Mécanicien — Spécialité
+dhsSkillClassEngiMechSpecDesc,Sous-branche Mécanicien : Spécialité.,Sous-branche Mécanicien : Spécialité.
+dhsPerkEngiMechToughName,Robustesse,Robustesse
+dhsPerkEngiMechToughDesc,Réduit les dégâts physiques subis.,Réduit les dégâts physiques subis.
+dhsPerkEngiMechHPName,Vitalité,Vitalité
+dhsPerkEngiMechHPDesc,Augmente votre santé maximale.,Augmente votre santé maximale.
+dhsPerkEngiMechVigorName,Endurance,Endurance
+dhsPerkEngiMechVigorDesc,Réduit l'endurance dépensée par les actions.,Réduit l'endurance dépensée par les actions.
+dhsPerkEngiMechStamRegenName,Récupération,Récupération
+dhsPerkEngiMechStamRegenDesc,Récupère l'endurance plus vite.,Récupère l'endurance plus vite.
+dhsPerkEngiMechCarryName,Portage,Portage
+dhsPerkEngiMechCarryDesc,Ajoute des emplacements de portage.,Ajoute des emplacements de portage.
+dhsPerkEngiMechResistName,Constitution,Constitution
+dhsPerkEngiMechResistDesc,Réduit légèrement tous les dégâts subis.,Réduit légèrement tous les dégâts subis.
+dhsPerkEngiMechBuffName,Tempérament,Tempérament
+dhsPerkEngiMechBuffDesc,Résiste aux effets négatifs.,Résiste aux effets négatifs.
+dhsReqClassEngiElec,Nécessite la classe Électricien,Nécessite la classe Électricien
+dhsBookClassEngiElec,Manuel de classe : Électricien,Manuel de classe : Électricien
+dhsBookClassEngiElecDesc,"Devenez Électricien : maîtrisez l'électricité, les pièges et la matraque. La lecture choisit la classe Électricien, débloque son craft signature et octroie quelques points de classe.","Devenez Électricien : maîtrisez l'électricité, les pièges et la matraque. La lecture choisit la classe Électricien, débloque son craft signature et octroie quelques points de classe."
+dhsMagEngiElec,Manuel : Électricien,Manuel : Électricien
+dhsMagEngiElecDesc,Un magazine de Électricien. Le lire octroie 1 point de classe Électricien à dépenser dans l'arbre Électricien. Utile uniquement à cette classe.,Un magazine de Électricien. Le lire octroie 1 point de classe Électricien à dépenser dans l'arbre Électricien. Utile uniquement à cette classe.
+dhsSkillClassEngiElecArmeName,Électricien — Arme,Électricien — Arme
+dhsSkillClassEngiElecArmeDesc,Sous-branche Électricien : Arme.,Sous-branche Électricien : Arme.
+dhsPerkEngiElecDmgName,Dégâts,Dégâts
+dhsPerkEngiElecDmgDesc,Augmente les dégâts de mêlée.,Augmente les dégâts de mêlée.
+dhsPerkEngiElecHandName,Maniement,Maniement
+dhsPerkEngiElecHandDesc,Améliore la maniabilité.,Améliore la maniabilité.
+dhsPerkEngiElecDismemberName,Brutalité,Brutalité
+dhsPerkEngiElecDismemberDesc,Augmente le démembrement.,Augmente le démembrement.
+dhsPerkEngiElecStamName,Conditionnement,Conditionnement
+dhsPerkEngiElecStamDesc,Réduit l'endurance dépensée.,Réduit l'endurance dépensée.
+dhsPerkEngiElecPierceName,Perforation,Perforation
+dhsPerkEngiElecPierceDesc,Vos attaques ignorent davantage l'armure.,Vos attaques ignorent davantage l'armure.
+dhsPerkEngiElecWStamName,Aisance,Aisance
+dhsPerkEngiElecWStamDesc,Réduit l'endurance dépensée avec votre arme.,Réduit l'endurance dépensée avec votre arme.
+dhsPerkEngiElecCleaveName,Tranchant,Tranchant
+dhsPerkEngiElecCleaveDesc,Augmente les chances de démembrement.,Augmente les chances de démembrement.
+dhsSkillClassEngiElecMetierName,Électricien — Métier,Électricien — Métier
+dhsSkillClassEngiElecMetierDesc,Sous-branche Électricien : Métier.,Sous-branche Électricien : Métier.
+dhsPerkEngiElecQualityName,Maîtrise d'artisanat,Maîtrise d'artisanat
+dhsPerkEngiElecQualityDesc,Améliore la qualité de ce que vous fabriquez (électricité et pièges).,Améliore la qualité de ce que vous fabriquez (électricité et pièges).
+dhsPerkEngiElecSpeedName,Production rapide,Production rapide
+dhsPerkEngiElecSpeedDesc,Fabrique plus vite (électricité et pièges).,Fabrique plus vite (électricité et pièges).
+dhsPerkEngiElecAtelierIName,Atelier : électricité et pièges,Atelier : électricité et pièges
+dhsPerkEngiElecAtelierIDesc,Débloque la fabrication de votre spécialité : électricité et pièges.,Débloque la fabrication de votre spécialité : électricité et pièges.
+dhsPerkEngiElecCraftXPName,Apprentissage,Apprentissage
+dhsPerkEngiElecCraftXPDesc,Augmente toute l'expérience gagnée.,Augmente toute l'expérience gagnée.
+dhsSkillClassEngiElecSpecName,Électricien — Spécialité,Électricien — Spécialité
+dhsSkillClassEngiElecSpecDesc,Sous-branche Électricien : Spécialité.,Sous-branche Électricien : Spécialité.
+dhsPerkEngiElecToughName,Robustesse,Robustesse
+dhsPerkEngiElecToughDesc,Réduit les dégâts physiques subis.,Réduit les dégâts physiques subis.
+dhsPerkEngiElecHPName,Vitalité,Vitalité
+dhsPerkEngiElecHPDesc,Augmente votre santé maximale.,Augmente votre santé maximale.
+dhsPerkEngiElecVigorName,Endurance,Endurance
+dhsPerkEngiElecVigorDesc,Réduit l'endurance dépensée par les actions.,Réduit l'endurance dépensée par les actions.
+dhsPerkEngiElecStamRegenName,Récupération,Récupération
+dhsPerkEngiElecStamRegenDesc,Récupère l'endurance plus vite.,Récupère l'endurance plus vite.
+dhsPerkEngiElecCarryName,Portage,Portage
+dhsPerkEngiElecCarryDesc,Ajoute des emplacements de portage.,Ajoute des emplacements de portage.
+dhsPerkEngiElecResistName,Constitution,Constitution
+dhsPerkEngiElecResistDesc,Réduit légèrement tous les dégâts subis.,Réduit légèrement tous les dégâts subis.
+dhsPerkEngiElecBuffName,Tempérament,Tempérament
+dhsPerkEngiElecBuffDesc,Résiste aux effets négatifs.,Résiste aux effets négatifs.
+dhsReqClassMedicSurg,Nécessite la classe Chirurgien,Nécessite la classe Chirurgien
+dhsBookClassMedicSurg,Manuel de classe : Chirurgien,Manuel de classe : Chirurgien
+dhsBookClassMedicSurgDesc,"Devenez Chirurgien : maîtrisez les soins et les armes blanches. La lecture choisit la classe Chirurgien, débloque son craft signature et octroie quelques points de classe.","Devenez Chirurgien : maîtrisez les soins et les armes blanches. La lecture choisit la classe Chirurgien, débloque son craft signature et octroie quelques points de classe."
+dhsMagMedicSurg,Manuel : Chirurgien,Manuel : Chirurgien
+dhsMagMedicSurgDesc,Un magazine de Chirurgien. Le lire octroie 1 point de classe Chirurgien à dépenser dans l'arbre Chirurgien. Utile uniquement à cette classe.,Un magazine de Chirurgien. Le lire octroie 1 point de classe Chirurgien à dépenser dans l'arbre Chirurgien. Utile uniquement à cette classe.
+dhsSkillClassMedicSurgArmeName,Chirurgien — Arme,Chirurgien — Arme
+dhsSkillClassMedicSurgArmeDesc,Sous-branche Chirurgien : Arme.,Sous-branche Chirurgien : Arme.
+dhsPerkMedicSurgDmgName,Dégâts,Dégâts
+dhsPerkMedicSurgDmgDesc,Augmente les dégâts de mêlée.,Augmente les dégâts de mêlée.
+dhsPerkMedicSurgHandName,Maniement,Maniement
+dhsPerkMedicSurgHandDesc,Améliore la maniabilité.,Améliore la maniabilité.
+dhsPerkMedicSurgDismemberName,Brutalité,Brutalité
+dhsPerkMedicSurgDismemberDesc,Augmente le démembrement.,Augmente le démembrement.
+dhsPerkMedicSurgStamName,Conditionnement,Conditionnement
+dhsPerkMedicSurgStamDesc,Réduit l'endurance dépensée.,Réduit l'endurance dépensée.
+dhsPerkMedicSurgPierceName,Perforation,Perforation
+dhsPerkMedicSurgPierceDesc,Vos attaques ignorent davantage l'armure.,Vos attaques ignorent davantage l'armure.
+dhsPerkMedicSurgWStamName,Aisance,Aisance
+dhsPerkMedicSurgWStamDesc,Réduit l'endurance dépensée avec votre arme.,Réduit l'endurance dépensée avec votre arme.
+dhsPerkMedicSurgCleaveName,Tranchant,Tranchant
+dhsPerkMedicSurgCleaveDesc,Augmente les chances de démembrement.,Augmente les chances de démembrement.
+dhsSkillClassMedicSurgMetierName,Chirurgien — Métier,Chirurgien — Métier
+dhsSkillClassMedicSurgMetierDesc,Sous-branche Chirurgien : Métier.,Sous-branche Chirurgien : Métier.
+dhsPerkMedicSurgQualityName,Maîtrise d'artisanat,Maîtrise d'artisanat
+dhsPerkMedicSurgQualityDesc,Améliore la qualité de ce que vous fabriquez (médecine).,Améliore la qualité de ce que vous fabriquez (médecine).
+dhsPerkMedicSurgSpeedName,Production rapide,Production rapide
+dhsPerkMedicSurgSpeedDesc,Fabrique plus vite (médecine).,Fabrique plus vite (médecine).
+dhsPerkMedicSurgAtelierIName,Atelier : médecine,Atelier : médecine
+dhsPerkMedicSurgAtelierIDesc,Débloque la fabrication de votre spécialité : médecine.,Débloque la fabrication de votre spécialité : médecine.
+dhsPerkMedicSurgAtelierIIName,Maîtrise : médecine,Maîtrise : médecine
+dhsPerkMedicSurgAtelierIIDesc,Débloque la fabrication avancée de votre spécialité : médecine.,Débloque la fabrication avancée de votre spécialité : médecine.
+dhsPerkMedicSurgCraftXPName,Apprentissage,Apprentissage
+dhsPerkMedicSurgCraftXPDesc,Augmente toute l'expérience gagnée.,Augmente toute l'expérience gagnée.
+dhsSkillClassMedicSurgSpecName,Chirurgien — Spécialité,Chirurgien — Spécialité
+dhsSkillClassMedicSurgSpecDesc,Sous-branche Chirurgien : Spécialité.,Sous-branche Chirurgien : Spécialité.
+dhsPerkMedicSurgToughName,Robustesse,Robustesse
+dhsPerkMedicSurgToughDesc,Réduit les dégâts physiques subis.,Réduit les dégâts physiques subis.
+dhsPerkMedicSurgHPName,Vitalité,Vitalité
+dhsPerkMedicSurgHPDesc,Augmente votre santé maximale.,Augmente votre santé maximale.
+dhsPerkMedicSurgVigorName,Endurance,Endurance
+dhsPerkMedicSurgVigorDesc,Réduit l'endurance dépensée par les actions.,Réduit l'endurance dépensée par les actions.
+dhsPerkMedicSurgStamRegenName,Récupération,Récupération
+dhsPerkMedicSurgStamRegenDesc,Récupère l'endurance plus vite.,Récupère l'endurance plus vite.
+dhsPerkMedicSurgCarryName,Portage,Portage
+dhsPerkMedicSurgCarryDesc,Ajoute des emplacements de portage.,Ajoute des emplacements de portage.
+dhsPerkMedicSurgResistName,Constitution,Constitution
+dhsPerkMedicSurgResistDesc,Réduit légèrement tous les dégâts subis.,Réduit légèrement tous les dégâts subis.
+dhsPerkMedicSurgBuffName,Tempérament,Tempérament
+dhsPerkMedicSurgBuffDesc,Résiste aux effets négatifs.,Résiste aux effets négatifs.
+dhsReqClassMedicChem,Nécessite la classe Chimiste,Nécessite la classe Chimiste
+dhsBookClassMedicChem,Manuel de classe : Chimiste,Manuel de classe : Chimiste
+dhsBookClassMedicChemDesc,"Devenez Chimiste : maîtrisez la chimie, les drogues et les armes de jet. La lecture choisit la classe Chimiste, débloque son craft signature et octroie quelques points de classe.","Devenez Chimiste : maîtrisez la chimie, les drogues et les armes de jet. La lecture choisit la classe Chimiste, débloque son craft signature et octroie quelques points de classe."
+dhsMagMedicChem,Manuel : Chimiste,Manuel : Chimiste
+dhsMagMedicChemDesc,Un magazine de Chimiste. Le lire octroie 1 point de classe Chimiste à dépenser dans l'arbre Chimiste. Utile uniquement à cette classe.,Un magazine de Chimiste. Le lire octroie 1 point de classe Chimiste à dépenser dans l'arbre Chimiste. Utile uniquement à cette classe.
+dhsSkillClassMedicChemArmeName,Chimiste — Arme,Chimiste — Arme
+dhsSkillClassMedicChemArmeDesc,Sous-branche Chimiste : Arme.,Sous-branche Chimiste : Arme.
+dhsPerkMedicChemDmgName,Dégâts,Dégâts
+dhsPerkMedicChemDmgDesc,Augmente les dégâts de jet.,Augmente les dégâts de jet.
+dhsPerkMedicChemHandName,Maniement,Maniement
+dhsPerkMedicChemHandDesc,Améliore la maniabilité.,Améliore la maniabilité.
+dhsPerkMedicChemVeloName,Bon bras,Bon bras
+dhsPerkMedicChemVeloDesc,Lance plus loin.,Lance plus loin.
+dhsPerkMedicChemPierceName,Perforation,Perforation
+dhsPerkMedicChemPierceDesc,Vos attaques ignorent davantage l'armure.,Vos attaques ignorent davantage l'armure.
+dhsPerkMedicChemWStamName,Aisance,Aisance
+dhsPerkMedicChemWStamDesc,Réduit l'endurance dépensée avec votre arme.,Réduit l'endurance dépensée avec votre arme.
+dhsPerkMedicChemCleaveName,Tranchant,Tranchant
+dhsPerkMedicChemCleaveDesc,Augmente les chances de démembrement.,Augmente les chances de démembrement.
+dhsSkillClassMedicChemMetierName,Chimiste — Métier,Chimiste — Métier
+dhsSkillClassMedicChemMetierDesc,Sous-branche Chimiste : Métier.,Sous-branche Chimiste : Métier.
+dhsPerkMedicChemQualityName,Maîtrise d'artisanat,Maîtrise d'artisanat
+dhsPerkMedicChemQualityDesc,Améliore la qualité de ce que vous fabriquez (chimie et explosifs).,Améliore la qualité de ce que vous fabriquez (chimie et explosifs).
+dhsPerkMedicChemSpeedName,Production rapide,Production rapide
+dhsPerkMedicChemSpeedDesc,Fabrique plus vite (chimie et explosifs).,Fabrique plus vite (chimie et explosifs).
+dhsPerkMedicChemAtelierIName,Atelier : chimie et explosifs,Atelier : chimie et explosifs
+dhsPerkMedicChemAtelierIDesc,Débloque la fabrication de votre spécialité : chimie et explosifs.,Débloque la fabrication de votre spécialité : chimie et explosifs.
+dhsPerkMedicChemCraftXPName,Apprentissage,Apprentissage
+dhsPerkMedicChemCraftXPDesc,Augmente toute l'expérience gagnée.,Augmente toute l'expérience gagnée.
+dhsSkillClassMedicChemSpecName,Chimiste — Spécialité,Chimiste — Spécialité
+dhsSkillClassMedicChemSpecDesc,Sous-branche Chimiste : Spécialité.,Sous-branche Chimiste : Spécialité.
+dhsPerkMedicChemToughName,Robustesse,Robustesse
+dhsPerkMedicChemToughDesc,Réduit les dégâts physiques subis.,Réduit les dégâts physiques subis.
+dhsPerkMedicChemHPName,Vitalité,Vitalité
+dhsPerkMedicChemHPDesc,Augmente votre santé maximale.,Augmente votre santé maximale.
+dhsPerkMedicChemVigorName,Endurance,Endurance
+dhsPerkMedicChemVigorDesc,Réduit l'endurance dépensée par les actions.,Réduit l'endurance dépensée par les actions.
+dhsPerkMedicChemStamRegenName,Récupération,Récupération
+dhsPerkMedicChemStamRegenDesc,Récupère l'endurance plus vite.,Récupère l'endurance plus vite.
+dhsPerkMedicChemCarryName,Portage,Portage
+dhsPerkMedicChemCarryDesc,Ajoute des emplacements de portage.,Ajoute des emplacements de portage.
+dhsPerkMedicChemResistName,Constitution,Constitution
+dhsPerkMedicChemResistDesc,Réduit légèrement tous les dégâts subis.,Réduit légèrement tous les dégâts subis.
+dhsPerkMedicChemBuffName,Tempérament,Tempérament
+dhsPerkMedicChemBuffDesc,Résiste aux effets négatifs.,Résiste aux effets négatifs.
+dhsReqClassSoldSnip,Nécessite la classe Tireur d'élite,Nécessite la classe Tireur d'élite
+dhsBookClassSoldSnip,Manuel de classe : Tireur d'élite,Manuel de classe : Tireur d'élite
+dhsBookClassSoldSnipDesc,"Devenez Tireur d'élite : maîtrisez les fusils de précision. La lecture choisit la classe Tireur d'élite, débloque son craft signature et octroie quelques points de classe.","Devenez Tireur d'élite : maîtrisez les fusils de précision. La lecture choisit la classe Tireur d'élite, débloque son craft signature et octroie quelques points de classe."
+dhsMagSoldSnip,Manuel : Tireur d'élite,Manuel : Tireur d'élite
+dhsMagSoldSnipDesc,Un magazine de Tireur d'élite. Le lire octroie 1 point de classe Tireur d'élite à dépenser dans l'arbre Tireur d'élite. Utile uniquement à cette classe.,Un magazine de Tireur d'élite. Le lire octroie 1 point de classe Tireur d'élite à dépenser dans l'arbre Tireur d'élite. Utile uniquement à cette classe.
+dhsSkillClassSoldSnipArmeName,Tireur d'élite — Arme,Tireur d'élite — Arme
+dhsSkillClassSoldSnipArmeDesc,Sous-branche Tireur d'élite : Arme.,Sous-branche Tireur d'élite : Arme.
+dhsPerkSoldSnipDmgName,Dégâts,Dégâts
+dhsPerkSoldSnipDmgDesc,Augmente les dégâts de l'arme de classe.,Augmente les dégâts de l'arme de classe.
+dhsPerkSoldSnipHandName,Maniement,Maniement
+dhsPerkSoldSnipHandDesc,Améliore la maniabilité.,Améliore la maniabilité.
+dhsPerkSoldSnipReloadName,Rechargement rapide,Rechargement rapide
+dhsPerkSoldSnipReloadDesc,Recharge plus vite.,Recharge plus vite.
+dhsPerkSoldSnipAimName,Précision,Précision
+dhsPerkSoldSnipAimDesc,Réduit la dispersion en visée.,Réduit la dispersion en visée.
+dhsPerkSoldSnipPierceName,Perforation,Perforation
+dhsPerkSoldSnipPierceDesc,Vos attaques ignorent davantage l'armure.,Vos attaques ignorent davantage l'armure.
+dhsPerkSoldSnipWStamName,Aisance,Aisance
+dhsPerkSoldSnipWStamDesc,Réduit l'endurance dépensée avec votre arme.,Réduit l'endurance dépensée avec votre arme.
+dhsPerkSoldSnipSteadyName,Stabilité,Stabilité
+dhsPerkSoldSnipSteadyDesc,Réduit la dispersion en visée.,Réduit la dispersion en visée.
+dhsSkillClassSoldSnipMetierName,Tireur d'élite — Métier,Tireur d'élite — Métier
+dhsSkillClassSoldSnipMetierDesc,Sous-branche Tireur d'élite : Métier.,Sous-branche Tireur d'élite : Métier.
+dhsPerkSoldSnipQualityName,Maîtrise d'artisanat,Maîtrise d'artisanat
+dhsPerkSoldSnipQualityDesc,Améliore la qualité de ce que vous fabriquez (fusils de précision).,Améliore la qualité de ce que vous fabriquez (fusils de précision).
+dhsPerkSoldSnipSpeedName,Production rapide,Production rapide
+dhsPerkSoldSnipSpeedDesc,Fabrique plus vite (fusils de précision).,Fabrique plus vite (fusils de précision).
+dhsPerkSoldSnipAtelierIName,Atelier : fusils de précision,Atelier : fusils de précision
+dhsPerkSoldSnipAtelierIDesc,Débloque la fabrication de votre spécialité : fusils de précision.,Débloque la fabrication de votre spécialité : fusils de précision.
+dhsPerkSoldSnipAtelierIIName,Maîtrise : fusils de précision,Maîtrise : fusils de précision
+dhsPerkSoldSnipAtelierIIDesc,Débloque la fabrication avancée de votre spécialité : fusils de précision.,Débloque la fabrication avancée de votre spécialité : fusils de précision.
+dhsPerkSoldSnipCraftXPName,Apprentissage,Apprentissage
+dhsPerkSoldSnipCraftXPDesc,Augmente toute l'expérience gagnée.,Augmente toute l'expérience gagnée.
+dhsSkillClassSoldSnipSpecName,Tireur d'élite — Spécialité,Tireur d'élite — Spécialité
+dhsSkillClassSoldSnipSpecDesc,Sous-branche Tireur d'élite : Spécialité.,Sous-branche Tireur d'élite : Spécialité.
+dhsPerkSoldSnipToughName,Robustesse,Robustesse
+dhsPerkSoldSnipToughDesc,Réduit les dégâts physiques subis.,Réduit les dégâts physiques subis.
+dhsPerkSoldSnipHPName,Vitalité,Vitalité
+dhsPerkSoldSnipHPDesc,Augmente votre santé maximale.,Augmente votre santé maximale.
+dhsPerkSoldSnipVigorName,Endurance,Endurance
+dhsPerkSoldSnipVigorDesc,Réduit l'endurance dépensée par les actions.,Réduit l'endurance dépensée par les actions.
+dhsPerkSoldSnipStamRegenName,Récupération,Récupération
+dhsPerkSoldSnipStamRegenDesc,Récupère l'endurance plus vite.,Récupère l'endurance plus vite.
+dhsPerkSoldSnipCarryName,Portage,Portage
+dhsPerkSoldSnipCarryDesc,Ajoute des emplacements de portage.,Ajoute des emplacements de portage.
+dhsPerkSoldSnipResistName,Constitution,Constitution
+dhsPerkSoldSnipResistDesc,Réduit légèrement tous les dégâts subis.,Réduit légèrement tous les dégâts subis.
+dhsPerkSoldSnipBuffName,Tempérament,Tempérament
+dhsPerkSoldSnipBuffDesc,Résiste aux effets négatifs.,Résiste aux effets négatifs.
+dhsReqClassSoldAslt,Nécessite la classe Assaut,Nécessite la classe Assaut
+dhsBookClassSoldAslt,Manuel de classe : Assaut,Manuel de classe : Assaut
+dhsBookClassSoldAsltDesc,"Devenez Assaut : maîtrisez les mitrailleuses et le tir nourri. La lecture choisit la classe Assaut, débloque son craft signature et octroie quelques points de classe.","Devenez Assaut : maîtrisez les mitrailleuses et le tir nourri. La lecture choisit la classe Assaut, débloque son craft signature et octroie quelques points de classe."
+dhsMagSoldAslt,Manuel : Assaut,Manuel : Assaut
+dhsMagSoldAsltDesc,Un magazine de Assaut. Le lire octroie 1 point de classe Assaut à dépenser dans l'arbre Assaut. Utile uniquement à cette classe.,Un magazine de Assaut. Le lire octroie 1 point de classe Assaut à dépenser dans l'arbre Assaut. Utile uniquement à cette classe.
+dhsSkillClassSoldAsltArmeName,Assaut — Arme,Assaut — Arme
+dhsSkillClassSoldAsltArmeDesc,Sous-branche Assaut : Arme.,Sous-branche Assaut : Arme.
+dhsPerkSoldAsltDmgName,Dégâts,Dégâts
+dhsPerkSoldAsltDmgDesc,Augmente les dégâts de l'arme de classe.,Augmente les dégâts de l'arme de classe.
+dhsPerkSoldAsltHandName,Maniement,Maniement
+dhsPerkSoldAsltHandDesc,Améliore la maniabilité.,Améliore la maniabilité.
+dhsPerkSoldAsltReloadName,Rechargement rapide,Rechargement rapide
+dhsPerkSoldAsltReloadDesc,Recharge plus vite.,Recharge plus vite.
+dhsPerkSoldAsltAimName,Précision,Précision
+dhsPerkSoldAsltAimDesc,Réduit la dispersion en visée.,Réduit la dispersion en visée.
+dhsPerkSoldAsltPierceName,Perforation,Perforation
+dhsPerkSoldAsltPierceDesc,Vos attaques ignorent davantage l'armure.,Vos attaques ignorent davantage l'armure.
+dhsPerkSoldAsltWStamName,Aisance,Aisance
+dhsPerkSoldAsltWStamDesc,Réduit l'endurance dépensée avec votre arme.,Réduit l'endurance dépensée avec votre arme.
+dhsPerkSoldAsltSteadyName,Stabilité,Stabilité
+dhsPerkSoldAsltSteadyDesc,Réduit la dispersion en visée.,Réduit la dispersion en visée.
+dhsSkillClassSoldAsltMetierName,Assaut — Métier,Assaut — Métier
+dhsSkillClassSoldAsltMetierDesc,Sous-branche Assaut : Métier.,Sous-branche Assaut : Métier.
+dhsPerkSoldAsltQualityName,Maîtrise d'artisanat,Maîtrise d'artisanat
+dhsPerkSoldAsltQualityDesc,Améliore la qualité de ce que vous fabriquez (armes automatiques).,Améliore la qualité de ce que vous fabriquez (armes automatiques).
+dhsPerkSoldAsltSpeedName,Production rapide,Production rapide
+dhsPerkSoldAsltSpeedDesc,Fabrique plus vite (armes automatiques).,Fabrique plus vite (armes automatiques).
+dhsPerkSoldAsltAtelierIName,Atelier : armes automatiques,Atelier : armes automatiques
+dhsPerkSoldAsltAtelierIDesc,Débloque la fabrication de votre spécialité : armes automatiques.,Débloque la fabrication de votre spécialité : armes automatiques.
+dhsPerkSoldAsltAtelierIIName,Maîtrise : armes automatiques,Maîtrise : armes automatiques
+dhsPerkSoldAsltAtelierIIDesc,Débloque la fabrication avancée de votre spécialité : armes automatiques.,Débloque la fabrication avancée de votre spécialité : armes automatiques.
+dhsPerkSoldAsltCraftXPName,Apprentissage,Apprentissage
+dhsPerkSoldAsltCraftXPDesc,Augmente toute l'expérience gagnée.,Augmente toute l'expérience gagnée.
+dhsSkillClassSoldAsltSpecName,Assaut — Spécialité,Assaut — Spécialité
+dhsSkillClassSoldAsltSpecDesc,Sous-branche Assaut : Spécialité.,Sous-branche Assaut : Spécialité.
+dhsPerkSoldAsltToughName,Robustesse,Robustesse
+dhsPerkSoldAsltToughDesc,Réduit les dégâts physiques subis.,Réduit les dégâts physiques subis.
+dhsPerkSoldAsltHPName,Vitalité,Vitalité
+dhsPerkSoldAsltHPDesc,Augmente votre santé maximale.,Augmente votre santé maximale.
+dhsPerkSoldAsltVigorName,Endurance,Endurance
+dhsPerkSoldAsltVigorDesc,Réduit l'endurance dépensée par les actions.,Réduit l'endurance dépensée par les actions.
+dhsPerkSoldAsltStamRegenName,Récupération,Récupération
+dhsPerkSoldAsltStamRegenDesc,Récupère l'endurance plus vite.,Récupère l'endurance plus vite.
+dhsPerkSoldAsltCarryName,Portage,Portage
+dhsPerkSoldAsltCarryDesc,Ajoute des emplacements de portage.,Ajoute des emplacements de portage.
+dhsPerkSoldAsltResistName,Constitution,Constitution
+dhsPerkSoldAsltResistDesc,Réduit légèrement tous les dégâts subis.,Réduit légèrement tous les dégâts subis.
+dhsPerkSoldAsltBuffName,Tempérament,Tempérament
+dhsPerkSoldAsltBuffDesc,Résiste aux effets négatifs.,Résiste aux effets négatifs.
+dhsReqClassSurvHunt,Nécessite la classe Chasseur,Nécessite la classe Chasseur
+dhsBookClassSurvHunt,Manuel de classe : Chasseur,Manuel de classe : Chasseur
+dhsBookClassSurvHuntDesc,"Devenez Chasseur : maîtrisez les arcs, arbalètes et la chasse. La lecture choisit la classe Chasseur, débloque son craft signature et octroie quelques points de classe.","Devenez Chasseur : maîtrisez les arcs, arbalètes et la chasse. La lecture choisit la classe Chasseur, débloque son craft signature et octroie quelques points de classe."
+dhsMagSurvHunt,Manuel : Chasseur,Manuel : Chasseur
+dhsMagSurvHuntDesc,Un magazine de Chasseur. Le lire octroie 1 point de classe Chasseur à dépenser dans l'arbre Chasseur. Utile uniquement à cette classe.,Un magazine de Chasseur. Le lire octroie 1 point de classe Chasseur à dépenser dans l'arbre Chasseur. Utile uniquement à cette classe.
+dhsSkillClassSurvHuntArmeName,Chasseur — Arme,Chasseur — Arme
+dhsSkillClassSurvHuntArmeDesc,Sous-branche Chasseur : Arme.,Sous-branche Chasseur : Arme.
+dhsPerkSurvHuntDmgName,Dégâts,Dégâts
+dhsPerkSurvHuntDmgDesc,Augmente les dégâts arc/arbalète.,Augmente les dégâts arc/arbalète.
+dhsPerkSurvHuntHandName,Maniement,Maniement
+dhsPerkSurvHuntHandDesc,Améliore la maniabilité.,Améliore la maniabilité.
+dhsPerkSurvHuntDrawName,Armement rapide,Armement rapide
+dhsPerkSurvHuntDrawDesc,Encoche plus vite.,Encoche plus vite.
+dhsPerkSurvHuntVeloName,Tir puissant,Tir puissant
+dhsPerkSurvHuntVeloDesc,Augmente la vitesse des projectiles.,Augmente la vitesse des projectiles.
+dhsPerkSurvHuntPierceName,Perforation,Perforation
+dhsPerkSurvHuntPierceDesc,Vos attaques ignorent davantage l'armure.,Vos attaques ignorent davantage l'armure.
+dhsPerkSurvHuntWStamName,Aisance,Aisance
+dhsPerkSurvHuntWStamDesc,Réduit l'endurance dépensée avec votre arme.,Réduit l'endurance dépensée avec votre arme.
+dhsPerkSurvHuntSteadyName,Stabilité,Stabilité
+dhsPerkSurvHuntSteadyDesc,Réduit la dispersion en visée.,Réduit la dispersion en visée.
+dhsSkillClassSurvHuntMetierName,Chasseur — Métier,Chasseur — Métier
+dhsSkillClassSurvHuntMetierDesc,Sous-branche Chasseur : Métier.,Sous-branche Chasseur : Métier.
+dhsPerkSurvHuntQualityName,Maîtrise d'artisanat,Maîtrise d'artisanat
+dhsPerkSurvHuntQualityDesc,Améliore la qualité de ce que vous fabriquez (arcs et chasse).,Améliore la qualité de ce que vous fabriquez (arcs et chasse).
+dhsPerkSurvHuntSpeedName,Production rapide,Production rapide
+dhsPerkSurvHuntSpeedDesc,Fabrique plus vite (arcs et chasse).,Fabrique plus vite (arcs et chasse).
+dhsPerkSurvHuntAtelierIName,Atelier : arcs et chasse,Atelier : arcs et chasse
+dhsPerkSurvHuntAtelierIDesc,Débloque la fabrication de votre spécialité : arcs et chasse.,Débloque la fabrication de votre spécialité : arcs et chasse.
+dhsPerkSurvHuntAtelierIIName,Maîtrise : arcs et chasse,Maîtrise : arcs et chasse
+dhsPerkSurvHuntAtelierIIDesc,Débloque la fabrication avancée de votre spécialité : arcs et chasse.,Débloque la fabrication avancée de votre spécialité : arcs et chasse.
+dhsPerkSurvHuntCraftXPName,Apprentissage,Apprentissage
+dhsPerkSurvHuntCraftXPDesc,Augmente toute l'expérience gagnée.,Augmente toute l'expérience gagnée.
+dhsSkillClassSurvHuntSpecName,Chasseur — Spécialité,Chasseur — Spécialité
+dhsSkillClassSurvHuntSpecDesc,Sous-branche Chasseur : Spécialité.,Sous-branche Chasseur : Spécialité.
+dhsPerkSurvHuntToughName,Robustesse,Robustesse
+dhsPerkSurvHuntToughDesc,Réduit les dégâts physiques subis.,Réduit les dégâts physiques subis.
+dhsPerkSurvHuntHPName,Vitalité,Vitalité
+dhsPerkSurvHuntHPDesc,Augmente votre santé maximale.,Augmente votre santé maximale.
+dhsPerkSurvHuntVigorName,Endurance,Endurance
+dhsPerkSurvHuntVigorDesc,Réduit l'endurance dépensée par les actions.,Réduit l'endurance dépensée par les actions.
+dhsPerkSurvHuntStamRegenName,Récupération,Récupération
+dhsPerkSurvHuntStamRegenDesc,Récupère l'endurance plus vite.,Récupère l'endurance plus vite.
+dhsPerkSurvHuntCarryName,Portage,Portage
+dhsPerkSurvHuntCarryDesc,Ajoute des emplacements de portage.,Ajoute des emplacements de portage.
+dhsPerkSurvHuntResistName,Constitution,Constitution
+dhsPerkSurvHuntResistDesc,Réduit légèrement tous les dégâts subis.,Réduit légèrement tous les dégâts subis.
+dhsPerkSurvHuntBuffName,Tempérament,Tempérament
+dhsPerkSurvHuntBuffDesc,Résiste aux effets négatifs.,Résiste aux effets négatifs.
+dhsReqClassSurvHerb,Nécessite la classe Herboriste,Nécessite la classe Herboriste
+dhsBookClassSurvHerb,Manuel de classe : Herboriste,Manuel de classe : Herboriste
+dhsBookClassSurvHerbDesc,"Devenez Herboriste : maîtrisez la cueillette, les remèdes et les lances. La lecture choisit la classe Herboriste, débloque son craft signature et octroie quelques points de classe.","Devenez Herboriste : maîtrisez la cueillette, les remèdes et les lances. La lecture choisit la classe Herboriste, débloque son craft signature et octroie quelques points de classe."
+dhsMagSurvHerb,Manuel : Herboriste,Manuel : Herboriste
+dhsMagSurvHerbDesc,Un magazine de Herboriste. Le lire octroie 1 point de classe Herboriste à dépenser dans l'arbre Herboriste. Utile uniquement à cette classe.,Un magazine de Herboriste. Le lire octroie 1 point de classe Herboriste à dépenser dans l'arbre Herboriste. Utile uniquement à cette classe.
+dhsSkillClassSurvHerbArmeName,Herboriste — Arme,Herboriste — Arme
+dhsSkillClassSurvHerbArmeDesc,Sous-branche Herboriste : Arme.,Sous-branche Herboriste : Arme.
+dhsPerkSurvHerbDmgName,Dégâts,Dégâts
+dhsPerkSurvHerbDmgDesc,Augmente les dégâts de mêlée.,Augmente les dégâts de mêlée.
+dhsPerkSurvHerbHandName,Maniement,Maniement
+dhsPerkSurvHerbHandDesc,Améliore la maniabilité.,Améliore la maniabilité.
+dhsPerkSurvHerbDismemberName,Brutalité,Brutalité
+dhsPerkSurvHerbDismemberDesc,Augmente le démembrement.,Augmente le démembrement.
+dhsPerkSurvHerbStamName,Conditionnement,Conditionnement
+dhsPerkSurvHerbStamDesc,Réduit l'endurance dépensée.,Réduit l'endurance dépensée.
+dhsPerkSurvHerbPierceName,Perforation,Perforation
+dhsPerkSurvHerbPierceDesc,Vos attaques ignorent davantage l'armure.,Vos attaques ignorent davantage l'armure.
+dhsPerkSurvHerbWStamName,Aisance,Aisance
+dhsPerkSurvHerbWStamDesc,Réduit l'endurance dépensée avec votre arme.,Réduit l'endurance dépensée avec votre arme.
+dhsPerkSurvHerbCleaveName,Tranchant,Tranchant
+dhsPerkSurvHerbCleaveDesc,Augmente les chances de démembrement.,Augmente les chances de démembrement.
+dhsSkillClassSurvHerbMetierName,Herboriste — Métier,Herboriste — Métier
+dhsSkillClassSurvHerbMetierDesc,Sous-branche Herboriste : Métier.,Sous-branche Herboriste : Métier.
+dhsPerkSurvHerbQualityName,Maîtrise d'artisanat,Maîtrise d'artisanat
+dhsPerkSurvHerbQualityDesc,Améliore la qualité de ce que vous fabriquez (remèdes naturels).,Améliore la qualité de ce que vous fabriquez (remèdes naturels).
+dhsPerkSurvHerbSpeedName,Production rapide,Production rapide
+dhsPerkSurvHerbSpeedDesc,Fabrique plus vite (remèdes naturels).,Fabrique plus vite (remèdes naturels).
+dhsPerkSurvHerbAtelierIName,Atelier : remèdes naturels,Atelier : remèdes naturels
+dhsPerkSurvHerbAtelierIDesc,Débloque la fabrication de votre spécialité : remèdes naturels.,Débloque la fabrication de votre spécialité : remèdes naturels.
+dhsPerkSurvHerbAtelierIIName,Maîtrise : remèdes naturels,Maîtrise : remèdes naturels
+dhsPerkSurvHerbAtelierIIDesc,Débloque la fabrication avancée de votre spécialité : remèdes naturels.,Débloque la fabrication avancée de votre spécialité : remèdes naturels.
+dhsPerkSurvHerbCraftXPName,Apprentissage,Apprentissage
+dhsPerkSurvHerbCraftXPDesc,Augmente toute l'expérience gagnée.,Augmente toute l'expérience gagnée.
+dhsSkillClassSurvHerbSpecName,Herboriste — Spécialité,Herboriste — Spécialité
+dhsSkillClassSurvHerbSpecDesc,Sous-branche Herboriste : Spécialité.,Sous-branche Herboriste : Spécialité.
+dhsPerkSurvHerbToughName,Robustesse,Robustesse
+dhsPerkSurvHerbToughDesc,Réduit les dégâts physiques subis.,Réduit les dégâts physiques subis.
+dhsPerkSurvHerbHPName,Vitalité,Vitalité
+dhsPerkSurvHerbHPDesc,Augmente votre santé maximale.,Augmente votre santé maximale.
+dhsPerkSurvHerbVigorName,Endurance,Endurance
+dhsPerkSurvHerbVigorDesc,Réduit l'endurance dépensée par les actions.,Réduit l'endurance dépensée par les actions.
+dhsPerkSurvHerbStamRegenName,Récupération,Récupération
+dhsPerkSurvHerbStamRegenDesc,Récupère l'endurance plus vite.,Récupère l'endurance plus vite.
+dhsPerkSurvHerbCarryName,Portage,Portage
+dhsPerkSurvHerbCarryDesc,Ajoute des emplacements de portage.,Ajoute des emplacements de portage.
+dhsPerkSurvHerbResistName,Constitution,Constitution
+dhsPerkSurvHerbResistDesc,Réduit légèrement tous les dégâts subis.,Réduit légèrement tous les dégâts subis.
+dhsPerkSurvHerbBuffName,Tempérament,Tempérament
+dhsPerkSurvHerbBuffDesc,Résiste aux effets négatifs.,Résiste aux effets négatifs.
+dhsReqClassBuilArch,Nécessite la classe Architecte,Nécessite la classe Architecte
+dhsBookClassBuilArch,Manuel de classe : Architecte,Manuel de classe : Architecte
+dhsBookClassBuilArchDesc,"Devenez Architecte : maîtrisez les fortifications et les masses. La lecture choisit la classe Architecte, débloque son craft signature et octroie quelques points de classe.","Devenez Architecte : maîtrisez les fortifications et les masses. La lecture choisit la classe Architecte, débloque son craft signature et octroie quelques points de classe."
+dhsMagBuilArch,Manuel : Architecte,Manuel : Architecte
+dhsMagBuilArchDesc,Un magazine de Architecte. Le lire octroie 1 point de classe Architecte à dépenser dans l'arbre Architecte. Utile uniquement à cette classe.,Un magazine de Architecte. Le lire octroie 1 point de classe Architecte à dépenser dans l'arbre Architecte. Utile uniquement à cette classe.
+dhsSkillClassBuilArchArmeName,Architecte — Arme,Architecte — Arme
+dhsSkillClassBuilArchArmeDesc,Sous-branche Architecte : Arme.,Sous-branche Architecte : Arme.
+dhsPerkBuilArchDmgName,Dégâts,Dégâts
+dhsPerkBuilArchDmgDesc,Augmente les dégâts de mêlée.,Augmente les dégâts de mêlée.
+dhsPerkBuilArchHandName,Maniement,Maniement
+dhsPerkBuilArchHandDesc,Améliore la maniabilité.,Améliore la maniabilité.
+dhsPerkBuilArchDismemberName,Brutalité,Brutalité
+dhsPerkBuilArchDismemberDesc,Augmente le démembrement.,Augmente le démembrement.
+dhsPerkBuilArchStamName,Conditionnement,Conditionnement
+dhsPerkBuilArchStamDesc,Réduit l'endurance dépensée.,Réduit l'endurance dépensée.
+dhsPerkBuilArchPierceName,Perforation,Perforation
+dhsPerkBuilArchPierceDesc,Vos attaques ignorent davantage l'armure.,Vos attaques ignorent davantage l'armure.
+dhsPerkBuilArchWStamName,Aisance,Aisance
+dhsPerkBuilArchWStamDesc,Réduit l'endurance dépensée avec votre arme.,Réduit l'endurance dépensée avec votre arme.
+dhsPerkBuilArchCleaveName,Tranchant,Tranchant
+dhsPerkBuilArchCleaveDesc,Augmente les chances de démembrement.,Augmente les chances de démembrement.
+dhsSkillClassBuilArchMetierName,Architecte — Métier,Architecte — Métier
+dhsSkillClassBuilArchMetierDesc,Sous-branche Architecte : Métier.,Sous-branche Architecte : Métier.
+dhsPerkBuilArchQualityName,Maîtrise d'artisanat,Maîtrise d'artisanat
+dhsPerkBuilArchQualityDesc,Améliore la qualité de ce que vous fabriquez (construction et fortifications).,Améliore la qualité de ce que vous fabriquez (construction et fortifications).
+dhsPerkBuilArchSpeedName,Production rapide,Production rapide
+dhsPerkBuilArchSpeedDesc,Fabrique plus vite (construction et fortifications).,Fabrique plus vite (construction et fortifications).
+dhsPerkBuilArchAtelierIName,Atelier : construction et fortifications,Atelier : construction et fortifications
+dhsPerkBuilArchAtelierIDesc,Débloque la fabrication de votre spécialité : construction et fortifications.,Débloque la fabrication de votre spécialité : construction et fortifications.
+dhsPerkBuilArchAtelierIIName,Maîtrise : construction et fortifications,Maîtrise : construction et fortifications
+dhsPerkBuilArchAtelierIIDesc,Débloque la fabrication avancée de votre spécialité : construction et fortifications.,Débloque la fabrication avancée de votre spécialité : construction et fortifications.
+dhsPerkBuilArchCraftXPName,Apprentissage,Apprentissage
+dhsPerkBuilArchCraftXPDesc,Augmente toute l'expérience gagnée.,Augmente toute l'expérience gagnée.
+dhsSkillClassBuilArchSpecName,Architecte — Spécialité,Architecte — Spécialité
+dhsSkillClassBuilArchSpecDesc,Sous-branche Architecte : Spécialité.,Sous-branche Architecte : Spécialité.
+dhsPerkBuilArchToughName,Robustesse,Robustesse
+dhsPerkBuilArchToughDesc,Réduit les dégâts physiques subis.,Réduit les dégâts physiques subis.
+dhsPerkBuilArchHPName,Vitalité,Vitalité
+dhsPerkBuilArchHPDesc,Augmente votre santé maximale.,Augmente votre santé maximale.
+dhsPerkBuilArchVigorName,Endurance,Endurance
+dhsPerkBuilArchVigorDesc,Réduit l'endurance dépensée par les actions.,Réduit l'endurance dépensée par les actions.
+dhsPerkBuilArchStamRegenName,Récupération,Récupération
+dhsPerkBuilArchStamRegenDesc,Récupère l'endurance plus vite.,Récupère l'endurance plus vite.
+dhsPerkBuilArchCarryName,Portage,Portage
+dhsPerkBuilArchCarryDesc,Ajoute des emplacements de portage.,Ajoute des emplacements de portage.
+dhsPerkBuilArchResistName,Constitution,Constitution
+dhsPerkBuilArchResistDesc,Réduit légèrement tous les dégâts subis.,Réduit légèrement tous les dégâts subis.
+dhsPerkBuilArchBuffName,Tempérament,Tempérament
+dhsPerkBuilArchBuffDesc,Résiste aux effets négatifs.,Résiste aux effets négatifs.
+dhsReqClassBuilArti,Nécessite la classe Artisan,Nécessite la classe Artisan
+dhsBookClassBuilArti,Manuel de classe : Artisan,Manuel de classe : Artisan
+dhsBookClassBuilArtiDesc,"Devenez Artisan : maîtrisez les ateliers, outils et l'artisanat. La lecture choisit la classe Artisan, débloque son craft signature et octroie quelques points de classe.","Devenez Artisan : maîtrisez les ateliers, outils et l'artisanat. La lecture choisit la classe Artisan, débloque son craft signature et octroie quelques points de classe."
+dhsMagBuilArti,Manuel : Artisan,Manuel : Artisan
+dhsMagBuilArtiDesc,Un magazine de Artisan. Le lire octroie 1 point de classe Artisan à dépenser dans l'arbre Artisan. Utile uniquement à cette classe.,Un magazine de Artisan. Le lire octroie 1 point de classe Artisan à dépenser dans l'arbre Artisan. Utile uniquement à cette classe.
+dhsSkillClassBuilArtiArmeName,Artisan — Arme,Artisan — Arme
+dhsSkillClassBuilArtiArmeDesc,Sous-branche Artisan : Arme.,Sous-branche Artisan : Arme.
+dhsPerkBuilArtiHarvestName,Récolte,Récolte
+dhsPerkBuilArtiHarvestDesc,Récolte plus avec les outils.,Récolte plus avec les outils.
+dhsPerkBuilArtiBlockName,Outils puissants,Outils puissants
+dhsPerkBuilArtiBlockDesc,Augmente les dégâts aux blocs.,Augmente les dégâts aux blocs.
+dhsPerkBuilArtiStamName,Conditionnement,Conditionnement
+dhsPerkBuilArtiStamDesc,Réduit l'endurance dépensée.,Réduit l'endurance dépensée.
+dhsPerkBuilArtiPierceName,Perforation,Perforation
+dhsPerkBuilArtiPierceDesc,Vos attaques ignorent davantage l'armure.,Vos attaques ignorent davantage l'armure.
+dhsPerkBuilArtiWStamName,Aisance,Aisance
+dhsPerkBuilArtiWStamDesc,Réduit l'endurance dépensée avec votre arme.,Réduit l'endurance dépensée avec votre arme.
+dhsPerkBuilArtiCleaveName,Tranchant,Tranchant
+dhsPerkBuilArtiCleaveDesc,Augmente les chances de démembrement.,Augmente les chances de démembrement.
+dhsSkillClassBuilArtiMetierName,Artisan — Métier,Artisan — Métier
+dhsSkillClassBuilArtiMetierDesc,Sous-branche Artisan : Métier.,Sous-branche Artisan : Métier.
+dhsPerkBuilArtiQualityName,Maîtrise d'artisanat,Maîtrise d'artisanat
+dhsPerkBuilArtiQualityDesc,Améliore la qualité de ce que vous fabriquez (outils et équipement).,Améliore la qualité de ce que vous fabriquez (outils et équipement).
+dhsPerkBuilArtiSpeedName,Production rapide,Production rapide
+dhsPerkBuilArtiSpeedDesc,Fabrique plus vite (outils et équipement).,Fabrique plus vite (outils et équipement).
+dhsPerkBuilArtiAtelierIName,Atelier : outils et équipement,Atelier : outils et équipement
+dhsPerkBuilArtiAtelierIDesc,Débloque la fabrication de votre spécialité : outils et équipement.,Débloque la fabrication de votre spécialité : outils et équipement.
+dhsPerkBuilArtiAtelierIIName,Maîtrise : outils et équipement,Maîtrise : outils et équipement
+dhsPerkBuilArtiAtelierIIDesc,Débloque la fabrication avancée de votre spécialité : outils et équipement.,Débloque la fabrication avancée de votre spécialité : outils et équipement.
+dhsPerkBuilArtiCraftXPName,Apprentissage,Apprentissage
+dhsPerkBuilArtiCraftXPDesc,Augmente toute l'expérience gagnée.,Augmente toute l'expérience gagnée.
+dhsSkillClassBuilArtiSpecName,Artisan — Spécialité,Artisan — Spécialité
+dhsSkillClassBuilArtiSpecDesc,Sous-branche Artisan : Spécialité.,Sous-branche Artisan : Spécialité.
+dhsPerkBuilArtiToughName,Robustesse,Robustesse
+dhsPerkBuilArtiToughDesc,Réduit les dégâts physiques subis.,Réduit les dégâts physiques subis.
+dhsPerkBuilArtiHPName,Vitalité,Vitalité
+dhsPerkBuilArtiHPDesc,Augmente votre santé maximale.,Augmente votre santé maximale.
+dhsPerkBuilArtiVigorName,Endurance,Endurance
+dhsPerkBuilArtiVigorDesc,Réduit l'endurance dépensée par les actions.,Réduit l'endurance dépensée par les actions.
+dhsPerkBuilArtiStamRegenName,Récupération,Récupération
+dhsPerkBuilArtiStamRegenDesc,Récupère l'endurance plus vite.,Récupère l'endurance plus vite.
+dhsPerkBuilArtiCarryName,Portage,Portage
+dhsPerkBuilArtiCarryDesc,Ajoute des emplacements de portage.,Ajoute des emplacements de portage.
+dhsPerkBuilArtiResistName,Constitution,Constitution
+dhsPerkBuilArtiResistDesc,Réduit légèrement tous les dégâts subis.,Réduit légèrement tous les dégâts subis.
+dhsPerkBuilArtiBuffName,Tempérament,Tempérament
+dhsPerkBuilArtiBuffDesc,Résiste aux effets négatifs.,Résiste aux effets négatifs.
+dhsReqClassScoutTrac,Nécessite la classe Pisteur,Nécessite la classe Pisteur
+dhsBookClassScoutTrac,Manuel de classe : Pisteur,Manuel de classe : Pisteur
+dhsBookClassScoutTracDesc,"Devenez Pisteur : maîtrisez la mobilité, l'exploration et les pistolets. La lecture choisit la classe Pisteur, débloque son craft signature et octroie quelques points de classe.","Devenez Pisteur : maîtrisez la mobilité, l'exploration et les pistolets. La lecture choisit la classe Pisteur, débloque son craft signature et octroie quelques points de classe."
+dhsMagScoutTrac,Manuel : Pisteur,Manuel : Pisteur
+dhsMagScoutTracDesc,Un magazine de Pisteur. Le lire octroie 1 point de classe Pisteur à dépenser dans l'arbre Pisteur. Utile uniquement à cette classe.,Un magazine de Pisteur. Le lire octroie 1 point de classe Pisteur à dépenser dans l'arbre Pisteur. Utile uniquement à cette classe.
+dhsSkillClassScoutTracArmeName,Pisteur — Arme,Pisteur — Arme
+dhsSkillClassScoutTracArmeDesc,Sous-branche Pisteur : Arme.,Sous-branche Pisteur : Arme.
+dhsPerkScoutTracDmgName,Dégâts,Dégâts
+dhsPerkScoutTracDmgDesc,Augmente les dégâts de l'arme de classe.,Augmente les dégâts de l'arme de classe.
+dhsPerkScoutTracHandName,Maniement,Maniement
+dhsPerkScoutTracHandDesc,Améliore la maniabilité.,Améliore la maniabilité.
+dhsPerkScoutTracReloadName,Rechargement rapide,Rechargement rapide
+dhsPerkScoutTracReloadDesc,Recharge plus vite.,Recharge plus vite.
+dhsPerkScoutTracAimName,Précision,Précision
+dhsPerkScoutTracAimDesc,Réduit la dispersion en visée.,Réduit la dispersion en visée.
+dhsPerkScoutTracPierceName,Perforation,Perforation
+dhsPerkScoutTracPierceDesc,Vos attaques ignorent davantage l'armure.,Vos attaques ignorent davantage l'armure.
+dhsPerkScoutTracWStamName,Aisance,Aisance
+dhsPerkScoutTracWStamDesc,Réduit l'endurance dépensée avec votre arme.,Réduit l'endurance dépensée avec votre arme.
+dhsPerkScoutTracSteadyName,Stabilité,Stabilité
+dhsPerkScoutTracSteadyDesc,Réduit la dispersion en visée.,Réduit la dispersion en visée.
+dhsSkillClassScoutTracMetierName,Pisteur — Métier,Pisteur — Métier
+dhsSkillClassScoutTracMetierDesc,Sous-branche Pisteur : Métier.,Sous-branche Pisteur : Métier.
+dhsPerkScoutTracQualityName,Maîtrise d'artisanat,Maîtrise d'artisanat
+dhsPerkScoutTracQualityDesc,Améliore la qualité de ce que vous fabriquez (pistolets).,Améliore la qualité de ce que vous fabriquez (pistolets).
+dhsPerkScoutTracSpeedName,Production rapide,Production rapide
+dhsPerkScoutTracSpeedDesc,Fabrique plus vite (pistolets).,Fabrique plus vite (pistolets).
+dhsPerkScoutTracAtelierIName,Atelier : pistolets,Atelier : pistolets
+dhsPerkScoutTracAtelierIDesc,Débloque la fabrication de votre spécialité : pistolets.,Débloque la fabrication de votre spécialité : pistolets.
+dhsPerkScoutTracAtelierIIName,Maîtrise : pistolets,Maîtrise : pistolets
+dhsPerkScoutTracAtelierIIDesc,Débloque la fabrication avancée de votre spécialité : pistolets.,Débloque la fabrication avancée de votre spécialité : pistolets.
+dhsPerkScoutTracCraftXPName,Apprentissage,Apprentissage
+dhsPerkScoutTracCraftXPDesc,Augmente toute l'expérience gagnée.,Augmente toute l'expérience gagnée.
+dhsSkillClassScoutTracSpecName,Pisteur — Spécialité,Pisteur — Spécialité
+dhsSkillClassScoutTracSpecDesc,Sous-branche Pisteur : Spécialité.,Sous-branche Pisteur : Spécialité.
+dhsPerkScoutTracToughName,Robustesse,Robustesse
+dhsPerkScoutTracToughDesc,Réduit les dégâts physiques subis.,Réduit les dégâts physiques subis.
+dhsPerkScoutTracHPName,Vitalité,Vitalité
+dhsPerkScoutTracHPDesc,Augmente votre santé maximale.,Augmente votre santé maximale.
+dhsPerkScoutTracVigorName,Endurance,Endurance
+dhsPerkScoutTracVigorDesc,Réduit l'endurance dépensée par les actions.,Réduit l'endurance dépensée par les actions.
+dhsPerkScoutTracStamRegenName,Récupération,Récupération
+dhsPerkScoutTracStamRegenDesc,Récupère l'endurance plus vite.,Récupère l'endurance plus vite.
+dhsPerkScoutTracCarryName,Portage,Portage
+dhsPerkScoutTracCarryDesc,Ajoute des emplacements de portage.,Ajoute des emplacements de portage.
+dhsPerkScoutTracResistName,Constitution,Constitution
+dhsPerkScoutTracResistDesc,Réduit légèrement tous les dégâts subis.,Réduit légèrement tous les dégâts subis.
+dhsPerkScoutTracBuffName,Tempérament,Tempérament
+dhsPerkScoutTracBuffDesc,Résiste aux effets négatifs.,Résiste aux effets négatifs.
+dhsReqClassScoutInfi,Nécessite la classe Infiltrateur,Nécessite la classe Infiltrateur
+dhsBookClassScoutInfi,Manuel de classe : Infiltrateur,Manuel de classe : Infiltrateur
+dhsBookClassScoutInfiDesc,"Devenez Infiltrateur : maîtrisez la furtivité, le pillage et les armes de poing. La lecture choisit la classe Infiltrateur, débloque son craft signature et octroie quelques points de classe.","Devenez Infiltrateur : maîtrisez la furtivité, le pillage et les armes de poing. La lecture choisit la classe Infiltrateur, débloque son craft signature et octroie quelques points de classe."
+dhsMagScoutInfi,Manuel : Infiltrateur,Manuel : Infiltrateur
+dhsMagScoutInfiDesc,Un magazine de Infiltrateur. Le lire octroie 1 point de classe Infiltrateur à dépenser dans l'arbre Infiltrateur. Utile uniquement à cette classe.,Un magazine de Infiltrateur. Le lire octroie 1 point de classe Infiltrateur à dépenser dans l'arbre Infiltrateur. Utile uniquement à cette classe.
+dhsSkillClassScoutInfiArmeName,Infiltrateur — Arme,Infiltrateur — Arme
+dhsSkillClassScoutInfiArmeDesc,Sous-branche Infiltrateur : Arme.,Sous-branche Infiltrateur : Arme.
+dhsPerkScoutInfiDmgName,Dégâts,Dégâts
+dhsPerkScoutInfiDmgDesc,Augmente les dégâts de mêlée.,Augmente les dégâts de mêlée.
+dhsPerkScoutInfiHandName,Maniement,Maniement
+dhsPerkScoutInfiHandDesc,Améliore la maniabilité.,Améliore la maniabilité.
+dhsPerkScoutInfiDismemberName,Brutalité,Brutalité
+dhsPerkScoutInfiDismemberDesc,Augmente le démembrement.,Augmente le démembrement.
+dhsPerkScoutInfiStamName,Conditionnement,Conditionnement
+dhsPerkScoutInfiStamDesc,Réduit l'endurance dépensée.,Réduit l'endurance dépensée.
+dhsPerkScoutInfiPierceName,Perforation,Perforation
+dhsPerkScoutInfiPierceDesc,Vos attaques ignorent davantage l'armure.,Vos attaques ignorent davantage l'armure.
+dhsPerkScoutInfiWStamName,Aisance,Aisance
+dhsPerkScoutInfiWStamDesc,Réduit l'endurance dépensée avec votre arme.,Réduit l'endurance dépensée avec votre arme.
+dhsPerkScoutInfiCleaveName,Tranchant,Tranchant
+dhsPerkScoutInfiCleaveDesc,Augmente les chances de démembrement.,Augmente les chances de démembrement.
+dhsSkillClassScoutInfiMetierName,Infiltrateur — Métier,Infiltrateur — Métier
+dhsSkillClassScoutInfiMetierDesc,Sous-branche Infiltrateur : Métier.,Sous-branche Infiltrateur : Métier.
+dhsPerkScoutInfiQualityName,Maîtrise d'artisanat,Maîtrise d'artisanat
+dhsPerkScoutInfiQualityDesc,Améliore la qualité de ce que vous fabriquez (armes de poing et pillage).,Améliore la qualité de ce que vous fabriquez (armes de poing et pillage).
+dhsPerkScoutInfiSpeedName,Production rapide,Production rapide
+dhsPerkScoutInfiSpeedDesc,Fabrique plus vite (armes de poing et pillage).,Fabrique plus vite (armes de poing et pillage).
+dhsPerkScoutInfiAtelierIName,Atelier : armes de poing et pillage,Atelier : armes de poing et pillage
+dhsPerkScoutInfiAtelierIDesc,Débloque la fabrication de votre spécialité : armes de poing et pillage.,Débloque la fabrication de votre spécialité : armes de poing et pillage.
+dhsPerkScoutInfiAtelierIIName,Maîtrise : armes de poing et pillage,Maîtrise : armes de poing et pillage
+dhsPerkScoutInfiAtelierIIDesc,Débloque la fabrication avancée de votre spécialité : armes de poing et pillage.,Débloque la fabrication avancée de votre spécialité : armes de poing et pillage.
+dhsPerkScoutInfiCraftXPName,Apprentissage,Apprentissage
+dhsPerkScoutInfiCraftXPDesc,Augmente toute l'expérience gagnée.,Augmente toute l'expérience gagnée.
+dhsSkillClassScoutInfiSpecName,Infiltrateur — Spécialité,Infiltrateur — Spécialité
+dhsSkillClassScoutInfiSpecDesc,Sous-branche Infiltrateur : Spécialité.,Sous-branche Infiltrateur : Spécialité.
+dhsPerkScoutInfiToughName,Robustesse,Robustesse
+dhsPerkScoutInfiToughDesc,Réduit les dégâts physiques subis.,Réduit les dégâts physiques subis.
+dhsPerkScoutInfiHPName,Vitalité,Vitalité
+dhsPerkScoutInfiHPDesc,Augmente votre santé maximale.,Augmente votre santé maximale.
+dhsPerkScoutInfiVigorName,Endurance,Endurance
+dhsPerkScoutInfiVigorDesc,Réduit l'endurance dépensée par les actions.,Réduit l'endurance dépensée par les actions.
+dhsPerkScoutInfiStamRegenName,Récupération,Récupération
+dhsPerkScoutInfiStamRegenDesc,Récupère l'endurance plus vite.,Récupère l'endurance plus vite.
+dhsPerkScoutInfiCarryName,Portage,Portage
+dhsPerkScoutInfiCarryDesc,Ajoute des emplacements de portage.,Ajoute des emplacements de portage.
+dhsPerkScoutInfiResistName,Constitution,Constitution
+dhsPerkScoutInfiResistDesc,Réduit légèrement tous les dégâts subis.,Réduit légèrement tous les dégâts subis.
+dhsPerkScoutInfiBuffName,Tempérament,Tempérament
+dhsPerkScoutInfiBuffDesc,Résiste aux effets négatifs.,Résiste aux effets négatifs.
+dhsReqClassFarmAgri,Nécessite la classe Agriculteur,Nécessite la classe Agriculteur
+dhsBookClassFarmAgri,Manuel de classe : Agriculteur,Manuel de classe : Agriculteur
+dhsBookClassFarmAgriDesc,"Devenez Agriculteur : maîtrisez les cultures et le fusil à pompe. La lecture choisit la classe Agriculteur, débloque son craft signature et octroie quelques points de classe.","Devenez Agriculteur : maîtrisez les cultures et le fusil à pompe. La lecture choisit la classe Agriculteur, débloque son craft signature et octroie quelques points de classe."
+dhsMagFarmAgri,Manuel : Agriculteur,Manuel : Agriculteur
+dhsMagFarmAgriDesc,Un magazine de Agriculteur. Le lire octroie 1 point de classe Agriculteur à dépenser dans l'arbre Agriculteur. Utile uniquement à cette classe.,Un magazine de Agriculteur. Le lire octroie 1 point de classe Agriculteur à dépenser dans l'arbre Agriculteur. Utile uniquement à cette classe.
+dhsSkillClassFarmAgriShotgunName,Agriculteur — Fusil à pompe,Agriculteur — Fusil à pompe
+dhsSkillClassFarmAgriShotgunDesc,Sous-branche Agriculteur : Fusil à pompe.,Sous-branche Agriculteur : Fusil à pompe.
+dhsPerkFarmAgriDmgName,Dégâts,Dégâts
+dhsPerkFarmAgriDmgDesc,Augmente les dégâts au fusil à pompe.,Augmente les dégâts au fusil à pompe.
+dhsPerkFarmAgriHandName,Maniement,Maniement
+dhsPerkFarmAgriHandDesc,Améliore la maniabilité du fusil à pompe.,Améliore la maniabilité du fusil à pompe.
+dhsPerkFarmAgriReloadName,Rechargement rapide,Rechargement rapide
+dhsPerkFarmAgriReloadDesc,Recharge le fusil plus vite.,Recharge le fusil plus vite.
+dhsPerkFarmAgriAimName,Précision,Précision
+dhsPerkFarmAgriAimDesc,Resserre la gerbe en visée.,Resserre la gerbe en visée.
+dhsPerkFarmAgriPierceName,Perforation,Perforation
+dhsPerkFarmAgriPierceDesc,Les tirs ignorent davantage l'armure.,Les tirs ignorent davantage l'armure.
+dhsPerkFarmAgriSlugName,Arsenal du fermier,Arsenal du fermier
+dhsPerkFarmAgriSlugDesc,Débloque la fabrication de Cartouches de fermier (balles lourdes) à l'établi.,Débloque la fabrication de Cartouches de fermier (balles lourdes) à l'établi.
+dhsPerkFarmAgriBuckName,Cartouchière,Cartouchière
+dhsPerkFarmAgriBuckDesc,Débloque la fabrication de Chevrotine de fermier (chevrotine lourde) à l'établi.,Débloque la fabrication de Chevrotine de fermier (chevrotine lourde) à l'établi.
+dhsSkillClassFarmAgriFarmingName,Agriculteur — Agriculture,Agriculteur — Agriculture
+dhsSkillClassFarmAgriFarmingDesc,Sous-branche Agriculteur : Agriculture.,Sous-branche Agriculteur : Agriculture.
+dhsPerkFarmAgriGreenName,Main verte,Main verte
+dhsPerkFarmAgriGreenDesc,Récolte bien plus sur cultures et plantes sauvages.,Récolte bien plus sur cultures et plantes sauvages.
+dhsPerkFarmAgriButcherName,Éleveur,Éleveur
+dhsPerkFarmAgriButcherDesc,Récolte plus de viande/ressources sur les animaux.,Récolte plus de viande/ressources sur les animaux.
+dhsPerkFarmAgriFastCraftName,Tâcheron,Tâcheron
+dhsPerkFarmAgriFastCraftDesc,Fabrique vos recettes d'Agriculteur plus vite.,Fabrique vos recettes d'Agriculteur plus vite.
+dhsPerkFarmAgriPreserveName,Conserverie,Conserverie
+dhsPerkFarmAgriPreserveDesc,Débloque la cuisson des Conserves du fermier (nourriture copieuse qui se garde).,Débloque la cuisson des Conserves du fermier (nourriture copieuse qui se garde).
+dhsPerkFarmAgriBellyName,Estomac solide,Estomac solide
+dhsPerkFarmAgriBellyDesc,Augmente votre nourriture maximale.,Augmente votre nourriture maximale.
+dhsPerkFarmAgriXPName,Lève-tôt,Lève-tôt
+dhsPerkFarmAgriXPDesc,Augmente toute l'expérience gagnée.,Augmente toute l'expérience gagnée.
+dhsPerkFarmAgriStamRegenName,Souffle paysan,Souffle paysan
+dhsPerkFarmAgriStamRegenDesc,Récupère l'endurance plus vite.,Récupère l'endurance plus vite.
+dhsSkillClassFarmAgriProviderName,Agriculteur — Subsistance,Agriculteur — Subsistance
+dhsSkillClassFarmAgriProviderDesc,Sous-branche Agriculteur : Subsistance.,Sous-branche Agriculteur : Subsistance.
+dhsPerkFarmAgriStamName,Endurance paysanne,Endurance paysanne
+dhsPerkFarmAgriStamDesc,Réduit l'endurance dépensée par les actions.,Réduit l'endurance dépensée par les actions.
+dhsPerkFarmAgriCarryName,Bête de somme,Bête de somme
+dhsPerkFarmAgriCarryDesc,Ajoute des emplacements de portage.,Ajoute des emplacements de portage.
+dhsPerkFarmAgriToughName,Coriace,Coriace
+dhsPerkFarmAgriToughDesc,Réduit les dégâts physiques subis.,Réduit les dégâts physiques subis.
+dhsPerkFarmAgriResistName,Constitution,Constitution
+dhsPerkFarmAgriResistDesc,Réduit légèrement tous les dégâts subis.,Réduit légèrement tous les dégâts subis.
+dhsPerkFarmAgriHPName,Robuste,Robuste
+dhsPerkFarmAgriHPDesc,Augmente votre santé maximale.,Augmente votre santé maximale.
+dhsPerkFarmAgriBuffName,Estomac d'acier,Estomac d'acier
+dhsPerkFarmAgriBuffDesc,Résiste aux effets négatifs.,Résiste aux effets négatifs.
+dhsAmmoFarmerSlug,Cartouche de fermier,Cartouche de fermier
+dhsAmmoFarmerSlugDesc,"Une lourde balle montée main, bien plus puissante qu'une balle standard. Fabriquée uniquement par les Agriculteurs.","Une lourde balle montée main, bien plus puissante qu'une balle standard. Fabriquée uniquement par les Agriculteurs."
+dhsAmmoFarmerBuck,Chevrotine de fermier,Chevrotine de fermier
+dhsAmmoFarmerBuckDesc,Lourde chevrotine montée main pour le combat rapproché. Fabriquée uniquement par les Agriculteurs.,Lourde chevrotine montée main pour le combat rapproché. Fabriquée uniquement par les Agriculteurs.
+dhsFoodPreserves,Conserves du fermier,Conserves du fermier
+dhsFoodPreservesDesc,"Conserve maison : copieuse, se garde longtemps, s'empile. Cuisinée uniquement par les Agriculteurs.","Conserve maison : copieuse, se garde longtemps, s'empile. Cuisinée uniquement par les Agriculteurs."
+dhsReqClassFarmCook,Nécessite la classe Cuisinier,Nécessite la classe Cuisinier
+dhsBookClassFarmCook,Manuel de classe : Cuisinier,Manuel de classe : Cuisinier
+dhsBookClassFarmCookDesc,"Devenez Cuisinier : maîtrisez la cuisine, les buffs d'équipe et les gourdins. La lecture choisit la classe Cuisinier, débloque son craft signature et octroie quelques points de classe.","Devenez Cuisinier : maîtrisez la cuisine, les buffs d'équipe et les gourdins. La lecture choisit la classe Cuisinier, débloque son craft signature et octroie quelques points de classe."
+dhsMagFarmCook,Manuel : Cuisinier,Manuel : Cuisinier
+dhsMagFarmCookDesc,Un magazine de Cuisinier. Le lire octroie 1 point de classe Cuisinier à dépenser dans l'arbre Cuisinier. Utile uniquement à cette classe.,Un magazine de Cuisinier. Le lire octroie 1 point de classe Cuisinier à dépenser dans l'arbre Cuisinier. Utile uniquement à cette classe.
+dhsSkillClassFarmCookClubName,Cuisinier — Gourdin,Cuisinier — Gourdin
+dhsSkillClassFarmCookClubDesc,Sous-branche Cuisinier : Gourdin.,Sous-branche Cuisinier : Gourdin.
+dhsPerkFarmCookDmgName,Dégâts,Dégâts
+dhsPerkFarmCookDmgDesc,Augmente les dégâts au gourdin.,Augmente les dégâts au gourdin.
+dhsPerkFarmCookHandName,Maniement,Maniement
+dhsPerkFarmCookHandDesc,Améliore la maniabilité du gourdin.,Améliore la maniabilité du gourdin.
+dhsPerkFarmCookDismemberName,Attendrisseur,Attendrisseur
+dhsPerkFarmCookDismemberDesc,Augmente le démembrement au gourdin.,Augmente le démembrement au gourdin.
+dhsPerkFarmCookStamName,Conditionnement,Conditionnement
+dhsPerkFarmCookStamDesc,Réduit l'endurance dépensée en attaquant.,Réduit l'endurance dépensée en attaquant.
+dhsPerkFarmCookBlockName,Massue,Massue
+dhsPerkFarmCookBlockDesc,Augmente les dégâts aux blocs au gourdin.,Augmente les dégâts aux blocs au gourdin.
+dhsPerkFarmCookArmorName,Broyeur d'armure,Broyeur d'armure
+dhsPerkFarmCookArmorDesc,Les coups ignorent davantage l'armure.,Les coups ignorent davantage l'armure.
+dhsSkillClassFarmCookKitchenName,Cuisinier — Cuisine,Cuisinier — Cuisine
+dhsSkillClassFarmCookKitchenDesc,Sous-branche Cuisinier : Cuisine.,Sous-branche Cuisinier : Cuisine.
+dhsPerkFarmCookFastCookName,Marmiton,Marmiton
+dhsPerkFarmCookFastCookDesc,Cuisine vos recettes de Cuisinier plus vite.,Cuisine vos recettes de Cuisinier plus vite.
 dhsPerkFarmCookGourmetName,Gourmet,Gourmet
-dhsPerkFarmCookGourmetDesc,Increases your maximum food.,Augmente votre nourriture maximale.
-dhsPerkFarmCookFeastName,Cook's Kitchen,Cuisine du chef
-dhsPerkFarmCookFeastDesc,Unlocks cooking the Team Feast: a shared meal that buffs nearby allies.,Débloque la cuisson du Festin d'équipe : un plat qui buff les alliés proches.
-dhsPerkFarmCookTonicName,Mixology,Mixologie
-dhsPerkFarmCookTonicDesc,Unlocks brewing the Cook's Tonic: a shared stamina drink.,Débloque la préparation du Tonique du chef : une boisson d'endurance partagée.
-dhsPerkFarmCookGrandName,Grand Chef,Grand chef
-dhsPerkFarmCookGrandDesc,Unlocks cooking the Grand Feast: a stronger team meal.,Débloque la cuisson du Grand festin : un repas d'équipe renforcé.
-dhsPerkFarmCookButcherName,Butcher,Boucher
-dhsPerkFarmCookButcherDesc,Harvest more meat from animals.,Récolte plus de viande sur les animaux.
-dhsPerkFarmCookXPName,Quick Learner,Apprenti rapide
-dhsPerkFarmCookXPDesc,Increases all experience gained.,Augmente toute l'expérience gagnée.
-dhsSkillClassFarmCookSupportName,Cook — Support,Cuisinier — Soutien d'équipe
-dhsSkillClassFarmCookSupportDesc,Cook sub-branch: Support.,Sous-branche Cuisinier : Soutien d'équipe.
-dhsPerkFarmCookToughName,Hearty,Robustesse
-dhsPerkFarmCookToughDesc,Reduces physical damage taken.,Réduit les dégâts physiques subis.
-dhsPerkFarmCookResistName,Bulwark,Garde
-dhsPerkFarmCookResistDesc,Reduces all damage taken slightly.,Réduit légèrement tous les dégâts subis.
-dhsPerkFarmCookHPName,Big Boned,Solide gaillard
-dhsPerkFarmCookHPDesc,Increases your maximum health.,Augmente votre santé maximale.
-dhsPerkFarmCookCarryName,Porter,Porteur
-dhsPerkFarmCookCarryDesc,Adds carry capacity slots.,Ajoute des emplacements de portage.
-dhsPerkFarmCookStamRegenName,Second Wind,Second souffle
-dhsPerkFarmCookStamRegenDesc,Recovers stamina faster.,Récupère l'endurance plus vite.
-dhsPerkFarmCookBuffName,Cast Iron,Estomac d'acier
-dhsPerkFarmCookBuffDesc,Resists negative status effects.,Résiste aux effets négatifs.
-dhsPerkFarmCookMeneurName,Quartermaster,Intendant
-dhsPerkFarmCookMeneurDesc,Increases all experience gained.,Augmente toute l'expérience gagnée.
-dhsFoodFeast,Team Feast,Festin d'équipe
-dhsFoodFeastDesc,A hearty shared meal. Feeds you well and buffs nearby allies. Cooked only by Cooks.,Un copieux repas partagé. Vous rassasie et buff les alliés proches. Cuisiné uniquement par les Cuisiniers.
-dhsFoodFeastGrand,Grand Feast,Grand festin
-dhsFoodFeastGrandDesc,A lavish shared banquet. Feeds and strongly buffs nearby allies. Cooked only by Cooks.,Un banquet partagé fastueux. Nourrit et buff fortement les alliés proches. Cuisiné uniquement par les Cuisiniers.
-dhsDrinkTonic,Cook's Tonic,Tonique du chef
-dhsDrinkTonicDesc,A reviving brew. Drinking it boosts stamina recovery for you and nearby allies.,Un breuvage revigorant. Le boire booste la récupération d'endurance pour vous et les alliés proches.
-dhsBuffFeastName,Team Feast,Festin d'équipe
-dhsBuffFeastDesc,Well fed by a Cook: reduced damage taken and stamina use.,Bien nourri par un Cuisinier : dégâts subis et endurance dépensée réduits.
-dhsBuffFeastGrandName,Grand Feast,Grand festin
-dhsBuffFeastGrandDesc,"Feasted by a Cook: greatly reduced damage taken, stamina use and faster stamina recovery.","Festoyé par un Cuisinier : dégâts subis et endurance fortement réduits, récupération accélérée."
-dhsBuffTonicName,Cook's Tonic,Tonique du chef
-dhsBuffTonicDesc,Energized by a Cook's tonic: faster stamina recovery and less stamina use.,"Revigoré par le tonique du chef : récupération d'endurance accélérée, moins d'endurance dépensée."
+dhsPerkFarmCookGourmetDesc,Augmente votre nourriture maximale.,Augmente votre nourriture maximale.
+dhsPerkFarmCookFeastName,Cuisine du chef,Cuisine du chef
+dhsPerkFarmCookFeastDesc,Débloque la cuisson du Festin d'équipe : un plat qui buff les alliés proches.,Débloque la cuisson du Festin d'équipe : un plat qui buff les alliés proches.
+dhsPerkFarmCookTonicName,Mixologie,Mixologie
+dhsPerkFarmCookTonicDesc,Débloque la préparation du Tonique du chef : une boisson d'endurance partagée.,Débloque la préparation du Tonique du chef : une boisson d'endurance partagée.
+dhsPerkFarmCookGrandName,Grand chef,Grand chef
+dhsPerkFarmCookGrandDesc,Débloque la cuisson du Grand festin : un repas d'équipe renforcé.,Débloque la cuisson du Grand festin : un repas d'équipe renforcé.
+dhsPerkFarmCookButcherName,Boucher,Boucher
+dhsPerkFarmCookButcherDesc,Récolte plus de viande sur les animaux.,Récolte plus de viande sur les animaux.
+dhsPerkFarmCookXPName,Apprenti rapide,Apprenti rapide
+dhsPerkFarmCookXPDesc,Augmente toute l'expérience gagnée.,Augmente toute l'expérience gagnée.
+dhsSkillClassFarmCookSupportName,Cuisinier — Soutien d'équipe,Cuisinier — Soutien d'équipe
+dhsSkillClassFarmCookSupportDesc,Sous-branche Cuisinier : Soutien d'équipe.,Sous-branche Cuisinier : Soutien d'équipe.
+dhsPerkFarmCookToughName,Robustesse,Robustesse
+dhsPerkFarmCookToughDesc,Réduit les dégâts physiques subis.,Réduit les dégâts physiques subis.
+dhsPerkFarmCookResistName,Garde,Garde
+dhsPerkFarmCookResistDesc,Réduit légèrement tous les dégâts subis.,Réduit légèrement tous les dégâts subis.
+dhsPerkFarmCookHPName,Solide gaillard,Solide gaillard
+dhsPerkFarmCookHPDesc,Augmente votre santé maximale.,Augmente votre santé maximale.
+dhsPerkFarmCookCarryName,Porteur,Porteur
+dhsPerkFarmCookCarryDesc,Ajoute des emplacements de portage.,Ajoute des emplacements de portage.
+dhsPerkFarmCookStamRegenName,Second souffle,Second souffle
+dhsPerkFarmCookStamRegenDesc,Récupère l'endurance plus vite.,Récupère l'endurance plus vite.
+dhsPerkFarmCookBuffName,Estomac d'acier,Estomac d'acier
+dhsPerkFarmCookBuffDesc,Résiste aux effets négatifs.,Résiste aux effets négatifs.
+dhsPerkFarmCookMeneurName,Intendant,Intendant
+dhsPerkFarmCookMeneurDesc,Augmente toute l'expérience gagnée.,Augmente toute l'expérience gagnée.
+dhsFoodFeast,Festin d'équipe,Festin d'équipe
+dhsFoodFeastDesc,Un copieux repas partagé. Vous rassasie et buff les alliés proches. Cuisiné uniquement par les Cuisiniers.,Un copieux repas partagé. Vous rassasie et buff les alliés proches. Cuisiné uniquement par les Cuisiniers.
+dhsFoodFeastGrand,Grand festin,Grand festin
+dhsFoodFeastGrandDesc,Un banquet partagé fastueux. Nourrit et buff fortement les alliés proches. Cuisiné uniquement par les Cuisiniers.,Un banquet partagé fastueux. Nourrit et buff fortement les alliés proches. Cuisiné uniquement par les Cuisiniers.
+dhsDrinkTonic,Tonique du chef,Tonique du chef
+dhsDrinkTonicDesc,Un breuvage revigorant. Le boire booste la récupération d'endurance pour vous et les alliés proches.,Un breuvage revigorant. Le boire booste la récupération d'endurance pour vous et les alliés proches.
+dhsBuffFeastName,Festin d'équipe,Festin d'équipe
+dhsBuffFeastDesc,Bien nourri par un Cuisinier : dégâts subis et endurance dépensée réduits.,Bien nourri par un Cuisinier : dégâts subis et endurance dépensée réduits.
+dhsBuffFeastGrandName,Grand festin,Grand festin
+dhsBuffFeastGrandDesc,"Festoyé par un Cuisinier : dégâts subis et endurance fortement réduits, récupération accélérée.","Festoyé par un Cuisinier : dégâts subis et endurance fortement réduits, récupération accélérée."
+dhsBuffTonicName,Tonique du chef,Tonique du chef
+dhsBuffTonicDesc,"Revigoré par le tonique du chef : récupération d'endurance accélérée, moins d'endurance dépensée.","Revigoré par le tonique du chef : récupération d'endurance accélérée, moins d'endurance dépensée."
