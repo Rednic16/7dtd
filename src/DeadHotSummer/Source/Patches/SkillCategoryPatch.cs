@@ -9,10 +9,11 @@ namespace DeadHotSummer
     ///
     /// Vanilla : XUiC_CategoryList.SetupCategoriesByWorkstation("skills") liste TOUS les
     /// attributs (IsAttribute) sans tenir compte de leur drapeau Hidden. On remplace cette
-    /// branche pour SAUTER les attributs marqués Hidden (les 5 attributs vanilla + General,
-    /// mis en hidden via progression.xml), ne laissant visibles que notre catégorie "Classes"
-    /// (attClasses) + Books + Crafting. Les perks vanilla restent définis (auto-accordés par
-    /// ClassManager) pour ne pas casser le craft.
+    /// branche pour ne laisser visibles QUE nos onglets de classe (attClass*) : les 5 attributs
+    /// vanilla ET l'onglet "Compétences d'artisanat" (attCrafting) sont masqués. Les
+    /// crafting_skills vanilla continuent de progresser via les magazines de butin (filet de
+    /// sécurité) -> rien ne devient incraftable ; les crafts sans classe propre (armures,
+    /// établis, mods, matériaux) sont en plus rattachés à la classe commune Survivant.
     /// </summary>
     [Preserve]
     [HarmonyPatch(typeof(XUiC_CategoryList), "SetupCategoriesByWorkstation")]
@@ -39,12 +40,11 @@ namespace DeadHotSummer
             {
                 ProgressionClass pc = kvp.Value;
                 if (!pc.IsAttribute) continue;
-                // Allowlist : on n'affiche QUE nos catégories de classe (attClass*) + Crafting.
-                // Tout le reste (5 attributs vanilla, General, Books) est masqué de la fenêtre.
-                // NB: ProgressionClass.Name est en minuscules côté moteur.
-                bool show = pc.Name != null && (pc.Name.StartsWith("attclass") || pc.Name == "attcrafting");
+                // Allowlist : on n'affiche QUE nos catégories de classe (attClass*). Tout le reste
+                // (5 attributs vanilla, attCrafting/Artisanat, General, Books) est masqué de la
+                // fenêtre. NB: ProgressionClass.Name est en minuscules côté moteur.
+                bool show = pc.Name != null && pc.Name.StartsWith("attclass");
                 if (!show) continue;
-                if (!XUiM_Recipes.CraftingProgression && pc.Name == "attcrafting") continue;
                 if (num >= __instance.CategoryButtons.Count) break; // sécurité (jamais hors slots)
                 __instance.SetCategoryEntry(num, pc.Name, pc.Icon, Localization.Get(pc.Name));
                 num++;

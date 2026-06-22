@@ -83,6 +83,22 @@ dhsPerkCommonCuisineName,Cuisine de survie,Cuisine de survie
 dhsPerkCommonCuisineDesc,Débloque la préparation des plats et boissons de base pour tous.,Débloque la préparation des plats et boissons de base pour tous.
 dhsPerkCommonCuisineR1,Cuisine de survie,Cuisine de survie
 dhsPerkCommonCuisineR1Long,Débloque la préparation des plats et boissons de base pour tous.,Débloque la préparation des plats et boissons de base pour tous.
+dhsPerkCommonAtelierName,Atelier de survie,Atelier de survie
+dhsPerkCommonAtelierDesc,"Débloque la fabrication des établis et stations (forge, établi, station chimique, bétonnière, récupérateur de rosée, creuset, enclume, marmite, gril) pour tous.","Débloque la fabrication des établis et stations (forge, établi, station chimique, bétonnière, récupérateur de rosée, creuset, enclume, marmite, gril) pour tous."
+dhsPerkCommonAtelierR1,Atelier de survie,Atelier de survie
+dhsPerkCommonAtelierR1Long,"Débloque la fabrication des établis et stations (forge, établi, station chimique, bétonnière, récupérateur de rosée, creuset, enclume, marmite, gril) pour tous.","Débloque la fabrication des établis et stations (forge, établi, station chimique, bétonnière, récupérateur de rosée, creuset, enclume, marmite, gril) pour tous."
+dhsPerkCommonArmuresName,Confection d'armures,Confection d'armures
+dhsPerkCommonArmuresDesc,Débloque la confection de toutes les tenues d'armure (toutes panoplies) pour tous.,Débloque la confection de toutes les tenues d'armure (toutes panoplies) pour tous.
+dhsPerkCommonArmuresR1,Confection d'armures,Confection d'armures
+dhsPerkCommonArmuresR1Long,Débloque la confection de toutes les tenues d'armure (toutes panoplies) pour tous.,Débloque la confection de toutes les tenues d'armure (toutes panoplies) pour tous.
+dhsPerkCommonModsName,Bricolage de mods,Bricolage de mods
+dhsPerkCommonModsDesc,"Débloque la fabrication des modifications d'armes, d'armures, de mêlée, de véhicules et de drones pour tous.","Débloque la fabrication des modifications d'armes, d'armures, de mêlée, de véhicules et de drones pour tous."
+dhsPerkCommonModsR1,Bricolage de mods,Bricolage de mods
+dhsPerkCommonModsR1Long,"Débloque la fabrication des modifications d'armes, d'armures, de mêlée, de véhicules et de drones pour tous.","Débloque la fabrication des modifications d'armes, d'armures, de mêlée, de véhicules et de drones pour tous."
+dhsPerkCommonMateriauxName,Récupération & matériaux,Récupération & matériaux
+dhsPerkCommonMateriauxDesc,"Débloque la fabrication des matériaux et munitions intermédiaires de base (poudre, crochets, lots de ressources, etc.) pour tous.","Débloque la fabrication des matériaux et munitions intermédiaires de base (poudre, crochets, lots de ressources, etc.) pour tous."
+dhsPerkCommonMateriauxR1,Récupération & matériaux,Récupération & matériaux
+dhsPerkCommonMateriauxR1Long,"Débloque la fabrication des matériaux et munitions intermédiaires de base (poudre, crochets, lots de ressources, etc.) pour tous.","Débloque la fabrication des matériaux et munitions intermédiaires de base (poudre, crochets, lots de ressources, etc.) pour tous."
 dhsReqClassEngiMech,Nécessite la classe Mécanicien,Nécessite la classe Mécanicien
 dhsBookClassEngiMech,Manuel de classe : Mécanicien,Manuel de classe : Mécanicien
 dhsBookClassEngiMechDesc,"Devenez Mécanicien : maîtrisez les véhicules, tourelles et drones de récup'. La lecture choisit la classe Mécanicien, débloque son craft signature et octroie quelques points de classe.","Devenez Mécanicien : maîtrisez les véhicules, tourelles et drones de récup'. La lecture choisit la classe Mécanicien, débloque son craft signature et octroie quelques points de classe."

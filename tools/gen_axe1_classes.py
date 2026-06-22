@@ -269,6 +269,15 @@ T0_ALL = ["gunHandgunT0PipePistol","gunRifleT0PipeRifle","gunMGT0PipeMachineGun"
 # Plats de base + eau -> débloqués par Survivant (pour TOUS).
 BASE_FOODS = ["foodGrilledMeat","foodBoiledMeat","foodCornOnTheCob","foodBakedPotato","drinkJarBoiledWater","foodMeatStew"]
 
+# ---- Crafts "sans classe propre" -> rattachés à SURVIVANT (pour TOUS) ----
+# (L'onglet Artisanat vanilla est masqué ; ces recettes, qui n'appartiennent à aucune
+#  sous-classe, deviennent l'identité de la classe commune. Listes extraites de recipes.xml.)
+SURV_STATIONS = ["forge","workbench","chemistryStation","cementMixer","cntDewCollector",
+                 "toolForgeCrucible","toolAnvil","toolCookingPot","toolCookingGrill"]
+SURV_ARMOR = ["armorAssassinBoots","armorAssassinGloves","armorAssassinHelmet","armorAssassinOutfit","armorAthleticBoots","armorAthleticGloves","armorAthleticHelmet","armorAthleticOutfit","armorBikerBoots","armorBikerGloves","armorBikerHelmet","armorBikerOutfit","armorCommandoBoots","armorCommandoGloves","armorCommandoHelmet","armorCommandoOutfit","armorEnforcerBoots","armorEnforcerGloves","armorEnforcerHelmet","armorEnforcerOutfit","armorFarmerBoots","armorFarmerGloves","armorFarmerHelmet","armorFarmerOutfit","armorLumberjackBoots","armorLumberjackGloves","armorLumberjackHelmet","armorLumberjackOutfit","armorMinerBoots","armorMinerGloves","armorMinerHelmet","armorMinerOutfit","armorNerdBoots","armorNerdGloves","armorNerdHelmet","armorNerdOutfit","armorNomadBoots","armorNomadGloves","armorNomadHelmet","armorNomadOutfit","armorPreacherBoots","armorPreacherGloves","armorPreacherHelmet","armorPreacherOutfit","armorPrimitiveBoots","armorPrimitiveGloves","armorPrimitiveHelmet","armorPrimitiveOutfit","armorRaiderBoots","armorRaiderGloves","armorRaiderHelmet","armorRaiderOutfit","armorRangerBoots","armorRangerGloves","armorRangerHelmet","armorRangerOutfit","armorRogueBoots","armorRogueGloves","armorRogueHelmet","armorRogueOutfit","armorScavengerBoots","armorScavengerGloves","armorScavengerHelmet","armorScavengerOutfit"]
+SURV_MODS = ["modArmorAdvancedMuffledConnectors","modArmorBandolier","modArmorCigar","modArmorCoolingMesh","modArmorCustomizedFittings","modArmorDoubleStoragePocket","modArmorHelmetLight","modArmorImpactBracing","modArmorImprovedFittings","modArmorInsulatedLiner","modArmorMuffledConnectors","modArmorPlatingBasic","modArmorPlatingReinforced","modArmorQuadStoragePocket","modArmorStealthBoots","modArmorStoragePocket","modArmorTripleStoragePocket","modArmorWaterPurifier","modFuelTankLarge","modFuelTankSmall","modGunBarrelExtender","modGunBipod","modGunBowArrowRest","modGunBowPolymerString","modGunChoke","modGunCrippleEm","modGunDrumMagazineExtender","modGunDuckbill","modGunFlashlight","modGunForegrip","modGunLaserSight","modGunMagazineExtender","modGunMeleeRadRemover","modGunMeleeTheHunter","modGunMuzzleBrake","modGunReflexSight","modGunRetractingStock","modGunScopeLarge","modGunScopeMedium","modGunScopeSmall","modGunShotgunTubeExtenderMagazine","modGunSoundSuppressorSilencer","modGunTriggerGroupAutomatic","modGunTriggerGroupBurst3","modGunTriggerGroupSemi","modMeleeBunkerBuster","modMeleeClubBarbedWire","modMeleeClubBurningShaft","modMeleeClubMetalChain","modMeleeClubMetalSpikes","modMeleeDiamondTip","modMeleeErgonomicGrip","modMeleeFiremansAxeMod","modMeleeFortifyingGrip","modMeleeGraveDigger","modMeleeIronBreaker","modMeleeSerratedBlade","modMeleeStructuralBrace","modMeleeStunBatonRepulsor","modMeleeTemperedBlade","modMeleeWeightedHead","modMeleeWoodSplitter","modRoboticDroneArmorPlatingMod","modRoboticDroneCargoMod","modRoboticDroneHeadlampMod","modRoboticDroneMedicMod","modRoboticDroneMoraleBoosterMod","modRoboticDroneWeaponMod","modShotgunSawedOffBarrel","modVehicleArmor","modVehicleExpandedSeat","modVehicleFuelSaver","modVehicleOffRoadHeadlights","modVehiclePlow","modVehicleReserveFuelTank","modVehicleSuperCharger"]
+SURV_RESOURCES = ["resourceCloth","resourceCoalBundle","resourceGunPowderBundle","resourceLeadBundle","resourceLockPick","resourceLockPickBundle","resourceOil","resourceOilShaleBundle","resourcePotassiumNitratePowderBundle","resourceRocketCasing","resourceRocketTip","resourceRockSmallBundle","resourceScrapIronBundle","resourceWoodBundle"]
+
 # Domaine de craft par sous-classe : (tag de catégorie pour CraftingTime/déblocage, libellé FR).
 DOMAIN = {
     "SoldSnip": ("perkDeadEye","fusils de précision"),
@@ -302,6 +311,18 @@ SURVIVOR = [
     unlock("Cuisine","Cuisine de survie","Cuisine de survie","ui_game_symbol_fork", ",".join(BASE_FOODS), True, 1,
            "Débloque la préparation des plats et boissons de base pour tous.",
            "Débloque la préparation des plats et boissons de base pour tous."),
+    unlock("Atelier","Atelier de survie","Atelier de survie","ui_game_symbol_workbench", ",".join(SURV_STATIONS), True, 1,
+           "Débloque la fabrication des établis et stations (forge, établi, station chimique, bétonnière, récupérateur de rosée, creuset, enclume, marmite, gril) pour tous.",
+           "Débloque la fabrication des établis et stations (forge, établi, station chimique, bétonnière, récupérateur de rosée, creuset, enclume, marmite, gril) pour tous."),
+    unlock("Armures","Confection d'armures","Confection d'armures","ui_game_symbol_armor_iron", ",".join(SURV_ARMOR), True, 1,
+           "Débloque la confection de toutes les tenues d'armure (toutes panoplies) pour tous.",
+           "Débloque la confection de toutes les tenues d'armure (toutes panoplies) pour tous."),
+    unlock("Mods","Bricolage de mods","Bricolage de mods","ui_game_symbol_wrench", ",".join(SURV_MODS), True, 1,
+           "Débloque la fabrication des modifications d'armes, d'armures, de mêlée, de véhicules et de drones pour tous.",
+           "Débloque la fabrication des modifications d'armes, d'armures, de mêlée, de véhicules et de drones pour tous."),
+    unlock("Materiaux","Récupération & matériaux","Récupération & matériaux","ui_game_symbol_smelt", ",".join(SURV_RESOURCES), True, 1,
+           "Débloque la fabrication des matériaux et munitions intermédiaires de base (poudre, crochets, lots de ressources, etc.) pour tous.",
+           "Débloque la fabrication des matériaux et munitions intermédiaires de base (poudre, crochets, lots de ressources, etc.) pour tous."),
 ]
 
 # ---- Spécialité UNIQUE par sous-classe (perks thématiques, pas de générique répété) ----

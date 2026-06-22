@@ -127,6 +127,34 @@
         <effect_description level="1" desc_key="dhsPerkCommonCuisineR1" long_desc_key="dhsPerkCommonCuisineR1Long"/>
       </effect_group>
     </perk>
+    <perk name="perkClassCommonAtelier" parent="skillClassCommon" name_key="dhsPerkCommonAtelierName" desc_key="dhsPerkCommonAtelierDesc" icon="ui_game_symbol_workbench" max_level="1" base_skill_point_cost="0">
+      <level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="dhsReqLvl1"/></level_requirements>
+      <effect_group>
+        <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="forge,workbench,chemistryStation,cementMixer,cntDewCollector,toolForgeCrucible,toolAnvil,toolCookingPot,toolCookingGrill"/>
+        <effect_description level="1" desc_key="dhsPerkCommonAtelierR1" long_desc_key="dhsPerkCommonAtelierR1Long"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassCommonArmures" parent="skillClassCommon" name_key="dhsPerkCommonArmuresName" desc_key="dhsPerkCommonArmuresDesc" icon="ui_game_symbol_armor_iron" max_level="1" base_skill_point_cost="0">
+      <level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="dhsReqLvl1"/></level_requirements>
+      <effect_group>
+        <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="armorAssassinBoots,armorAssassinGloves,armorAssassinHelmet,armorAssassinOutfit,armorAthleticBoots,armorAthleticGloves,armorAthleticHelmet,armorAthleticOutfit,armorBikerBoots,armorBikerGloves,armorBikerHelmet,armorBikerOutfit,armorCommandoBoots,armorCommandoGloves,armorCommandoHelmet,armorCommandoOutfit,armorEnforcerBoots,armorEnforcerGloves,armorEnforcerHelmet,armorEnforcerOutfit,armorFarmerBoots,armorFarmerGloves,armorFarmerHelmet,armorFarmerOutfit,armorLumberjackBoots,armorLumberjackGloves,armorLumberjackHelmet,armorLumberjackOutfit,armorMinerBoots,armorMinerGloves,armorMinerHelmet,armorMinerOutfit,armorNerdBoots,armorNerdGloves,armorNerdHelmet,armorNerdOutfit,armorNomadBoots,armorNomadGloves,armorNomadHelmet,armorNomadOutfit,armorPreacherBoots,armorPreacherGloves,armorPreacherHelmet,armorPreacherOutfit,armorPrimitiveBoots,armorPrimitiveGloves,armorPrimitiveHelmet,armorPrimitiveOutfit,armorRaiderBoots,armorRaiderGloves,armorRaiderHelmet,armorRaiderOutfit,armorRangerBoots,armorRangerGloves,armorRangerHelmet,armorRangerOutfit,armorRogueBoots,armorRogueGloves,armorRogueHelmet,armorRogueOutfit,armorScavengerBoots,armorScavengerGloves,armorScavengerHelmet,armorScavengerOutfit"/>
+        <effect_description level="1" desc_key="dhsPerkCommonArmuresR1" long_desc_key="dhsPerkCommonArmuresR1Long"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassCommonMods" parent="skillClassCommon" name_key="dhsPerkCommonModsName" desc_key="dhsPerkCommonModsDesc" icon="ui_game_symbol_wrench" max_level="1" base_skill_point_cost="0">
+      <level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="dhsReqLvl1"/></level_requirements>
+      <effect_group>
+        <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modArmorAdvancedMuffledConnectors,modArmorBandolier,modArmorCigar,modArmorCoolingMesh,modArmorCustomizedFittings,modArmorDoubleStoragePocket,modArmorHelmetLight,modArmorImpactBracing,modArmorImprovedFittings,modArmorInsulatedLiner,modArmorMuffledConnectors,modArmorPlatingBasic,modArmorPlatingReinforced,modArmorQuadStoragePocket,modArmorStealthBoots,modArmorStoragePocket,modArmorTripleStoragePocket,modArmorWaterPurifier,modFuelTankLarge,modFuelTankSmall,modGunBarrelExtender,modGunBipod,modGunBowArrowRest,modGunBowPolymerString,modGunChoke,modGunCrippleEm,modGunDrumMagazineExtender,modGunDuckbill,modGunFlashlight,modGunForegrip,modGunLaserSight,modGunMagazineExtender,modGunMeleeRadRemover,modGunMeleeTheHunter,modGunMuzzleBrake,modGunReflexSight,modGunRetractingStock,modGunScopeLarge,modGunScopeMedium,modGunScopeSmall,modGunShotgunTubeExtenderMagazine,modGunSoundSuppressorSilencer,modGunTriggerGroupAutomatic,modGunTriggerGroupBurst3,modGunTriggerGroupSemi,modMeleeBunkerBuster,modMeleeClubBarbedWire,modMeleeClubBurningShaft,modMeleeClubMetalChain,modMeleeClubMetalSpikes,modMeleeDiamondTip,modMeleeErgonomicGrip,modMeleeFiremansAxeMod,modMeleeFortifyingGrip,modMeleeGraveDigger,modMeleeIronBreaker,modMeleeSerratedBlade,modMeleeStructuralBrace,modMeleeStunBatonRepulsor,modMeleeTemperedBlade,modMeleeWeightedHead,modMeleeWoodSplitter,modRoboticDroneArmorPlatingMod,modRoboticDroneCargoMod,modRoboticDroneHeadlampMod,modRoboticDroneMedicMod,modRoboticDroneMoraleBoosterMod,modRoboticDroneWeaponMod,modShotgunSawedOffBarrel,modVehicleArmor,modVehicleExpandedSeat,modVehicleFuelSaver,modVehicleOffRoadHeadlights,modVehiclePlow,modVehicleReserveFuelTank,modVehicleSuperCharger"/>
+        <effect_description level="1" desc_key="dhsPerkCommonModsR1" long_desc_key="dhsPerkCommonModsR1Long"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassCommonMateriaux" parent="skillClassCommon" name_key="dhsPerkCommonMateriauxName" desc_key="dhsPerkCommonMateriauxDesc" icon="ui_game_symbol_smelt" max_level="1" base_skill_point_cost="0">
+      <level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="dhsReqLvl1"/></level_requirements>
+      <effect_group>
+        <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="resourceCloth,resourceCoalBundle,resourceGunPowderBundle,resourceLeadBundle,resourceLockPick,resourceLockPickBundle,resourceOil,resourceOilShaleBundle,resourcePotassiumNitratePowderBundle,resourceRocketCasing,resourceRocketTip,resourceRockSmallBundle,resourceScrapIronBundle,resourceWoodBundle"/>
+        <effect_description level="1" desc_key="dhsPerkCommonMateriauxR1" long_desc_key="dhsPerkCommonMateriauxR1Long"/>
+      </effect_group>
+    </perk>
     <perk name="perkClassEngiMechDmg" parent="skillClassEngiMechArme" name_key="dhsPerkEngiMechDmgName" desc_key="dhsPerkEngiMechDmgDesc" icon="ui_game_symbol_wrench" max_level="5">
       <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsEngiMech" operation="Equals" value="1" desc_key="dhsReqClassEngiMech"/><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="dhsReqLvl1"/></level_requirements>
       <level_requirements level="2"><requirement name="CVarCompare" cvar="dhsClsEngiMech" operation="Equals" value="1" desc_key="dhsReqClassEngiMech"/><requirement name="PlayerLevel" operation="GTE" value="12" desc_key="dhsReqLvl12"/></level_requirements>
