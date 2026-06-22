@@ -26,12 +26,28 @@ dhsattClassFarmerName,Fermier,Fermier
 dhsattClassFarmerDesc,Branche Fermier,Branche Fermier
 dhsSkillClassCommonName,Survivant,Survivant
 dhsSkillClassCommonDesc,Compétences communes à tous,Compétences communes à tous
-dhsPerkCommonToughnessName,Robustesse,Robustesse
-dhsPerkCommonToughnessDesc,Réduit les dégâts physiques subis.,Réduit les dégâts physiques subis.
-dhsPerkCommonForagerName,Cueilleur,Cueilleur
-dhsPerkCommonForagerDesc,Récolte plus sur les animaux et plantes sauvages.,Récolte plus sur les animaux et plantes sauvages.
+dhsPerkCommonVitaliteName,Vitalité,Vitalité
+dhsPerkCommonVitaliteDesc,Augmente votre santé maximale.,Augmente votre santé maximale.
 dhsPerkCommonEnduranceName,Endurance,Endurance
-dhsPerkCommonEnduranceDesc,Réduit la perte d'endurance des actions.,Réduit la perte d'endurance des actions.
+dhsPerkCommonEnduranceDesc,Réduit l'endurance dépensée par les actions.,Réduit l'endurance dépensée par les actions.
+dhsPerkCommonRecupName,Récupération,Récupération
+dhsPerkCommonRecupDesc,Récupère l'endurance plus vite.,Récupère l'endurance plus vite.
+dhsPerkCommonPorteurName,Porteur,Porteur
+dhsPerkCommonPorteurDesc,Ajoute des emplacements de portage.,Ajoute des emplacements de portage.
+dhsPerkCommonRobusteName,Robustesse,Robustesse
+dhsPerkCommonRobusteDesc,Réduit les dégâts physiques subis.,Réduit les dégâts physiques subis.
+dhsPerkCommonConstiName,Constitution,Constitution
+dhsPerkCommonConstiDesc,Réduit légèrement tous les dégâts subis.,Réduit légèrement tous les dégâts subis.
+dhsPerkCommonTemperName,Tempérament,Tempérament
+dhsPerkCommonTemperDesc,Résiste aux effets négatifs.,Résiste aux effets négatifs.
+dhsPerkCommonMetabName,Métabolisme,Métabolisme
+dhsPerkCommonMetabDesc,Augmente votre nourriture maximale.,Augmente votre nourriture maximale.
+dhsPerkCommonSurvieName,Instinct de survie,Instinct de survie
+dhsPerkCommonSurvieDesc,Augmente toute l'expérience gagnée.,Augmente toute l'expérience gagnée.
+dhsPerkCommonFroidName,Acclimatation au froid,Acclimatation au froid
+dhsPerkCommonFroidDesc,Améliore la résistance au froid.,Améliore la résistance au froid.
+dhsPerkCommonChaudName,Acclimatation à la chaleur,Acclimatation à la chaleur
+dhsPerkCommonChaudDesc,Améliore la résistance à la chaleur.,Améliore la résistance à la chaleur.
 dhsPerkCommonGearName,Débrouillardise,Débrouillardise
 dhsPerkCommonGearDesc,"Débloque la fabrication des armes et outils de base (tuyau, pierre) pour tous.","Débloque la fabrication des armes et outils de base (tuyau, pierre) pour tous."
 dhsPerkCommonCuisineName,Cuisine de survie,Cuisine de survie
@@ -71,22 +87,18 @@ dhsPerkEngiMechSigTurretName,Atelier robotique,Atelier robotique
 dhsPerkEngiMechSigTurretDesc,Débloque la fabrication des Munitions de tourelle haute vélocité.,Débloque la fabrication des Munitions de tourelle haute vélocité.
 dhsSkillClassEngiMechSpecName,Mécanicien — Spécialité,Mécanicien — Spécialité
 dhsSkillClassEngiMechSpecDesc,Sous-branche Mécanicien : Spécialité.,Sous-branche Mécanicien : Spécialité.
-dhsPerkEngiMechWreckerName,Ferrailleur,Ferrailleur
-dhsPerkEngiMechWreckerDesc,Récupère plus de pièces mécaniques en démontant.,Récupère plus de pièces mécaniques en démontant.
-dhsPerkEngiMechToughName,Robustesse,Robustesse
-dhsPerkEngiMechToughDesc,Réduit les dégâts physiques subis.,Réduit les dégâts physiques subis.
-dhsPerkEngiMechHPName,Vitalité,Vitalité
-dhsPerkEngiMechHPDesc,Augmente votre santé maximale.,Augmente votre santé maximale.
-dhsPerkEngiMechVigorName,Endurance,Endurance
-dhsPerkEngiMechVigorDesc,Réduit l'endurance dépensée par les actions.,Réduit l'endurance dépensée par les actions.
-dhsPerkEngiMechStamRegenName,Récupération,Récupération
-dhsPerkEngiMechStamRegenDesc,Récupère l'endurance plus vite.,Récupère l'endurance plus vite.
-dhsPerkEngiMechCarryName,Portage,Portage
-dhsPerkEngiMechCarryDesc,Ajoute des emplacements de portage.,Ajoute des emplacements de portage.
-dhsPerkEngiMechResistName,Constitution,Constitution
-dhsPerkEngiMechResistDesc,Réduit légèrement tous les dégâts subis.,Réduit légèrement tous les dégâts subis.
-dhsPerkEngiMechBuffName,Tempérament,Tempérament
-dhsPerkEngiMechBuffDesc,Résiste aux effets négatifs.,Résiste aux effets négatifs.
+dhsPerkEngiMechWreckName,Ferrailleur,Ferrailleur
+dhsPerkEngiMechWreckDesc,Récupère plus de pièces en démontant.,Récupère plus de pièces en démontant.
+dhsPerkEngiMechDriveName,Pilote,Pilote
+dhsPerkEngiMechDriveDesc,Augmente votre mobilité.,Augmente votre mobilité.
+dhsPerkEngiMechSparkName,Isolation,Isolation
+dhsPerkEngiMechSparkDesc,Réduit les dégâts élémentaires subis.,Réduit les dégâts élémentaires subis.
+dhsPerkEngiMechBlastName,Châssis renforcé,Châssis renforcé
+dhsPerkEngiMechBlastDesc,Réduit les dégâts d'explosion subis.,Réduit les dégâts d'explosion subis.
+dhsPerkEngiMechPartsName,Magasin de pièces,Magasin de pièces
+dhsPerkEngiMechPartsDesc,Récupère davantage de butin.,Récupère davantage de butin.
+dhsPerkEngiMechTradeName,Casse auto,Casse auto
+dhsPerkEngiMechTradeDesc,Améliore les prix de vente.,Améliore les prix de vente.
 dhsAmmoTurretHV,Munition de tourelle haute vélocité,Munition de tourelle haute vélocité
 dhsAmmoTurretHVDesc,Munition optimisée pour tourelles et drones : dégâts robotiques accrus. Fabriquée uniquement par le Mécanicien.,Munition optimisée pour tourelles et drones : dégâts robotiques accrus. Fabriquée uniquement par le Mécanicien.
 dhsReqClassEngiElec,Nécessite la classe Électricien,Nécessite la classe Électricien
@@ -124,22 +136,18 @@ dhsPerkEngiElecSigCellName,Génie électrique,Génie électrique
 dhsPerkEngiElecSigCellDesc,Débloque la fabrication de la Cellule d'énergie renforcée.,Débloque la fabrication de la Cellule d'énergie renforcée.
 dhsSkillClassEngiElecSpecName,Électricien — Spécialité,Électricien — Spécialité
 dhsSkillClassEngiElecSpecDesc,Sous-branche Électricien : Spécialité.,Sous-branche Électricien : Spécialité.
-dhsPerkEngiElecDismantlerName,Démonteur,Démonteur
-dhsPerkEngiElecDismantlerDesc,Récupère plus de composants en démontant.,Récupère plus de composants en démontant.
-dhsPerkEngiElecToughName,Robustesse,Robustesse
-dhsPerkEngiElecToughDesc,Réduit les dégâts physiques subis.,Réduit les dégâts physiques subis.
-dhsPerkEngiElecHPName,Vitalité,Vitalité
-dhsPerkEngiElecHPDesc,Augmente votre santé maximale.,Augmente votre santé maximale.
-dhsPerkEngiElecVigorName,Endurance,Endurance
-dhsPerkEngiElecVigorDesc,Réduit l'endurance dépensée par les actions.,Réduit l'endurance dépensée par les actions.
-dhsPerkEngiElecStamRegenName,Récupération,Récupération
-dhsPerkEngiElecStamRegenDesc,Récupère l'endurance plus vite.,Récupère l'endurance plus vite.
-dhsPerkEngiElecCarryName,Portage,Portage
-dhsPerkEngiElecCarryDesc,Ajoute des emplacements de portage.,Ajoute des emplacements de portage.
-dhsPerkEngiElecResistName,Constitution,Constitution
-dhsPerkEngiElecResistDesc,Réduit légèrement tous les dégâts subis.,Réduit légèrement tous les dégâts subis.
-dhsPerkEngiElecBuffName,Tempérament,Tempérament
-dhsPerkEngiElecBuffDesc,Résiste aux effets négatifs.,Résiste aux effets négatifs.
+dhsPerkEngiElecDismanName,Démonteur,Démonteur
+dhsPerkEngiElecDismanDesc,Récupère plus de composants en démontant.,Récupère plus de composants en démontant.
+dhsPerkEngiElecInsulName,Isolation électrique,Isolation électrique
+dhsPerkEngiElecInsulDesc,Réduit fortement les dégâts élémentaires subis.,Réduit fortement les dégâts élémentaires subis.
+dhsPerkEngiElecTrapName,Maître des pièges,Maître des pièges
+dhsPerkEngiElecTrapDesc,Réduit les dégâts subis de vos propres pièges.,Réduit les dégâts subis de vos propres pièges.
+dhsPerkEngiElecLightName,Œil dans le noir,Œil dans le noir
+dhsPerkEngiElecLightDesc,Améliore la qualité du butin trouvé.,Améliore la qualité du butin trouvé.
+dhsPerkEngiElecQuietName,Discrétion électronique,Discrétion électronique
+dhsPerkEngiElecQuietDesc,Réduit le bruit que vous faites.,Réduit le bruit que vous faites.
+dhsPerkEngiElecPlateName,Combinaison isolante,Combinaison isolante
+dhsPerkEngiElecPlateDesc,Réduit les dégâts physiques subis.,Réduit les dégâts physiques subis.
 dhsBatteryHD,Cellule d'énergie renforcée,Cellule d'énergie renforcée
 dhsBatteryHDDesc,Batterie haute capacité pour pièges et installations électriques. Fabriquée uniquement par l'Électricien.,Batterie haute capacité pour pièges et installations électriques. Fabriquée uniquement par l'Électricien.
 dhsReqClassMedicSurg,Nécessite la classe Chirurgien,Nécessite la classe Chirurgien
@@ -179,20 +187,18 @@ dhsPerkMedicSurgSigKitName,Bloc opératoire,Bloc opératoire
 dhsPerkMedicSurgSigKitDesc,Débloque la fabrication de la Trousse de chirurgie.,Débloque la fabrication de la Trousse de chirurgie.
 dhsSkillClassMedicSurgSpecName,Chirurgien — Spécialité,Chirurgien — Spécialité
 dhsSkillClassMedicSurgSpecDesc,Sous-branche Chirurgien : Spécialité.,Sous-branche Chirurgien : Spécialité.
-dhsPerkMedicSurgToughName,Robustesse,Robustesse
+dhsPerkMedicSurgSteadyName,Mains stables,Mains stables
+dhsPerkMedicSurgSteadyDesc,Résiste fortement aux effets négatifs.,Résiste fortement aux effets négatifs.
+dhsPerkMedicSurgSterileName,Asepsie,Asepsie
+dhsPerkMedicSurgSterileDesc,Réduit les dégâts élémentaires subis.,Réduit les dégâts élémentaires subis.
+dhsPerkMedicSurgCalmName,Sang-froid clinique,Sang-froid clinique
+dhsPerkMedicSurgCalmDesc,Réduit les dégâts d'explosion subis.,Réduit les dégâts d'explosion subis.
+dhsPerkMedicSurgSupplyName,Pharmacie,Pharmacie
+dhsPerkMedicSurgSupplyDesc,Améliore la qualité du butin trouvé.,Améliore la qualité du butin trouvé.
+dhsPerkMedicSurgToughName,Constitution de fer,Constitution de fer
 dhsPerkMedicSurgToughDesc,Réduit les dégâts physiques subis.,Réduit les dégâts physiques subis.
-dhsPerkMedicSurgHPName,Vitalité,Vitalité
-dhsPerkMedicSurgHPDesc,Augmente votre santé maximale.,Augmente votre santé maximale.
-dhsPerkMedicSurgVigorName,Endurance,Endurance
-dhsPerkMedicSurgVigorDesc,Réduit l'endurance dépensée par les actions.,Réduit l'endurance dépensée par les actions.
-dhsPerkMedicSurgStamRegenName,Récupération,Récupération
-dhsPerkMedicSurgStamRegenDesc,Récupère l'endurance plus vite.,Récupère l'endurance plus vite.
-dhsPerkMedicSurgCarryName,Portage,Portage
-dhsPerkMedicSurgCarryDesc,Ajoute des emplacements de portage.,Ajoute des emplacements de portage.
-dhsPerkMedicSurgResistName,Constitution,Constitution
-dhsPerkMedicSurgResistDesc,Réduit légèrement tous les dégâts subis.,Réduit légèrement tous les dégâts subis.
-dhsPerkMedicSurgBuffName,Tempérament,Tempérament
-dhsPerkMedicSurgBuffDesc,Résiste aux effets négatifs.,Résiste aux effets négatifs.
+dhsPerkMedicSurgTradeName,Praticien,Praticien
+dhsPerkMedicSurgTradeDesc,Améliore les prix de vente.,Améliore les prix de vente.
 dhsMedSurgeryKit,Trousse de chirurgie,Trousse de chirurgie
 dhsMedSurgeryKitDesc,Trousse de soins complète de qualité hospitalière. Fabriquée uniquement par le Chirurgien.,Trousse de soins complète de qualité hospitalière. Fabriquée uniquement par le Chirurgien.
 dhsReqClassMedicChem,Nécessite la classe Chimiste,Nécessite la classe Chimiste
@@ -228,20 +234,18 @@ dhsPerkMedicChemSigBombName,Cocktails du chimiste,Cocktails du chimiste
 dhsPerkMedicChemSigBombDesc,Débloque la fabrication des Cocktails incendiaires du chimiste.,Débloque la fabrication des Cocktails incendiaires du chimiste.
 dhsSkillClassMedicChemSpecName,Chimiste — Spécialité,Chimiste — Spécialité
 dhsSkillClassMedicChemSpecDesc,Sous-branche Chimiste : Spécialité.,Sous-branche Chimiste : Spécialité.
-dhsPerkMedicChemToughName,Robustesse,Robustesse
-dhsPerkMedicChemToughDesc,Réduit les dégâts physiques subis.,Réduit les dégâts physiques subis.
-dhsPerkMedicChemHPName,Vitalité,Vitalité
-dhsPerkMedicChemHPDesc,Augmente votre santé maximale.,Augmente votre santé maximale.
-dhsPerkMedicChemVigorName,Endurance,Endurance
-dhsPerkMedicChemVigorDesc,Réduit l'endurance dépensée par les actions.,Réduit l'endurance dépensée par les actions.
-dhsPerkMedicChemStamRegenName,Récupération,Récupération
-dhsPerkMedicChemStamRegenDesc,Récupère l'endurance plus vite.,Récupère l'endurance plus vite.
-dhsPerkMedicChemCarryName,Portage,Portage
-dhsPerkMedicChemCarryDesc,Ajoute des emplacements de portage.,Ajoute des emplacements de portage.
-dhsPerkMedicChemResistName,Constitution,Constitution
-dhsPerkMedicChemResistDesc,Réduit légèrement tous les dégâts subis.,Réduit légèrement tous les dégâts subis.
-dhsPerkMedicChemBuffName,Tempérament,Tempérament
-dhsPerkMedicChemBuffDesc,Résiste aux effets négatifs.,Résiste aux effets négatifs.
+dhsPerkMedicChemHazmatName,Combinaison NBC,Combinaison NBC
+dhsPerkMedicChemHazmatDesc,Réduit fortement les dégâts élémentaires subis.,Réduit fortement les dégâts élémentaires subis.
+dhsPerkMedicChemAntitoxName,Antidote,Antidote
+dhsPerkMedicChemAntitoxDesc,Résiste fortement aux effets négatifs.,Résiste fortement aux effets négatifs.
+dhsPerkMedicChemBlastName,Manipulation prudente,Manipulation prudente
+dhsPerkMedicChemBlastDesc,Réduit les dégâts d'explosion subis.,Réduit les dégâts d'explosion subis.
+dhsPerkMedicChemLabName,Laborantin,Laborantin
+dhsPerkMedicChemLabDesc,Améliore la qualité du butin trouvé.,Améliore la qualité du butin trouvé.
+dhsPerkMedicChemYieldName,Distillateur,Distillateur
+dhsPerkMedicChemYieldDesc,Récupère davantage de butin.,Récupère davantage de butin.
+dhsPerkMedicChemQuietName,Pas discrets,Pas discrets
+dhsPerkMedicChemQuietDesc,Réduit le bruit que vous faites.,Réduit le bruit que vous faites.
 dhsThrownFirebomb,Cocktail incendiaire du chimiste,Cocktail incendiaire du chimiste
 dhsThrownFirebombDesc,Cocktail incendiaire renforcé à la chimie : bien plus dévastateur. Fabriqué uniquement par le Chimiste.,Cocktail incendiaire renforcé à la chimie : bien plus dévastateur. Fabriqué uniquement par le Chimiste.
 dhsReqClassSoldSnip,Nécessite la classe Tireur d'élite,Nécessite la classe Tireur d'élite
@@ -281,20 +285,18 @@ dhsPerkSoldSnipSigAmmoName,Munitions de précision,Munitions de précision
 dhsPerkSoldSnipSigAmmoDesc,Débloque la fabrication des Cartouches de match perforantes.,Débloque la fabrication des Cartouches de match perforantes.
 dhsSkillClassSoldSnipSpecName,Tireur d'élite — Spécialité,Tireur d'élite — Spécialité
 dhsSkillClassSoldSnipSpecDesc,Sous-branche Tireur d'élite : Spécialité.,Sous-branche Tireur d'élite : Spécialité.
-dhsPerkSoldSnipToughName,Robustesse,Robustesse
-dhsPerkSoldSnipToughDesc,Réduit les dégâts physiques subis.,Réduit les dégâts physiques subis.
-dhsPerkSoldSnipHPName,Vitalité,Vitalité
-dhsPerkSoldSnipHPDesc,Augmente votre santé maximale.,Augmente votre santé maximale.
-dhsPerkSoldSnipVigorName,Endurance,Endurance
-dhsPerkSoldSnipVigorDesc,Réduit l'endurance dépensée par les actions.,Réduit l'endurance dépensée par les actions.
-dhsPerkSoldSnipStamRegenName,Récupération,Récupération
-dhsPerkSoldSnipStamRegenDesc,Récupère l'endurance plus vite.,Récupère l'endurance plus vite.
-dhsPerkSoldSnipCarryName,Portage,Portage
-dhsPerkSoldSnipCarryDesc,Ajoute des emplacements de portage.,Ajoute des emplacements de portage.
-dhsPerkSoldSnipResistName,Constitution,Constitution
-dhsPerkSoldSnipResistDesc,Réduit légèrement tous les dégâts subis.,Réduit légèrement tous les dégâts subis.
-dhsPerkSoldSnipBuffName,Tempérament,Tempérament
-dhsPerkSoldSnipBuffDesc,Résiste aux effets négatifs.,Résiste aux effets négatifs.
+dhsPerkSoldSnipCoverName,Sous le feu,Sous le feu
+dhsPerkSoldSnipCoverDesc,Réduit les dégâts d'explosion subis.,Réduit les dégâts d'explosion subis.
+dhsPerkSoldSnipPlatesName,Tenue pare-balles,Tenue pare-balles
+dhsPerkSoldSnipPlatesDesc,Réduit les dégâts élémentaires subis.,Réduit les dégâts élémentaires subis.
+dhsPerkSoldSnipReconName,Repérage de cibles,Repérage de cibles
+dhsPerkSoldSnipReconDesc,Améliore la qualité du butin trouvé.,Améliore la qualité du butin trouvé.
+dhsPerkSoldSnipCalmName,Sang-froid,Sang-froid
+dhsPerkSoldSnipCalmDesc,Résiste aux effets négatifs en plein combat.,Résiste aux effets négatifs en plein combat.
+dhsPerkSoldSnipHoldName,Position dominante,Position dominante
+dhsPerkSoldSnipHoldDesc,Réduit les dégâts physiques subis.,Réduit les dégâts physiques subis.
+dhsPerkSoldSnipQuarterName,Économe de guerre,Économe de guerre
+dhsPerkSoldSnipQuarterDesc,Améliore les prix de vente chez les marchands.,Améliore les prix de vente chez les marchands.
 dhsAmmoMatchAP,Cartouche de match perforante,Cartouche de match perforante
 dhsAmmoMatchAPDesc,Munition de précision montée main : dégâts et perforation accrus. Fabriquée uniquement par le Tireur d'élite.,Munition de précision montée main : dégâts et perforation accrus. Fabriquée uniquement par le Tireur d'élite.
 dhsReqClassSoldAslt,Nécessite la classe Assaut,Nécessite la classe Assaut
@@ -334,20 +336,18 @@ dhsPerkSoldAsltSigAmmoName,Munitions de combat,Munitions de combat
 dhsPerkSoldAsltSigAmmoDesc,Débloque la fabrication des Cartouches de combat.,Débloque la fabrication des Cartouches de combat.
 dhsSkillClassSoldAsltSpecName,Assaut — Spécialité,Assaut — Spécialité
 dhsSkillClassSoldAsltSpecDesc,Sous-branche Assaut : Spécialité.,Sous-branche Assaut : Spécialité.
-dhsPerkSoldAsltToughName,Robustesse,Robustesse
-dhsPerkSoldAsltToughDesc,Réduit les dégâts physiques subis.,Réduit les dégâts physiques subis.
-dhsPerkSoldAsltHPName,Vitalité,Vitalité
-dhsPerkSoldAsltHPDesc,Augmente votre santé maximale.,Augmente votre santé maximale.
-dhsPerkSoldAsltVigorName,Endurance,Endurance
-dhsPerkSoldAsltVigorDesc,Réduit l'endurance dépensée par les actions.,Réduit l'endurance dépensée par les actions.
-dhsPerkSoldAsltStamRegenName,Récupération,Récupération
-dhsPerkSoldAsltStamRegenDesc,Récupère l'endurance plus vite.,Récupère l'endurance plus vite.
-dhsPerkSoldAsltCarryName,Portage,Portage
-dhsPerkSoldAsltCarryDesc,Ajoute des emplacements de portage.,Ajoute des emplacements de portage.
-dhsPerkSoldAsltResistName,Constitution,Constitution
-dhsPerkSoldAsltResistDesc,Réduit légèrement tous les dégâts subis.,Réduit légèrement tous les dégâts subis.
-dhsPerkSoldAsltBuffName,Tempérament,Tempérament
-dhsPerkSoldAsltBuffDesc,Résiste aux effets négatifs.,Résiste aux effets négatifs.
+dhsPerkSoldAsltHeavyName,Blindage lourd,Blindage lourd
+dhsPerkSoldAsltHeavyDesc,Réduit fortement les dégâts physiques subis.,Réduit fortement les dégâts physiques subis.
+dhsPerkSoldAsltBlastName,Anti-souffle,Anti-souffle
+dhsPerkSoldAsltBlastDesc,Réduit les dégâts d'explosion subis.,Réduit les dégâts d'explosion subis.
+dhsPerkSoldAsltSuitName,Combinaison de combat,Combinaison de combat
+dhsPerkSoldAsltSuitDesc,Réduit les dégâts élémentaires subis.,Réduit les dégâts élémentaires subis.
+dhsPerkSoldAsltPushName,Percée,Percée
+dhsPerkSoldAsltPushDesc,Augmente votre mobilité sous le feu.,Augmente votre mobilité sous le feu.
+dhsPerkSoldAsltBeltName,Ceinture de munitions,Ceinture de munitions
+dhsPerkSoldAsltBeltDesc,Récupère davantage de butin.,Récupère davantage de butin.
+dhsPerkSoldAsltMoraleName,Cri de guerre,Cri de guerre
+dhsPerkSoldAsltMoraleDesc,Résiste aux effets négatifs.,Résiste aux effets négatifs.
 dhsAmmoBattle,Cartouche de combat,Cartouche de combat
 dhsAmmoBattleDesc,Munition de combat surchargée pour le tir nourri. Fabriquée uniquement par l'Assaut.,Munition de combat surchargée pour le tir nourri. Fabriquée uniquement par l'Assaut.
 dhsReqClassSurvHunt,Nécessite la classe Chasseur,Nécessite la classe Chasseur
@@ -389,20 +389,16 @@ dhsSkillClassSurvHuntSpecName,Chasseur — Spécialité,Chasseur — Spécialit�
 dhsSkillClassSurvHuntSpecDesc,Sous-branche Chasseur : Spécialité.,Sous-branche Chasseur : Spécialité.
 dhsPerkSurvHuntSkinnerName,Dépeceur,Dépeceur
 dhsPerkSurvHuntSkinnerDesc,"Récolte plus de viande, de cuir et d'os sur les animaux.","Récolte plus de viande, de cuir et d'os sur les animaux."
-dhsPerkSurvHuntToughName,Robustesse,Robustesse
-dhsPerkSurvHuntToughDesc,Réduit les dégâts physiques subis.,Réduit les dégâts physiques subis.
-dhsPerkSurvHuntHPName,Vitalité,Vitalité
-dhsPerkSurvHuntHPDesc,Augmente votre santé maximale.,Augmente votre santé maximale.
-dhsPerkSurvHuntVigorName,Endurance,Endurance
-dhsPerkSurvHuntVigorDesc,Réduit l'endurance dépensée par les actions.,Réduit l'endurance dépensée par les actions.
-dhsPerkSurvHuntStamRegenName,Récupération,Récupération
-dhsPerkSurvHuntStamRegenDesc,Récupère l'endurance plus vite.,Récupère l'endurance plus vite.
-dhsPerkSurvHuntCarryName,Portage,Portage
-dhsPerkSurvHuntCarryDesc,Ajoute des emplacements de portage.,Ajoute des emplacements de portage.
-dhsPerkSurvHuntResistName,Constitution,Constitution
-dhsPerkSurvHuntResistDesc,Réduit légèrement tous les dégâts subis.,Réduit légèrement tous les dégâts subis.
-dhsPerkSurvHuntBuffName,Tempérament,Tempérament
-dhsPerkSurvHuntBuffDesc,Résiste aux effets négatifs.,Résiste aux effets négatifs.
+dhsPerkSurvHuntTrackName,Traqueur,Traqueur
+dhsPerkSurvHuntTrackDesc,Augmente votre mobilité en extérieur.,Augmente votre mobilité en extérieur.
+dhsPerkSurvHuntColdName,Trappeur,Trappeur
+dhsPerkSurvHuntColdDesc,Améliore la résistance au froid.,Améliore la résistance au froid.
+dhsPerkSurvHuntQuietName,Approche silencieuse,Approche silencieuse
+dhsPerkSurvHuntQuietDesc,Réduit le bruit que vous faites.,Réduit le bruit que vous faites.
+dhsPerkSurvHuntForageName,Fourrageur,Fourrageur
+dhsPerkSurvHuntForageDesc,Améliore la qualité du butin de fouille.,Améliore la qualité du butin de fouille.
+dhsPerkSurvHuntHeatName,Endurci au climat,Endurci au climat
+dhsPerkSurvHuntHeatDesc,Améliore la résistance à la chaleur.,Améliore la résistance à la chaleur.
 dhsAmmoHuntArrow,Flèche de chasse,Flèche de chasse
 dhsAmmoHuntArrowDesc,"Flèche lourde de chasseur, bien plus pénétrante sur le gibier et les morts. Fabriquée uniquement par le Chasseur.","Flèche lourde de chasseur, bien plus pénétrante sur le gibier et les morts. Fabriquée uniquement par le Chasseur."
 dhsReqClassSurvHerb,Nécessite la classe Herboriste,Nécessite la classe Herboriste
@@ -442,22 +438,18 @@ dhsPerkSurvHerbSigBrewName,Herboristerie,Herboristerie
 dhsPerkSurvHerbSigBrewDesc,Débloque la préparation de la Décoction d'herboriste.,Débloque la préparation de la Décoction d'herboriste.
 dhsSkillClassSurvHerbSpecName,Herboriste — Spécialité,Herboriste — Spécialité
 dhsSkillClassSurvHerbSpecDesc,Sous-branche Herboriste : Spécialité.,Sous-branche Herboriste : Spécialité.
-dhsPerkSurvHerbGathererName,Cueilleur émérite,Cueilleur émérite
-dhsPerkSurvHerbGathererDesc,Récolte plus sur les plantes sauvages.,Récolte plus sur les plantes sauvages.
-dhsPerkSurvHerbToughName,Robustesse,Robustesse
-dhsPerkSurvHerbToughDesc,Réduit les dégâts physiques subis.,Réduit les dégâts physiques subis.
-dhsPerkSurvHerbHPName,Vitalité,Vitalité
-dhsPerkSurvHerbHPDesc,Augmente votre santé maximale.,Augmente votre santé maximale.
-dhsPerkSurvHerbVigorName,Endurance,Endurance
-dhsPerkSurvHerbVigorDesc,Réduit l'endurance dépensée par les actions.,Réduit l'endurance dépensée par les actions.
-dhsPerkSurvHerbStamRegenName,Récupération,Récupération
-dhsPerkSurvHerbStamRegenDesc,Récupère l'endurance plus vite.,Récupère l'endurance plus vite.
-dhsPerkSurvHerbCarryName,Portage,Portage
-dhsPerkSurvHerbCarryDesc,Ajoute des emplacements de portage.,Ajoute des emplacements de portage.
-dhsPerkSurvHerbResistName,Constitution,Constitution
-dhsPerkSurvHerbResistDesc,Réduit légèrement tous les dégâts subis.,Réduit légèrement tous les dégâts subis.
-dhsPerkSurvHerbBuffName,Tempérament,Tempérament
-dhsPerkSurvHerbBuffDesc,Résiste aux effets négatifs.,Résiste aux effets négatifs.
+dhsPerkSurvHerbGatherName,Cueilleur émérite,Cueilleur émérite
+dhsPerkSurvHerbGatherDesc,Récolte plus sur les plantes sauvages.,Récolte plus sur les plantes sauvages.
+dhsPerkSurvHerbToxinName,Anticorps,Anticorps
+dhsPerkSurvHerbToxinDesc,"Résiste fortement aux effets négatifs (poisons, maladies).","Résiste fortement aux effets négatifs (poisons, maladies)."
+dhsPerkSurvHerbColdName,Acclimaté au froid,Acclimaté au froid
+dhsPerkSurvHerbColdDesc,Améliore la résistance au froid.,Améliore la résistance au froid.
+dhsPerkSurvHerbHeatName,Acclimaté à la chaleur,Acclimaté à la chaleur
+dhsPerkSurvHerbHeatDesc,Améliore la résistance à la chaleur.,Améliore la résistance à la chaleur.
+dhsPerkSurvHerbElemName,Onguents protecteurs,Onguents protecteurs
+dhsPerkSurvHerbElemDesc,Réduit les dégâts élémentaires subis.,Réduit les dégâts élémentaires subis.
+dhsPerkSurvHerbForageName,Herboriste chevronné,Herboriste chevronné
+dhsPerkSurvHerbForageDesc,Améliore la qualité du butin de fouille.,Améliore la qualité du butin de fouille.
 dhsDrinkDecoction,Décoction d'herboriste,Décoction d'herboriste
 dhsDrinkDecoctionDesc,Tisane fortifiante : régule l'endurance et endurcit le corps. Préparée uniquement par l'Herboriste.,Tisane fortifiante : régule l'endurance et endurcit le corps. Préparée uniquement par l'Herboriste.
 dhsBuffHerbalName,Décoction d'herboriste,Décoction d'herboriste
@@ -497,22 +489,18 @@ dhsPerkBuilArchCraftXPName,Apprentissage,Apprentissage
 dhsPerkBuilArchCraftXPDesc,Augmente toute l'expérience gagnée.,Augmente toute l'expérience gagnée.
 dhsSkillClassBuilArchSpecName,Architecte — Spécialité,Architecte — Spécialité
 dhsSkillClassBuilArchSpecDesc,Sous-branche Architecte : Spécialité.,Sous-branche Architecte : Spécialité.
-dhsPerkBuilArchQuarrymanName,Carrier,Carrier
-dhsPerkBuilArchQuarrymanDesc,Récolte plus de minerai et de bois en exploitant les ressources.,Récolte plus de minerai et de bois en exploitant les ressources.
-dhsPerkBuilArchToughName,Robustesse,Robustesse
-dhsPerkBuilArchToughDesc,Réduit les dégâts physiques subis.,Réduit les dégâts physiques subis.
-dhsPerkBuilArchHPName,Vitalité,Vitalité
-dhsPerkBuilArchHPDesc,Augmente votre santé maximale.,Augmente votre santé maximale.
-dhsPerkBuilArchVigorName,Endurance,Endurance
-dhsPerkBuilArchVigorDesc,Réduit l'endurance dépensée par les actions.,Réduit l'endurance dépensée par les actions.
-dhsPerkBuilArchStamRegenName,Récupération,Récupération
-dhsPerkBuilArchStamRegenDesc,Récupère l'endurance plus vite.,Récupère l'endurance plus vite.
-dhsPerkBuilArchCarryName,Portage,Portage
-dhsPerkBuilArchCarryDesc,Ajoute des emplacements de portage.,Ajoute des emplacements de portage.
-dhsPerkBuilArchResistName,Constitution,Constitution
-dhsPerkBuilArchResistDesc,Réduit légèrement tous les dégâts subis.,Réduit légèrement tous les dégâts subis.
-dhsPerkBuilArchBuffName,Tempérament,Tempérament
-dhsPerkBuilArchBuffDesc,Résiste aux effets négatifs.,Résiste aux effets négatifs.
+dhsPerkBuilArchQuarryName,Carrier,Carrier
+dhsPerkBuilArchQuarryDesc,Récolte plus de minerai et de bois.,Récolte plus de minerai et de bois.
+dhsPerkBuilArchTrapName,Génie défensif,Génie défensif
+dhsPerkBuilArchTrapDesc,Réduit les dégâts subis de vos propres pièges.,Réduit les dégâts subis de vos propres pièges.
+dhsPerkBuilArchBlastName,Bâtisseur solide,Bâtisseur solide
+dhsPerkBuilArchBlastDesc,Réduit les dégâts d'explosion subis.,Réduit les dégâts d'explosion subis.
+dhsPerkBuilArchHaulName,Hercule,Hercule
+dhsPerkBuilArchHaulDesc,Réduit l'endurance dépensée.,Réduit l'endurance dépensée.
+dhsPerkBuilArchPlateName,Carapace,Carapace
+dhsPerkBuilArchPlateDesc,Réduit les dégâts physiques subis.,Réduit les dégâts physiques subis.
+dhsPerkBuilArchHeatName,Forgeron endurci,Forgeron endurci
+dhsPerkBuilArchHeatDesc,Améliore la résistance à la chaleur.,Améliore la résistance à la chaleur.
 dhsReqClassBuilArti,Nécessite la classe Artisan,Nécessite la classe Artisan
 dhsBookClassBuilArti,Manuel de classe : Artisan,Manuel de classe : Artisan
 dhsBookClassBuilArtiDesc,"Devenez Artisan : maîtrisez les ateliers, outils et l'artisanat. La lecture choisit la classe Artisan, débloque son craft signature et octroie quelques points de classe.","Devenez Artisan : maîtrisez les ateliers, outils et l'artisanat. La lecture choisit la classe Artisan, débloque son craft signature et octroie quelques points de classe."
@@ -548,22 +536,18 @@ dhsPerkBuilArtiSigKitName,Atelier d'artisan,Atelier d'artisan
 dhsPerkBuilArtiSigKitDesc,Débloque la fabrication de la Trousse de réparation pro.,Débloque la fabrication de la Trousse de réparation pro.
 dhsSkillClassBuilArtiSpecName,Artisan — Spécialité,Artisan — Spécialité
 dhsSkillClassBuilArtiSpecDesc,Sous-branche Artisan : Spécialité.,Sous-branche Artisan : Spécialité.
-dhsPerkBuilArtiScrapperName,Récupérateur,Récupérateur
-dhsPerkBuilArtiScrapperDesc,Récupère plus de ressources en démontant et récupérant.,Récupère plus de ressources en démontant et récupérant.
-dhsPerkBuilArtiToughName,Robustesse,Robustesse
-dhsPerkBuilArtiToughDesc,Réduit les dégâts physiques subis.,Réduit les dégâts physiques subis.
-dhsPerkBuilArtiHPName,Vitalité,Vitalité
-dhsPerkBuilArtiHPDesc,Augmente votre santé maximale.,Augmente votre santé maximale.
-dhsPerkBuilArtiVigorName,Endurance,Endurance
-dhsPerkBuilArtiVigorDesc,Réduit l'endurance dépensée par les actions.,Réduit l'endurance dépensée par les actions.
-dhsPerkBuilArtiStamRegenName,Récupération,Récupération
-dhsPerkBuilArtiStamRegenDesc,Récupère l'endurance plus vite.,Récupère l'endurance plus vite.
-dhsPerkBuilArtiCarryName,Portage,Portage
-dhsPerkBuilArtiCarryDesc,Ajoute des emplacements de portage.,Ajoute des emplacements de portage.
-dhsPerkBuilArtiResistName,Constitution,Constitution
-dhsPerkBuilArtiResistDesc,Réduit légèrement tous les dégâts subis.,Réduit légèrement tous les dégâts subis.
-dhsPerkBuilArtiBuffName,Tempérament,Tempérament
-dhsPerkBuilArtiBuffDesc,Résiste aux effets négatifs.,Résiste aux effets négatifs.
+dhsPerkBuilArtiScrapName,Récupérateur,Récupérateur
+dhsPerkBuilArtiScrapDesc,Récupère plus de ressources en démontant.,Récupère plus de ressources en démontant.
+dhsPerkBuilArtiTradeName,Marchand,Marchand
+dhsPerkBuilArtiTradeDesc,Améliore les prix de vente.,Améliore les prix de vente.
+dhsPerkBuilArtiDealName,Acheteur avisé,Acheteur avisé
+dhsPerkBuilArtiDealDesc,Améliore les prix d'achat.,Améliore les prix d'achat.
+dhsPerkBuilArtiEyeName,Brocanteur,Brocanteur
+dhsPerkBuilArtiEyeDesc,Améliore la qualité du butin.,Améliore la qualité du butin.
+dhsPerkBuilArtiStockName,Magasinier,Magasinier
+dhsPerkBuilArtiStockDesc,Récupère davantage de butin.,Récupère davantage de butin.
+dhsPerkBuilArtiPlateName,Atelier blindé,Atelier blindé
+dhsPerkBuilArtiPlateDesc,Réduit les dégâts physiques subis.,Réduit les dégâts physiques subis.
 dhsRepairKitPro,Trousse de réparation pro,Trousse de réparation pro
 dhsRepairKitProDesc,"Trousse d'artisan complète, idéale pour entretenir armes, outils et véhicules. Fabriquée uniquement par l'Artisan.","Trousse d'artisan complète, idéale pour entretenir armes, outils et véhicules. Fabriquée uniquement par l'Artisan."
 dhsReqClassScoutTrac,Nécessite la classe Pisteur,Nécessite la classe Pisteur
@@ -603,20 +587,18 @@ dhsPerkScoutTracSigAmmoName,Munitions du pisteur,Munitions du pisteur
 dhsPerkScoutTracSigAmmoDesc,Débloque la fabrication des Balles légères du pisteur.,Débloque la fabrication des Balles légères du pisteur.
 dhsSkillClassScoutTracSpecName,Pisteur — Spécialité,Pisteur — Spécialité
 dhsSkillClassScoutTracSpecDesc,Sous-branche Pisteur : Spécialité.,Sous-branche Pisteur : Spécialité.
-dhsPerkScoutTracToughName,Robustesse,Robustesse
-dhsPerkScoutTracToughDesc,Réduit les dégâts physiques subis.,Réduit les dégâts physiques subis.
-dhsPerkScoutTracHPName,Vitalité,Vitalité
-dhsPerkScoutTracHPDesc,Augmente votre santé maximale.,Augmente votre santé maximale.
-dhsPerkScoutTracVigorName,Endurance,Endurance
-dhsPerkScoutTracVigorDesc,Réduit l'endurance dépensée par les actions.,Réduit l'endurance dépensée par les actions.
-dhsPerkScoutTracStamRegenName,Récupération,Récupération
-dhsPerkScoutTracStamRegenDesc,Récupère l'endurance plus vite.,Récupère l'endurance plus vite.
-dhsPerkScoutTracCarryName,Portage,Portage
-dhsPerkScoutTracCarryDesc,Ajoute des emplacements de portage.,Ajoute des emplacements de portage.
-dhsPerkScoutTracResistName,Constitution,Constitution
-dhsPerkScoutTracResistDesc,Réduit légèrement tous les dégâts subis.,Réduit légèrement tous les dégâts subis.
-dhsPerkScoutTracBuffName,Tempérament,Tempérament
-dhsPerkScoutTracBuffDesc,Résiste aux effets négatifs.,Résiste aux effets négatifs.
+dhsPerkScoutTracRunName,Coureur des bois,Coureur des bois
+dhsPerkScoutTracRunDesc,Augmente votre mobilité.,Augmente votre mobilité.
+dhsPerkScoutTracQuietName,Pas feutrés,Pas feutrés
+dhsPerkScoutTracQuietDesc,Réduit le bruit que vous faites.,Réduit le bruit que vous faites.
+dhsPerkScoutTracEyeName,Œil d'éclaireur,Œil d'éclaireur
+dhsPerkScoutTracEyeDesc,Améliore la qualité du butin trouvé.,Améliore la qualité du butin trouvé.
+dhsPerkScoutTracTradeName,Négociateur,Négociateur
+dhsPerkScoutTracTradeDesc,Améliore les prix d'achat chez les marchands.,Améliore les prix d'achat chez les marchands.
+dhsPerkScoutTracGleanName,Glaneur,Glaneur
+dhsPerkScoutTracGleanDesc,Récupère davantage de butin.,Récupère davantage de butin.
+dhsPerkScoutTracHeatName,Routard,Routard
+dhsPerkScoutTracHeatDesc,Améliore la résistance à la chaleur.,Améliore la résistance à la chaleur.
 dhsAmmoLight,Balle légère du pisteur,Balle légère du pisteur
 dhsAmmoLightDesc,"Balle de pistolet allégée, dégâts accrus pour le tir rapide. Fabriquée uniquement par le Pisteur.","Balle de pistolet allégée, dégâts accrus pour le tir rapide. Fabriquée uniquement par le Pisteur."
 dhsReqClassScoutInfi,Nécessite la classe Infiltrateur,Nécessite la classe Infiltrateur
@@ -656,22 +638,18 @@ dhsPerkScoutInfiSigStimName,Pharmacopée du rôdeur,Pharmacopée du rôdeur
 dhsPerkScoutInfiSigStimDesc,Débloque la préparation du Stimulant du rôdeur.,Débloque la préparation du Stimulant du rôdeur.
 dhsSkillClassScoutInfiSpecName,Infiltrateur — Spécialité,Infiltrateur — Spécialité
 dhsSkillClassScoutInfiSpecDesc,Sous-branche Infiltrateur : Spécialité.,Sous-branche Infiltrateur : Spécialité.
-dhsPerkScoutInfiLooterName,Pillard,Pillard
-dhsPerkScoutInfiLooterDesc,Récupère plus de ressources en fouillant et démontant.,Récupère plus de ressources en fouillant et démontant.
-dhsPerkScoutInfiToughName,Robustesse,Robustesse
-dhsPerkScoutInfiToughDesc,Réduit les dégâts physiques subis.,Réduit les dégâts physiques subis.
-dhsPerkScoutInfiHPName,Vitalité,Vitalité
-dhsPerkScoutInfiHPDesc,Augmente votre santé maximale.,Augmente votre santé maximale.
-dhsPerkScoutInfiVigorName,Endurance,Endurance
-dhsPerkScoutInfiVigorDesc,Réduit l'endurance dépensée par les actions.,Réduit l'endurance dépensée par les actions.
-dhsPerkScoutInfiStamRegenName,Récupération,Récupération
-dhsPerkScoutInfiStamRegenDesc,Récupère l'endurance plus vite.,Récupère l'endurance plus vite.
-dhsPerkScoutInfiCarryName,Portage,Portage
-dhsPerkScoutInfiCarryDesc,Ajoute des emplacements de portage.,Ajoute des emplacements de portage.
-dhsPerkScoutInfiResistName,Constitution,Constitution
-dhsPerkScoutInfiResistDesc,Réduit légèrement tous les dégâts subis.,Réduit légèrement tous les dégâts subis.
-dhsPerkScoutInfiBuffName,Tempérament,Tempérament
-dhsPerkScoutInfiBuffDesc,Résiste aux effets négatifs.,Résiste aux effets négatifs.
+dhsPerkScoutInfiShadowName,Ombre,Ombre
+dhsPerkScoutInfiShadowDesc,Réduit fortement le bruit que vous faites.,Réduit fortement le bruit que vous faites.
+dhsPerkScoutInfiSneakName,Démarche feutrée,Démarche feutrée
+dhsPerkScoutInfiSneakDesc,Augmente votre mobilité.,Augmente votre mobilité.
+dhsPerkScoutInfiLockName,Crocheteur,Crocheteur
+dhsPerkScoutInfiLockDesc,Crochète les serrures plus vite.,Crochète les serrures plus vite.
+dhsPerkScoutInfiLootName,Pillard,Pillard
+dhsPerkScoutInfiLootDesc,Récupère davantage de butin.,Récupère davantage de butin.
+dhsPerkScoutInfiThiefName,Œil du voleur,Œil du voleur
+dhsPerkScoutInfiThiefDesc,Améliore la qualité du butin trouvé.,Améliore la qualité du butin trouvé.
+dhsPerkScoutInfiRareName,Fouineur,Fouineur
+dhsPerkScoutInfiRareDesc,Augmente les chances de butin rare.,Augmente les chances de butin rare.
 dhsDrugProwler,Stimulant du rôdeur,Stimulant du rôdeur
 dhsDrugProwlerDesc,Stimulant maison qui aiguise la furtivité et les réflexes. Préparé uniquement par l'Infiltrateur.,Stimulant maison qui aiguise la furtivité et les réflexes. Préparé uniquement par l'Infiltrateur.
 dhsReqClassFarmAgri,Nécessite la classe Agriculteur,Nécessite la classe Agriculteur
@@ -711,20 +689,20 @@ dhsPerkFarmAgriXPName,Lève-tôt,Lève-tôt
 dhsPerkFarmAgriXPDesc,Augmente toute l'expérience gagnée.,Augmente toute l'expérience gagnée.
 dhsPerkFarmAgriStamRegenName,Souffle paysan,Souffle paysan
 dhsPerkFarmAgriStamRegenDesc,Récupère l'endurance plus vite.,Récupère l'endurance plus vite.
-dhsSkillClassFarmAgriProviderName,Agriculteur — Subsistance,Agriculteur — Subsistance
-dhsSkillClassFarmAgriProviderDesc,Sous-branche Agriculteur : Subsistance.,Sous-branche Agriculteur : Subsistance.
-dhsPerkFarmAgriStamName,Endurance paysanne,Endurance paysanne
-dhsPerkFarmAgriStamDesc,Réduit l'endurance dépensée par les actions.,Réduit l'endurance dépensée par les actions.
-dhsPerkFarmAgriCarryName,Bête de somme,Bête de somme
-dhsPerkFarmAgriCarryDesc,Ajoute des emplacements de portage.,Ajoute des emplacements de portage.
-dhsPerkFarmAgriToughName,Coriace,Coriace
-dhsPerkFarmAgriToughDesc,Réduit les dégâts physiques subis.,Réduit les dégâts physiques subis.
-dhsPerkFarmAgriResistName,Constitution,Constitution
-dhsPerkFarmAgriResistDesc,Réduit légèrement tous les dégâts subis.,Réduit légèrement tous les dégâts subis.
-dhsPerkFarmAgriHPName,Robuste,Robuste
-dhsPerkFarmAgriHPDesc,Augmente votre santé maximale.,Augmente votre santé maximale.
-dhsPerkFarmAgriBuffName,Estomac d'acier,Estomac d'acier
-dhsPerkFarmAgriBuffDesc,Résiste aux effets négatifs.,Résiste aux effets négatifs.
+dhsSkillClassFarmAgriProviderName,Agriculteur — Terroir,Agriculteur — Terroir
+dhsSkillClassFarmAgriProviderDesc,Sous-branche Agriculteur : Terroir.,Sous-branche Agriculteur : Terroir.
+dhsPerkFarmAgriWildName,Fourrageur,Fourrageur
+dhsPerkFarmAgriWildDesc,Récolte plus sur les plantes sauvages.,Récolte plus sur les plantes sauvages.
+dhsPerkFarmAgriSunName,Travailleur des champs,Travailleur des champs
+dhsPerkFarmAgriSunDesc,Améliore la résistance à la chaleur.,Améliore la résistance à la chaleur.
+dhsPerkFarmAgriTradeName,Maquignon,Maquignon
+dhsPerkFarmAgriTradeDesc,Améliore les prix de vente chez les marchands.,Améliore les prix de vente chez les marchands.
+dhsPerkFarmAgriForageName,Glaneur des champs,Glaneur des champs
+dhsPerkFarmAgriForageDesc,Améliore la qualité du butin de fouille.,Améliore la qualité du butin de fouille.
+dhsPerkFarmAgriQuietName,Vie au grand air,Vie au grand air
+dhsPerkFarmAgriQuietDesc,Réduit le bruit que vous faites.,Réduit le bruit que vous faites.
+dhsPerkFarmAgriSturdyName,Robuste paysan,Robuste paysan
+dhsPerkFarmAgriSturdyDesc,Réduit les dégâts physiques subis.,Réduit les dégâts physiques subis.
 dhsAmmoFarmerSlug,Cartouche de fermier,Cartouche de fermier
 dhsAmmoFarmerSlugDesc,"Une lourde balle montée main, bien plus puissante qu'une balle standard. Fabriquée uniquement par les Agriculteurs.","Une lourde balle montée main, bien plus puissante qu'une balle standard. Fabriquée uniquement par les Agriculteurs."
 dhsAmmoFarmerBuck,Chevrotine de fermier,Chevrotine de fermier
@@ -766,22 +744,20 @@ dhsPerkFarmCookButcherName,Boucher,Boucher
 dhsPerkFarmCookButcherDesc,Récolte plus de viande sur les animaux.,Récolte plus de viande sur les animaux.
 dhsPerkFarmCookXPName,Apprenti rapide,Apprenti rapide
 dhsPerkFarmCookXPDesc,Augmente toute l'expérience gagnée.,Augmente toute l'expérience gagnée.
-dhsSkillClassFarmCookSupportName,Cuisinier — Soutien d'équipe,Cuisinier — Soutien d'équipe
-dhsSkillClassFarmCookSupportDesc,Sous-branche Cuisinier : Soutien d'équipe.,Sous-branche Cuisinier : Soutien d'équipe.
-dhsPerkFarmCookToughName,Robustesse,Robustesse
-dhsPerkFarmCookToughDesc,Réduit les dégâts physiques subis.,Réduit les dégâts physiques subis.
-dhsPerkFarmCookResistName,Garde,Garde
-dhsPerkFarmCookResistDesc,Réduit légèrement tous les dégâts subis.,Réduit légèrement tous les dégâts subis.
-dhsPerkFarmCookHPName,Solide gaillard,Solide gaillard
-dhsPerkFarmCookHPDesc,Augmente votre santé maximale.,Augmente votre santé maximale.
-dhsPerkFarmCookCarryName,Porteur,Porteur
-dhsPerkFarmCookCarryDesc,Ajoute des emplacements de portage.,Ajoute des emplacements de portage.
-dhsPerkFarmCookStamRegenName,Second souffle,Second souffle
-dhsPerkFarmCookStamRegenDesc,Récupère l'endurance plus vite.,Récupère l'endurance plus vite.
-dhsPerkFarmCookBuffName,Estomac d'acier,Estomac d'acier
-dhsPerkFarmCookBuffDesc,Résiste aux effets négatifs.,Résiste aux effets négatifs.
-dhsPerkFarmCookMeneurName,Intendant,Intendant
-dhsPerkFarmCookMeneurDesc,Augmente toute l'expérience gagnée.,Augmente toute l'expérience gagnée.
+dhsSkillClassFarmCookSupportName,Cuisinier — Maison & équipe,Cuisinier — Maison & équipe
+dhsSkillClassFarmCookSupportDesc,Sous-branche Cuisinier : Maison & équipe.,Sous-branche Cuisinier : Maison & équipe.
+dhsPerkFarmCookProvisionName,Intendance,Intendance
+dhsPerkFarmCookProvisionDesc,Récupère davantage de butin.,Récupère davantage de butin.
+dhsPerkFarmCookTradeName,Restaurateur,Restaurateur
+dhsPerkFarmCookTradeDesc,Améliore les prix de vente chez les marchands.,Améliore les prix de vente chez les marchands.
+dhsPerkFarmCookElemName,Cuistot endurci,Cuistot endurci
+dhsPerkFarmCookElemDesc,Réduit les dégâts élémentaires (feu) subis.,Réduit les dégâts élémentaires (feu) subis.
+dhsPerkFarmCookCalmName,Maître du coup de feu,Maître du coup de feu
+dhsPerkFarmCookCalmDesc,Résiste aux effets négatifs.,Résiste aux effets négatifs.
+dhsPerkFarmCookHeatName,Près des fourneaux,Près des fourneaux
+dhsPerkFarmCookHeatDesc,Améliore la résistance à la chaleur.,Améliore la résistance à la chaleur.
+dhsPerkFarmCookPlateName,Carrure de chef,Carrure de chef
+dhsPerkFarmCookPlateDesc,Réduit les dégâts physiques subis.,Réduit les dégâts physiques subis.
 dhsFoodFeast,Festin d'équipe,Festin d'équipe
 dhsFoodFeastDesc,Un copieux repas partagé. Vous rassasie et buff les alliés proches. Cuisiné uniquement par les Cuisiniers.,Un copieux repas partagé. Vous rassasie et buff les alliés proches. Cuisiné uniquement par les Cuisiniers.
 dhsFoodFeastGrand,Grand festin,Grand festin

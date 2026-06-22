@@ -131,6 +131,9 @@ def stat(suf, en, fr, eff, op, v1, vmax, nlev, tags, ed, fd, icon="ui_game_symbo
 def unlock(suf, en, fr, icon, recipes, auto, palier, ed, fd):
     return {"k":"unlock","suf":suf,"en":en,"fr":fr,"icon":icon,"recipes":recipes,
             "auto":auto,"palier":palier,"ed":ed,"fd":fd}
+def sp(suf, fr, fd, eff, op, v1, vmax, n, tags="", icon="ui_game_symbol_character"):
+    """Raccourci pour un perk de Spécialité (FR dans en+fr, desc=fd)."""
+    return stat(suf, fr, fr, eff, op, v1, vmax, n, tags, fd, fd, icon)
 
 # ---- FERMIER : Agriculteur (cultures + fusil à pompe) ----
 FARM_AGRI = [
@@ -169,19 +172,13 @@ FARM_AGRI = [
         stat("StamRegen","Field Stamina","Souffle paysan","StaminaChangeOT","perc_add",".05",".25",5,"",
              "Recovers stamina faster.","Récupère l'endurance plus vite.","ui_game_symbol_cardio"),
     ]),
-    ("Provider","Provider","Subsistance","ui_game_symbol_campfire", [
-        stat("Stam","Hardy","Endurance paysanne","StaminaLoss","perc_add","-.06","-.30",5,"",
-             "Reduces stamina spent on actions.","Réduit l'endurance dépensée par les actions.","ui_game_symbol_cardio"),
-        stat("Carry","Pack Mule","Bête de somme","CarryCapacity","base_add","1","3",3,"",
-             "Adds carry capacity slots.","Ajoute des emplacements de portage.","ui_game_symbol_backpack"),
-        stat("Tough","Weathered","Coriace","PhysicalDamageResist","base_add","1","5",5,"",
-             "Reduces physical damage taken.","Réduit les dégâts physiques subis.","ui_game_symbol_armor_iron"),
-        stat("Resist","Sturdy","Constitution","GeneralDamageResist","base_add","1","3",3,"",
-             "Reduces all damage taken slightly.","Réduit légèrement tous les dégâts subis.","ui_game_symbol_armor_iron"),
-        stat("HP","Strong Back","Robuste","HealthMax","base_add","5","25",5,"",
-             "Increases your maximum health.","Augmente votre santé maximale.","ui_game_symbol_healing_factor"),
-        stat("Buff","Iron Gut","Estomac d'acier","BuffResistance","base_add","1","3",3,"",
-             "Resists negative status effects.","Résiste aux effets négatifs.","ui_game_symbol_light_armor2"),
+    ("Provider","Provider","Terroir","ui_game_symbol_crops", [
+        sp("Wild","Fourrageur","Récolte plus sur les plantes sauvages.","HarvestCount","perc_add",".10",".50",5,"wildCropsHarvest","ui_game_symbol_crops"),
+        sp("Sun","Travailleur des champs","Améliore la résistance à la chaleur.","HyperthermalResist","base_add","2","10",5,"","ui_game_symbol_temperature"),
+        sp("Trade","Maquignon","Améliore les prix de vente chez les marchands.","BarteringSelling","base_add","2","10",5,"","ui_game_symbol_barter"),
+        sp("Forage","Glaneur des champs","Améliore la qualité du butin de fouille.","LootStage","perc_add",".04",".20",5,"","ui_game_symbol_map"),
+        sp("Quiet","Vie au grand air","Réduit le bruit que vous faites.","NoiseMultiplier","perc_add","-.04","-.20",5,"","ui_game_symbol_stealth"),
+        sp("Sturdy","Robuste paysan","Réduit les dégâts physiques subis.","PhysicalDamageResist","base_add","1","5",5,"","ui_game_symbol_armor_iron"),
     ]),
 ]
 
@@ -220,21 +217,13 @@ FARM_COOK = [
         stat("XP","Quick Learner","Apprenti rapide","PlayerExpGain","perc_add",".02",".10",5,"",
              "Increases all experience gained.","Augmente toute l'expérience gagnée.","ui_game_symbol_adventure"),
     ]),
-    ("Support","Support","Soutien d'équipe","ui_game_symbol_medical", [
-        stat("Tough","Hearty","Robustesse","PhysicalDamageResist","base_add","1","5",5,"",
-             "Reduces physical damage taken.","Réduit les dégâts physiques subis.","ui_game_symbol_armor_iron"),
-        stat("Resist","Bulwark","Garde","GeneralDamageResist","base_add","1","3",3,"",
-             "Reduces all damage taken slightly.","Réduit légèrement tous les dégâts subis.","ui_game_symbol_armor_iron"),
-        stat("HP","Big Boned","Solide gaillard","HealthMax","base_add","5","25",5,"",
-             "Increases your maximum health.","Augmente votre santé maximale.","ui_game_symbol_healing_factor"),
-        stat("Carry","Porter","Porteur","CarryCapacity","base_add","1","3",3,"",
-             "Adds carry capacity slots.","Ajoute des emplacements de portage.","ui_game_symbol_backpack"),
-        stat("StamRegen","Second Wind","Second souffle","StaminaChangeOT","perc_add",".05",".25",5,"",
-             "Recovers stamina faster.","Récupère l'endurance plus vite.","ui_game_symbol_cardio"),
-        stat("Buff","Cast Iron","Estomac d'acier","BuffResistance","base_add","1","3",3,"",
-             "Resists negative status effects.","Résiste aux effets négatifs.","ui_game_symbol_light_armor2"),
-        stat("Meneur","Quartermaster","Intendant","PlayerExpGain","perc_add",".02",".10",5,"",
-             "Increases all experience gained.","Augmente toute l'expérience gagnée.","ui_game_symbol_adventure"),
+    ("Support","Support","Maison & équipe","ui_game_symbol_medical", [
+        sp("Provision","Intendance","Récupère davantage de butin.","LootQuantity","perc_add",".04",".20",5,"","ui_game_symbol_pack_mule"),
+        sp("Trade","Restaurateur","Améliore les prix de vente chez les marchands.","BarteringSelling","base_add","2","10",5,"","ui_game_symbol_barter"),
+        sp("Elem","Cuistot endurci","Réduit les dégâts élémentaires (feu) subis.","ElementalDamageResist","base_add","2","10",5,"","ui_game_symbol_medical"),
+        sp("Calm","Maître du coup de feu","Résiste aux effets négatifs.","BuffResistance","base_add","1","4",4,"","ui_game_symbol_light_armor2"),
+        sp("Heat","Près des fourneaux","Améliore la résistance à la chaleur.","HyperthermalResist","base_add","2","10",5,"","ui_game_symbol_temperature"),
+        sp("Plate","Carrure de chef","Réduit les dégâts physiques subis.","PhysicalDamageResist","base_add","1","4",4,"","ui_game_symbol_armor_iron"),
     ]),
 ]
 
@@ -287,15 +276,127 @@ DOMAIN = {
     "MedicChem": ("chemStationCrafting","chimie et explosifs"),
 }
 
-# Perk thématique de récolte par sous-classe (tags HarvestCount vérifiés) -> identité distinctive.
-THEME = {
-    "SurvHunt":  ("Skinner","Dépeceur","Récolte plus de viande, de cuir et d'os sur les animaux.","butcherHarvest"),
-    "SurvHerb":  ("Gatherer","Cueilleur émérite","Récolte plus sur les plantes sauvages.","wildCropsHarvest"),
-    "BuilArch":  ("Quarryman","Carrier","Récolte plus de minerai et de bois en exploitant les ressources.","oreWoodHarvest"),
-    "BuilArti":  ("Scrapper","Récupérateur","Récupère plus de ressources en démontant et récupérant.","salvageHarvest"),
-    "ScoutInfi": ("Looter","Pillard","Récupère plus de ressources en fouillant et démontant.","salvageHarvest"),
-    "EngiMech":  ("Wrecker","Ferrailleur","Récupère plus de pièces mécaniques en démontant.","salvageHarvest"),
-    "EngiElec":  ("Dismantler","Démonteur","Récupère plus de composants en démontant.","salvageHarvest"),
+# ---- SURVIVANT (classe commune, pour TOUS) : arbre de survie générique + bases ----
+# Tous les bonus génériques (vitalité, endurance, port, résistances...) vivent ICI, plus aucun
+# dans les sous-classes (dont la Spécialité est désormais unique). Remplace la base vanilla.
+SURVIVOR = [
+    sp("Vitalite","Vitalité","Augmente votre santé maximale.","HealthMax","base_add","5","25",5,"","ui_game_symbol_healing_factor"),
+    sp("Endurance","Endurance","Réduit l'endurance dépensée par les actions.","StaminaLoss","perc_add","-.06","-.30",5,"","ui_game_symbol_cardio"),
+    sp("Recup","Récupération","Récupère l'endurance plus vite.","StaminaChangeOT","perc_add",".05",".25",5,"","ui_game_symbol_cardio"),
+    sp("Porteur","Porteur","Ajoute des emplacements de portage.","CarryCapacity","base_add","2","10",5,"","ui_game_symbol_pack_mule"),
+    sp("Robuste","Robustesse","Réduit les dégâts physiques subis.","PhysicalDamageResist","base_add","1","5",5,"","ui_game_symbol_armor_iron"),
+    sp("Consti","Constitution","Réduit légèrement tous les dégâts subis.","GeneralDamageResist","base_add","1","3",3,"","ui_game_symbol_armor_iron"),
+    sp("Temper","Tempérament","Résiste aux effets négatifs.","BuffResistance","base_add","1","3",3,"","ui_game_symbol_light_armor2"),
+    sp("Metab","Métabolisme","Augmente votre nourriture maximale.","FoodMax","base_add","5","25",5,"","ui_game_symbol_stomach"),
+    sp("Survie","Instinct de survie","Augmente toute l'expérience gagnée.","PlayerExpGain","perc_add",".02",".10",5,"","ui_game_symbol_adventure"),
+    sp("Froid","Acclimatation au froid","Améliore la résistance au froid.","HypothermalResist","base_add","2","10",5,"","ui_game_symbol_temperature"),
+    sp("Chaud","Acclimatation à la chaleur","Améliore la résistance à la chaleur.","HyperthermalResist","base_add","2","10",5,"","ui_game_symbol_temperature"),
+    unlock("Gear","Débrouillardise","Débrouillardise","ui_game_symbol_workbench", ",".join(T0_ALL), True, 1,
+           "Débloque la fabrication des armes et outils de base (tuyau, pierre) pour tous.",
+           "Débloque la fabrication des armes et outils de base (tuyau, pierre) pour tous."),
+    unlock("Cuisine","Cuisine de survie","Cuisine de survie","ui_game_symbol_fork", ",".join(BASE_FOODS), True, 1,
+           "Débloque la préparation des plats et boissons de base pour tous.",
+           "Débloque la préparation des plats et boissons de base pour tous."),
+]
+
+# ---- Spécialité UNIQUE par sous-classe (perks thématiques, pas de générique répété) ----
+THEME_SPEC = {
+    "SoldSnip": [
+        sp("Cover","Sous le feu","Réduit les dégâts d'explosion subis.","ExplosionIncomingDamage","perc_add","-.06","-.30",5,"","ui_game_symbol_armor_iron"),
+        sp("Plates","Tenue pare-balles","Réduit les dégâts élémentaires subis.","ElementalDamageResist","base_add","2","10",5,"","ui_game_symbol_armor_iron"),
+        sp("Recon","Repérage de cibles","Améliore la qualité du butin trouvé.","LootStage","perc_add",".04",".20",5,"","ui_game_symbol_map"),
+        sp("Calm","Sang-froid","Résiste aux effets négatifs en plein combat.","BuffResistance","base_add","1","4",4,"","ui_game_symbol_light_armor2"),
+        sp("Hold","Position dominante","Réduit les dégâts physiques subis.","PhysicalDamageResist","base_add","1","5",5,"","ui_game_symbol_armor_iron"),
+        sp("Quarter","Économe de guerre","Améliore les prix de vente chez les marchands.","BarteringSelling","base_add","2","10",5,"","ui_game_symbol_barter"),
+    ],
+    "SoldAslt": [
+        sp("Heavy","Blindage lourd","Réduit fortement les dégâts physiques subis.","PhysicalDamageResist","base_add","1","6",6,"","ui_game_symbol_armor_iron"),
+        sp("Blast","Anti-souffle","Réduit les dégâts d'explosion subis.","ExplosionIncomingDamage","perc_add","-.08","-.40",5,"","ui_game_symbol_armor_iron"),
+        sp("Suit","Combinaison de combat","Réduit les dégâts élémentaires subis.","ElementalDamageResist","base_add","2","12",6,"","ui_game_symbol_armor_iron"),
+        sp("Push","Percée","Augmente votre mobilité sous le feu.","Mobility","perc_add",".02",".10",5,"","ui_game_symbol_run"),
+        sp("Belt","Ceinture de munitions","Récupère davantage de butin.","LootQuantity","perc_add",".04",".20",5,"","ui_game_symbol_pack_mule"),
+        sp("Morale","Cri de guerre","Résiste aux effets négatifs.","BuffResistance","base_add","1","4",4,"","ui_game_symbol_light_armor2"),
+    ],
+    "ScoutTrac": [
+        sp("Run","Coureur des bois","Augmente votre mobilité.","Mobility","perc_add",".04",".20",5,"","ui_game_symbol_run"),
+        sp("Quiet","Pas feutrés","Réduit le bruit que vous faites.","NoiseMultiplier","perc_add","-.05","-.25",5,"","ui_game_symbol_stealth"),
+        sp("Eye","Œil d'éclaireur","Améliore la qualité du butin trouvé.","LootStage","perc_add",".05",".25",5,"","ui_game_symbol_map"),
+        sp("Trade","Négociateur","Améliore les prix d'achat chez les marchands.","BarteringBuying","base_add","2","10",5,"","ui_game_symbol_barter"),
+        sp("Glean","Glaneur","Récupère davantage de butin.","LootQuantity","perc_add",".04",".20",5,"","ui_game_symbol_pack_mule"),
+        sp("Heat","Routard","Améliore la résistance à la chaleur.","HyperthermalResist","base_add","2","10",5,"","ui_game_symbol_temperature"),
+    ],
+    "ScoutInfi": [
+        sp("Shadow","Ombre","Réduit fortement le bruit que vous faites.","NoiseMultiplier","perc_add","-.06","-.30",5,"","ui_game_symbol_stealth"),
+        sp("Sneak","Démarche feutrée","Augmente votre mobilité.","Mobility","perc_add",".03",".15",5,"","ui_game_symbol_run"),
+        sp("Lock","Crocheteur","Crochète les serrures plus vite.","LockPickTime","perc_subtract",".1",".5",5,"","ui_game_symbol_lock"),
+        sp("Loot","Pillard","Récupère davantage de butin.","LootQuantity","perc_add",".05",".25",5,"","ui_game_symbol_pack_mule"),
+        sp("Thief","Œil du voleur","Améliore la qualité du butin trouvé.","LootStage","perc_add",".05",".25",5,"","ui_game_symbol_map"),
+        sp("Rare","Fouineur","Augmente les chances de butin rare.","LootDropProb","perc_add",".05",".25",5,"","ui_game_symbol_map"),
+    ],
+    "SurvHunt": [
+        sp("Skinner","Dépeceur","Récolte plus de viande, de cuir et d'os sur les animaux.","HarvestCount","perc_add",".10",".50",5,"butcherHarvest","ui_game_symbol_pack_mule"),
+        sp("Track","Traqueur","Augmente votre mobilité en extérieur.","Mobility","perc_add",".03",".15",5,"","ui_game_symbol_run"),
+        sp("Cold","Trappeur","Améliore la résistance au froid.","HypothermalResist","base_add","2","10",5,"","ui_game_symbol_temperature"),
+        sp("Quiet","Approche silencieuse","Réduit le bruit que vous faites.","NoiseMultiplier","perc_add","-.04","-.20",5,"","ui_game_symbol_stealth"),
+        sp("Forage","Fourrageur","Améliore la qualité du butin de fouille.","LootStage","perc_add",".04",".20",5,"","ui_game_symbol_map"),
+        sp("Heat","Endurci au climat","Améliore la résistance à la chaleur.","HyperthermalResist","base_add","2","10",5,"","ui_game_symbol_temperature"),
+    ],
+    "SurvHerb": [
+        sp("Gather","Cueilleur émérite","Récolte plus sur les plantes sauvages.","HarvestCount","perc_add",".10",".50",5,"wildCropsHarvest","ui_game_symbol_crops"),
+        sp("Toxin","Anticorps","Résiste fortement aux effets négatifs (poisons, maladies).","BuffResistance","base_add","1","5",5,"","ui_game_symbol_medical"),
+        sp("Cold","Acclimaté au froid","Améliore la résistance au froid.","HypothermalResist","base_add","2","10",5,"","ui_game_symbol_temperature"),
+        sp("Heat","Acclimaté à la chaleur","Améliore la résistance à la chaleur.","HyperthermalResist","base_add","2","10",5,"","ui_game_symbol_temperature"),
+        sp("Elem","Onguents protecteurs","Réduit les dégâts élémentaires subis.","ElementalDamageResist","base_add","2","10",5,"","ui_game_symbol_medical"),
+        sp("Forage","Herboriste chevronné","Améliore la qualité du butin de fouille.","LootStage","perc_add",".03",".15",5,"","ui_game_symbol_map"),
+    ],
+    "BuilArch": [
+        sp("Quarry","Carrier","Récolte plus de minerai et de bois.","HarvestCount","perc_add",".10",".50",5,"oreWoodHarvest","ui_game_symbol_pack_mule"),
+        sp("Trap","Génie défensif","Réduit les dégâts subis de vos propres pièges.","TrapIncomingDamage","perc_add","-.1","-.5",5,"","ui_game_symbol_armor_iron"),
+        sp("Blast","Bâtisseur solide","Réduit les dégâts d'explosion subis.","ExplosionIncomingDamage","perc_add","-.06","-.30",5,"","ui_game_symbol_armor_iron"),
+        sp("Haul","Hercule","Réduit l'endurance dépensée.","StaminaLoss","perc_add","-.05","-.25",5,"","ui_game_symbol_cardio"),
+        sp("Plate","Carapace","Réduit les dégâts physiques subis.","PhysicalDamageResist","base_add","1","5",5,"","ui_game_symbol_armor_iron"),
+        sp("Heat","Forgeron endurci","Améliore la résistance à la chaleur.","HyperthermalResist","base_add","2","10",5,"","ui_game_symbol_temperature"),
+    ],
+    "BuilArti": [
+        sp("Scrap","Récupérateur","Récupère plus de ressources en démontant.","HarvestCount","perc_add",".10",".50",5,"salvageHarvest","ui_game_symbol_pack_mule"),
+        sp("Trade","Marchand","Améliore les prix de vente.","BarteringSelling","base_add","2","10",5,"","ui_game_symbol_barter"),
+        sp("Deal","Acheteur avisé","Améliore les prix d'achat.","BarteringBuying","base_add","2","10",5,"","ui_game_symbol_barter"),
+        sp("Eye","Brocanteur","Améliore la qualité du butin.","LootStage","perc_add",".05",".25",5,"","ui_game_symbol_map"),
+        sp("Stock","Magasinier","Récupère davantage de butin.","LootQuantity","perc_add",".04",".20",5,"","ui_game_symbol_pack_mule"),
+        sp("Plate","Atelier blindé","Réduit les dégâts physiques subis.","PhysicalDamageResist","base_add","1","4",4,"","ui_game_symbol_armor_iron"),
+    ],
+    "EngiMech": [
+        sp("Wreck","Ferrailleur","Récupère plus de pièces en démontant.","HarvestCount","perc_add",".10",".50",5,"salvageHarvest","ui_game_symbol_wrench"),
+        sp("Drive","Pilote","Augmente votre mobilité.","Mobility","perc_add",".03",".15",5,"","ui_game_symbol_run"),
+        sp("Spark","Isolation","Réduit les dégâts élémentaires subis.","ElementalDamageResist","base_add","2","10",5,"","ui_game_symbol_electric_generator"),
+        sp("Blast","Châssis renforcé","Réduit les dégâts d'explosion subis.","ExplosionIncomingDamage","perc_add","-.06","-.30",5,"","ui_game_symbol_armor_iron"),
+        sp("Parts","Magasin de pièces","Récupère davantage de butin.","LootQuantity","perc_add",".04",".20",5,"","ui_game_symbol_pack_mule"),
+        sp("Trade","Casse auto","Améliore les prix de vente.","BarteringSelling","base_add","2","10",5,"","ui_game_symbol_barter"),
+    ],
+    "EngiElec": [
+        sp("Disman","Démonteur","Récupère plus de composants en démontant.","HarvestCount","perc_add",".10",".50",5,"salvageHarvest","ui_game_symbol_wrench"),
+        sp("Insul","Isolation électrique","Réduit fortement les dégâts élémentaires subis.","ElementalDamageResist","base_add","3","15",5,"","ui_game_symbol_electric_generator"),
+        sp("Trap","Maître des pièges","Réduit les dégâts subis de vos propres pièges.","TrapIncomingDamage","perc_add","-.1","-.5",5,"","ui_game_symbol_electric_generator"),
+        sp("Light","Œil dans le noir","Améliore la qualité du butin trouvé.","LootStage","perc_add",".04",".20",5,"","ui_game_symbol_map"),
+        sp("Quiet","Discrétion électronique","Réduit le bruit que vous faites.","NoiseMultiplier","perc_add","-.04","-.20",5,"","ui_game_symbol_stealth"),
+        sp("Plate","Combinaison isolante","Réduit les dégâts physiques subis.","PhysicalDamageResist","base_add","1","4",4,"","ui_game_symbol_armor_iron"),
+    ],
+    "MedicSurg": [
+        sp("Steady","Mains stables","Résiste fortement aux effets négatifs.","BuffResistance","base_add","1","5",5,"","ui_game_symbol_medical"),
+        sp("Sterile","Asepsie","Réduit les dégâts élémentaires subis.","ElementalDamageResist","base_add","2","10",5,"","ui_game_symbol_medical"),
+        sp("Calm","Sang-froid clinique","Réduit les dégâts d'explosion subis.","ExplosionIncomingDamage","perc_add","-.05","-.25",5,"","ui_game_symbol_armor_iron"),
+        sp("Supply","Pharmacie","Améliore la qualité du butin trouvé.","LootStage","perc_add",".04",".20",5,"","ui_game_symbol_map"),
+        sp("Tough","Constitution de fer","Réduit les dégâts physiques subis.","PhysicalDamageResist","base_add","1","5",5,"","ui_game_symbol_armor_iron"),
+        sp("Trade","Praticien","Améliore les prix de vente.","BarteringSelling","base_add","2","10",5,"","ui_game_symbol_barter"),
+    ],
+    "MedicChem": [
+        sp("Hazmat","Combinaison NBC","Réduit fortement les dégâts élémentaires subis.","ElementalDamageResist","base_add","3","15",5,"","ui_game_symbol_science"),
+        sp("Antitox","Antidote","Résiste fortement aux effets négatifs.","BuffResistance","base_add","1","5",5,"","ui_game_symbol_science"),
+        sp("Blast","Manipulation prudente","Réduit les dégâts d'explosion subis.","ExplosionIncomingDamage","perc_add","-.08","-.40",5,"","ui_game_symbol_science"),
+        sp("Lab","Laborantin","Améliore la qualité du butin trouvé.","LootStage","perc_add",".04",".20",5,"","ui_game_symbol_map"),
+        sp("Yield","Distillateur","Récupère davantage de butin.","LootQuantity","perc_add",".04",".20",5,"","ui_game_symbol_pack_mule"),
+        sp("Quiet","Pas discrets","Réduit le bruit que vous faites.","NoiseMultiplier","perc_add","-.04","-.20",5,"","ui_game_symbol_stealth"),
+    ],
 }
 
 def build_domain_subbranches(code):
@@ -344,27 +445,8 @@ def build_domain_subbranches(code):
         for sp in cr.get("sigperks", []):
             metier.append(sp)
     # --- Sous-branche SPÉCIALITÉ (stats thématiques) ---
-    spec = [
-        stat("Tough","Robustesse","Robustesse","PhysicalDamageResist","base_add","1","5",5,"",
-             "Réduit les dégâts physiques subis.","Réduit les dégâts physiques subis.","ui_game_symbol_armor_iron"),
-        stat("HP","Vitalité","Vitalité","HealthMax","base_add","5","25",5,"",
-             "Augmente votre santé maximale.","Augmente votre santé maximale.","ui_game_symbol_healing_factor"),
-        stat("Vigor","Endurance","Endurance","StaminaLoss","perc_add","-.06","-.30",5,"",
-             "Réduit l'endurance dépensée par les actions.","Réduit l'endurance dépensée par les actions.","ui_game_symbol_cardio"),
-        stat("StamRegen","Récupération","Récupération","StaminaChangeOT","perc_add",".05",".25",5,"",
-             "Récupère l'endurance plus vite.","Récupère l'endurance plus vite.","ui_game_symbol_cardio"),
-        stat("Carry","Portage","Portage","CarryCapacity","base_add","1","3",3,"",
-             "Ajoute des emplacements de portage.","Ajoute des emplacements de portage.","ui_game_symbol_pack_mule"),
-        stat("Resist","Constitution","Constitution","GeneralDamageResist","base_add","1","3",3,"",
-             "Réduit légèrement tous les dégâts subis.","Réduit légèrement tous les dégâts subis.","ui_game_symbol_armor_iron"),
-        stat("Buff","Tempérament","Tempérament","BuffResistance","base_add","1","3",3,"",
-             "Résiste aux effets négatifs.","Résiste aux effets négatifs.","ui_game_symbol_light_armor2"),
-    ]
-    th = THEME.get(code)
-    if th:
-        tsuf, tnm, tdesc, thtag = th
-        spec.insert(0, stat(tsuf, tnm, tnm, "HarvestCount", "perc_add", ".10", ".50", 5, thtag,
-                            tdesc, tdesc, "ui_game_symbol_pack_mule"))
+    # Spécialité UNIQUE par sous-classe (plus aucun générique : ils sont chez Survivant).
+    spec = list(THEME_SPEC.get(code, []))
     return [("Arme", "Arme", "Arme", wic, arme),
             ("Metier", "Métier", "Métier", "ui_game_symbol_workbench", metier),
             ("Spec", "Spécialité", "Spécialité", "ui_game_symbol_character", spec)]
@@ -710,20 +792,36 @@ def craft(code): return CRAFTABLES.get(code)
 def _palier(i):
     return LVL[i] if i < len(LVL) else LVL[-1]
 
-def _perk_xml(L, code, skill, p):
+def _perk_xml(L, code, skill, p, gated=True):
+    """Émet un <perk>. gated=True -> requiert la classe (CVarCompare). On ajoute des
+    <effect_description> (réutilisant la clé Desc FR) pour que l'UI affiche le texte FR
+    par niveau au lieu du nom brut de l'effet (ex. 'HealthMax: 105')."""
     name = f"perkClass{code}{p['suf']}"
+    dkey = f"dhsPerk{code}{p['suf']}Desc"
+    nkey = f"dhsPerk{code}{p['suf']}Name"
+    def req(lvl, palier):
+        g = f'<requirement name="CVarCompare" cvar="{cvar(code)}" operation="Equals" value="1" desc_key="dhsReqClass{code}"/>' if gated else ''
+        return f'      <level_requirements level="{lvl}">{g}<requirement name="PlayerLevel" operation="GTE" value="{palier}"/></level_requirements>'
     if p["k"] == "stat":
-        L.append(f'    <perk name="{name}" parent="{skill}" name_key="dhsPerk{code}{p["suf"]}Name" desc_key="dhsPerk{code}{p["suf"]}Desc" icon="{p["icon"]}" max_level="{p["n"]}">')
-        for i in range(p["n"]):
-            L.append(f'      <level_requirements level="{i+1}"><requirement name="CVarCompare" cvar="{cvar(code)}" operation="Equals" value="1" desc_key="dhsReqClass{code}"/><requirement name="PlayerLevel" operation="GTE" value="{_palier(i)}"/></level_requirements>')
+        n = p["n"]
+        L.append(f'    <perk name="{name}" parent="{skill}" name_key="{nkey}" desc_key="{dkey}" icon="{p["icon"]}" max_level="{n}">')
+        for i in range(n):
+            L.append(req(i+1, _palier(i)))
         tagattr = f' tags="{p["tags"]}"' if p["tags"] else ''
-        L.append(f'      <effect_group><passive_effect name="{p["eff"]}" operation="{p["op"]}" level="1,{p["n"]}" value="{p["v1"]},{p["vmax"]}"{tagattr}/></effect_group>')
+        L.append('      <effect_group>')
+        L.append(f'        <passive_effect name="{p["eff"]}" operation="{p["op"]}" level="1,{n}" value="{p["v1"]},{p["vmax"]}"{tagattr}/>')
+        for i in range(n):
+            L.append(f'        <effect_description level="{i+1}" desc_key="{dkey}" long_desc_key="{dkey}"/>')
+        L.append('      </effect_group>')
         L.append('    </perk>')
     else:  # unlock
         cost = '0' if p["auto"] else '1'
-        L.append(f'    <perk name="{name}" parent="{skill}" name_key="dhsPerk{code}{p["suf"]}Name" desc_key="dhsPerk{code}{p["suf"]}Desc" icon="{p["icon"]}" max_level="1" base_skill_point_cost="{cost}">')
-        L.append(f'      <level_requirements level="1"><requirement name="CVarCompare" cvar="{cvar(code)}" operation="Equals" value="1" desc_key="dhsReqClass{code}"/><requirement name="PlayerLevel" operation="GTE" value="{p["palier"]}"/></level_requirements>')
-        L.append(f'      <effect_group><passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="{p["recipes"]}"/></effect_group>')
+        L.append(f'    <perk name="{name}" parent="{skill}" name_key="{nkey}" desc_key="{dkey}" icon="{p["icon"]}" max_level="1" base_skill_point_cost="{cost}">')
+        L.append(req(1, p["palier"]))
+        L.append('      <effect_group>')
+        L.append(f'        <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="{p["recipes"]}"/>')
+        L.append(f'        <effect_description level="1" desc_key="{dkey}" long_desc_key="{dkey}"/>')
+        L.append('      </effect_group>')
         L.append('    </perk>')
 
 def gen_progression():
@@ -746,24 +844,9 @@ def gen_progression():
     L.append('  </append>')
     # Perks
     L.append('  <append xpath="/progression/perks">')
-    base = [
-        ("Toughness","ui_game_symbol_armor_iron","PhysicalDamageResist","base_add","2","10",None),
-        ("Forager","ui_game_symbol_hand","HarvestCount","perc_add",".1",".5","butcherHarvest,wildCropsHarvest"),
-        ("Endurance","ui_game_symbol_run","StaminaLoss","perc_add","-.05","-.25",None),
-    ]
-    for suf,icon,nm,op,v1,v5,tag in base:
-        L.append(f'    <perk name="perkClassCommon{suf}" parent="skillClassCommon" name_key="dhsPerkCommon{suf}Name" desc_key="dhsPerkCommon{suf}Desc" icon="{icon}" max_level="5">')
-        for i in range(5):
-            L.append(f'      <level_requirements level="{i+1}"><requirement name="PlayerLevel" operation="GTE" value="{LVL[i]}"/></level_requirements>')
-        tagattr = f' tags="{tag}"' if tag else ''
-        L.append(f'      <effect_group><passive_effect name="{nm}" operation="{op}" level="1,5" value="{v1},{v5}"{tagattr}/></effect_group>')
-        L.append('    </perk>')
-    # Survivant : déblocages de BASE pour TOUS (armes T0/tuyau, outils T0, plats de base). Coût 0.
-    for suf, names, palier in [("Gear", T0_ALL, 1), ("Cuisine", BASE_FOODS, 1)]:
-        L.append(f'    <perk name="perkClassCommon{suf}" parent="skillClassCommon" name_key="dhsPerkCommon{suf}Name" desc_key="dhsPerkCommon{suf}Desc" icon="ui_game_symbol_workbench" max_level="1" base_skill_point_cost="0">')
-        L.append(f'      <level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="{palier}"/></level_requirements>')
-        L.append(f'      <effect_group><passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="{",".join(names)}"/></effect_group>')
-        L.append('    </perk>')
+    # Survivant (commun, pour TOUS) : arbre de survie générique + déblocages de base. Non gaté.
+    for p in SURVIVOR:
+        _perk_xml(L, "Common", "skillClassCommon", p, gated=False)
     for code,_sen,_sfr,_tag,_kind,_fid,_sicon,_efl,_ffl in SUBS:
         for sk,_ben,_bfr,_bicon,perks in subbranches_for(code):
             skill = f"skillClass{code}{sk}"
@@ -880,17 +963,11 @@ def gen_loc():
     rows += [
         ("dhsSkillClassCommonName","Survivor","Survivant"),
         ("dhsSkillClassCommonDesc","Common skills available to everyone","Compétences communes à tous"),
-        ("dhsPerkCommonToughnessName","Toughness","Robustesse"),
-        ("dhsPerkCommonToughnessDesc","Reduces physical damage taken.","Réduit les dégâts physiques subis."),
-        ("dhsPerkCommonForagerName","Forager","Cueilleur"),
-        ("dhsPerkCommonForagerDesc","Harvest more from animals and wild plants.","Récolte plus sur les animaux et plantes sauvages."),
-        ("dhsPerkCommonEnduranceName","Endurance","Endurance"),
-        ("dhsPerkCommonEnduranceDesc","Reduces stamina loss from actions.","Réduit la perte d'endurance des actions."),
-        ("dhsPerkCommonGearName","Débrouillardise","Débrouillardise"),
-        ("dhsPerkCommonGearDesc","Débloque la fabrication des armes et outils de base (tuyau, pierre) pour tous.","Débloque la fabrication des armes et outils de base (tuyau, pierre) pour tous."),
-        ("dhsPerkCommonCuisineName","Cuisine de survie","Cuisine de survie"),
-        ("dhsPerkCommonCuisineDesc","Débloque la préparation des plats et boissons de base pour tous.","Débloque la préparation des plats et boissons de base pour tous."),
     ]
+    # Loc des perks Survivant (générés depuis SURVIVOR)
+    for p in SURVIVOR:
+        rows.append((f"dhsPerkCommon{p['suf']}Name", p["en"], p["fr"]))
+        rows.append((f"dhsPerkCommon{p['suf']}Desc", p["ed"], p["fd"]))
     for code,en,fr,_tag,_kind,_fid,_sicon,efl,ffl in SUBS:
         rows.append((f"dhsReqClass{code}", f"Requires the {en} class", f"Nécessite la classe {fr}"))
         rows.append((f"dhsBookClass{code}", f"Class Manual: {en}", f"Manuel de classe : {fr}"))
