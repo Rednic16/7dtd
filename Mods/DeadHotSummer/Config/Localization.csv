@@ -87,14 +87,14 @@ dhsPerkCommonAtelierName,Atelier de survie,Atelier de survie
 dhsPerkCommonAtelierDesc,"Débloque la fabrication des établis et stations (forge, établi, station chimique, bétonnière, récupérateur de rosée, creuset, enclume, marmite, gril) pour tous.","Débloque la fabrication des établis et stations (forge, établi, station chimique, bétonnière, récupérateur de rosée, creuset, enclume, marmite, gril) pour tous."
 dhsPerkCommonAtelierR1,Atelier de survie,Atelier de survie
 dhsPerkCommonAtelierR1Long,"Débloque la fabrication des établis et stations (forge, établi, station chimique, bétonnière, récupérateur de rosée, creuset, enclume, marmite, gril) pour tous.","Débloque la fabrication des établis et stations (forge, établi, station chimique, bétonnière, récupérateur de rosée, creuset, enclume, marmite, gril) pour tous."
-dhsPerkCommonArmuresName,Confection d'armures,Confection d'armures
-dhsPerkCommonArmuresDesc,Débloque la confection de toutes les tenues d'armure (toutes panoplies) pour tous.,Débloque la confection de toutes les tenues d'armure (toutes panoplies) pour tous.
-dhsPerkCommonArmuresR1,Confection d'armures,Confection d'armures
-dhsPerkCommonArmuresR1Long,Débloque la confection de toutes les tenues d'armure (toutes panoplies) pour tous.,Débloque la confection de toutes les tenues d'armure (toutes panoplies) pour tous.
-dhsPerkCommonModsName,Bricolage de mods,Bricolage de mods
-dhsPerkCommonModsDesc,"Débloque la fabrication des modifications d'armes, d'armures, de mêlée, de véhicules et de drones pour tous.","Débloque la fabrication des modifications d'armes, d'armures, de mêlée, de véhicules et de drones pour tous."
-dhsPerkCommonModsR1,Bricolage de mods,Bricolage de mods
-dhsPerkCommonModsR1Long,"Débloque la fabrication des modifications d'armes, d'armures, de mêlée, de véhicules et de drones pour tous.","Débloque la fabrication des modifications d'armes, d'armures, de mêlée, de véhicules et de drones pour tous."
+dhsPerkCommonArmureBaseName,Armure de base,Armure de base
+dhsPerkCommonArmureBaseDesc,Débloque la confection de l'armure primitive (de base) pour tous. Les panoplies avancées s'apprennent dans les sous-classes.,Débloque la confection de l'armure primitive (de base) pour tous. Les panoplies avancées s'apprennent dans les sous-classes.
+dhsPerkCommonArmureBaseR1,Armure de base,Armure de base
+dhsPerkCommonArmureBaseR1Long,Débloque la confection de l'armure primitive (de base) pour tous. Les panoplies avancées s'apprennent dans les sous-classes.,Débloque la confection de l'armure primitive (de base) pour tous. Les panoplies avancées s'apprennent dans les sous-classes.
+dhsPerkCommonMunsBaseName,Munitions de base,Munitions de base
+dhsPerkCommonMunsBaseDesc,"Débloque la fabrication en lot des munitions de base (balles standard, flèches/carreaux, cartouches, munitions de tourelle) pour tous. Les munitions spécialisées s'apprennent dans les sous-classes.","Débloque la fabrication en lot des munitions de base (balles standard, flèches/carreaux, cartouches, munitions de tourelle) pour tous. Les munitions spécialisées s'apprennent dans les sous-classes."
+dhsPerkCommonMunsBaseR1,Munitions de base,Munitions de base
+dhsPerkCommonMunsBaseR1Long,"Débloque la fabrication en lot des munitions de base (balles standard, flèches/carreaux, cartouches, munitions de tourelle) pour tous. Les munitions spécialisées s'apprennent dans les sous-classes.","Débloque la fabrication en lot des munitions de base (balles standard, flèches/carreaux, cartouches, munitions de tourelle) pour tous. Les munitions spécialisées s'apprennent dans les sous-classes."
 dhsPerkCommonMateriauxName,Récupération & matériaux,Récupération & matériaux
 dhsPerkCommonMateriauxDesc,"Débloque la fabrication des matériaux et munitions intermédiaires de base (poudre, crochets, lots de ressources, etc.) pour tous.","Débloque la fabrication des matériaux et munitions intermédiaires de base (poudre, crochets, lots de ressources, etc.) pour tous."
 dhsPerkCommonMateriauxR1,Récupération & matériaux,Récupération & matériaux
@@ -266,6 +266,20 @@ dhsPerkEngiMechTradeR4,Casse auto,Casse auto
 dhsPerkEngiMechTradeR4Long,Niveau 4 : +8. Améliore les prix de vente.,Niveau 4 : +8. Améliore les prix de vente.
 dhsPerkEngiMechTradeR5,Casse auto,Casse auto
 dhsPerkEngiMechTradeR5Long,Niveau 5 : +10. Améliore les prix de vente.,Niveau 5 : +10. Améliore les prix de vente.
+dhsSkillClassEngiMechEquipName,Mécanicien — Équipement,Mécanicien — Équipement
+dhsSkillClassEngiMechEquipDesc,Sous-branche Mécanicien : Équipement.,Sous-branche Mécanicien : Équipement.
+dhsPerkEngiMechArmureName,Panoplie Motard,Panoplie Motard
+dhsPerkEngiMechArmureDesc,"Débloque la confection de la panoplie d'armure Motard (casque, torse, gants, bottes).","Débloque la confection de la panoplie d'armure Motard (casque, torse, gants, bottes)."
+dhsPerkEngiMechArmureR1,Panoplie Motard,Panoplie Motard
+dhsPerkEngiMechArmureR1Long,"Débloque la confection de la panoplie d'armure Motard (casque, torse, gants, bottes).","Débloque la confection de la panoplie d'armure Motard (casque, torse, gants, bottes)."
+dhsPerkEngiMechMunsName,Munitions spécialisées,Munitions spécialisées
+dhsPerkEngiMechMunsDesc,"Débloque la fabrication des munitions spécialisées de votre arme (perforantes, à pointe creuse, explosives, etc.).","Débloque la fabrication des munitions spécialisées de votre arme (perforantes, à pointe creuse, explosives, etc.)."
+dhsPerkEngiMechMunsR1,Munitions spécialisées,Munitions spécialisées
+dhsPerkEngiMechMunsR1Long,"Débloque la fabrication des munitions spécialisées de votre arme (perforantes, à pointe creuse, explosives, etc.).","Débloque la fabrication des munitions spécialisées de votre arme (perforantes, à pointe creuse, explosives, etc.)."
+dhsPerkEngiMechModsName,Modifications,Modifications
+dhsPerkEngiMechModsDesc,Débloque la fabrication des modifications adaptées à votre spécialité.,Débloque la fabrication des modifications adaptées à votre spécialité.
+dhsPerkEngiMechModsR1,Modifications,Modifications
+dhsPerkEngiMechModsR1Long,Débloque la fabrication des modifications adaptées à votre spécialité.,Débloque la fabrication des modifications adaptées à votre spécialité.
 dhsAmmoTurretHV,Munition de tourelle haute vélocité,Munition de tourelle haute vélocité
 dhsAmmoTurretHVDesc,Munition optimisée pour tourelles et drones : dégâts robotiques accrus. Fabriquée uniquement par le Mécanicien.,Munition optimisée pour tourelles et drones : dégâts robotiques accrus. Fabriquée uniquement par le Mécanicien.
 dhsReqClassEngiElec,Nécessite la classe Électricien,Nécessite la classe Électricien
@@ -453,6 +467,16 @@ dhsPerkEngiElecPlateR3,Combinaison isolante,Combinaison isolante
 dhsPerkEngiElecPlateR3Long,Niveau 3 : +3. Réduit les dégâts physiques subis.,Niveau 3 : +3. Réduit les dégâts physiques subis.
 dhsPerkEngiElecPlateR4,Combinaison isolante,Combinaison isolante
 dhsPerkEngiElecPlateR4Long,Niveau 4 : +4. Réduit les dégâts physiques subis.,Niveau 4 : +4. Réduit les dégâts physiques subis.
+dhsSkillClassEngiElecEquipName,Électricien — Équipement,Électricien — Équipement
+dhsSkillClassEngiElecEquipDesc,Sous-branche Électricien : Équipement.,Sous-branche Électricien : Équipement.
+dhsPerkEngiElecArmureName,Panoplie Exécuteur,Panoplie Exécuteur
+dhsPerkEngiElecArmureDesc,"Débloque la confection de la panoplie d'armure Exécuteur (casque, torse, gants, bottes).","Débloque la confection de la panoplie d'armure Exécuteur (casque, torse, gants, bottes)."
+dhsPerkEngiElecArmureR1,Panoplie Exécuteur,Panoplie Exécuteur
+dhsPerkEngiElecArmureR1Long,"Débloque la confection de la panoplie d'armure Exécuteur (casque, torse, gants, bottes).","Débloque la confection de la panoplie d'armure Exécuteur (casque, torse, gants, bottes)."
+dhsPerkEngiElecModsName,Modifications,Modifications
+dhsPerkEngiElecModsDesc,Débloque la fabrication des modifications adaptées à votre spécialité.,Débloque la fabrication des modifications adaptées à votre spécialité.
+dhsPerkEngiElecModsR1,Modifications,Modifications
+dhsPerkEngiElecModsR1Long,Débloque la fabrication des modifications adaptées à votre spécialité.,Débloque la fabrication des modifications adaptées à votre spécialité.
 dhsBatteryHD,Cellule d'énergie renforcée,Cellule d'énergie renforcée
 dhsBatteryHDDesc,Batterie haute capacité pour pièges et installations électriques. Fabriquée uniquement par l'Électricien.,Batterie haute capacité pour pièges et installations électriques. Fabriquée uniquement par l'Électricien.
 dhsReqClassMedicSurg,Nécessite la classe Chirurgien,Nécessite la classe Chirurgien
@@ -646,6 +670,16 @@ dhsPerkMedicSurgTradeR4,Praticien,Praticien
 dhsPerkMedicSurgTradeR4Long,Niveau 4 : +8. Améliore les prix de vente.,Niveau 4 : +8. Améliore les prix de vente.
 dhsPerkMedicSurgTradeR5,Praticien,Praticien
 dhsPerkMedicSurgTradeR5Long,Niveau 5 : +10. Améliore les prix de vente.,Niveau 5 : +10. Améliore les prix de vente.
+dhsSkillClassMedicSurgEquipName,Chirurgien — Équipement,Chirurgien — Équipement
+dhsSkillClassMedicSurgEquipDesc,Sous-branche Chirurgien : Équipement.,Sous-branche Chirurgien : Équipement.
+dhsPerkMedicSurgArmureName,Panoplie Prêcheur,Panoplie Prêcheur
+dhsPerkMedicSurgArmureDesc,"Débloque la confection de la panoplie d'armure Prêcheur (casque, torse, gants, bottes).","Débloque la confection de la panoplie d'armure Prêcheur (casque, torse, gants, bottes)."
+dhsPerkMedicSurgArmureR1,Panoplie Prêcheur,Panoplie Prêcheur
+dhsPerkMedicSurgArmureR1Long,"Débloque la confection de la panoplie d'armure Prêcheur (casque, torse, gants, bottes).","Débloque la confection de la panoplie d'armure Prêcheur (casque, torse, gants, bottes)."
+dhsPerkMedicSurgModsName,Modifications,Modifications
+dhsPerkMedicSurgModsDesc,Débloque la fabrication des modifications adaptées à votre spécialité.,Débloque la fabrication des modifications adaptées à votre spécialité.
+dhsPerkMedicSurgModsR1,Modifications,Modifications
+dhsPerkMedicSurgModsR1Long,Débloque la fabrication des modifications adaptées à votre spécialité.,Débloque la fabrication des modifications adaptées à votre spécialité.
 dhsMedSurgeryKit,Trousse de chirurgie,Trousse de chirurgie
 dhsMedSurgeryKitDesc,Trousse de soins complète de qualité hospitalière. Fabriquée uniquement par le Chirurgien.,Trousse de soins complète de qualité hospitalière. Fabriquée uniquement par le Chirurgien.
 dhsReqClassMedicChem,Nécessite la classe Chimiste,Nécessite la classe Chimiste
@@ -823,6 +857,16 @@ dhsPerkMedicChemQuietR4,Pas discrets,Pas discrets
 dhsPerkMedicChemQuietR4Long,Niveau 4 : -16 %. Réduit le bruit que vous faites.,Niveau 4 : -16 %. Réduit le bruit que vous faites.
 dhsPerkMedicChemQuietR5,Pas discrets,Pas discrets
 dhsPerkMedicChemQuietR5Long,Niveau 5 : -20 %. Réduit le bruit que vous faites.,Niveau 5 : -20 %. Réduit le bruit que vous faites.
+dhsSkillClassMedicChemEquipName,Chimiste — Équipement,Chimiste — Équipement
+dhsSkillClassMedicChemEquipDesc,Sous-branche Chimiste : Équipement.,Sous-branche Chimiste : Équipement.
+dhsPerkMedicChemArmureName,Panoplie Intello,Panoplie Intello
+dhsPerkMedicChemArmureDesc,"Débloque la confection de la panoplie d'armure Intello (casque, torse, gants, bottes).","Débloque la confection de la panoplie d'armure Intello (casque, torse, gants, bottes)."
+dhsPerkMedicChemArmureR1,Panoplie Intello,Panoplie Intello
+dhsPerkMedicChemArmureR1Long,"Débloque la confection de la panoplie d'armure Intello (casque, torse, gants, bottes).","Débloque la confection de la panoplie d'armure Intello (casque, torse, gants, bottes)."
+dhsPerkMedicChemMunsName,Munitions spécialisées,Munitions spécialisées
+dhsPerkMedicChemMunsDesc,"Débloque la fabrication des munitions spécialisées de votre arme (perforantes, à pointe creuse, explosives, etc.).","Débloque la fabrication des munitions spécialisées de votre arme (perforantes, à pointe creuse, explosives, etc.)."
+dhsPerkMedicChemMunsR1,Munitions spécialisées,Munitions spécialisées
+dhsPerkMedicChemMunsR1Long,"Débloque la fabrication des munitions spécialisées de votre arme (perforantes, à pointe creuse, explosives, etc.).","Débloque la fabrication des munitions spécialisées de votre arme (perforantes, à pointe creuse, explosives, etc.)."
 dhsThrownFirebomb,Cocktail incendiaire du chimiste,Cocktail incendiaire du chimiste
 dhsThrownFirebombDesc,Cocktail incendiaire renforcé à la chimie : bien plus dévastateur. Fabriqué uniquement par le Chimiste.,Cocktail incendiaire renforcé à la chimie : bien plus dévastateur. Fabriqué uniquement par le Chimiste.
 dhsReqClassSoldSnip,Nécessite la classe Tireur d'élite,Nécessite la classe Tireur d'élite
@@ -1014,6 +1058,20 @@ dhsPerkSoldSnipQuarterR4,Économe de guerre,Économe de guerre
 dhsPerkSoldSnipQuarterR4Long,Niveau 4 : +8. Améliore les prix de vente chez les marchands.,Niveau 4 : +8. Améliore les prix de vente chez les marchands.
 dhsPerkSoldSnipQuarterR5,Économe de guerre,Économe de guerre
 dhsPerkSoldSnipQuarterR5Long,Niveau 5 : +10. Améliore les prix de vente chez les marchands.,Niveau 5 : +10. Améliore les prix de vente chez les marchands.
+dhsSkillClassSoldSnipEquipName,Tireur d'élite — Équipement,Tireur d'élite — Équipement
+dhsSkillClassSoldSnipEquipDesc,Sous-branche Tireur d'élite : Équipement.,Sous-branche Tireur d'élite : Équipement.
+dhsPerkSoldSnipArmureName,Panoplie Ranger (longue portée),Panoplie Ranger (longue portée)
+dhsPerkSoldSnipArmureDesc,"Débloque la confection de la panoplie d'armure Ranger (longue portée) (casque, torse, gants, bottes).","Débloque la confection de la panoplie d'armure Ranger (longue portée) (casque, torse, gants, bottes)."
+dhsPerkSoldSnipArmureR1,Panoplie Ranger (longue portée),Panoplie Ranger (longue portée)
+dhsPerkSoldSnipArmureR1Long,"Débloque la confection de la panoplie d'armure Ranger (longue portée) (casque, torse, gants, bottes).","Débloque la confection de la panoplie d'armure Ranger (longue portée) (casque, torse, gants, bottes)."
+dhsPerkSoldSnipMunsName,Munitions spécialisées,Munitions spécialisées
+dhsPerkSoldSnipMunsDesc,"Débloque la fabrication des munitions spécialisées de votre arme (perforantes, à pointe creuse, explosives, etc.).","Débloque la fabrication des munitions spécialisées de votre arme (perforantes, à pointe creuse, explosives, etc.)."
+dhsPerkSoldSnipMunsR1,Munitions spécialisées,Munitions spécialisées
+dhsPerkSoldSnipMunsR1Long,"Débloque la fabrication des munitions spécialisées de votre arme (perforantes, à pointe creuse, explosives, etc.).","Débloque la fabrication des munitions spécialisées de votre arme (perforantes, à pointe creuse, explosives, etc.)."
+dhsPerkSoldSnipModsName,Modifications,Modifications
+dhsPerkSoldSnipModsDesc,Débloque la fabrication des modifications adaptées à votre spécialité.,Débloque la fabrication des modifications adaptées à votre spécialité.
+dhsPerkSoldSnipModsR1,Modifications,Modifications
+dhsPerkSoldSnipModsR1Long,Débloque la fabrication des modifications adaptées à votre spécialité.,Débloque la fabrication des modifications adaptées à votre spécialité.
 dhsAmmoMatchAP,Cartouche de match perforante,Cartouche de match perforante
 dhsAmmoMatchAPDesc,Munition de précision montée main : dégâts et perforation accrus. Fabriquée uniquement par le Tireur d'élite.,Munition de précision montée main : dégâts et perforation accrus. Fabriquée uniquement par le Tireur d'élite.
 dhsReqClassSoldAslt,Nécessite la classe Assaut,Nécessite la classe Assaut
@@ -1209,6 +1267,20 @@ dhsPerkSoldAsltMoraleR3,Cri de guerre,Cri de guerre
 dhsPerkSoldAsltMoraleR3Long,Niveau 3 : +3. Résiste aux effets négatifs.,Niveau 3 : +3. Résiste aux effets négatifs.
 dhsPerkSoldAsltMoraleR4,Cri de guerre,Cri de guerre
 dhsPerkSoldAsltMoraleR4Long,Niveau 4 : +4. Résiste aux effets négatifs.,Niveau 4 : +4. Résiste aux effets négatifs.
+dhsSkillClassSoldAsltEquipName,Assaut — Équipement,Assaut — Équipement
+dhsSkillClassSoldAsltEquipDesc,Sous-branche Assaut : Équipement.,Sous-branche Assaut : Équipement.
+dhsPerkSoldAsltArmureName,Panoplie Commando,Panoplie Commando
+dhsPerkSoldAsltArmureDesc,"Débloque la confection de la panoplie d'armure Commando (casque, torse, gants, bottes).","Débloque la confection de la panoplie d'armure Commando (casque, torse, gants, bottes)."
+dhsPerkSoldAsltArmureR1,Panoplie Commando,Panoplie Commando
+dhsPerkSoldAsltArmureR1Long,"Débloque la confection de la panoplie d'armure Commando (casque, torse, gants, bottes).","Débloque la confection de la panoplie d'armure Commando (casque, torse, gants, bottes)."
+dhsPerkSoldAsltMunsName,Munitions spécialisées,Munitions spécialisées
+dhsPerkSoldAsltMunsDesc,"Débloque la fabrication des munitions spécialisées de votre arme (perforantes, à pointe creuse, explosives, etc.).","Débloque la fabrication des munitions spécialisées de votre arme (perforantes, à pointe creuse, explosives, etc.)."
+dhsPerkSoldAsltMunsR1,Munitions spécialisées,Munitions spécialisées
+dhsPerkSoldAsltMunsR1Long,"Débloque la fabrication des munitions spécialisées de votre arme (perforantes, à pointe creuse, explosives, etc.).","Débloque la fabrication des munitions spécialisées de votre arme (perforantes, à pointe creuse, explosives, etc.)."
+dhsPerkSoldAsltModsName,Modifications,Modifications
+dhsPerkSoldAsltModsDesc,Débloque la fabrication des modifications adaptées à votre spécialité.,Débloque la fabrication des modifications adaptées à votre spécialité.
+dhsPerkSoldAsltModsR1,Modifications,Modifications
+dhsPerkSoldAsltModsR1Long,Débloque la fabrication des modifications adaptées à votre spécialité.,Débloque la fabrication des modifications adaptées à votre spécialité.
 dhsAmmoBattle,Cartouche de combat,Cartouche de combat
 dhsAmmoBattleDesc,Munition de combat surchargée pour le tir nourri. Fabriquée uniquement par l'Assaut.,Munition de combat surchargée pour le tir nourri. Fabriquée uniquement par l'Assaut.
 dhsReqClassSurvHunt,Nécessite la classe Chasseur,Nécessite la classe Chasseur
@@ -1402,6 +1474,20 @@ dhsPerkSurvHuntHeatR4,Endurci au climat,Endurci au climat
 dhsPerkSurvHuntHeatR4Long,Niveau 4 : +8. Améliore la résistance à la chaleur.,Niveau 4 : +8. Améliore la résistance à la chaleur.
 dhsPerkSurvHuntHeatR5,Endurci au climat,Endurci au climat
 dhsPerkSurvHuntHeatR5Long,Niveau 5 : +10. Améliore la résistance à la chaleur.,Niveau 5 : +10. Améliore la résistance à la chaleur.
+dhsSkillClassSurvHuntEquipName,Chasseur — Équipement,Chasseur — Équipement
+dhsSkillClassSurvHuntEquipDesc,Sous-branche Chasseur : Équipement.,Sous-branche Chasseur : Équipement.
+dhsPerkSurvHuntArmureName,Panoplie Maraudeur,Panoplie Maraudeur
+dhsPerkSurvHuntArmureDesc,"Débloque la confection de la panoplie d'armure Maraudeur (casque, torse, gants, bottes).","Débloque la confection de la panoplie d'armure Maraudeur (casque, torse, gants, bottes)."
+dhsPerkSurvHuntArmureR1,Panoplie Maraudeur,Panoplie Maraudeur
+dhsPerkSurvHuntArmureR1Long,"Débloque la confection de la panoplie d'armure Maraudeur (casque, torse, gants, bottes).","Débloque la confection de la panoplie d'armure Maraudeur (casque, torse, gants, bottes)."
+dhsPerkSurvHuntMunsName,Munitions spécialisées,Munitions spécialisées
+dhsPerkSurvHuntMunsDesc,"Débloque la fabrication des munitions spécialisées de votre arme (perforantes, à pointe creuse, explosives, etc.).","Débloque la fabrication des munitions spécialisées de votre arme (perforantes, à pointe creuse, explosives, etc.)."
+dhsPerkSurvHuntMunsR1,Munitions spécialisées,Munitions spécialisées
+dhsPerkSurvHuntMunsR1Long,"Débloque la fabrication des munitions spécialisées de votre arme (perforantes, à pointe creuse, explosives, etc.).","Débloque la fabrication des munitions spécialisées de votre arme (perforantes, à pointe creuse, explosives, etc.)."
+dhsPerkSurvHuntModsName,Modifications,Modifications
+dhsPerkSurvHuntModsDesc,Débloque la fabrication des modifications adaptées à votre spécialité.,Débloque la fabrication des modifications adaptées à votre spécialité.
+dhsPerkSurvHuntModsR1,Modifications,Modifications
+dhsPerkSurvHuntModsR1Long,Débloque la fabrication des modifications adaptées à votre spécialité.,Débloque la fabrication des modifications adaptées à votre spécialité.
 dhsAmmoHuntArrow,Flèche de chasse,Flèche de chasse
 dhsAmmoHuntArrowDesc,"Flèche lourde de chasseur, bien plus pénétrante sur le gibier et les morts. Fabriquée uniquement par le Chasseur.","Flèche lourde de chasseur, bien plus pénétrante sur le gibier et les morts. Fabriquée uniquement par le Chasseur."
 dhsReqClassSurvHerb,Nécessite la classe Herboriste,Nécessite la classe Herboriste
@@ -1595,6 +1681,12 @@ dhsPerkSurvHerbForageR4,Herboriste chevronné,Herboriste chevronné
 dhsPerkSurvHerbForageR4Long,Niveau 4 : +12 %. Améliore la qualité du butin de fouille.,Niveau 4 : +12 %. Améliore la qualité du butin de fouille.
 dhsPerkSurvHerbForageR5,Herboriste chevronné,Herboriste chevronné
 dhsPerkSurvHerbForageR5Long,Niveau 5 : +15 %. Améliore la qualité du butin de fouille.,Niveau 5 : +15 %. Améliore la qualité du butin de fouille.
+dhsSkillClassSurvHerbEquipName,Herboriste — Équipement,Herboriste — Équipement
+dhsSkillClassSurvHerbEquipDesc,Sous-branche Herboriste : Équipement.,Sous-branche Herboriste : Équipement.
+dhsPerkSurvHerbArmureName,Panoplie Charognard,Panoplie Charognard
+dhsPerkSurvHerbArmureDesc,"Débloque la confection de la panoplie d'armure Charognard (casque, torse, gants, bottes).","Débloque la confection de la panoplie d'armure Charognard (casque, torse, gants, bottes)."
+dhsPerkSurvHerbArmureR1,Panoplie Charognard,Panoplie Charognard
+dhsPerkSurvHerbArmureR1Long,"Débloque la confection de la panoplie d'armure Charognard (casque, torse, gants, bottes).","Débloque la confection de la panoplie d'armure Charognard (casque, torse, gants, bottes)."
 dhsDrinkDecoction,Décoction d'herboriste,Décoction d'herboriste
 dhsDrinkDecoctionDesc,Tisane fortifiante : régule l'endurance et endurcit le corps. Préparée uniquement par l'Herboriste.,Tisane fortifiante : régule l'endurance et endurcit le corps. Préparée uniquement par l'Herboriste.
 dhsBuffHerbalName,Décoction d'herboriste,Décoction d'herboriste
@@ -1786,6 +1878,16 @@ dhsPerkBuilArchHeatR4,Forgeron endurci,Forgeron endurci
 dhsPerkBuilArchHeatR4Long,Niveau 4 : +8. Améliore la résistance à la chaleur.,Niveau 4 : +8. Améliore la résistance à la chaleur.
 dhsPerkBuilArchHeatR5,Forgeron endurci,Forgeron endurci
 dhsPerkBuilArchHeatR5Long,Niveau 5 : +10. Améliore la résistance à la chaleur.,Niveau 5 : +10. Améliore la résistance à la chaleur.
+dhsSkillClassBuilArchEquipName,Architecte — Équipement,Architecte — Équipement
+dhsSkillClassBuilArchEquipDesc,Sous-branche Architecte : Équipement.,Sous-branche Architecte : Équipement.
+dhsPerkBuilArchArmureName,Panoplie Pillard,Panoplie Pillard
+dhsPerkBuilArchArmureDesc,"Débloque la confection de la panoplie d'armure Pillard (casque, torse, gants, bottes).","Débloque la confection de la panoplie d'armure Pillard (casque, torse, gants, bottes)."
+dhsPerkBuilArchArmureR1,Panoplie Pillard,Panoplie Pillard
+dhsPerkBuilArchArmureR1Long,"Débloque la confection de la panoplie d'armure Pillard (casque, torse, gants, bottes).","Débloque la confection de la panoplie d'armure Pillard (casque, torse, gants, bottes)."
+dhsPerkBuilArchModsName,Modifications,Modifications
+dhsPerkBuilArchModsDesc,Débloque la fabrication des modifications adaptées à votre spécialité.,Débloque la fabrication des modifications adaptées à votre spécialité.
+dhsPerkBuilArchModsR1,Modifications,Modifications
+dhsPerkBuilArchModsR1Long,Débloque la fabrication des modifications adaptées à votre spécialité.,Débloque la fabrication des modifications adaptées à votre spécialité.
 dhsReqClassBuilArti,Nécessite la classe Artisan,Nécessite la classe Artisan
 dhsBookClassBuilArti,Manuel de classe : Artisan,Manuel de classe : Artisan
 dhsBookClassBuilArtiDesc,"Devenez Artisan : maîtrisez les ateliers, outils et l'artisanat. La lecture choisit la classe Artisan, débloque son craft signature et octroie quelques points de classe.","Devenez Artisan : maîtrisez les ateliers, outils et l'artisanat. La lecture choisit la classe Artisan, débloque son craft signature et octroie quelques points de classe."
@@ -1963,6 +2065,16 @@ dhsPerkBuilArtiPlateR3,Atelier blindé,Atelier blindé
 dhsPerkBuilArtiPlateR3Long,Niveau 3 : +3. Réduit les dégâts physiques subis.,Niveau 3 : +3. Réduit les dégâts physiques subis.
 dhsPerkBuilArtiPlateR4,Atelier blindé,Atelier blindé
 dhsPerkBuilArtiPlateR4Long,Niveau 4 : +4. Réduit les dégâts physiques subis.,Niveau 4 : +4. Réduit les dégâts physiques subis.
+dhsSkillClassBuilArtiEquipName,Artisan — Équipement,Artisan — Équipement
+dhsSkillClassBuilArtiEquipDesc,Sous-branche Artisan : Équipement.,Sous-branche Artisan : Équipement.
+dhsPerkBuilArtiArmureName,Panoplie Mineur,Panoplie Mineur
+dhsPerkBuilArtiArmureDesc,"Débloque la confection de la panoplie d'armure Mineur (casque, torse, gants, bottes).","Débloque la confection de la panoplie d'armure Mineur (casque, torse, gants, bottes)."
+dhsPerkBuilArtiArmureR1,Panoplie Mineur,Panoplie Mineur
+dhsPerkBuilArtiArmureR1Long,"Débloque la confection de la panoplie d'armure Mineur (casque, torse, gants, bottes).","Débloque la confection de la panoplie d'armure Mineur (casque, torse, gants, bottes)."
+dhsPerkBuilArtiModsName,Modifications,Modifications
+dhsPerkBuilArtiModsDesc,Débloque la fabrication des modifications adaptées à votre spécialité.,Débloque la fabrication des modifications adaptées à votre spécialité.
+dhsPerkBuilArtiModsR1,Modifications,Modifications
+dhsPerkBuilArtiModsR1Long,Débloque la fabrication des modifications adaptées à votre spécialité.,Débloque la fabrication des modifications adaptées à votre spécialité.
 dhsRepairKitPro,Trousse de réparation pro,Trousse de réparation pro
 dhsRepairKitProDesc,"Trousse d'artisan complète, idéale pour entretenir armes, outils et véhicules. Fabriquée uniquement par l'Artisan.","Trousse d'artisan complète, idéale pour entretenir armes, outils et véhicules. Fabriquée uniquement par l'Artisan."
 dhsReqClassScoutTrac,Nécessite la classe Pisteur,Nécessite la classe Pisteur
@@ -2156,6 +2268,16 @@ dhsPerkScoutTracHeatR4,Routard,Routard
 dhsPerkScoutTracHeatR4Long,Niveau 4 : +8. Améliore la résistance à la chaleur.,Niveau 4 : +8. Améliore la résistance à la chaleur.
 dhsPerkScoutTracHeatR5,Routard,Routard
 dhsPerkScoutTracHeatR5Long,Niveau 5 : +10. Améliore la résistance à la chaleur.,Niveau 5 : +10. Améliore la résistance à la chaleur.
+dhsSkillClassScoutTracEquipName,Pisteur — Équipement,Pisteur — Équipement
+dhsSkillClassScoutTracEquipDesc,Sous-branche Pisteur : Équipement.,Sous-branche Pisteur : Équipement.
+dhsPerkScoutTracArmureName,Panoplie Nomade et Athlète,Panoplie Nomade et Athlète
+dhsPerkScoutTracArmureDesc,"Débloque la confection de la panoplie d'armure Nomade et Athlète (casque, torse, gants, bottes).","Débloque la confection de la panoplie d'armure Nomade et Athlète (casque, torse, gants, bottes)."
+dhsPerkScoutTracArmureR1,Panoplie Nomade et Athlète,Panoplie Nomade et Athlète
+dhsPerkScoutTracArmureR1Long,"Débloque la confection de la panoplie d'armure Nomade et Athlète (casque, torse, gants, bottes).","Débloque la confection de la panoplie d'armure Nomade et Athlète (casque, torse, gants, bottes)."
+dhsPerkScoutTracMunsName,Munitions spécialisées,Munitions spécialisées
+dhsPerkScoutTracMunsDesc,"Débloque la fabrication des munitions spécialisées de votre arme (perforantes, à pointe creuse, explosives, etc.).","Débloque la fabrication des munitions spécialisées de votre arme (perforantes, à pointe creuse, explosives, etc.)."
+dhsPerkScoutTracMunsR1,Munitions spécialisées,Munitions spécialisées
+dhsPerkScoutTracMunsR1Long,"Débloque la fabrication des munitions spécialisées de votre arme (perforantes, à pointe creuse, explosives, etc.).","Débloque la fabrication des munitions spécialisées de votre arme (perforantes, à pointe creuse, explosives, etc.)."
 dhsAmmoLight,Balle légère du pisteur,Balle légère du pisteur
 dhsAmmoLightDesc,"Balle de pistolet allégée, dégâts accrus pour le tir rapide. Fabriquée uniquement par le Pisteur.","Balle de pistolet allégée, dégâts accrus pour le tir rapide. Fabriquée uniquement par le Pisteur."
 dhsReqClassScoutInfi,Nécessite la classe Infiltrateur,Nécessite la classe Infiltrateur
@@ -2349,6 +2471,16 @@ dhsPerkScoutInfiRareR4,Fouineur,Fouineur
 dhsPerkScoutInfiRareR4Long,Niveau 4 : +20 %. Augmente les chances de butin rare.,Niveau 4 : +20 %. Augmente les chances de butin rare.
 dhsPerkScoutInfiRareR5,Fouineur,Fouineur
 dhsPerkScoutInfiRareR5Long,Niveau 5 : +25 %. Augmente les chances de butin rare.,Niveau 5 : +25 %. Augmente les chances de butin rare.
+dhsSkillClassScoutInfiEquipName,Infiltrateur — Équipement,Infiltrateur — Équipement
+dhsSkillClassScoutInfiEquipDesc,Sous-branche Infiltrateur : Équipement.,Sous-branche Infiltrateur : Équipement.
+dhsPerkScoutInfiArmureName,Panoplie Assassin,Panoplie Assassin
+dhsPerkScoutInfiArmureDesc,"Débloque la confection de la panoplie d'armure Assassin (casque, torse, gants, bottes).","Débloque la confection de la panoplie d'armure Assassin (casque, torse, gants, bottes)."
+dhsPerkScoutInfiArmureR1,Panoplie Assassin,Panoplie Assassin
+dhsPerkScoutInfiArmureR1Long,"Débloque la confection de la panoplie d'armure Assassin (casque, torse, gants, bottes).","Débloque la confection de la panoplie d'armure Assassin (casque, torse, gants, bottes)."
+dhsPerkScoutInfiModsName,Modifications,Modifications
+dhsPerkScoutInfiModsDesc,Débloque la fabrication des modifications adaptées à votre spécialité.,Débloque la fabrication des modifications adaptées à votre spécialité.
+dhsPerkScoutInfiModsR1,Modifications,Modifications
+dhsPerkScoutInfiModsR1Long,Débloque la fabrication des modifications adaptées à votre spécialité.,Débloque la fabrication des modifications adaptées à votre spécialité.
 dhsDrugProwler,Stimulant du rôdeur,Stimulant du rôdeur
 dhsDrugProwlerDesc,Stimulant maison qui aiguise la furtivité et les réflexes. Préparé uniquement par l'Infiltrateur.,Stimulant maison qui aiguise la furtivité et les réflexes. Préparé uniquement par l'Infiltrateur.
 dhsReqClassFarmAgri,Nécessite la classe Agriculteur,Nécessite la classe Agriculteur
@@ -2566,6 +2698,20 @@ dhsPerkFarmAgriSturdyR4,Robuste paysan,Robuste paysan
 dhsPerkFarmAgriSturdyR4Long,Niveau 4 : +4. Réduit les dégâts physiques subis.,Niveau 4 : +4. Réduit les dégâts physiques subis.
 dhsPerkFarmAgriSturdyR5,Robuste paysan,Robuste paysan
 dhsPerkFarmAgriSturdyR5Long,Niveau 5 : +5. Réduit les dégâts physiques subis.,Niveau 5 : +5. Réduit les dégâts physiques subis.
+dhsSkillClassFarmAgriEquipName,Agriculteur — Équipement,Agriculteur — Équipement
+dhsSkillClassFarmAgriEquipDesc,Sous-branche Agriculteur : Équipement.,Sous-branche Agriculteur : Équipement.
+dhsPerkFarmAgriArmureName,Panoplie Fermier,Panoplie Fermier
+dhsPerkFarmAgriArmureDesc,"Débloque la confection de la panoplie d'armure Fermier (casque, torse, gants, bottes).","Débloque la confection de la panoplie d'armure Fermier (casque, torse, gants, bottes)."
+dhsPerkFarmAgriArmureR1,Panoplie Fermier,Panoplie Fermier
+dhsPerkFarmAgriArmureR1Long,"Débloque la confection de la panoplie d'armure Fermier (casque, torse, gants, bottes).","Débloque la confection de la panoplie d'armure Fermier (casque, torse, gants, bottes)."
+dhsPerkFarmAgriMunsName,Munitions spécialisées,Munitions spécialisées
+dhsPerkFarmAgriMunsDesc,"Débloque la fabrication des munitions spécialisées de votre arme (perforantes, à pointe creuse, explosives, etc.).","Débloque la fabrication des munitions spécialisées de votre arme (perforantes, à pointe creuse, explosives, etc.)."
+dhsPerkFarmAgriMunsR1,Munitions spécialisées,Munitions spécialisées
+dhsPerkFarmAgriMunsR1Long,"Débloque la fabrication des munitions spécialisées de votre arme (perforantes, à pointe creuse, explosives, etc.).","Débloque la fabrication des munitions spécialisées de votre arme (perforantes, à pointe creuse, explosives, etc.)."
+dhsPerkFarmAgriModsName,Modifications,Modifications
+dhsPerkFarmAgriModsDesc,Débloque la fabrication des modifications adaptées à votre spécialité.,Débloque la fabrication des modifications adaptées à votre spécialité.
+dhsPerkFarmAgriModsR1,Modifications,Modifications
+dhsPerkFarmAgriModsR1Long,Débloque la fabrication des modifications adaptées à votre spécialité.,Débloque la fabrication des modifications adaptées à votre spécialité.
 dhsAmmoFarmerSlug,Cartouche de fermier,Cartouche de fermier
 dhsAmmoFarmerSlugDesc,"Une lourde balle montée main, bien plus puissante qu'une balle standard. Fabriquée uniquement par les Agriculteurs.","Une lourde balle montée main, bien plus puissante qu'une balle standard. Fabriquée uniquement par les Agriculteurs."
 dhsAmmoFarmerBuck,Chevrotine de fermier,Chevrotine de fermier
@@ -2771,6 +2917,16 @@ dhsPerkFarmCookPlateR3,Carrure de chef,Carrure de chef
 dhsPerkFarmCookPlateR3Long,Niveau 3 : +3. Réduit les dégâts physiques subis.,Niveau 3 : +3. Réduit les dégâts physiques subis.
 dhsPerkFarmCookPlateR4,Carrure de chef,Carrure de chef
 dhsPerkFarmCookPlateR4Long,Niveau 4 : +4. Réduit les dégâts physiques subis.,Niveau 4 : +4. Réduit les dégâts physiques subis.
+dhsSkillClassFarmCookEquipName,Cuisinier — Équipement,Cuisinier — Équipement
+dhsSkillClassFarmCookEquipDesc,Sous-branche Cuisinier : Équipement.,Sous-branche Cuisinier : Équipement.
+dhsPerkFarmCookArmureName,Panoplie Bûcheron,Panoplie Bûcheron
+dhsPerkFarmCookArmureDesc,"Débloque la confection de la panoplie d'armure Bûcheron (casque, torse, gants, bottes).","Débloque la confection de la panoplie d'armure Bûcheron (casque, torse, gants, bottes)."
+dhsPerkFarmCookArmureR1,Panoplie Bûcheron,Panoplie Bûcheron
+dhsPerkFarmCookArmureR1Long,"Débloque la confection de la panoplie d'armure Bûcheron (casque, torse, gants, bottes).","Débloque la confection de la panoplie d'armure Bûcheron (casque, torse, gants, bottes)."
+dhsPerkFarmCookModsName,Modifications,Modifications
+dhsPerkFarmCookModsDesc,Débloque la fabrication des modifications adaptées à votre spécialité.,Débloque la fabrication des modifications adaptées à votre spécialité.
+dhsPerkFarmCookModsR1,Modifications,Modifications
+dhsPerkFarmCookModsR1Long,Débloque la fabrication des modifications adaptées à votre spécialité.,Débloque la fabrication des modifications adaptées à votre spécialité.
 dhsFoodFeast,Festin d'équipe,Festin d'équipe
 dhsFoodFeastDesc,Un copieux repas partagé. Vous rassasie et buff les alliés proches. Cuisiné uniquement par les Cuisiniers.,Un copieux repas partagé. Vous rassasie et buff les alliés proches. Cuisiné uniquement par les Cuisiniers.
 dhsFoodFeastGrand,Grand festin,Grand festin

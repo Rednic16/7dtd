@@ -269,14 +269,76 @@ T0_ALL = ["gunHandgunT0PipePistol","gunRifleT0PipeRifle","gunMGT0PipeMachineGun"
 # Plats de base + eau -> débloqués par Survivant (pour TOUS).
 BASE_FOODS = ["foodGrilledMeat","foodBoiledMeat","foodCornOnTheCob","foodBakedPotato","drinkJarBoiledWater","foodMeatStew"]
 
-# ---- Crafts "sans classe propre" -> rattachés à SURVIVANT (pour TOUS) ----
-# (L'onglet Artisanat vanilla est masqué ; ces recettes, qui n'appartiennent à aucune
-#  sous-classe, deviennent l'identité de la classe commune. Listes extraites de recipes.xml.)
+# ---- Crafts génériques -> rattachés à SURVIVANT (pour TOUS) ----
+# (L'onglet Artisanat vanilla est masqué ; ces recettes, sans identité de classe, deviennent
+#  l'identité de la classe commune. Listes extraites de recipes.xml.)
 SURV_STATIONS = ["forge","workbench","chemistryStation","cementMixer","cntDewCollector",
                  "toolForgeCrucible","toolAnvil","toolCookingPot","toolCookingGrill"]
-SURV_ARMOR = ["armorAssassinBoots","armorAssassinGloves","armorAssassinHelmet","armorAssassinOutfit","armorAthleticBoots","armorAthleticGloves","armorAthleticHelmet","armorAthleticOutfit","armorBikerBoots","armorBikerGloves","armorBikerHelmet","armorBikerOutfit","armorCommandoBoots","armorCommandoGloves","armorCommandoHelmet","armorCommandoOutfit","armorEnforcerBoots","armorEnforcerGloves","armorEnforcerHelmet","armorEnforcerOutfit","armorFarmerBoots","armorFarmerGloves","armorFarmerHelmet","armorFarmerOutfit","armorLumberjackBoots","armorLumberjackGloves","armorLumberjackHelmet","armorLumberjackOutfit","armorMinerBoots","armorMinerGloves","armorMinerHelmet","armorMinerOutfit","armorNerdBoots","armorNerdGloves","armorNerdHelmet","armorNerdOutfit","armorNomadBoots","armorNomadGloves","armorNomadHelmet","armorNomadOutfit","armorPreacherBoots","armorPreacherGloves","armorPreacherHelmet","armorPreacherOutfit","armorPrimitiveBoots","armorPrimitiveGloves","armorPrimitiveHelmet","armorPrimitiveOutfit","armorRaiderBoots","armorRaiderGloves","armorRaiderHelmet","armorRaiderOutfit","armorRangerBoots","armorRangerGloves","armorRangerHelmet","armorRangerOutfit","armorRogueBoots","armorRogueGloves","armorRogueHelmet","armorRogueOutfit","armorScavengerBoots","armorScavengerGloves","armorScavengerHelmet","armorScavengerOutfit"]
-SURV_MODS = ["modArmorAdvancedMuffledConnectors","modArmorBandolier","modArmorCigar","modArmorCoolingMesh","modArmorCustomizedFittings","modArmorDoubleStoragePocket","modArmorHelmetLight","modArmorImpactBracing","modArmorImprovedFittings","modArmorInsulatedLiner","modArmorMuffledConnectors","modArmorPlatingBasic","modArmorPlatingReinforced","modArmorQuadStoragePocket","modArmorStealthBoots","modArmorStoragePocket","modArmorTripleStoragePocket","modArmorWaterPurifier","modFuelTankLarge","modFuelTankSmall","modGunBarrelExtender","modGunBipod","modGunBowArrowRest","modGunBowPolymerString","modGunChoke","modGunCrippleEm","modGunDrumMagazineExtender","modGunDuckbill","modGunFlashlight","modGunForegrip","modGunLaserSight","modGunMagazineExtender","modGunMeleeRadRemover","modGunMeleeTheHunter","modGunMuzzleBrake","modGunReflexSight","modGunRetractingStock","modGunScopeLarge","modGunScopeMedium","modGunScopeSmall","modGunShotgunTubeExtenderMagazine","modGunSoundSuppressorSilencer","modGunTriggerGroupAutomatic","modGunTriggerGroupBurst3","modGunTriggerGroupSemi","modMeleeBunkerBuster","modMeleeClubBarbedWire","modMeleeClubBurningShaft","modMeleeClubMetalChain","modMeleeClubMetalSpikes","modMeleeDiamondTip","modMeleeErgonomicGrip","modMeleeFiremansAxeMod","modMeleeFortifyingGrip","modMeleeGraveDigger","modMeleeIronBreaker","modMeleeSerratedBlade","modMeleeStructuralBrace","modMeleeStunBatonRepulsor","modMeleeTemperedBlade","modMeleeWeightedHead","modMeleeWoodSplitter","modRoboticDroneArmorPlatingMod","modRoboticDroneCargoMod","modRoboticDroneHeadlampMod","modRoboticDroneMedicMod","modRoboticDroneMoraleBoosterMod","modRoboticDroneWeaponMod","modShotgunSawedOffBarrel","modVehicleArmor","modVehicleExpandedSeat","modVehicleFuelSaver","modVehicleOffRoadHeadlights","modVehiclePlow","modVehicleReserveFuelTank","modVehicleSuperCharger"]
 SURV_RESOURCES = ["resourceCloth","resourceCoalBundle","resourceGunPowderBundle","resourceLeadBundle","resourceLockPick","resourceLockPickBundle","resourceOil","resourceOilShaleBundle","resourcePotassiumNitratePowderBundle","resourceRocketCasing","resourceRocketTip","resourceRockSmallBundle","resourceScrapIronBundle","resourceWoodBundle"]
+# Armure de base + munitions de base (lots) restent dans Survivant (pour TOUS).
+SURV_ARMOR_BASIC = ["armorPrimitiveBoots","armorPrimitiveGloves","armorPrimitiveHelmet","armorPrimitiveOutfit"]
+SURV_AMMO_BASIC = ["ammoBundle9mmBulletBall","ammoBundle762mmBulletBall","ammoBundle44MagnumBulletBall",
+                   "ammoBundleArrowIron","ammoBundleArrowStone","ammoBundleCrossbowBoltIron",
+                   "ammoBundleCrossbowBoltStone","ammoBundleShotgunShell","ammoBundleJunkTurretRegular"]
+
+# ============================================================================
+# Répartition ARMURES / MODS / MUNITIONS SPÉCIFIQUES dans les sous-classes adaptées (J1.21).
+# Chaque sous-classe reçoit une sous-branche "Équipement" (déblocages auto = identité).
+# ============================================================================
+ARMOR_PIECES = ("Helmet", "Outfit", "Gloves", "Boots")
+def armor_set(prefix): return [prefix + p for p in ARMOR_PIECES]
+# Panoplie d'armure thématique par sous-classe (Primitive -> Survivant).
+ARMOR_BY_CODE = {
+    "SoldSnip": ("armorRanger",   "Ranger (longue portée)"),
+    "SoldAslt": ("armorCommando", "Commando"),
+    "ScoutTrac":("armorNomad",    "Nomade"),
+    "ScoutInfi":("armorAssassin", "Assassin"),
+    "SurvHunt": ("armorRogue",    "Maraudeur"),
+    "SurvHerb": ("armorScavenger","Charognard"),
+    "BuilArch": ("armorRaider",   "Pillard"),
+    "BuilArti": ("armorMiner",    "Mineur"),
+    "EngiMech": ("armorBiker",    "Motard"),
+    "EngiElec": ("armorEnforcer", "Exécuteur"),
+    "MedicSurg":("armorPreacher", "Prêcheur"),
+    "MedicChem":("armorNerd",     "Intello"),
+    "FarmAgri": ("armorFarmer",   "Fermier"),
+    "FarmCook": ("armorLumberjack","Bûcheron"),
+}
+# Armure "Athletic" en plus pour le Pisteur (mobilité), pour couvrir les 15 panoplies non-Primitive.
+ARMOR_EXTRA = {"ScoutTrac": ("armorAthletic", "Athlète")}
+
+# Munitions spécifiques par sous-classe (les munitions de base restent dans Survivant).
+AMMO_BY_CODE = {
+    "SoldSnip": ["ammo762mmBulletAP","ammoBundle762mmBulletAP"],
+    "SoldAslt": ["ammo762mmBulletHP","ammoBundle762mmBulletHP"],
+    "ScoutTrac":["ammo9mmBulletAP","ammo9mmBulletHP","ammoBundle9mmBulletAP","ammoBundle9mmBulletHP",
+                 "ammo44MagnumBulletAP","ammo44MagnumBulletHP","ammoBundle44MagnumBulletAP","ammoBundle44MagnumBulletHP"],
+    "SurvHunt": ["ammoArrowExploding","ammoArrowFlaming","ammoArrowSteelAP",
+                 "ammoCrossbowBoltExploding","ammoCrossbowBoltFlaming","ammoCrossbowBoltSteelAP",
+                 "ammoBundleArrowExploding","ammoBundleArrowFlaming","ammoBundleArrowSteelAP",
+                 "ammoBundleCrossbowBoltExploding","ammoBundleCrossbowBoltFlaming","ammoBundleCrossbowBoltSteelAP"],
+    "EngiMech": ["ammoJunkTurretShell","ammoJunkTurretAP","ammoBundleJunkTurretShell","ammoBundleJunkTurretAP","ammoGasCanBundle"],
+    "MedicChem":["ammoRocketFrag","ammoRocketHE","thrownAmmoPipeBomb","thrownDynamite","thrownGrenade","thrownGrenadeContact","thrownTimedCharge"],
+    "FarmAgri": ["ammoShotgunSlug","ammoShotgunBreachingSlug","ammoBundleShotgunSlug","ammoBundleShotgunBreachingSlug"],
+}
+# Liste maîtresse des munitions à débloquer (spécifiques + lots de base) = contrôle de couverture.
+AMMO_ALL = sorted(set(SURV_AMMO_BASIC) | {a for v in AMMO_BY_CODE.values() for a in v})
+
+# Modifications par sous-classe (adaptées à l'arme/au domaine).
+MODS_BY_CODE = {
+    "SoldSnip": ["modGunScopeLarge","modGunScopeMedium","modGunScopeSmall","modGunReflexSight","modGunLaserSight","modGunFlashlight"],
+    "SoldAslt": ["modGunBarrelExtender","modGunBipod","modGunCrippleEm","modGunDrumMagazineExtender","modGunForegrip","modGunMagazineExtender","modGunMuzzleBrake","modGunRetractingStock","modGunSoundSuppressorSilencer","modGunTriggerGroupAutomatic","modGunTriggerGroupBurst3","modGunTriggerGroupSemi"],
+    "ScoutInfi":["modMeleeErgonomicGrip","modMeleeFortifyingGrip","modGunMeleeRadRemover","modGunMeleeTheHunter"],
+    "SurvHunt": ["modGunBowArrowRest","modGunBowPolymerString"],
+    "BuilArch": ["modMeleeBunkerBuster","modMeleeWoodSplitter","modMeleeFiremansAxeMod","modMeleeGraveDigger","modMeleeIronBreaker","modMeleeWeightedHead","modMeleeStructuralBrace"],
+    "BuilArti": ["modArmorAdvancedMuffledConnectors","modArmorBandolier","modArmorCigar","modArmorCoolingMesh","modArmorCustomizedFittings","modArmorDoubleStoragePocket","modArmorHelmetLight","modArmorImpactBracing","modArmorImprovedFittings","modArmorInsulatedLiner","modArmorMuffledConnectors","modArmorPlatingBasic","modArmorPlatingReinforced","modArmorQuadStoragePocket","modArmorStealthBoots","modArmorStoragePocket","modArmorTripleStoragePocket","modArmorWaterPurifier"],
+    "EngiMech": ["modVehicleArmor","modVehicleExpandedSeat","modVehicleFuelSaver","modVehicleOffRoadHeadlights","modVehiclePlow","modVehicleReserveFuelTank","modVehicleSuperCharger","modFuelTankLarge","modFuelTankSmall","modRoboticDroneArmorPlatingMod","modRoboticDroneCargoMod","modRoboticDroneHeadlampMod","modRoboticDroneMedicMod","modRoboticDroneMoraleBoosterMod","modRoboticDroneWeaponMod"],
+    "EngiElec": ["modMeleeStunBatonRepulsor"],
+    "MedicSurg":["modMeleeSerratedBlade","modMeleeTemperedBlade","modMeleeDiamondTip"],
+    "FarmAgri": ["modGunChoke","modGunDuckbill","modGunShotgunTubeExtenderMagazine","modShotgunSawedOffBarrel"],
+    "FarmCook": ["modMeleeClubBarbedWire","modMeleeClubBurningShaft","modMeleeClubMetalChain","modMeleeClubMetalSpikes"],
+}
+MODS_ALL = sorted({m for v in MODS_BY_CODE.values() for m in v})
 
 # Domaine de craft par sous-classe : (tag de catégorie pour CraftingTime/déblocage, libellé FR).
 DOMAIN = {
@@ -314,12 +376,12 @@ SURVIVOR = [
     unlock("Atelier","Atelier de survie","Atelier de survie","ui_game_symbol_workbench", ",".join(SURV_STATIONS), True, 1,
            "Débloque la fabrication des établis et stations (forge, établi, station chimique, bétonnière, récupérateur de rosée, creuset, enclume, marmite, gril) pour tous.",
            "Débloque la fabrication des établis et stations (forge, établi, station chimique, bétonnière, récupérateur de rosée, creuset, enclume, marmite, gril) pour tous."),
-    unlock("Armures","Confection d'armures","Confection d'armures","ui_game_symbol_armor_iron", ",".join(SURV_ARMOR), True, 1,
-           "Débloque la confection de toutes les tenues d'armure (toutes panoplies) pour tous.",
-           "Débloque la confection de toutes les tenues d'armure (toutes panoplies) pour tous."),
-    unlock("Mods","Bricolage de mods","Bricolage de mods","ui_game_symbol_wrench", ",".join(SURV_MODS), True, 1,
-           "Débloque la fabrication des modifications d'armes, d'armures, de mêlée, de véhicules et de drones pour tous.",
-           "Débloque la fabrication des modifications d'armes, d'armures, de mêlée, de véhicules et de drones pour tous."),
+    unlock("ArmureBase","Armure de base","Armure de base","ui_game_symbol_armor_iron", ",".join(SURV_ARMOR_BASIC), True, 1,
+           "Débloque la confection de l'armure primitive (de base) pour tous. Les panoplies avancées s'apprennent dans les sous-classes.",
+           "Débloque la confection de l'armure primitive (de base) pour tous. Les panoplies avancées s'apprennent dans les sous-classes."),
+    unlock("MunsBase","Munitions de base","Munitions de base","ui_game_symbol_rifle", ",".join(SURV_AMMO_BASIC), True, 1,
+           "Débloque la fabrication en lot des munitions de base (balles standard, flèches/carreaux, cartouches, munitions de tourelle) pour tous. Les munitions spécialisées s'apprennent dans les sous-classes.",
+           "Débloque la fabrication en lot des munitions de base (balles standard, flèches/carreaux, cartouches, munitions de tourelle) pour tous. Les munitions spécialisées s'apprennent dans les sous-classes."),
     unlock("Materiaux","Récupération & matériaux","Récupération & matériaux","ui_game_symbol_smelt", ",".join(SURV_RESOURCES), True, 1,
            "Débloque la fabrication des matériaux et munitions intermédiaires de base (poudre, crochets, lots de ressources, etc.) pour tous.",
            "Débloque la fabrication des matériaux et munitions intermédiaires de base (poudre, crochets, lots de ressources, etc.) pour tous."),
@@ -467,11 +529,46 @@ def build_domain_subbranches(code):
             ("Metier", "Métier", "Métier", "ui_game_symbol_workbench", metier),
             ("Spec", "Spécialité", "Spécialité", "ui_game_symbol_character", spec)]
 
+def equip_subbranch(code):
+    """Sous-branche ÉQUIPEMENT : déblocages (auto = identité) de la panoplie d'armure, des
+    munitions spécifiques et des mods adaptés à la sous-classe. None si rien à débloquer."""
+    perks = []
+    arm = ARMOR_BY_CODE.get(code)
+    if arm:
+        pref, label = arm
+        recipes = list(armor_set(pref))
+        ex = ARMOR_EXTRA.get(code)
+        labels = label
+        if ex:
+            recipes += armor_set(ex[0]); labels = f"{label} et {ex[1]}"
+        perks.append(unlock("Armure", f"Panoplie {labels}", f"Panoplie {labels}", "ui_game_symbol_armor_iron",
+                            ",".join(recipes), True, 1,
+                            f"Débloque la confection de la panoplie d'armure {labels} (casque, torse, gants, bottes).",
+                            f"Débloque la confection de la panoplie d'armure {labels} (casque, torse, gants, bottes)."))
+    am = AMMO_BY_CODE.get(code)
+    if am:
+        perks.append(unlock("Muns", "Munitions spécialisées", "Munitions spécialisées", "ui_game_symbol_rifle",
+                            ",".join(am), True, 1,
+                            "Débloque la fabrication des munitions spécialisées de votre arme (perforantes, à pointe creuse, explosives, etc.).",
+                            "Débloque la fabrication des munitions spécialisées de votre arme (perforantes, à pointe creuse, explosives, etc.)."))
+    md = MODS_BY_CODE.get(code)
+    if md:
+        perks.append(unlock("Mods", "Modifications", "Modifications", "ui_game_symbol_wrench",
+                            ",".join(md), True, 1,
+                            "Débloque la fabrication des modifications adaptées à votre spécialité.",
+                            "Débloque la fabrication des modifications adaptées à votre spécialité."))
+    if not perks:
+        return None
+    return ("Equip", "Équipement", "Équipement", "ui_game_symbol_armor_iron", perks)
+
 def subbranches_for(code):
-    """Sous-branches d'une sous-classe : Fermier = détaillé à la main, les 12 autres = domaine."""
-    if code in SUBCLASS_DEF:
-        return SUBCLASS_DEF[code]
-    return build_domain_subbranches(code)
+    """Sous-branches d'une sous-classe : Fermier = détaillé à la main, les 12 autres = domaine ;
+    plus une sous-branche Équipement (armure/munitions/mods) commune à toutes."""
+    base = list(SUBCLASS_DEF[code]) if code in SUBCLASS_DEF else build_domain_subbranches(code)
+    eq = equip_subbranch(code)
+    if eq:
+        base = base + [eq]
+    return base
 
 def auto_unlock_perks(code):
     out = []
@@ -1092,9 +1189,30 @@ def validate():
                 if sig in seen:
                     errors.append(f"{code} : doublon {sig} ({sk}/{p['suf']} == {seen[sig]})")
                 seen[sig] = f"{sk}/{p['suf']}"
+    # Couverture armures / mods / munitions : aucune recette assignée à deux classes, tout couvert.
+    def _flat(pairs):
+        seen = {}
+        for code, items in pairs:
+            for x in items:
+                if x in seen:
+                    errors.append(f"recette '{x}' assignée 2x ({code} & {seen[x]})")
+                seen[x] = code
+        return seen
+    arm = _flat([(c, armor_set(p)) for c, (p, _l) in ARMOR_BY_CODE.items()]
+                + [(c, armor_set(p)) for c, (p, _l) in ARMOR_EXTRA.items()]
+                + [("Survivant", SURV_ARMOR_BASIC)])
+    mods = _flat(list(MODS_BY_CODE.items()))
+    am = _flat([(c, v) for c, v in AMMO_BY_CODE.items()] + [("Survivant", SURV_AMMO_BASIC)])
+    if len(arm) != 64:  # 16 panoplies × 4 pièces
+        errors.append(f"armures couvertes={len(arm)} (attendu 64)")
+    if len(mods) != 76:
+        errors.append(f"mods couverts={len(mods)} (attendu 76)")
+    if set(am) != set(AMMO_ALL):
+        errors.append(f"munitions: écart de couverture (couvert {len(am)}, attendu {len(AMMO_ALL)})")
     if errors:
         raise AssertionError("Violations d'unicité de perks :\n  - " + "\n  - ".join(errors))
-    print(f"validate(): OK — {len(SUBS)} sous-classes, aucun doublon, {len(RESERVED_SURVIVOR)} types réservés à Survivant")
+    print(f"validate(): OK — {len(SUBS)} sous-classes, aucun doublon ; "
+          f"armures={len(arm)}, mods={len(mods)}, munitions={len(am)} réparties")
 
 def main():
     validate()

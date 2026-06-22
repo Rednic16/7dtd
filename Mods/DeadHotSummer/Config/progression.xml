@@ -16,45 +16,59 @@
     <skill name="skillClassEngiMechArme" parent="attClassEngineer" name_key="dhsSkillClassEngiMechArmeName" desc_key="dhsSkillClassEngiMechArmeDesc" icon="ui_game_symbol_wrench"><effect_group/></skill>
     <skill name="skillClassEngiMechMetier" parent="attClassEngineer" name_key="dhsSkillClassEngiMechMetierName" desc_key="dhsSkillClassEngiMechMetierDesc" icon="ui_game_symbol_workbench"><effect_group/></skill>
     <skill name="skillClassEngiMechSpec" parent="attClassEngineer" name_key="dhsSkillClassEngiMechSpecName" desc_key="dhsSkillClassEngiMechSpecDesc" icon="ui_game_symbol_character"><effect_group/></skill>
+    <skill name="skillClassEngiMechEquip" parent="attClassEngineer" name_key="dhsSkillClassEngiMechEquipName" desc_key="dhsSkillClassEngiMechEquipDesc" icon="ui_game_symbol_armor_iron"><effect_group/></skill>
     <skill name="skillClassEngiElecArme" parent="attClassEngineer" name_key="dhsSkillClassEngiElecArmeName" desc_key="dhsSkillClassEngiElecArmeDesc" icon="ui_game_symbol_electric_generator"><effect_group/></skill>
     <skill name="skillClassEngiElecMetier" parent="attClassEngineer" name_key="dhsSkillClassEngiElecMetierName" desc_key="dhsSkillClassEngiElecMetierDesc" icon="ui_game_symbol_workbench"><effect_group/></skill>
     <skill name="skillClassEngiElecSpec" parent="attClassEngineer" name_key="dhsSkillClassEngiElecSpecName" desc_key="dhsSkillClassEngiElecSpecDesc" icon="ui_game_symbol_character"><effect_group/></skill>
+    <skill name="skillClassEngiElecEquip" parent="attClassEngineer" name_key="dhsSkillClassEngiElecEquipName" desc_key="dhsSkillClassEngiElecEquipDesc" icon="ui_game_symbol_armor_iron"><effect_group/></skill>
     <skill name="skillClassMedicSurgArme" parent="attClassMedic" name_key="dhsSkillClassMedicSurgArmeName" desc_key="dhsSkillClassMedicSurgArmeDesc" icon="ui_game_symbol_medical"><effect_group/></skill>
     <skill name="skillClassMedicSurgMetier" parent="attClassMedic" name_key="dhsSkillClassMedicSurgMetierName" desc_key="dhsSkillClassMedicSurgMetierDesc" icon="ui_game_symbol_workbench"><effect_group/></skill>
     <skill name="skillClassMedicSurgSpec" parent="attClassMedic" name_key="dhsSkillClassMedicSurgSpecName" desc_key="dhsSkillClassMedicSurgSpecDesc" icon="ui_game_symbol_character"><effect_group/></skill>
+    <skill name="skillClassMedicSurgEquip" parent="attClassMedic" name_key="dhsSkillClassMedicSurgEquipName" desc_key="dhsSkillClassMedicSurgEquipDesc" icon="ui_game_symbol_armor_iron"><effect_group/></skill>
     <skill name="skillClassMedicChemArme" parent="attClassMedic" name_key="dhsSkillClassMedicChemArmeName" desc_key="dhsSkillClassMedicChemArmeDesc" icon="ui_game_symbol_science"><effect_group/></skill>
     <skill name="skillClassMedicChemMetier" parent="attClassMedic" name_key="dhsSkillClassMedicChemMetierName" desc_key="dhsSkillClassMedicChemMetierDesc" icon="ui_game_symbol_workbench"><effect_group/></skill>
     <skill name="skillClassMedicChemSpec" parent="attClassMedic" name_key="dhsSkillClassMedicChemSpecName" desc_key="dhsSkillClassMedicChemSpecDesc" icon="ui_game_symbol_character"><effect_group/></skill>
+    <skill name="skillClassMedicChemEquip" parent="attClassMedic" name_key="dhsSkillClassMedicChemEquipName" desc_key="dhsSkillClassMedicChemEquipDesc" icon="ui_game_symbol_armor_iron"><effect_group/></skill>
     <skill name="skillClassSoldSnipArme" parent="attClassSoldier" name_key="dhsSkillClassSoldSnipArmeName" desc_key="dhsSkillClassSoldSnipArmeDesc" icon="ui_game_symbol_long_shot"><effect_group/></skill>
     <skill name="skillClassSoldSnipMetier" parent="attClassSoldier" name_key="dhsSkillClassSoldSnipMetierName" desc_key="dhsSkillClassSoldSnipMetierDesc" icon="ui_game_symbol_workbench"><effect_group/></skill>
     <skill name="skillClassSoldSnipSpec" parent="attClassSoldier" name_key="dhsSkillClassSoldSnipSpecName" desc_key="dhsSkillClassSoldSnipSpecDesc" icon="ui_game_symbol_character"><effect_group/></skill>
+    <skill name="skillClassSoldSnipEquip" parent="attClassSoldier" name_key="dhsSkillClassSoldSnipEquipName" desc_key="dhsSkillClassSoldSnipEquipDesc" icon="ui_game_symbol_armor_iron"><effect_group/></skill>
     <skill name="skillClassSoldAsltArme" parent="attClassSoldier" name_key="dhsSkillClassSoldAsltArmeName" desc_key="dhsSkillClassSoldAsltArmeDesc" icon="ui_game_symbol_rifle"><effect_group/></skill>
     <skill name="skillClassSoldAsltMetier" parent="attClassSoldier" name_key="dhsSkillClassSoldAsltMetierName" desc_key="dhsSkillClassSoldAsltMetierDesc" icon="ui_game_symbol_workbench"><effect_group/></skill>
     <skill name="skillClassSoldAsltSpec" parent="attClassSoldier" name_key="dhsSkillClassSoldAsltSpecName" desc_key="dhsSkillClassSoldAsltSpecDesc" icon="ui_game_symbol_character"><effect_group/></skill>
+    <skill name="skillClassSoldAsltEquip" parent="attClassSoldier" name_key="dhsSkillClassSoldAsltEquipName" desc_key="dhsSkillClassSoldAsltEquipDesc" icon="ui_game_symbol_armor_iron"><effect_group/></skill>
     <skill name="skillClassSurvHuntArme" parent="attClassSurvivalist" name_key="dhsSkillClassSurvHuntArmeName" desc_key="dhsSkillClassSurvHuntArmeDesc" icon="ui_game_symbol_archery"><effect_group/></skill>
     <skill name="skillClassSurvHuntMetier" parent="attClassSurvivalist" name_key="dhsSkillClassSurvHuntMetierName" desc_key="dhsSkillClassSurvHuntMetierDesc" icon="ui_game_symbol_workbench"><effect_group/></skill>
     <skill name="skillClassSurvHuntSpec" parent="attClassSurvivalist" name_key="dhsSkillClassSurvHuntSpecName" desc_key="dhsSkillClassSurvHuntSpecDesc" icon="ui_game_symbol_character"><effect_group/></skill>
+    <skill name="skillClassSurvHuntEquip" parent="attClassSurvivalist" name_key="dhsSkillClassSurvHuntEquipName" desc_key="dhsSkillClassSurvHuntEquipDesc" icon="ui_game_symbol_armor_iron"><effect_group/></skill>
     <skill name="skillClassSurvHerbArme" parent="attClassSurvivalist" name_key="dhsSkillClassSurvHerbArmeName" desc_key="dhsSkillClassSurvHerbArmeDesc" icon="ui_game_symbol_crops"><effect_group/></skill>
     <skill name="skillClassSurvHerbMetier" parent="attClassSurvivalist" name_key="dhsSkillClassSurvHerbMetierName" desc_key="dhsSkillClassSurvHerbMetierDesc" icon="ui_game_symbol_workbench"><effect_group/></skill>
     <skill name="skillClassSurvHerbSpec" parent="attClassSurvivalist" name_key="dhsSkillClassSurvHerbSpecName" desc_key="dhsSkillClassSurvHerbSpecDesc" icon="ui_game_symbol_character"><effect_group/></skill>
+    <skill name="skillClassSurvHerbEquip" parent="attClassSurvivalist" name_key="dhsSkillClassSurvHerbEquipName" desc_key="dhsSkillClassSurvHerbEquipDesc" icon="ui_game_symbol_armor_iron"><effect_group/></skill>
     <skill name="skillClassBuilArchArme" parent="attClassBuilder" name_key="dhsSkillClassBuilArchArmeName" desc_key="dhsSkillClassBuilArchArmeDesc" icon="ui_game_symbol_hammer"><effect_group/></skill>
     <skill name="skillClassBuilArchMetier" parent="attClassBuilder" name_key="dhsSkillClassBuilArchMetierName" desc_key="dhsSkillClassBuilArchMetierDesc" icon="ui_game_symbol_workbench"><effect_group/></skill>
     <skill name="skillClassBuilArchSpec" parent="attClassBuilder" name_key="dhsSkillClassBuilArchSpecName" desc_key="dhsSkillClassBuilArchSpecDesc" icon="ui_game_symbol_character"><effect_group/></skill>
+    <skill name="skillClassBuilArchEquip" parent="attClassBuilder" name_key="dhsSkillClassBuilArchEquipName" desc_key="dhsSkillClassBuilArchEquipDesc" icon="ui_game_symbol_armor_iron"><effect_group/></skill>
     <skill name="skillClassBuilArtiArme" parent="attClassBuilder" name_key="dhsSkillClassBuilArtiArmeName" desc_key="dhsSkillClassBuilArtiArmeDesc" icon="ui_game_symbol_workbench"><effect_group/></skill>
     <skill name="skillClassBuilArtiMetier" parent="attClassBuilder" name_key="dhsSkillClassBuilArtiMetierName" desc_key="dhsSkillClassBuilArtiMetierDesc" icon="ui_game_symbol_workbench"><effect_group/></skill>
     <skill name="skillClassBuilArtiSpec" parent="attClassBuilder" name_key="dhsSkillClassBuilArtiSpecName" desc_key="dhsSkillClassBuilArtiSpecDesc" icon="ui_game_symbol_character"><effect_group/></skill>
+    <skill name="skillClassBuilArtiEquip" parent="attClassBuilder" name_key="dhsSkillClassBuilArtiEquipName" desc_key="dhsSkillClassBuilArtiEquipDesc" icon="ui_game_symbol_armor_iron"><effect_group/></skill>
     <skill name="skillClassScoutTracArme" parent="attClassScout" name_key="dhsSkillClassScoutTracArmeName" desc_key="dhsSkillClassScoutTracArmeDesc" icon="ui_game_symbol_run"><effect_group/></skill>
     <skill name="skillClassScoutTracMetier" parent="attClassScout" name_key="dhsSkillClassScoutTracMetierName" desc_key="dhsSkillClassScoutTracMetierDesc" icon="ui_game_symbol_workbench"><effect_group/></skill>
     <skill name="skillClassScoutTracSpec" parent="attClassScout" name_key="dhsSkillClassScoutTracSpecName" desc_key="dhsSkillClassScoutTracSpecDesc" icon="ui_game_symbol_character"><effect_group/></skill>
+    <skill name="skillClassScoutTracEquip" parent="attClassScout" name_key="dhsSkillClassScoutTracEquipName" desc_key="dhsSkillClassScoutTracEquipDesc" icon="ui_game_symbol_armor_iron"><effect_group/></skill>
     <skill name="skillClassScoutInfiArme" parent="attClassScout" name_key="dhsSkillClassScoutInfiArmeName" desc_key="dhsSkillClassScoutInfiArmeDesc" icon="ui_game_symbol_stealth2"><effect_group/></skill>
     <skill name="skillClassScoutInfiMetier" parent="attClassScout" name_key="dhsSkillClassScoutInfiMetierName" desc_key="dhsSkillClassScoutInfiMetierDesc" icon="ui_game_symbol_workbench"><effect_group/></skill>
     <skill name="skillClassScoutInfiSpec" parent="attClassScout" name_key="dhsSkillClassScoutInfiSpecName" desc_key="dhsSkillClassScoutInfiSpecDesc" icon="ui_game_symbol_character"><effect_group/></skill>
+    <skill name="skillClassScoutInfiEquip" parent="attClassScout" name_key="dhsSkillClassScoutInfiEquipName" desc_key="dhsSkillClassScoutInfiEquipDesc" icon="ui_game_symbol_armor_iron"><effect_group/></skill>
     <skill name="skillClassFarmAgriShotgun" parent="attClassFarmer" name_key="dhsSkillClassFarmAgriShotgunName" desc_key="dhsSkillClassFarmAgriShotgunDesc" icon="ui_game_symbol_shotgun"><effect_group/></skill>
     <skill name="skillClassFarmAgriFarming" parent="attClassFarmer" name_key="dhsSkillClassFarmAgriFarmingName" desc_key="dhsSkillClassFarmAgriFarmingDesc" icon="ui_game_symbol_crops"><effect_group/></skill>
     <skill name="skillClassFarmAgriProvider" parent="attClassFarmer" name_key="dhsSkillClassFarmAgriProviderName" desc_key="dhsSkillClassFarmAgriProviderDesc" icon="ui_game_symbol_crops"><effect_group/></skill>
+    <skill name="skillClassFarmAgriEquip" parent="attClassFarmer" name_key="dhsSkillClassFarmAgriEquipName" desc_key="dhsSkillClassFarmAgriEquipDesc" icon="ui_game_symbol_armor_iron"><effect_group/></skill>
     <skill name="skillClassFarmCookClub" parent="attClassFarmer" name_key="dhsSkillClassFarmCookClubName" desc_key="dhsSkillClassFarmCookClubDesc" icon="ui_game_symbol_hammer"><effect_group/></skill>
     <skill name="skillClassFarmCookKitchen" parent="attClassFarmer" name_key="dhsSkillClassFarmCookKitchenName" desc_key="dhsSkillClassFarmCookKitchenDesc" icon="ui_game_symbol_fork"><effect_group/></skill>
     <skill name="skillClassFarmCookSupport" parent="attClassFarmer" name_key="dhsSkillClassFarmCookSupportName" desc_key="dhsSkillClassFarmCookSupportDesc" icon="ui_game_symbol_medical"><effect_group/></skill>
+    <skill name="skillClassFarmCookEquip" parent="attClassFarmer" name_key="dhsSkillClassFarmCookEquipName" desc_key="dhsSkillClassFarmCookEquipDesc" icon="ui_game_symbol_armor_iron"><effect_group/></skill>
   </append>
   <append xpath="/progression/perks">
     <perk name="perkClassCommonVitalite" parent="skillClassCommon" name_key="dhsPerkCommonVitaliteName" desc_key="dhsPerkCommonVitaliteDesc" icon="ui_game_symbol_healing_factor" max_level="5">
@@ -134,18 +148,18 @@
         <effect_description level="1" desc_key="dhsPerkCommonAtelierR1" long_desc_key="dhsPerkCommonAtelierR1Long"/>
       </effect_group>
     </perk>
-    <perk name="perkClassCommonArmures" parent="skillClassCommon" name_key="dhsPerkCommonArmuresName" desc_key="dhsPerkCommonArmuresDesc" icon="ui_game_symbol_armor_iron" max_level="1" base_skill_point_cost="0">
+    <perk name="perkClassCommonArmureBase" parent="skillClassCommon" name_key="dhsPerkCommonArmureBaseName" desc_key="dhsPerkCommonArmureBaseDesc" icon="ui_game_symbol_armor_iron" max_level="1" base_skill_point_cost="0">
       <level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="dhsReqLvl1"/></level_requirements>
       <effect_group>
-        <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="armorAssassinBoots,armorAssassinGloves,armorAssassinHelmet,armorAssassinOutfit,armorAthleticBoots,armorAthleticGloves,armorAthleticHelmet,armorAthleticOutfit,armorBikerBoots,armorBikerGloves,armorBikerHelmet,armorBikerOutfit,armorCommandoBoots,armorCommandoGloves,armorCommandoHelmet,armorCommandoOutfit,armorEnforcerBoots,armorEnforcerGloves,armorEnforcerHelmet,armorEnforcerOutfit,armorFarmerBoots,armorFarmerGloves,armorFarmerHelmet,armorFarmerOutfit,armorLumberjackBoots,armorLumberjackGloves,armorLumberjackHelmet,armorLumberjackOutfit,armorMinerBoots,armorMinerGloves,armorMinerHelmet,armorMinerOutfit,armorNerdBoots,armorNerdGloves,armorNerdHelmet,armorNerdOutfit,armorNomadBoots,armorNomadGloves,armorNomadHelmet,armorNomadOutfit,armorPreacherBoots,armorPreacherGloves,armorPreacherHelmet,armorPreacherOutfit,armorPrimitiveBoots,armorPrimitiveGloves,armorPrimitiveHelmet,armorPrimitiveOutfit,armorRaiderBoots,armorRaiderGloves,armorRaiderHelmet,armorRaiderOutfit,armorRangerBoots,armorRangerGloves,armorRangerHelmet,armorRangerOutfit,armorRogueBoots,armorRogueGloves,armorRogueHelmet,armorRogueOutfit,armorScavengerBoots,armorScavengerGloves,armorScavengerHelmet,armorScavengerOutfit"/>
-        <effect_description level="1" desc_key="dhsPerkCommonArmuresR1" long_desc_key="dhsPerkCommonArmuresR1Long"/>
+        <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="armorPrimitiveBoots,armorPrimitiveGloves,armorPrimitiveHelmet,armorPrimitiveOutfit"/>
+        <effect_description level="1" desc_key="dhsPerkCommonArmureBaseR1" long_desc_key="dhsPerkCommonArmureBaseR1Long"/>
       </effect_group>
     </perk>
-    <perk name="perkClassCommonMods" parent="skillClassCommon" name_key="dhsPerkCommonModsName" desc_key="dhsPerkCommonModsDesc" icon="ui_game_symbol_wrench" max_level="1" base_skill_point_cost="0">
+    <perk name="perkClassCommonMunsBase" parent="skillClassCommon" name_key="dhsPerkCommonMunsBaseName" desc_key="dhsPerkCommonMunsBaseDesc" icon="ui_game_symbol_rifle" max_level="1" base_skill_point_cost="0">
       <level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="dhsReqLvl1"/></level_requirements>
       <effect_group>
-        <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modArmorAdvancedMuffledConnectors,modArmorBandolier,modArmorCigar,modArmorCoolingMesh,modArmorCustomizedFittings,modArmorDoubleStoragePocket,modArmorHelmetLight,modArmorImpactBracing,modArmorImprovedFittings,modArmorInsulatedLiner,modArmorMuffledConnectors,modArmorPlatingBasic,modArmorPlatingReinforced,modArmorQuadStoragePocket,modArmorStealthBoots,modArmorStoragePocket,modArmorTripleStoragePocket,modArmorWaterPurifier,modFuelTankLarge,modFuelTankSmall,modGunBarrelExtender,modGunBipod,modGunBowArrowRest,modGunBowPolymerString,modGunChoke,modGunCrippleEm,modGunDrumMagazineExtender,modGunDuckbill,modGunFlashlight,modGunForegrip,modGunLaserSight,modGunMagazineExtender,modGunMeleeRadRemover,modGunMeleeTheHunter,modGunMuzzleBrake,modGunReflexSight,modGunRetractingStock,modGunScopeLarge,modGunScopeMedium,modGunScopeSmall,modGunShotgunTubeExtenderMagazine,modGunSoundSuppressorSilencer,modGunTriggerGroupAutomatic,modGunTriggerGroupBurst3,modGunTriggerGroupSemi,modMeleeBunkerBuster,modMeleeClubBarbedWire,modMeleeClubBurningShaft,modMeleeClubMetalChain,modMeleeClubMetalSpikes,modMeleeDiamondTip,modMeleeErgonomicGrip,modMeleeFiremansAxeMod,modMeleeFortifyingGrip,modMeleeGraveDigger,modMeleeIronBreaker,modMeleeSerratedBlade,modMeleeStructuralBrace,modMeleeStunBatonRepulsor,modMeleeTemperedBlade,modMeleeWeightedHead,modMeleeWoodSplitter,modRoboticDroneArmorPlatingMod,modRoboticDroneCargoMod,modRoboticDroneHeadlampMod,modRoboticDroneMedicMod,modRoboticDroneMoraleBoosterMod,modRoboticDroneWeaponMod,modShotgunSawedOffBarrel,modVehicleArmor,modVehicleExpandedSeat,modVehicleFuelSaver,modVehicleOffRoadHeadlights,modVehiclePlow,modVehicleReserveFuelTank,modVehicleSuperCharger"/>
-        <effect_description level="1" desc_key="dhsPerkCommonModsR1" long_desc_key="dhsPerkCommonModsR1Long"/>
+        <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="ammoBundle9mmBulletBall,ammoBundle762mmBulletBall,ammoBundle44MagnumBulletBall,ammoBundleArrowIron,ammoBundleArrowStone,ammoBundleCrossbowBoltIron,ammoBundleCrossbowBoltStone,ammoBundleShotgunShell,ammoBundleJunkTurretRegular"/>
+        <effect_description level="1" desc_key="dhsPerkCommonMunsBaseR1" long_desc_key="dhsPerkCommonMunsBaseR1Long"/>
       </effect_group>
     </perk>
     <perk name="perkClassCommonMateriaux" parent="skillClassCommon" name_key="dhsPerkCommonMateriauxName" desc_key="dhsPerkCommonMateriauxDesc" icon="ui_game_symbol_smelt" max_level="1" base_skill_point_cost="0">
@@ -354,6 +368,27 @@
         <effect_description level="3" desc_key="dhsPerkEngiMechTradeR3" long_desc_key="dhsPerkEngiMechTradeR3Long"/>
         <effect_description level="4" desc_key="dhsPerkEngiMechTradeR4" long_desc_key="dhsPerkEngiMechTradeR4Long"/>
         <effect_description level="5" desc_key="dhsPerkEngiMechTradeR5" long_desc_key="dhsPerkEngiMechTradeR5Long"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassEngiMechArmure" parent="skillClassEngiMechEquip" name_key="dhsPerkEngiMechArmureName" desc_key="dhsPerkEngiMechArmureDesc" icon="ui_game_symbol_armor_iron" max_level="1" base_skill_point_cost="0">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsEngiMech" operation="Equals" value="1" desc_key="dhsReqClassEngiMech"/><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="dhsReqLvl1"/></level_requirements>
+      <effect_group>
+        <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="armorBikerHelmet,armorBikerOutfit,armorBikerGloves,armorBikerBoots"/>
+        <effect_description level="1" desc_key="dhsPerkEngiMechArmureR1" long_desc_key="dhsPerkEngiMechArmureR1Long"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassEngiMechMuns" parent="skillClassEngiMechEquip" name_key="dhsPerkEngiMechMunsName" desc_key="dhsPerkEngiMechMunsDesc" icon="ui_game_symbol_rifle" max_level="1" base_skill_point_cost="0">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsEngiMech" operation="Equals" value="1" desc_key="dhsReqClassEngiMech"/><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="dhsReqLvl1"/></level_requirements>
+      <effect_group>
+        <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="ammoJunkTurretShell,ammoJunkTurretAP,ammoBundleJunkTurretShell,ammoBundleJunkTurretAP,ammoGasCanBundle"/>
+        <effect_description level="1" desc_key="dhsPerkEngiMechMunsR1" long_desc_key="dhsPerkEngiMechMunsR1Long"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassEngiMechMods" parent="skillClassEngiMechEquip" name_key="dhsPerkEngiMechModsName" desc_key="dhsPerkEngiMechModsDesc" icon="ui_game_symbol_wrench" max_level="1" base_skill_point_cost="0">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsEngiMech" operation="Equals" value="1" desc_key="dhsReqClassEngiMech"/><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="dhsReqLvl1"/></level_requirements>
+      <effect_group>
+        <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modVehicleArmor,modVehicleExpandedSeat,modVehicleFuelSaver,modVehicleOffRoadHeadlights,modVehiclePlow,modVehicleReserveFuelTank,modVehicleSuperCharger,modFuelTankLarge,modFuelTankSmall,modRoboticDroneArmorPlatingMod,modRoboticDroneCargoMod,modRoboticDroneHeadlampMod,modRoboticDroneMedicMod,modRoboticDroneMoraleBoosterMod,modRoboticDroneWeaponMod"/>
+        <effect_description level="1" desc_key="dhsPerkEngiMechModsR1" long_desc_key="dhsPerkEngiMechModsR1Long"/>
       </effect_group>
     </perk>
     <perk name="perkClassEngiElecDmg" parent="skillClassEngiElecArme" name_key="dhsPerkEngiElecDmgName" desc_key="dhsPerkEngiElecDmgDesc" icon="ui_game_symbol_electric_generator" max_level="5">
@@ -576,6 +611,20 @@
         <effect_description level="2" desc_key="dhsPerkEngiElecPlateR2" long_desc_key="dhsPerkEngiElecPlateR2Long"/>
         <effect_description level="3" desc_key="dhsPerkEngiElecPlateR3" long_desc_key="dhsPerkEngiElecPlateR3Long"/>
         <effect_description level="4" desc_key="dhsPerkEngiElecPlateR4" long_desc_key="dhsPerkEngiElecPlateR4Long"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassEngiElecArmure" parent="skillClassEngiElecEquip" name_key="dhsPerkEngiElecArmureName" desc_key="dhsPerkEngiElecArmureDesc" icon="ui_game_symbol_armor_iron" max_level="1" base_skill_point_cost="0">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsEngiElec" operation="Equals" value="1" desc_key="dhsReqClassEngiElec"/><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="dhsReqLvl1"/></level_requirements>
+      <effect_group>
+        <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="armorEnforcerHelmet,armorEnforcerOutfit,armorEnforcerGloves,armorEnforcerBoots"/>
+        <effect_description level="1" desc_key="dhsPerkEngiElecArmureR1" long_desc_key="dhsPerkEngiElecArmureR1Long"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassEngiElecMods" parent="skillClassEngiElecEquip" name_key="dhsPerkEngiElecModsName" desc_key="dhsPerkEngiElecModsDesc" icon="ui_game_symbol_wrench" max_level="1" base_skill_point_cost="0">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsEngiElec" operation="Equals" value="1" desc_key="dhsReqClassEngiElec"/><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="dhsReqLvl1"/></level_requirements>
+      <effect_group>
+        <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modMeleeStunBatonRepulsor"/>
+        <effect_description level="1" desc_key="dhsPerkEngiElecModsR1" long_desc_key="dhsPerkEngiElecModsR1Long"/>
       </effect_group>
     </perk>
     <perk name="perkClassMedicSurgDmg" parent="skillClassMedicSurgArme" name_key="dhsPerkMedicSurgDmgName" desc_key="dhsPerkMedicSurgDmgDesc" icon="ui_game_symbol_medical" max_level="5">
@@ -809,6 +858,20 @@
         <effect_description level="5" desc_key="dhsPerkMedicSurgTradeR5" long_desc_key="dhsPerkMedicSurgTradeR5Long"/>
       </effect_group>
     </perk>
+    <perk name="perkClassMedicSurgArmure" parent="skillClassMedicSurgEquip" name_key="dhsPerkMedicSurgArmureName" desc_key="dhsPerkMedicSurgArmureDesc" icon="ui_game_symbol_armor_iron" max_level="1" base_skill_point_cost="0">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsMedicSurg" operation="Equals" value="1" desc_key="dhsReqClassMedicSurg"/><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="dhsReqLvl1"/></level_requirements>
+      <effect_group>
+        <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="armorPreacherHelmet,armorPreacherOutfit,armorPreacherGloves,armorPreacherBoots"/>
+        <effect_description level="1" desc_key="dhsPerkMedicSurgArmureR1" long_desc_key="dhsPerkMedicSurgArmureR1Long"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassMedicSurgMods" parent="skillClassMedicSurgEquip" name_key="dhsPerkMedicSurgModsName" desc_key="dhsPerkMedicSurgModsDesc" icon="ui_game_symbol_wrench" max_level="1" base_skill_point_cost="0">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsMedicSurg" operation="Equals" value="1" desc_key="dhsReqClassMedicSurg"/><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="dhsReqLvl1"/></level_requirements>
+      <effect_group>
+        <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modMeleeSerratedBlade,modMeleeTemperedBlade,modMeleeDiamondTip"/>
+        <effect_description level="1" desc_key="dhsPerkMedicSurgModsR1" long_desc_key="dhsPerkMedicSurgModsR1Long"/>
+      </effect_group>
+    </perk>
     <perk name="perkClassMedicChemDmg" parent="skillClassMedicChemArme" name_key="dhsPerkMedicChemDmgName" desc_key="dhsPerkMedicChemDmgDesc" icon="ui_game_symbol_science" max_level="5">
       <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsMedicChem" operation="Equals" value="1" desc_key="dhsReqClassMedicChem"/><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="dhsReqLvl1"/></level_requirements>
       <level_requirements level="2"><requirement name="CVarCompare" cvar="dhsClsMedicChem" operation="Equals" value="1" desc_key="dhsReqClassMedicChem"/><requirement name="PlayerLevel" operation="GTE" value="12" desc_key="dhsReqLvl12"/></level_requirements>
@@ -1016,6 +1079,20 @@
         <effect_description level="3" desc_key="dhsPerkMedicChemQuietR3" long_desc_key="dhsPerkMedicChemQuietR3Long"/>
         <effect_description level="4" desc_key="dhsPerkMedicChemQuietR4" long_desc_key="dhsPerkMedicChemQuietR4Long"/>
         <effect_description level="5" desc_key="dhsPerkMedicChemQuietR5" long_desc_key="dhsPerkMedicChemQuietR5Long"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassMedicChemArmure" parent="skillClassMedicChemEquip" name_key="dhsPerkMedicChemArmureName" desc_key="dhsPerkMedicChemArmureDesc" icon="ui_game_symbol_armor_iron" max_level="1" base_skill_point_cost="0">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsMedicChem" operation="Equals" value="1" desc_key="dhsReqClassMedicChem"/><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="dhsReqLvl1"/></level_requirements>
+      <effect_group>
+        <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="armorNerdHelmet,armorNerdOutfit,armorNerdGloves,armorNerdBoots"/>
+        <effect_description level="1" desc_key="dhsPerkMedicChemArmureR1" long_desc_key="dhsPerkMedicChemArmureR1Long"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassMedicChemMuns" parent="skillClassMedicChemEquip" name_key="dhsPerkMedicChemMunsName" desc_key="dhsPerkMedicChemMunsDesc" icon="ui_game_symbol_rifle" max_level="1" base_skill_point_cost="0">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsMedicChem" operation="Equals" value="1" desc_key="dhsReqClassMedicChem"/><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="dhsReqLvl1"/></level_requirements>
+      <effect_group>
+        <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="ammoRocketFrag,ammoRocketHE,thrownAmmoPipeBomb,thrownDynamite,thrownGrenade,thrownGrenadeContact,thrownTimedCharge"/>
+        <effect_description level="1" desc_key="dhsPerkMedicChemMunsR1" long_desc_key="dhsPerkMedicChemMunsR1Long"/>
       </effect_group>
     </perk>
     <perk name="perkClassSoldSnipDmg" parent="skillClassSoldSnipArme" name_key="dhsPerkSoldSnipDmgName" desc_key="dhsPerkSoldSnipDmgDesc" icon="ui_game_symbol_long_shot" max_level="5">
@@ -1245,6 +1322,27 @@
         <effect_description level="3" desc_key="dhsPerkSoldSnipQuarterR3" long_desc_key="dhsPerkSoldSnipQuarterR3Long"/>
         <effect_description level="4" desc_key="dhsPerkSoldSnipQuarterR4" long_desc_key="dhsPerkSoldSnipQuarterR4Long"/>
         <effect_description level="5" desc_key="dhsPerkSoldSnipQuarterR5" long_desc_key="dhsPerkSoldSnipQuarterR5Long"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassSoldSnipArmure" parent="skillClassSoldSnipEquip" name_key="dhsPerkSoldSnipArmureName" desc_key="dhsPerkSoldSnipArmureDesc" icon="ui_game_symbol_armor_iron" max_level="1" base_skill_point_cost="0">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsSoldSnip" operation="Equals" value="1" desc_key="dhsReqClassSoldSnip"/><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="dhsReqLvl1"/></level_requirements>
+      <effect_group>
+        <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="armorRangerHelmet,armorRangerOutfit,armorRangerGloves,armorRangerBoots"/>
+        <effect_description level="1" desc_key="dhsPerkSoldSnipArmureR1" long_desc_key="dhsPerkSoldSnipArmureR1Long"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassSoldSnipMuns" parent="skillClassSoldSnipEquip" name_key="dhsPerkSoldSnipMunsName" desc_key="dhsPerkSoldSnipMunsDesc" icon="ui_game_symbol_rifle" max_level="1" base_skill_point_cost="0">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsSoldSnip" operation="Equals" value="1" desc_key="dhsReqClassSoldSnip"/><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="dhsReqLvl1"/></level_requirements>
+      <effect_group>
+        <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="ammo762mmBulletAP,ammoBundle762mmBulletAP"/>
+        <effect_description level="1" desc_key="dhsPerkSoldSnipMunsR1" long_desc_key="dhsPerkSoldSnipMunsR1Long"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassSoldSnipMods" parent="skillClassSoldSnipEquip" name_key="dhsPerkSoldSnipModsName" desc_key="dhsPerkSoldSnipModsDesc" icon="ui_game_symbol_wrench" max_level="1" base_skill_point_cost="0">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsSoldSnip" operation="Equals" value="1" desc_key="dhsReqClassSoldSnip"/><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="dhsReqLvl1"/></level_requirements>
+      <effect_group>
+        <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modGunScopeLarge,modGunScopeMedium,modGunScopeSmall,modGunReflexSight,modGunLaserSight,modGunFlashlight"/>
+        <effect_description level="1" desc_key="dhsPerkSoldSnipModsR1" long_desc_key="dhsPerkSoldSnipModsR1Long"/>
       </effect_group>
     </perk>
     <perk name="perkClassSoldAsltDmg" parent="skillClassSoldAsltArme" name_key="dhsPerkSoldAsltDmgName" desc_key="dhsPerkSoldAsltDmgDesc" icon="ui_game_symbol_rifle" max_level="5">
@@ -1480,6 +1578,27 @@
         <effect_description level="4" desc_key="dhsPerkSoldAsltMoraleR4" long_desc_key="dhsPerkSoldAsltMoraleR4Long"/>
       </effect_group>
     </perk>
+    <perk name="perkClassSoldAsltArmure" parent="skillClassSoldAsltEquip" name_key="dhsPerkSoldAsltArmureName" desc_key="dhsPerkSoldAsltArmureDesc" icon="ui_game_symbol_armor_iron" max_level="1" base_skill_point_cost="0">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsSoldAslt" operation="Equals" value="1" desc_key="dhsReqClassSoldAslt"/><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="dhsReqLvl1"/></level_requirements>
+      <effect_group>
+        <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="armorCommandoHelmet,armorCommandoOutfit,armorCommandoGloves,armorCommandoBoots"/>
+        <effect_description level="1" desc_key="dhsPerkSoldAsltArmureR1" long_desc_key="dhsPerkSoldAsltArmureR1Long"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassSoldAsltMuns" parent="skillClassSoldAsltEquip" name_key="dhsPerkSoldAsltMunsName" desc_key="dhsPerkSoldAsltMunsDesc" icon="ui_game_symbol_rifle" max_level="1" base_skill_point_cost="0">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsSoldAslt" operation="Equals" value="1" desc_key="dhsReqClassSoldAslt"/><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="dhsReqLvl1"/></level_requirements>
+      <effect_group>
+        <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="ammo762mmBulletHP,ammoBundle762mmBulletHP"/>
+        <effect_description level="1" desc_key="dhsPerkSoldAsltMunsR1" long_desc_key="dhsPerkSoldAsltMunsR1Long"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassSoldAsltMods" parent="skillClassSoldAsltEquip" name_key="dhsPerkSoldAsltModsName" desc_key="dhsPerkSoldAsltModsDesc" icon="ui_game_symbol_wrench" max_level="1" base_skill_point_cost="0">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsSoldAslt" operation="Equals" value="1" desc_key="dhsReqClassSoldAslt"/><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="dhsReqLvl1"/></level_requirements>
+      <effect_group>
+        <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modGunBarrelExtender,modGunBipod,modGunCrippleEm,modGunDrumMagazineExtender,modGunForegrip,modGunMagazineExtender,modGunMuzzleBrake,modGunRetractingStock,modGunSoundSuppressorSilencer,modGunTriggerGroupAutomatic,modGunTriggerGroupBurst3,modGunTriggerGroupSemi"/>
+        <effect_description level="1" desc_key="dhsPerkSoldAsltModsR1" long_desc_key="dhsPerkSoldAsltModsR1Long"/>
+      </effect_group>
+    </perk>
     <perk name="perkClassSurvHuntDmg" parent="skillClassSurvHuntArme" name_key="dhsPerkSurvHuntDmgName" desc_key="dhsPerkSurvHuntDmgDesc" icon="ui_game_symbol_archery" max_level="5">
       <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsSurvHunt" operation="Equals" value="1" desc_key="dhsReqClassSurvHunt"/><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="dhsReqLvl1"/></level_requirements>
       <level_requirements level="2"><requirement name="CVarCompare" cvar="dhsClsSurvHunt" operation="Equals" value="1" desc_key="dhsReqClassSurvHunt"/><requirement name="PlayerLevel" operation="GTE" value="12" desc_key="dhsReqLvl12"/></level_requirements>
@@ -1709,6 +1828,27 @@
         <effect_description level="3" desc_key="dhsPerkSurvHuntHeatR3" long_desc_key="dhsPerkSurvHuntHeatR3Long"/>
         <effect_description level="4" desc_key="dhsPerkSurvHuntHeatR4" long_desc_key="dhsPerkSurvHuntHeatR4Long"/>
         <effect_description level="5" desc_key="dhsPerkSurvHuntHeatR5" long_desc_key="dhsPerkSurvHuntHeatR5Long"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassSurvHuntArmure" parent="skillClassSurvHuntEquip" name_key="dhsPerkSurvHuntArmureName" desc_key="dhsPerkSurvHuntArmureDesc" icon="ui_game_symbol_armor_iron" max_level="1" base_skill_point_cost="0">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsSurvHunt" operation="Equals" value="1" desc_key="dhsReqClassSurvHunt"/><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="dhsReqLvl1"/></level_requirements>
+      <effect_group>
+        <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="armorRogueHelmet,armorRogueOutfit,armorRogueGloves,armorRogueBoots"/>
+        <effect_description level="1" desc_key="dhsPerkSurvHuntArmureR1" long_desc_key="dhsPerkSurvHuntArmureR1Long"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassSurvHuntMuns" parent="skillClassSurvHuntEquip" name_key="dhsPerkSurvHuntMunsName" desc_key="dhsPerkSurvHuntMunsDesc" icon="ui_game_symbol_rifle" max_level="1" base_skill_point_cost="0">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsSurvHunt" operation="Equals" value="1" desc_key="dhsReqClassSurvHunt"/><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="dhsReqLvl1"/></level_requirements>
+      <effect_group>
+        <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="ammoArrowExploding,ammoArrowFlaming,ammoArrowSteelAP,ammoCrossbowBoltExploding,ammoCrossbowBoltFlaming,ammoCrossbowBoltSteelAP,ammoBundleArrowExploding,ammoBundleArrowFlaming,ammoBundleArrowSteelAP,ammoBundleCrossbowBoltExploding,ammoBundleCrossbowBoltFlaming,ammoBundleCrossbowBoltSteelAP"/>
+        <effect_description level="1" desc_key="dhsPerkSurvHuntMunsR1" long_desc_key="dhsPerkSurvHuntMunsR1Long"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassSurvHuntMods" parent="skillClassSurvHuntEquip" name_key="dhsPerkSurvHuntModsName" desc_key="dhsPerkSurvHuntModsDesc" icon="ui_game_symbol_wrench" max_level="1" base_skill_point_cost="0">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsSurvHunt" operation="Equals" value="1" desc_key="dhsReqClassSurvHunt"/><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="dhsReqLvl1"/></level_requirements>
+      <effect_group>
+        <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modGunBowArrowRest,modGunBowPolymerString"/>
+        <effect_description level="1" desc_key="dhsPerkSurvHuntModsR1" long_desc_key="dhsPerkSurvHuntModsR1Long"/>
       </effect_group>
     </perk>
     <perk name="perkClassSurvHerbDmg" parent="skillClassSurvHerbArme" name_key="dhsPerkSurvHerbDmgName" desc_key="dhsPerkSurvHerbDmgDesc" icon="ui_game_symbol_crops" max_level="5">
@@ -1942,6 +2082,13 @@
         <effect_description level="5" desc_key="dhsPerkSurvHerbForageR5" long_desc_key="dhsPerkSurvHerbForageR5Long"/>
       </effect_group>
     </perk>
+    <perk name="perkClassSurvHerbArmure" parent="skillClassSurvHerbEquip" name_key="dhsPerkSurvHerbArmureName" desc_key="dhsPerkSurvHerbArmureDesc" icon="ui_game_symbol_armor_iron" max_level="1" base_skill_point_cost="0">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsSurvHerb" operation="Equals" value="1" desc_key="dhsReqClassSurvHerb"/><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="dhsReqLvl1"/></level_requirements>
+      <effect_group>
+        <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="armorScavengerHelmet,armorScavengerOutfit,armorScavengerGloves,armorScavengerBoots"/>
+        <effect_description level="1" desc_key="dhsPerkSurvHerbArmureR1" long_desc_key="dhsPerkSurvHerbArmureR1Long"/>
+      </effect_group>
+    </perk>
     <perk name="perkClassBuilArchDmg" parent="skillClassBuilArchArme" name_key="dhsPerkBuilArchDmgName" desc_key="dhsPerkBuilArchDmgDesc" icon="ui_game_symbol_hammer" max_level="5">
       <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsBuilArch" operation="Equals" value="1" desc_key="dhsReqClassBuilArch"/><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="dhsReqLvl1"/></level_requirements>
       <level_requirements level="2"><requirement name="CVarCompare" cvar="dhsClsBuilArch" operation="Equals" value="1" desc_key="dhsReqClassBuilArch"/><requirement name="PlayerLevel" operation="GTE" value="12" desc_key="dhsReqLvl12"/></level_requirements>
@@ -2166,6 +2313,20 @@
         <effect_description level="5" desc_key="dhsPerkBuilArchHeatR5" long_desc_key="dhsPerkBuilArchHeatR5Long"/>
       </effect_group>
     </perk>
+    <perk name="perkClassBuilArchArmure" parent="skillClassBuilArchEquip" name_key="dhsPerkBuilArchArmureName" desc_key="dhsPerkBuilArchArmureDesc" icon="ui_game_symbol_armor_iron" max_level="1" base_skill_point_cost="0">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsBuilArch" operation="Equals" value="1" desc_key="dhsReqClassBuilArch"/><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="dhsReqLvl1"/></level_requirements>
+      <effect_group>
+        <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="armorRaiderHelmet,armorRaiderOutfit,armorRaiderGloves,armorRaiderBoots"/>
+        <effect_description level="1" desc_key="dhsPerkBuilArchArmureR1" long_desc_key="dhsPerkBuilArchArmureR1Long"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassBuilArchMods" parent="skillClassBuilArchEquip" name_key="dhsPerkBuilArchModsName" desc_key="dhsPerkBuilArchModsDesc" icon="ui_game_symbol_wrench" max_level="1" base_skill_point_cost="0">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsBuilArch" operation="Equals" value="1" desc_key="dhsReqClassBuilArch"/><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="dhsReqLvl1"/></level_requirements>
+      <effect_group>
+        <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modMeleeBunkerBuster,modMeleeWoodSplitter,modMeleeFiremansAxeMod,modMeleeGraveDigger,modMeleeIronBreaker,modMeleeWeightedHead,modMeleeStructuralBrace"/>
+        <effect_description level="1" desc_key="dhsPerkBuilArchModsR1" long_desc_key="dhsPerkBuilArchModsR1Long"/>
+      </effect_group>
+    </perk>
     <perk name="perkClassBuilArtiHarvest" parent="skillClassBuilArtiArme" name_key="dhsPerkBuilArtiHarvestName" desc_key="dhsPerkBuilArtiHarvestDesc" icon="ui_game_symbol_workbench" max_level="5">
       <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsBuilArti" operation="Equals" value="1" desc_key="dhsReqClassBuilArti"/><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="dhsReqLvl1"/></level_requirements>
       <level_requirements level="2"><requirement name="CVarCompare" cvar="dhsClsBuilArti" operation="Equals" value="1" desc_key="dhsReqClassBuilArti"/><requirement name="PlayerLevel" operation="GTE" value="12" desc_key="dhsReqLvl12"/></level_requirements>
@@ -2378,6 +2539,20 @@
         <effect_description level="2" desc_key="dhsPerkBuilArtiPlateR2" long_desc_key="dhsPerkBuilArtiPlateR2Long"/>
         <effect_description level="3" desc_key="dhsPerkBuilArtiPlateR3" long_desc_key="dhsPerkBuilArtiPlateR3Long"/>
         <effect_description level="4" desc_key="dhsPerkBuilArtiPlateR4" long_desc_key="dhsPerkBuilArtiPlateR4Long"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassBuilArtiArmure" parent="skillClassBuilArtiEquip" name_key="dhsPerkBuilArtiArmureName" desc_key="dhsPerkBuilArtiArmureDesc" icon="ui_game_symbol_armor_iron" max_level="1" base_skill_point_cost="0">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsBuilArti" operation="Equals" value="1" desc_key="dhsReqClassBuilArti"/><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="dhsReqLvl1"/></level_requirements>
+      <effect_group>
+        <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="armorMinerHelmet,armorMinerOutfit,armorMinerGloves,armorMinerBoots"/>
+        <effect_description level="1" desc_key="dhsPerkBuilArtiArmureR1" long_desc_key="dhsPerkBuilArtiArmureR1Long"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassBuilArtiMods" parent="skillClassBuilArtiEquip" name_key="dhsPerkBuilArtiModsName" desc_key="dhsPerkBuilArtiModsDesc" icon="ui_game_symbol_wrench" max_level="1" base_skill_point_cost="0">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsBuilArti" operation="Equals" value="1" desc_key="dhsReqClassBuilArti"/><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="dhsReqLvl1"/></level_requirements>
+      <effect_group>
+        <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modArmorAdvancedMuffledConnectors,modArmorBandolier,modArmorCigar,modArmorCoolingMesh,modArmorCustomizedFittings,modArmorDoubleStoragePocket,modArmorHelmetLight,modArmorImpactBracing,modArmorImprovedFittings,modArmorInsulatedLiner,modArmorMuffledConnectors,modArmorPlatingBasic,modArmorPlatingReinforced,modArmorQuadStoragePocket,modArmorStealthBoots,modArmorStoragePocket,modArmorTripleStoragePocket,modArmorWaterPurifier"/>
+        <effect_description level="1" desc_key="dhsPerkBuilArtiModsR1" long_desc_key="dhsPerkBuilArtiModsR1Long"/>
       </effect_group>
     </perk>
     <perk name="perkClassScoutTracDmg" parent="skillClassScoutTracArme" name_key="dhsPerkScoutTracDmgName" desc_key="dhsPerkScoutTracDmgDesc" icon="ui_game_symbol_run" max_level="5">
@@ -2611,6 +2786,20 @@
         <effect_description level="5" desc_key="dhsPerkScoutTracHeatR5" long_desc_key="dhsPerkScoutTracHeatR5Long"/>
       </effect_group>
     </perk>
+    <perk name="perkClassScoutTracArmure" parent="skillClassScoutTracEquip" name_key="dhsPerkScoutTracArmureName" desc_key="dhsPerkScoutTracArmureDesc" icon="ui_game_symbol_armor_iron" max_level="1" base_skill_point_cost="0">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsScoutTrac" operation="Equals" value="1" desc_key="dhsReqClassScoutTrac"/><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="dhsReqLvl1"/></level_requirements>
+      <effect_group>
+        <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="armorNomadHelmet,armorNomadOutfit,armorNomadGloves,armorNomadBoots,armorAthleticHelmet,armorAthleticOutfit,armorAthleticGloves,armorAthleticBoots"/>
+        <effect_description level="1" desc_key="dhsPerkScoutTracArmureR1" long_desc_key="dhsPerkScoutTracArmureR1Long"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassScoutTracMuns" parent="skillClassScoutTracEquip" name_key="dhsPerkScoutTracMunsName" desc_key="dhsPerkScoutTracMunsDesc" icon="ui_game_symbol_rifle" max_level="1" base_skill_point_cost="0">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsScoutTrac" operation="Equals" value="1" desc_key="dhsReqClassScoutTrac"/><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="dhsReqLvl1"/></level_requirements>
+      <effect_group>
+        <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="ammo9mmBulletAP,ammo9mmBulletHP,ammoBundle9mmBulletAP,ammoBundle9mmBulletHP,ammo44MagnumBulletAP,ammo44MagnumBulletHP,ammoBundle44MagnumBulletAP,ammoBundle44MagnumBulletHP"/>
+        <effect_description level="1" desc_key="dhsPerkScoutTracMunsR1" long_desc_key="dhsPerkScoutTracMunsR1Long"/>
+      </effect_group>
+    </perk>
     <perk name="perkClassScoutInfiDmg" parent="skillClassScoutInfiArme" name_key="dhsPerkScoutInfiDmgName" desc_key="dhsPerkScoutInfiDmgDesc" icon="ui_game_symbol_stealth2" max_level="5">
       <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsScoutInfi" operation="Equals" value="1" desc_key="dhsReqClassScoutInfi"/><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="dhsReqLvl1"/></level_requirements>
       <level_requirements level="2"><requirement name="CVarCompare" cvar="dhsClsScoutInfi" operation="Equals" value="1" desc_key="dhsReqClassScoutInfi"/><requirement name="PlayerLevel" operation="GTE" value="12" desc_key="dhsReqLvl12"/></level_requirements>
@@ -2840,6 +3029,20 @@
         <effect_description level="3" desc_key="dhsPerkScoutInfiRareR3" long_desc_key="dhsPerkScoutInfiRareR3Long"/>
         <effect_description level="4" desc_key="dhsPerkScoutInfiRareR4" long_desc_key="dhsPerkScoutInfiRareR4Long"/>
         <effect_description level="5" desc_key="dhsPerkScoutInfiRareR5" long_desc_key="dhsPerkScoutInfiRareR5Long"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassScoutInfiArmure" parent="skillClassScoutInfiEquip" name_key="dhsPerkScoutInfiArmureName" desc_key="dhsPerkScoutInfiArmureDesc" icon="ui_game_symbol_armor_iron" max_level="1" base_skill_point_cost="0">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsScoutInfi" operation="Equals" value="1" desc_key="dhsReqClassScoutInfi"/><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="dhsReqLvl1"/></level_requirements>
+      <effect_group>
+        <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="armorAssassinHelmet,armorAssassinOutfit,armorAssassinGloves,armorAssassinBoots"/>
+        <effect_description level="1" desc_key="dhsPerkScoutInfiArmureR1" long_desc_key="dhsPerkScoutInfiArmureR1Long"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassScoutInfiMods" parent="skillClassScoutInfiEquip" name_key="dhsPerkScoutInfiModsName" desc_key="dhsPerkScoutInfiModsDesc" icon="ui_game_symbol_wrench" max_level="1" base_skill_point_cost="0">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsScoutInfi" operation="Equals" value="1" desc_key="dhsReqClassScoutInfi"/><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="dhsReqLvl1"/></level_requirements>
+      <effect_group>
+        <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modMeleeErgonomicGrip,modMeleeFortifyingGrip,modGunMeleeRadRemover,modGunMeleeTheHunter"/>
+        <effect_description level="1" desc_key="dhsPerkScoutInfiModsR1" long_desc_key="dhsPerkScoutInfiModsR1Long"/>
       </effect_group>
     </perk>
     <perk name="perkClassFarmAgriDmg" parent="skillClassFarmAgriShotgun" name_key="dhsPerkFarmAgriDmgName" desc_key="dhsPerkFarmAgriDmgDesc" icon="ui_game_symbol_shotgun" max_level="5">
@@ -3103,6 +3306,27 @@
         <effect_description level="5" desc_key="dhsPerkFarmAgriSturdyR5" long_desc_key="dhsPerkFarmAgriSturdyR5Long"/>
       </effect_group>
     </perk>
+    <perk name="perkClassFarmAgriArmure" parent="skillClassFarmAgriEquip" name_key="dhsPerkFarmAgriArmureName" desc_key="dhsPerkFarmAgriArmureDesc" icon="ui_game_symbol_armor_iron" max_level="1" base_skill_point_cost="0">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsFarmAgri" operation="Equals" value="1" desc_key="dhsReqClassFarmAgri"/><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="dhsReqLvl1"/></level_requirements>
+      <effect_group>
+        <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="armorFarmerHelmet,armorFarmerOutfit,armorFarmerGloves,armorFarmerBoots"/>
+        <effect_description level="1" desc_key="dhsPerkFarmAgriArmureR1" long_desc_key="dhsPerkFarmAgriArmureR1Long"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassFarmAgriMuns" parent="skillClassFarmAgriEquip" name_key="dhsPerkFarmAgriMunsName" desc_key="dhsPerkFarmAgriMunsDesc" icon="ui_game_symbol_rifle" max_level="1" base_skill_point_cost="0">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsFarmAgri" operation="Equals" value="1" desc_key="dhsReqClassFarmAgri"/><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="dhsReqLvl1"/></level_requirements>
+      <effect_group>
+        <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="ammoShotgunSlug,ammoShotgunBreachingSlug,ammoBundleShotgunSlug,ammoBundleShotgunBreachingSlug"/>
+        <effect_description level="1" desc_key="dhsPerkFarmAgriMunsR1" long_desc_key="dhsPerkFarmAgriMunsR1Long"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassFarmAgriMods" parent="skillClassFarmAgriEquip" name_key="dhsPerkFarmAgriModsName" desc_key="dhsPerkFarmAgriModsDesc" icon="ui_game_symbol_wrench" max_level="1" base_skill_point_cost="0">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsFarmAgri" operation="Equals" value="1" desc_key="dhsReqClassFarmAgri"/><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="dhsReqLvl1"/></level_requirements>
+      <effect_group>
+        <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modGunChoke,modGunDuckbill,modGunShotgunTubeExtenderMagazine,modShotgunSawedOffBarrel"/>
+        <effect_description level="1" desc_key="dhsPerkFarmAgriModsR1" long_desc_key="dhsPerkFarmAgriModsR1Long"/>
+      </effect_group>
+    </perk>
     <perk name="perkClassFarmCookDmg" parent="skillClassFarmCookClub" name_key="dhsPerkFarmCookDmgName" desc_key="dhsPerkFarmCookDmgDesc" icon="ui_game_symbol_hammer" max_level="5">
       <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsFarmCook" operation="Equals" value="1" desc_key="dhsReqClassFarmCook"/><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="dhsReqLvl1"/></level_requirements>
       <level_requirements level="2"><requirement name="CVarCompare" cvar="dhsClsFarmCook" operation="Equals" value="1" desc_key="dhsReqClassFarmCook"/><requirement name="PlayerLevel" operation="GTE" value="12" desc_key="dhsReqLvl12"/></level_requirements>
@@ -3343,6 +3567,20 @@
         <effect_description level="2" desc_key="dhsPerkFarmCookPlateR2" long_desc_key="dhsPerkFarmCookPlateR2Long"/>
         <effect_description level="3" desc_key="dhsPerkFarmCookPlateR3" long_desc_key="dhsPerkFarmCookPlateR3Long"/>
         <effect_description level="4" desc_key="dhsPerkFarmCookPlateR4" long_desc_key="dhsPerkFarmCookPlateR4Long"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassFarmCookArmure" parent="skillClassFarmCookEquip" name_key="dhsPerkFarmCookArmureName" desc_key="dhsPerkFarmCookArmureDesc" icon="ui_game_symbol_armor_iron" max_level="1" base_skill_point_cost="0">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsFarmCook" operation="Equals" value="1" desc_key="dhsReqClassFarmCook"/><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="dhsReqLvl1"/></level_requirements>
+      <effect_group>
+        <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="armorLumberjackHelmet,armorLumberjackOutfit,armorLumberjackGloves,armorLumberjackBoots"/>
+        <effect_description level="1" desc_key="dhsPerkFarmCookArmureR1" long_desc_key="dhsPerkFarmCookArmureR1Long"/>
+      </effect_group>
+    </perk>
+    <perk name="perkClassFarmCookMods" parent="skillClassFarmCookEquip" name_key="dhsPerkFarmCookModsName" desc_key="dhsPerkFarmCookModsDesc" icon="ui_game_symbol_wrench" max_level="1" base_skill_point_cost="0">
+      <level_requirements level="1"><requirement name="CVarCompare" cvar="dhsClsFarmCook" operation="Equals" value="1" desc_key="dhsReqClassFarmCook"/><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="dhsReqLvl1"/></level_requirements>
+      <effect_group>
+        <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modMeleeClubBarbedWire,modMeleeClubBurningShaft,modMeleeClubMetalChain,modMeleeClubMetalSpikes"/>
+        <effect_description level="1" desc_key="dhsPerkFarmCookModsR1" long_desc_key="dhsPerkFarmCookModsR1Long"/>
       </effect_group>
     </perk>
   </append>
