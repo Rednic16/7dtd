@@ -27,41 +27,54 @@ CFG = os.path.join(ROOT, "Mods", "DeadHotSummer", "Config")
 
 LVL = [1, 12, 24, 36, 48]  # paliers PlayerLevel par rang
 
-# Template de perks par "kind" (utilisé pour les 12 sous-classes pas encore détaillées).
-# (suffixe, EN, FR, effet, op, v1, v5, scoped_au_tag, EN desc, FR desc)
+# Template de perks par "kind" (sous-branche ARME des 12 sous-classes "domaine").
+# Chaque kind est AUTONOME : ensemble d'effets TOUS DISTINCTS (aucun doublon intra-classe).
+# Tout est scopé au tag d'arme de la sous-classe (sauf indication). (suffixe, EN, FR, effet,
+# op, v1, v5, scoped_au_tag, EN desc, FR desc).  Maniement = WeaponHandling (prise en main).
 PERKS = {
     "gun": [
-        ("Dmg","Damage","Dégâts","EntityDamage","perc_add",".08",".40",True,"Increases your class weapon damage.","Augmente les dégâts de l'arme de classe."),
-        ("Hand","Handling","Maniement","WeaponHandling","perc_add",".10",".50",True,"Improves weapon handling.","Améliore la maniabilité."),
-        ("Reload","Fast Reload","Rechargement rapide","ReloadSpeedMultiplier","perc_add","-.06","-.30",True,"Reloads faster.","Recharge plus vite."),
-        ("Aim","Precision","Précision","SpreadMultiplierAiming","perc_add","-.06","-.30",True,"Reduces aimed spread.","Réduit la dispersion en visée."),
+        ("Dmg","Dégâts","Dégâts","EntityDamage","perc_add",".08",".40",True,"Augmente les dégâts de l'arme de classe.","Augmente les dégâts de l'arme de classe."),
+        ("Hand","Maniement","Maniement","WeaponHandling","perc_add",".10",".50",True,"Améliore la prise en main : visée plus rapide, recul et oscillation réduits.","Améliore la prise en main : visée plus rapide, recul et oscillation réduits."),
+        ("Reload","Rechargement rapide","Rechargement rapide","ReloadSpeedMultiplier","perc_add","-.06","-.30",True,"Recharge plus vite.","Recharge plus vite."),
+        ("Aim","Précision","Précision","SpreadMultiplierAiming","perc_add","-.06","-.30",True,"Réduit la dispersion des tirs en visée.","Réduit la dispersion des tirs en visée."),
+        ("Pierce","Perforation","Perforation","TargetArmor","perc_add","-.06","-.30",True,"Vos tirs ignorent davantage l'armure.","Vos tirs ignorent davantage l'armure."),
+        ("WStam","Aisance","Aisance","StaminaLoss","perc_add","-.05","-.25",True,"Réduit l'endurance dépensée en maniant cette arme.","Réduit l'endurance dépensée en maniant cette arme."),
     ],
     "bow": [
-        ("Dmg","Damage","Dégâts","EntityDamage","perc_add",".08",".40",True,"Increases bow/crossbow damage.","Augmente les dégâts arc/arbalète."),
-        ("Hand","Handling","Maniement","WeaponHandling","perc_add",".10",".50",True,"Improves handling.","Améliore la maniabilité."),
-        ("Draw","Quick Draw","Armement rapide","ReloadSpeedMultiplier","perc_add","-.06","-.30",True,"Nocks faster.","Encoche plus vite."),
-        ("Velo","Power Shot","Tir puissant","ProjectileVelocity","perc_add",".10",".50",True,"Increases projectile velocity.","Augmente la vitesse des projectiles."),
+        ("Dmg","Dégâts","Dégâts","EntityDamage","perc_add",".08",".40",True,"Augmente les dégâts arc/arbalète.","Augmente les dégâts arc/arbalète."),
+        ("Hand","Maniement","Maniement","WeaponHandling","perc_add",".10",".50",True,"Améliore la prise en main : visée plus stable, bandage plus régulier.","Améliore la prise en main : visée plus stable, bandage plus régulier."),
+        ("Draw","Armement rapide","Armement rapide","ReloadSpeedMultiplier","perc_add","-.06","-.30",True,"Encoche et arme plus vite.","Encoche et arme plus vite."),
+        ("Velo","Tir puissant","Tir puissant","ProjectileVelocity","perc_add",".10",".50",True,"Augmente la vitesse des projectiles (portée, précision).","Augmente la vitesse des projectiles (portée, précision)."),
+        ("Pierce","Perforation","Perforation","TargetArmor","perc_add","-.06","-.30",True,"Vos projectiles ignorent davantage l'armure.","Vos projectiles ignorent davantage l'armure."),
+        ("WStam","Aisance","Aisance","StaminaLoss","perc_add","-.05","-.25",True,"Réduit l'endurance dépensée en bandant l'arc.","Réduit l'endurance dépensée en bandant l'arc."),
     ],
     "melee": [
-        ("Dmg","Damage","Dégâts","EntityDamage","perc_add",".08",".40",True,"Increases melee damage.","Augmente les dégâts de mêlée."),
-        ("Hand","Handling","Maniement","WeaponHandling","perc_add",".10",".50",True,"Improves handling.","Améliore la maniabilité."),
-        ("Dismember","Brutality","Brutalité","DismemberChance","base_add",".05",".25",True,"Increases dismemberment.","Augmente le démembrement."),
-        ("Stam","Conditioning","Conditionnement","StaminaLoss","perc_add","-.06","-.30",False,"Reduces stamina spent.","Réduit l'endurance dépensée."),
+        ("Dmg","Dégâts","Dégâts","EntityDamage","perc_add",".08",".40",True,"Augmente les dégâts de mêlée.","Augmente les dégâts de mêlée."),
+        ("Hand","Maniement","Maniement","WeaponHandling","perc_add",".10",".50",True,"Améliore la prise en main : attaques plus vives.","Améliore la prise en main : attaques plus vives."),
+        ("Dismember","Brutalité","Brutalité","DismemberChance","base_add",".05",".25",True,"Augmente les chances de démembrement.","Augmente les chances de démembrement."),
+        ("Block","Force de frappe","Force de frappe","BlockDamage","perc_add",".10",".50",True,"Augmente les dégâts portés aux blocs et objets.","Augmente les dégâts portés aux blocs et objets."),
+        ("Pierce","Perforation","Perforation","TargetArmor","perc_add","-.06","-.30",True,"Vos coups ignorent davantage l'armure.","Vos coups ignorent davantage l'armure."),
+        ("WStam","Aisance","Aisance","StaminaLoss","perc_add","-.05","-.25",True,"Réduit l'endurance dépensée en attaquant.","Réduit l'endurance dépensée en attaquant."),
     ],
     "thrown": [
-        ("Dmg","Damage","Dégâts","EntityDamage","perc_add",".08",".40",True,"Increases thrown damage.","Augmente les dégâts de jet."),
-        ("Hand","Handling","Maniement","WeaponHandling","perc_add",".10",".50",True,"Improves handling.","Améliore la maniabilité."),
-        ("Velo","Strong Arm","Bon bras","ProjectileVelocity","perc_add",".10",".50",True,"Throws farther.","Lance plus loin."),
+        ("Dmg","Dégâts","Dégâts","EntityDamage","perc_add",".08",".40",True,"Augmente les dégâts de jet.","Augmente les dégâts de jet."),
+        ("Hand","Maniement","Maniement","WeaponHandling","perc_add",".10",".50",True,"Améliore la prise en main : armement et lancer plus vifs.","Améliore la prise en main : armement et lancer plus vifs."),
+        ("Velo","Bon bras","Bon bras","ProjectileVelocity","perc_add",".10",".50",True,"Lance plus loin et plus vite.","Lance plus loin et plus vite."),
+        ("Pierce","Perforation","Perforation","TargetArmor","perc_add","-.06","-.30",True,"Vos projectiles ignorent davantage l'armure.","Vos projectiles ignorent davantage l'armure."),
+        ("WStam","Aisance","Aisance","StaminaLoss","perc_add","-.05","-.25",True,"Réduit l'endurance dépensée en lançant.","Réduit l'endurance dépensée en lançant."),
     ],
     "robotics": [
-        ("Dmg","Damage","Dégâts","EntityDamage","perc_add",".08",".40",True,"Increases robotics damage.","Augmente les dégâts robotiques."),
-        ("Hand","Handling","Maniement","WeaponHandling","perc_add",".10",".50",True,"Improves handling.","Améliore la maniabilité."),
-        ("Reload","Maintenance","Maintenance","ReloadSpeedMultiplier","perc_add","-.06","-.30",True,"Services faster.","Entretient plus vite."),
+        ("Dmg","Dégâts","Dégâts","EntityDamage","perc_add",".08",".40",True,"Augmente les dégâts robotiques (tourelles, drones).","Augmente les dégâts robotiques (tourelles, drones)."),
+        ("Hand","Maniement","Maniement","WeaponHandling","perc_add",".10",".50",True,"Améliore la prise en main et la stabilité des armes robotiques.","Améliore la prise en main et la stabilité des armes robotiques."),
+        ("Reload","Maintenance","Maintenance","ReloadSpeedMultiplier","perc_add","-.06","-.30",True,"Recharge et entretient plus vite.","Recharge et entretient plus vite."),
+        ("Pierce","Perforation","Perforation","TargetArmor","perc_add","-.06","-.30",True,"Vos tirs robotiques ignorent davantage l'armure.","Vos tirs robotiques ignorent davantage l'armure."),
     ],
     "tools": [
-        ("Harvest","Harvesting","Récolte","HarvestCount","perc_add",".10",".50",True,"Harvests more with tools.","Récolte plus avec les outils."),
-        ("Block","Power Tools","Outils puissants","BlockDamage","perc_add",".10",".50",True,"Increases block damage.","Augmente les dégâts aux blocs."),
-        ("Stam","Conditioning","Conditionnement","StaminaLoss","perc_add","-.06","-.30",False,"Reduces stamina spent.","Réduit l'endurance dépensée."),
+        ("Harvest","Récolte","Récolte","HarvestCount","perc_add",".10",".50",True,"Récolte davantage avec les outils.","Récolte davantage avec les outils."),
+        ("Block","Outils puissants","Outils puissants","BlockDamage","perc_add",".10",".50",True,"Augmente les dégâts portés aux blocs.","Augmente les dégâts portés aux blocs."),
+        ("Dmg","Mordant","Mordant","EntityDamage","perc_add",".08",".40",True,"Augmente les dégâts des outils contre les ennemis.","Augmente les dégâts des outils contre les ennemis."),
+        ("Hand","Maniement","Maniement","WeaponHandling","perc_add",".10",".50",True,"Améliore la prise en main des outils.","Améliore la prise en main des outils."),
+        ("WStam","Aisance","Aisance","StaminaLoss","perc_add","-.05","-.25",True,"Réduit l'endurance dépensée avec les outils.","Réduit l'endurance dépensée avec les outils."),
     ],
 }
 
@@ -141,7 +154,7 @@ FARM_AGRI = [
         stat("Dmg","Damage","Dégâts","EntityDamage","perc_add",".08",".40",5,"perkBoomstick",
              "Increases pump shotgun damage.","Augmente les dégâts au fusil à pompe.","ui_game_symbol_shotgun"),
         stat("Hand","Handling","Maniement","WeaponHandling","perc_add",".10",".50",5,"perkBoomstick",
-             "Improves shotgun handling.","Améliore la maniabilité du fusil à pompe.","ui_game_symbol_shotgun"),
+             "Améliore la prise en main du fusil : visée plus rapide, recul et oscillation réduits.","Améliore la prise en main du fusil : visée plus rapide, recul et oscillation réduits.","ui_game_symbol_shotgun"),
         stat("Reload","Fast Reload","Rechargement rapide","ReloadSpeedMultiplier","perc_add","-.06","-.30",5,"perkBoomstick",
              "Reloads the shotgun faster.","Recharge le fusil plus vite.","ui_game_symbol_shotgun"),
         stat("Aim","Choke","Précision","SpreadMultiplierAiming","perc_add","-.06","-.30",5,"perkBoomstick",
@@ -156,21 +169,19 @@ FARM_AGRI = [
                "Débloque la fabrication de Chevrotine de fermier (chevrotine lourde) à l'établi."),
     ]),
     ("Farming","Farming","Agriculture","ui_game_symbol_crops", [
-        stat("Green","Green Thumb","Main verte","HarvestCount","perc_add",".15",".75",5,"cropHarvest,wildCropsHarvest",
-             "Harvest much more from crops and wild plants.","Récolte bien plus sur cultures et plantes sauvages.","ui_game_symbol_crops"),
+        stat("Green","Green Thumb","Main verte","HarvestCount","perc_add",".15",".75",5,"cropHarvest",
+             "Récolte bien plus sur vos cultures.","Récolte bien plus sur vos cultures.","ui_game_symbol_crops"),
         stat("Butcher","Homesteader","Éleveur","HarvestCount","perc_add",".10",".50",5,"butcherHarvest",
-             "Harvest more meat and resources from animals.","Récolte plus de viande/ressources sur les animaux.","ui_game_symbol_deep_cuts"),
-        stat("FastCraft","Farmhand","Tâcheron","CraftingTime","perc_add","-.10","-.50",5,"dhsCraftFarmAgri",
-             "Crafts your Farmer recipes faster.","Fabrique vos recettes d'Agriculteur plus vite.","ui_game_symbol_workbench"),
+             "Récolte plus de viande et de ressources sur les animaux.","Récolte plus de viande et de ressources sur les animaux.","ui_game_symbol_deep_cuts"),
+        stat("FastCraft","Cadence agricole","Cadence agricole","CraftingTime","perc_add","-.10","-.50",5,"dhsCraftFarmAgri",
+             "Fabrique vos recettes d'Agriculteur plus vite.","Fabrique vos recettes d'Agriculteur plus vite.","ui_game_symbol_workbench"),
         unlock("Preserve","Cannery","Conserverie","ui_game_symbol_fork","dhsFoodPreserves",False,24,
-               "Unlocks cooking Farmer's Preserves (long-lasting filling food).",
+               "Débloque la cuisson des Conserves du fermier (nourriture copieuse qui se garde).",
                "Débloque la cuisson des Conserves du fermier (nourriture copieuse qui se garde)."),
-        stat("Belly","Big Eater","Estomac solide","FoodMax","base_add","5","25",5,"",
-             "Increases your maximum food.","Augmente votre nourriture maximale.","ui_game_symbol_stomach"),
-        stat("XP","Early Riser","Lève-tôt","PlayerExpGain","perc_add",".02",".10",5,"",
-             "Increases all experience gained.","Augmente toute l'expérience gagnée.","ui_game_symbol_adventure"),
+        stat("Cart","Charrette","Charrette","CarryCapacity","base_add","2","10",5,"",
+             "Ajoute des emplacements pour transporter vos récoltes.","Ajoute des emplacements pour transporter vos récoltes.","ui_game_symbol_pack_mule"),
         stat("StamRegen","Field Stamina","Souffle paysan","StaminaChangeOT","perc_add",".05",".25",5,"",
-             "Recovers stamina faster.","Récupère l'endurance plus vite.","ui_game_symbol_cardio"),
+             "Récupère l'endurance plus vite.","Récupère l'endurance plus vite.","ui_game_symbol_cardio"),
     ]),
     ("Provider","Provider","Terroir","ui_game_symbol_crops", [
         sp("Wild","Fourrageur","Récolte plus sur les plantes sauvages.","HarvestCount","perc_add",".10",".50",5,"wildCropsHarvest","ui_game_symbol_crops"),
@@ -188,7 +199,7 @@ FARM_COOK = [
         stat("Dmg","Damage","Dégâts","EntityDamage","perc_add",".08",".40",5,"perkPummelPete",
              "Increases club damage.","Augmente les dégâts au gourdin.","ui_game_symbol_hammer"),
         stat("Hand","Handling","Maniement","WeaponHandling","perc_add",".10",".50",5,"perkPummelPete",
-             "Improves club handling.","Améliore la maniabilité du gourdin.","ui_game_symbol_hammer"),
+             "Améliore la prise en main du gourdin : attaques plus vives.","Améliore la prise en main du gourdin : attaques plus vives.","ui_game_symbol_hammer"),
         stat("Dismember","Tenderizer","Attendrisseur","DismemberChance","base_add",".05",".25",5,"perkPummelPete",
              "Increases dismemberment with clubs.","Augmente le démembrement au gourdin.","ui_game_symbol_hammer"),
         stat("Stam","Conditioning","Conditionnement","StaminaLoss","perc_add","-.06","-.30",5,"perkPummelPete",
@@ -200,22 +211,20 @@ FARM_COOK = [
     ]),
     ("Kitchen","Kitchen","Cuisine","ui_game_symbol_fork", [
         stat("FastCook","Sous-Chef","Marmiton","CraftingTime","perc_add","-.10","-.50",5,"dhsCraftFarmCook",
-             "Cooks your Cook recipes faster.","Cuisine vos recettes de Cuisinier plus vite.","ui_game_symbol_fork"),
-        stat("Gourmet","Gourmet","Gourmet","FoodMax","base_add","5","25",5,"",
-             "Increases your maximum food.","Augmente votre nourriture maximale.","ui_game_symbol_stomach"),
+             "Cuisine vos recettes de Cuisinier plus vite.","Cuisine vos recettes de Cuisinier plus vite.","ui_game_symbol_fork"),
         unlock("Feast","Cook's Kitchen","Cuisine du chef","ui_game_symbol_fork","dhsFoodFeast",True,1,
-               "Unlocks cooking the Team Feast: a shared meal that buffs nearby allies.",
+               "Débloque la cuisson du Festin d'équipe : un plat qui buff les alliés proches.",
                "Débloque la cuisson du Festin d'équipe : un plat qui buff les alliés proches."),
         unlock("Tonic","Mixology","Mixologie","ui_game_symbol_fork","dhsDrinkTonic",False,12,
-               "Unlocks brewing the Cook's Tonic: a shared stamina drink.",
+               "Débloque la préparation du Tonique du chef : une boisson d'endurance partagée.",
                "Débloque la préparation du Tonique du chef : une boisson d'endurance partagée."),
         unlock("Grand","Grand Chef","Grand chef","ui_game_symbol_fork","dhsFoodFeastGrand",False,36,
-               "Unlocks cooking the Grand Feast: a stronger team meal.",
+               "Débloque la cuisson du Grand festin : un repas d'équipe renforcé.",
                "Débloque la cuisson du Grand festin : un repas d'équipe renforcé."),
         stat("Butcher","Butcher","Boucher","HarvestCount","perc_add",".10",".50",5,"butcherHarvest",
-             "Harvest more meat from animals.","Récolte plus de viande sur les animaux.","ui_game_symbol_deep_cuts"),
-        stat("XP","Quick Learner","Apprenti rapide","PlayerExpGain","perc_add",".02",".10",5,"",
-             "Increases all experience gained.","Augmente toute l'expérience gagnée.","ui_game_symbol_adventure"),
+             "Récolte plus de viande sur les animaux.","Récolte plus de viande sur les animaux.","ui_game_symbol_deep_cuts"),
+        stat("Pantry","Garde-manger","Garde-manger","CarryCapacity","base_add","2","10",5,"",
+             "Ajoute des emplacements pour transporter vos provisions.","Ajoute des emplacements pour transporter vos provisions.","ui_game_symbol_pack_mule"),
     ]),
     ("Support","Support","Maison & équipe","ui_game_symbol_medical", [
         sp("Provision","Intendance","Récupère davantage de butin.","LootQuantity","perc_add",".04",".20",5,"","ui_game_symbol_pack_mule"),
@@ -276,21 +285,17 @@ DOMAIN = {
     "MedicChem": ("chemStationCrafting","chimie et explosifs"),
 }
 
-# ---- SURVIVANT (classe commune, pour TOUS) : arbre de survie générique + bases ----
-# Tous les bonus génériques (vitalité, endurance, port, résistances...) vivent ICI, plus aucun
-# dans les sous-classes (dont la Spécialité est désormais unique). Remplace la base vanilla.
+# ---- SURVIVANT (classe commune, pour TOUS) : socle vital MINIMAL + bases ----
+# Survivant ne garde QUE des stats vitales "universelles" (santé, nourriture, XP, résistance
+# générale). Tous les autres génériques (endurance, port, résistances spécifiques, thermie...)
+# sont RÉPARTIS dans les sous-classes (cf RESERVED_SURVIVOR + validate()). Aucun TYPE d'effet
+# de Survivant n'apparaît dans une sous-classe -> zéro doublon général<->sous-classe.
+RESERVED_SURVIVOR = {"HealthMax", "FoodMax", "PlayerExpGain", "GeneralDamageResist"}
 SURVIVOR = [
     sp("Vitalite","Vitalité","Augmente votre santé maximale.","HealthMax","base_add","5","25",5,"","ui_game_symbol_healing_factor"),
-    sp("Endurance","Endurance","Réduit l'endurance dépensée par les actions.","StaminaLoss","perc_add","-.06","-.30",5,"","ui_game_symbol_cardio"),
-    sp("Recup","Récupération","Récupère l'endurance plus vite.","StaminaChangeOT","perc_add",".05",".25",5,"","ui_game_symbol_cardio"),
-    sp("Porteur","Porteur","Ajoute des emplacements de portage.","CarryCapacity","base_add","2","10",5,"","ui_game_symbol_pack_mule"),
-    sp("Robuste","Robustesse","Réduit les dégâts physiques subis.","PhysicalDamageResist","base_add","1","5",5,"","ui_game_symbol_armor_iron"),
-    sp("Consti","Constitution","Réduit légèrement tous les dégâts subis.","GeneralDamageResist","base_add","1","3",3,"","ui_game_symbol_armor_iron"),
-    sp("Temper","Tempérament","Résiste aux effets négatifs.","BuffResistance","base_add","1","3",3,"","ui_game_symbol_light_armor2"),
     sp("Metab","Métabolisme","Augmente votre nourriture maximale.","FoodMax","base_add","5","25",5,"","ui_game_symbol_stomach"),
+    sp("Consti","Constitution","Réduit légèrement tous les dégâts subis.","GeneralDamageResist","base_add","1","3",3,"","ui_game_symbol_armor_iron"),
     sp("Survie","Instinct de survie","Augmente toute l'expérience gagnée.","PlayerExpGain","perc_add",".02",".10",5,"","ui_game_symbol_adventure"),
-    sp("Froid","Acclimatation au froid","Améliore la résistance au froid.","HypothermalResist","base_add","2","10",5,"","ui_game_symbol_temperature"),
-    sp("Chaud","Acclimatation à la chaleur","Améliore la résistance à la chaleur.","HyperthermalResist","base_add","2","10",5,"","ui_game_symbol_temperature"),
     unlock("Gear","Débrouillardise","Débrouillardise","ui_game_symbol_workbench", ",".join(T0_ALL), True, 1,
            "Débloque la fabrication des armes et outils de base (tuyau, pierre) pour tous.",
            "Débloque la fabrication des armes et outils de base (tuyau, pierre) pour tous."),
@@ -353,7 +358,7 @@ THEME_SPEC = {
         sp("Quarry","Carrier","Récolte plus de minerai et de bois.","HarvestCount","perc_add",".10",".50",5,"oreWoodHarvest","ui_game_symbol_pack_mule"),
         sp("Trap","Génie défensif","Réduit les dégâts subis de vos propres pièges.","TrapIncomingDamage","perc_add","-.1","-.5",5,"","ui_game_symbol_armor_iron"),
         sp("Blast","Bâtisseur solide","Réduit les dégâts d'explosion subis.","ExplosionIncomingDamage","perc_add","-.06","-.30",5,"","ui_game_symbol_armor_iron"),
-        sp("Haul","Hercule","Réduit l'endurance dépensée.","StaminaLoss","perc_add","-.05","-.25",5,"","ui_game_symbol_cardio"),
+        sp("Haul","Bête de somme","Ajoute des emplacements de portage pour les matériaux.","CarryCapacity","base_add","2","10",5,"","ui_game_symbol_pack_mule"),
         sp("Plate","Carapace","Réduit les dégâts physiques subis.","PhysicalDamageResist","base_add","1","5",5,"","ui_game_symbol_armor_iron"),
         sp("Heat","Forgeron endurci","Améliore la résistance à la chaleur.","HyperthermalResist","base_add","2","10",5,"","ui_game_symbol_temperature"),
     ],
@@ -407,19 +412,10 @@ def build_domain_subbranches(code):
     catTag, domFR = DOMAIN[code]
     wic = icon
     # --- Sous-branche ARME (maîtrise de l'arme de classe) ---
+    # PERKS[kind] est autonome : chaque effet est unique (pas de doublon intra-branche).
     arme = []
     for (suf,pen,pfr,nm,op,v1,v5,scoped,ed,fd) in PERKS[kind]:
         arme.append(stat(suf,pfr,pfr,nm,op,v1,v5,5, tag if scoped else "", fd, fd, wic))
-    arme.append(stat("Pierce","Perforation","Perforation","TargetArmor","perc_add","-.06","-.30",5,tag,
-                     "Vos attaques ignorent davantage l'armure.","Vos attaques ignorent davantage l'armure.",wic))
-    arme.append(stat("WStam","Aisance","Aisance","StaminaLoss","perc_add","-.05","-.25",5,tag,
-                     "Réduit l'endurance dépensée avec votre arme.","Réduit l'endurance dépensée avec votre arme.",wic))
-    if kind in ("gun","bow"):
-        arme.append(stat("Steady","Stabilité","Stabilité","SpreadMultiplierAiming","perc_add","-.06","-.30",5,tag,
-                         "Réduit la dispersion en visée.","Réduit la dispersion en visée.",wic))
-    else:
-        arme.append(stat("Cleave","Tranchant","Tranchant","DismemberChance","base_add",".04",".20",5,tag,
-                         "Augmente les chances de démembrement.","Augmente les chances de démembrement.",wic))
     # --- Sous-branche MÉTIER (identité de craft) ---
     metier = []
     if tiers:
@@ -437,8 +433,7 @@ def build_domain_subbranches(code):
         metier.append(unlock("AtelierII",f"Maîtrise : {domFR}",f"Maîtrise : {domFR}","ui_game_symbol_workbench", ",".join(rest), False, 24,
                              f"Débloque la fabrication avancée de votre spécialité : {domFR}.",
                              f"Débloque la fabrication avancée de votre spécialité : {domFR}."))
-    metier.append(stat("CraftXP","Apprentissage","Apprentissage","PlayerExpGain","perc_add",".02",".10",5,"",
-                       "Augmente toute l'expérience gagnée.","Augmente toute l'expérience gagnée.","ui_game_symbol_adventure"))
+    # (Apprentissage/PlayerExpGain retiré : type réservé à Survivant -> zéro doublon.)
     # Perks de déblocage des crafts SIGNATURE exclusifs (depuis CRAFTABLES), si définis.
     cr = CRAFTABLES.get(code)
     if cr:
@@ -792,6 +787,41 @@ def craft(code): return CRAFTABLES.get(code)
 def _palier(i):
     return LVL[i] if i < len(LVL) else LVL[-1]
 
+# --- Détail des stats par niveau (rempli dans le grand cadre de l'UI via long_desc) ---
+def _interp(v1, vmax, i, n):
+    """Valeur d'un passive_effect 'level=1,n value=v1,vmax' au rang i (interpolation linéaire,
+    comme le moteur)."""
+    a, b = float(v1), float(vmax)
+    return a if n <= 1 else a + (b - a) * (i - 1) / (n - 1)
+
+def _fmt(op, x):
+    """Formate une valeur d'effet pour l'affichage FR (pourcentage ou points)."""
+    if op == "perc_add":
+        return f"{x*100:+.0f} %"
+    if op == "perc_subtract":   # valeur stockée positive = réduction
+        return f"{-x*100:+.0f} %"
+    # base_add / base_set / base_subtract : fraction (<1) = %, sinon points entiers
+    if x != 0 and abs(x) < 1.0:
+        return f"{x*100:+.0f} %"
+    return f"{x:+.0f}"
+
+def rank_rows(code, p):
+    """Lignes de localisation pour le détail par niveau d'un perk (titre + texte long avec la
+    valeur calculée), affichées dans le cadre sous la description."""
+    base = f"dhsPerk{code}{p['suf']}"
+    rows = []
+    if p["k"] == "stat":
+        n = p["n"]
+        for i in range(1, n + 1):
+            s = _fmt(p["op"], _interp(p["v1"], p["vmax"], i, n))
+            longtxt = f"Niveau {i} : {s}. {p['fd']}"
+            rows.append((f"{base}R{i}", p["fr"], p["fr"]))
+            rows.append((f"{base}R{i}Long", longtxt, longtxt))
+    else:
+        rows.append((f"{base}R1", p["fr"], p["fr"]))
+        rows.append((f"{base}R1Long", p["fd"], p["fd"]))
+    return rows
+
 def _perk_xml(L, code, skill, p, gated=True):
     """Émet un <perk>. gated=True -> requiert la classe (CVarCompare). On ajoute des
     <effect_description> (réutilisant la clé Desc FR) pour que l'UI affiche le texte FR
@@ -799,9 +829,10 @@ def _perk_xml(L, code, skill, p, gated=True):
     name = f"perkClass{code}{p['suf']}"
     dkey = f"dhsPerk{code}{p['suf']}Desc"
     nkey = f"dhsPerk{code}{p['suf']}Name"
+    rbase = f"dhsPerk{code}{p['suf']}"
     def req(lvl, palier):
         g = f'<requirement name="CVarCompare" cvar="{cvar(code)}" operation="Equals" value="1" desc_key="dhsReqClass{code}"/>' if gated else ''
-        return f'      <level_requirements level="{lvl}">{g}<requirement name="PlayerLevel" operation="GTE" value="{palier}"/></level_requirements>'
+        return f'      <level_requirements level="{lvl}">{g}<requirement name="PlayerLevel" operation="GTE" value="{palier}" desc_key="dhsReqLvl{palier}"/></level_requirements>'
     if p["k"] == "stat":
         n = p["n"]
         L.append(f'    <perk name="{name}" parent="{skill}" name_key="{nkey}" desc_key="{dkey}" icon="{p["icon"]}" max_level="{n}">')
@@ -810,8 +841,9 @@ def _perk_xml(L, code, skill, p, gated=True):
         tagattr = f' tags="{p["tags"]}"' if p["tags"] else ''
         L.append('      <effect_group>')
         L.append(f'        <passive_effect name="{p["eff"]}" operation="{p["op"]}" level="1,{n}" value="{p["v1"]},{p["vmax"]}"{tagattr}/>')
+        # desc_key = titre du rang ; long_desc_key = détail avec la valeur calculée (cadre UI).
         for i in range(n):
-            L.append(f'        <effect_description level="{i+1}" desc_key="{dkey}" long_desc_key="{dkey}"/>')
+            L.append(f'        <effect_description level="{i+1}" desc_key="{rbase}R{i+1}" long_desc_key="{rbase}R{i+1}Long"/>')
         L.append('      </effect_group>')
         L.append('    </perk>')
     else:  # unlock
@@ -820,7 +852,7 @@ def _perk_xml(L, code, skill, p, gated=True):
         L.append(req(1, p["palier"]))
         L.append('      <effect_group>')
         L.append(f'        <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="{p["recipes"]}"/>')
-        L.append(f'        <effect_description level="1" desc_key="{dkey}" long_desc_key="{dkey}"/>')
+        L.append(f'        <effect_description level="1" desc_key="{rbase}R1" long_desc_key="{rbase}R1Long"/>')
         L.append('      </effect_group>')
         L.append('    </perk>')
 
@@ -956,6 +988,11 @@ def gen_loc():
     rows.append(("dhsAttClassCommonName","Survivor","Survivant"))
     rows.append(("dhsAttClassCommonDesc","Common skills for everyone","Compétences communes à tous"))
     rows.append(("dhsClassPointsLabel","Class points","Points de classe"))
+    # Libellés FR des prérequis de niveau (sinon l'UI affiche « Player level GTE N » en anglais).
+    for v in sorted(set(LVL) | {p_["palier"] for p_ in SURVIVOR if p_["k"] == "unlock"}
+                    | {1, 12, 24, 36, 48}):
+        txt = "Aucun prérequis de niveau" if v <= 1 else f"Niveau {v} requis"
+        rows.append((f"dhsReqLvl{v}", txt, txt))
     for bk,en,fr,_ic,_subs in BRANCHES:
         a = attr_of_branch(bk)
         rows.append((f"dhs{a}Name", en, fr))
@@ -968,6 +1005,7 @@ def gen_loc():
     for p in SURVIVOR:
         rows.append((f"dhsPerkCommon{p['suf']}Name", p["en"], p["fr"]))
         rows.append((f"dhsPerkCommon{p['suf']}Desc", p["ed"], p["fd"]))
+        rows += rank_rows("Common", p)
     for code,en,fr,_tag,_kind,_fid,_sicon,efl,ffl in SUBS:
         rows.append((f"dhsReqClass{code}", f"Requires the {en} class", f"Nécessite la classe {fr}"))
         rows.append((f"dhsBookClass{code}", f"Class Manual: {en}", f"Manuel de classe : {fr}"))
@@ -985,6 +1023,7 @@ def gen_loc():
             for p in perks:
                 rows.append((f"dhsPerk{code}{p['suf']}Name", p["en"], p["fr"]))
                 rows.append((f"dhsPerk{code}{p['suf']}Desc", p["ed"], p["fd"]))
+                rows += rank_rows(code, p)
         # loc des craftables
         cr = craft(code)
         if cr:
@@ -1000,7 +1039,44 @@ def gen_loc():
     out = [",".join(esc(c) for c in r) for r in rows]
     return "\n".join(out)+"\n"
 
+def _perk_sig(p):
+    """Signature d'unicité d'un perk : (effet, tags triés) pour une stat ; ('unlock', recettes)
+    pour un déblocage (toujours distinct par recettes)."""
+    if p["k"] == "unlock":
+        return ("unlock", p["recipes"])
+    return (p["eff"], tuple(sorted(t for t in p["tags"].split(",") if t)))
+
+def validate():
+    """Garantit les règles d'unicité demandées :
+      1) aucun TYPE d'effet réservé à Survivant n'apparaît dans une sous-classe (zéro doublon
+         général <-> sous-classe) ;
+      2) au sein d'une sous-classe (Arme + Métier + Spécialité), aucun perk en double
+         (même effet ET mêmes tags) -> chaque perk a un gameplay distinct.
+    Lève AssertionError listant toutes les violations."""
+    errors = []
+    # Survivant : pas de doublon interne + recense ses types réservés.
+    surv_sigs = {}
+    for p in SURVIVOR:
+        sig = _perk_sig(p)
+        if sig in surv_sigs:
+            errors.append(f"Survivant : doublon {sig} ({p['suf']} == {surv_sigs[sig]})")
+        surv_sigs[sig] = p["suf"]
+    for code, *_ in SUBS:
+        seen = {}
+        for sk, _en, _fr, _ic, perks in subbranches_for(code):
+            for p in perks:
+                if p["k"] == "stat" and p["eff"] in RESERVED_SURVIVOR:
+                    errors.append(f"{code}/{sk}/{p['suf']} : effet '{p['eff']}' réservé à Survivant")
+                sig = _perk_sig(p)
+                if sig in seen:
+                    errors.append(f"{code} : doublon {sig} ({sk}/{p['suf']} == {seen[sig]})")
+                seen[sig] = f"{sk}/{p['suf']}"
+    if errors:
+        raise AssertionError("Violations d'unicité de perks :\n  - " + "\n  - ".join(errors))
+    print(f"validate(): OK — {len(SUBS)} sous-classes, aucun doublon, {len(RESERVED_SURVIVOR)} types réservés à Survivant")
+
 def main():
+    validate()
     files = {
         "progression.xml": gen_progression(),
         "items.xml": gen_items(),
