@@ -6,13 +6,17 @@
       <property name="Class" value="EntityBandit"/>
       <property name="EntityType" value="Player"/>
       <property name="UserSpawnType" value="Menu"/>
-      <property name="Mesh" value="Player/Male/player_maleRagdoll"/>
-      <property name="AvatarController" value="AvatarNpcController"/>
-      <property name="ModelType" value="Npc"/>
-      <property name="HasRagdoll" value="false"/>
-      <property name="Prefab" value="NPC"/>
+      <!-- Modèle = système SDCS du joueur (apparence via Archetype). Rendu correct sur tout
+           client graphique. NB: un serveur dédié SANS GPU ne peut pas instancier un modèle SDCS
+           (EModelSDCS.Init nécessite des shaders) -> spawn de pillards = OK en solo/hôte ; pour un
+           dédié headless il faudra un archetype Npc (cf trader) — à traiter à l'équilibrage. -->
+      <property name="ModelType" value="SDCS"/>
+      <property name="PhysicsBody" value="PlayerSDCS"/>
+      <property name="AvatarController" value="AvatarSDCSController"/>
+      <property name="Prefab" value="Player"/>
       <property name="Parent" value="Players"/>
-      <property name="PhysicsBody" value="Player"/>
+      <property name="HasRagdoll" value="true"/>
+      <property name="RagdollOnDeathChance" value="0.5"/>
       <property name="HandItem" value="meleeHandPlayer"/>
       <property name="MaxViewAngle" value="180"/>
       <property name="Weight" value="70"/>
@@ -44,6 +48,7 @@
     </entity_class>
     <entity_class name="dhsBanditMarauder" extends="dhsBanditTemplate">
       <property name="Faction" value="banditMarauder"/>
+      <property name="Archetype" value="Bobby"/>
       <property name="EntityName" value="dhsBanditMarauderName"/>
       <property name="MaxHealth" value="150"/>
       <property name="MoveSpeedAggro" value="1.1, 1.3"/>
@@ -58,6 +63,7 @@
     </entity_class>
     <entity_class name="dhsBanditMotor" extends="dhsBanditTemplate">
       <property name="Faction" value="banditMotor"/>
+      <property name="Archetype" value="Hank"/>
       <property name="EntityName" value="dhsBanditMotorName"/>
       <property name="MaxHealth" value="200"/>
       <property name="MoveSpeedAggro" value="1.2, 1.5"/>
@@ -72,6 +78,7 @@
     </entity_class>
     <entity_class name="dhsBanditMilitia" extends="dhsBanditTemplate">
       <property name="Faction" value="banditMilitia"/>
+      <property name="Archetype" value="Denzel"/>
       <property name="EntityName" value="dhsBanditMilitiaName"/>
       <property name="MaxHealth" value="260"/>
       <property name="MoveSpeedAggro" value="1.15, 1.45"/>
@@ -86,6 +93,7 @@
     </entity_class>
     <entity_class name="dhsBanditSect" extends="dhsBanditTemplate">
       <property name="Faction" value="banditSect"/>
+      <property name="Archetype" value="Reggie"/>
       <property name="EntityName" value="dhsBanditSectName"/>
       <property name="MaxHealth" value="340"/>
       <property name="MoveSpeedAggro" value="1.2, 1.5"/>

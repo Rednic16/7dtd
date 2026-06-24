@@ -1288,7 +1288,7 @@ def gen_loc():
             for (k,e,f) in cr["loc"]:
                 rows.append((k, e, f))
     # AXE 2 — noms FR des pillards.
-    for suf, _faction, fr, _hp, _aggro, _loadout, _fl in BANDIT_TIERS:
+    for suf, _faction, fr, _hp, _aggro, _loadout, _arch, _fl in BANDIT_TIERS:
         rows.append((f"dhsBandit{suf}Name", fr, fr))
     # L'utilisateur veut TOUT en français (client en anglais) -> on met le français dans les
     # DEUX colonnes (english+french) pour garantir l'affichage FR quelle que soit la langue.
@@ -1360,19 +1360,19 @@ def validate():
 # Tiers pilotés par le GS GLOBAL (sélection du tier = C# BanditManager).
 # Chaque tier = sa faction (toutes mutuellement hostiles + hostiles joueurs/zombies).
 # ============================================================================
-# (suf, faction, FR, hp, moveAggro, [loadout items], flavorFR)
+# (suf, faction, FR, hp, moveAggro, [loadout items], archetype, flavorFR)
 BANDIT_TIERS = [
     ("Marauder", "banditMarauder", "Maraudeur", 150, "1.1, 1.3",
-     ["meleeWpnClubT0WoodenClub"],
+     ["meleeWpnClubT0WoodenClub"], "Bobby",
      "Pillard désespéré armé de bric et de broc."),
     ("Motor", "banditMotor", "Bandit motorisé", 200, "1.2, 1.5",
-     ["gunHandgunT1Pistol", "ammo9mmBulletBall"],
+     ["gunHandgunT1Pistol", "ammo9mmBulletBall"], "Hank",
      "Pillard mobile et mieux armé, écumeur des routes."),
     ("Militia", "banditMilitia", "Milicien pillard", 260, "1.15, 1.45",
-     ["gunMGT1AK47", "ammo762mmBulletBall"],
+     ["gunMGT1AK47", "ammo762mmBulletBall"], "Denzel",
      "Ex-militaire organisé, armes à feu et tactique de groupe."),
     ("Sect", "banditSect", "Fanatique de la Congrégation", 340, "1.2, 1.5",
-     ["gunRifleT2LeverActionRifle", "ammo762mmBulletBall"],
+     ["gunRifleT2LeverActionRifle", "ammo762mmBulletBall"], "Reggie",
      "Élite fanatique, la pire engeance des terres désolées."),
 ]
 BANDIT_FACTIONS = [t[1] for t in BANDIT_TIERS]
@@ -1407,13 +1407,17 @@ def gen_entityclasses():
       <property name="Class" value="EntityBandit"/>
       <property name="EntityType" value="Player"/>
       <property name="UserSpawnType" value="Menu"/>
-      <property name="Mesh" value="Player/Male/player_maleRagdoll"/>
-      <property name="AvatarController" value="AvatarNpcController"/>
-      <property name="ModelType" value="Npc"/>
-      <property name="HasRagdoll" value="false"/>
-      <property name="Prefab" value="NPC"/>
+      <!-- Modèle = système SDCS du joueur (apparence via Archetype). Rendu correct sur tout
+           client graphique. NB: un serveur dédié SANS GPU ne peut pas instancier un modèle SDCS
+           (EModelSDCS.Init nécessite des shaders) -> spawn de pillards = OK en solo/hôte ; pour un
+           dédié headless il faudra un archetype Npc (cf trader) — à traiter à l'équilibrage. -->
+      <property name="ModelType" value="SDCS"/>
+      <property name="PhysicsBody" value="PlayerSDCS"/>
+      <property name="AvatarController" value="AvatarSDCSController"/>
+      <property name="Prefab" value="Player"/>
       <property name="Parent" value="Players"/>
-      <property name="PhysicsBody" value="Player"/>
+      <property name="HasRagdoll" value="true"/>
+      <property name="RagdollOnDeathChance" value="0.5"/>
       <property name="HandItem" value="meleeHandPlayer"/>
       <property name="MaxViewAngle" value="180"/>
       <property name="Weight" value="70"/>
@@ -1432,10 +1436,11 @@ def gen_entityclasses():
       <property name="AITask" value="''' + task + '''"/>
       <property name="AITarget" value="''' + target + '''"/>
     </entity_class>''')
-    for suf, faction, fr, hp, aggro, loadout, _fl in BANDIT_TIERS:
+    for suf, faction, fr, hp, aggro, loadout, arch, _fl in BANDIT_TIERS:
         items = ",".join(loadout)
         L.append(f'''    <entity_class name="dhsBandit{suf}" extends="dhsBanditTemplate">
       <property name="Faction" value="{faction}"/>
+      <property name="Archetype" value="{arch}"/>
       <property name="EntityName" value="dhsBandit{suf}Name"/>
       <property name="MaxHealth" value="{hp}"/>
       <property name="MoveSpeedAggro" value="{aggro}"/>
