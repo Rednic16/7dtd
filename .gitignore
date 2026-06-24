@@ -10,6 +10,7 @@
 !/Mods/
 !/src/
 !/docs/
+!/tools/
 
 # --- Dans Mods/, ne garder que notre mod ---
 /Mods/*
@@ -35,3 +36,7 @@
 .idea/
 *.swp
 output_log*.txt
+
+# Python
+__pycache__/
+*.pyc

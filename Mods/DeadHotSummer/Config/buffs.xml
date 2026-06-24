@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- GENERE par tools/gen_axe1_classes.py — buffs signature de classe. -->
+<configs>
+  <append xpath="/buffs">
+    <buff name="dhsBuffHerbal" name_key="dhsBuffHerbalName" description_key="dhsBuffHerbalDesc" icon="ui_game_symbol_healing_factor" icon_color="136,221,136">
+      <duration value="600"/>
+      <stack_type value="replace"/>
+      <effect_group>
+        <passive_effect name="PhysicalDamageResist" operation="base_add" value="3"/>
+        <passive_effect name="StaminaLoss" operation="perc_add" value="-.10"/>
+        <passive_effect name="StaminaChangeOT" operation="perc_add" value=".20"/>
+      </effect_group>
+    </buff>
+    <buff name="dhsBuffFeast" name_key="dhsBuffFeastName" description_key="dhsBuffFeastDesc" icon="ui_game_symbol_fork" icon_color="255,153,51">
+      <duration value="600"/>
+      <stack_type value="replace"/>
+      <effect_group>
+        <passive_effect name="PhysicalDamageResist" operation="base_add" value="5"/>
+        <passive_effect name="StaminaLoss" operation="perc_add" value="-.15"/>
+      </effect_group>
+    </buff>
+    <buff name="dhsBuffFeastGrand" name_key="dhsBuffFeastGrandName" description_key="dhsBuffFeastGrandDesc" icon="ui_game_symbol_fork" icon_color="255,204,51">
+      <duration value="600"/>
+      <stack_type value="replace"/>
+      <effect_group>
+        <passive_effect name="PhysicalDamageResist" operation="base_add" value="8"/>
+        <passive_effect name="StaminaLoss" operation="perc_add" value="-.25"/>
+        <passive_effect name="StaminaChangeOT" operation="perc_add" value=".25"/>
+      </effect_group>
+    </buff>
+    <buff name="dhsBuffTonic" name_key="dhsBuffTonicName" description_key="dhsBuffTonicDesc" icon="ui_game_symbol_cardio" icon_color="255,170,85">
+      <duration value="600"/>
+      <stack_type value="replace"/>
+      <effect_group>
+        <passive_effect name="PhysicalDamageResist" operation="base_add" value="2"/>
+        <passive_effect name="StaminaLoss" operation="perc_add" value="-.15"/>
+        <passive_effect name="StaminaChangeOT" operation="perc_add" value=".35"/>
+      </effect_group>
+    </buff>
+  </append>
+</configs>

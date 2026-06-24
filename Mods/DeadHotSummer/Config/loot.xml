@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- GENERE par tools/gen_axe1_classes.py — ne pas editer a la main. -->
+<configs>
+  <append xpath="/lootcontainers/lootgroup[@name='perkBooks']">
+    <item name="dhsMagEngiMech"><requirement class="CVar" cvar="dhsClsEngiMech" operation="EQ" value="1"/></item>
+    <item name="dhsMagEngiElec"><requirement class="CVar" cvar="dhsClsEngiElec" operation="EQ" value="1"/></item>
+    <item name="dhsMagMedicSurg"><requirement class="CVar" cvar="dhsClsMedicSurg" operation="EQ" value="1"/></item>
+    <item name="dhsMagMedicChem"><requirement class="CVar" cvar="dhsClsMedicChem" operation="EQ" value="1"/></item>
+    <item name="dhsMagSoldSnip"><requirement class="CVar" cvar="dhsClsSoldSnip" operation="EQ" value="1"/></item>
+    <item name="dhsMagSoldAslt"><requirement class="CVar" cvar="dhsClsSoldAslt" operation="EQ" value="1"/></item>
+    <item name="dhsMagSurvHunt"><requirement class="CVar" cvar="dhsClsSurvHunt" operation="EQ" value="1"/></item>
+    <item name="dhsMagSurvHerb"><requirement class="CVar" cvar="dhsClsSurvHerb" operation="EQ" value="1"/></item>
+    <item name="dhsMagBuilArch"><requirement class="CVar" cvar="dhsClsBuilArch" operation="EQ" value="1"/></item>
+    <item name="dhsMagBuilArti"><requirement class="CVar" cvar="dhsClsBuilArti" operation="EQ" value="1"/></item>
+    <item name="dhsMagScoutTrac"><requirement class="CVar" cvar="dhsClsScoutTrac" operation="EQ" value="1"/></item>
+    <item name="dhsMagScoutInfi"><requirement class="CVar" cvar="dhsClsScoutInfi" operation="EQ" value="1"/></item>
+    <item name="dhsMagFarmAgri"><requirement class="CVar" cvar="dhsClsFarmAgri" operation="EQ" value="1"/></item>
+    <item name="dhsMagFarmCook"><requirement class="CVar" cvar="dhsClsFarmCook" operation="EQ" value="1"/></item>
+  </append>
+</configs>

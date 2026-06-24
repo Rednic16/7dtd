@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- GENERE par tools/gen_axe1_classes.py — recettes signature de classe. -->
+<configs>
+  <append xpath="/recipes">
+    <recipe name="dhsAmmoTurretHV" count="20" craft_area="workbench" craft_time="5" tags="learnable,workbenchCrafting,perkTurrets"><ingredient name="resourceGunPowder" count="6"/><ingredient name="resourceForgedIron" count="3"/></recipe>
+    <recipe name="dhsBatteryHD" count="1" craft_area="workbench" craft_time="20" tags="learnable,workbenchCrafting,perkAdvancedEngineering"><ingredient name="resourceElectricParts" count="3"/><ingredient name="resourceForgedIron" count="3"/><ingredient name="resourceDuctTape" count="2"/></recipe>
+    <recipe name="dhsMedSurgeryKit" count="1" craft_area="workbench" craft_time="20" tags="learnable,workbenchCrafting,craftingMedical"><ingredient name="medicalFirstAidBandage" count="1"/><ingredient name="medicalSplint" count="1"/><ingredient name="drinkJarBoiledWater" count="1"/></recipe>
+    <recipe name="dhsThrownFirebomb" count="2" craft_area="chemistryStation" craft_time="10" tags="learnable,chemStationCrafting,perkDemolitionsExpert"><ingredient name="resourceGunPowder" count="3"/><ingredient name="resourceOil" count="2"/><ingredient name="drinkJarBoiledWater" count="1"/></recipe>
+    <recipe name="dhsAmmoMatchAP" count="6" craft_area="workbench" craft_time="4" tags="learnable,workbenchCrafting,perkDeadEye"><ingredient name="resourceGunPowder" count="5"/><ingredient name="resourceForgedIron" count="2"/></recipe>
+    <recipe name="dhsAmmoBattle" count="10" craft_area="workbench" craft_time="4" tags="learnable,workbenchCrafting,perkMachineGunner"><ingredient name="resourceGunPowder" count="6"/><ingredient name="resourceForgedIron" count="2"/></recipe>
+    <recipe name="dhsAmmoHuntArrow" count="4" craft_area="workbench" craft_time="3" tags="learnable,workbenchCrafting,perkArchery"><ingredient name="ammoArrowIron" count="4"/><ingredient name="resourceForgedIron" count="1"/></recipe>
+    <recipe name="dhsDrinkDecoction" count="2" craft_area="campfire" craft_tool="toolCookingPot" craft_time="15" tags="learnable,craftingMedical"><ingredient name="drinkJarBoiledWater" count="2"/><ingredient name="resourceYuccaFibers" count="3"/></recipe>
+    <recipe name="dhsRepairKitPro" count="2" craft_area="workbench" craft_time="10" tags="learnable,workbenchCrafting,craftingHarvestingTools"><ingredient name="resourceForgedIron" count="3"/><ingredient name="resourceMechanicalParts" count="2"/><ingredient name="resourceDuctTape" count="1"/></recipe>
+    <recipe name="dhsAmmoLight" count="10" craft_area="workbench" craft_time="3" tags="learnable,workbenchCrafting,perkGunslinger"><ingredient name="resourceGunPowder" count="4"/><ingredient name="resourceForgedIron" count="1"/></recipe>
+    <recipe name="dhsDrugProwler" count="2" craft_area="campfire" craft_tool="toolCookingPot" craft_time="12" tags="learnable,perkBrawler"><ingredient name="resourceYuccaFibers" count="3"/><ingredient name="drinkJarBoiledWater" count="1"/></recipe>
+    <recipe name="dhsAmmoFarmerSlug" count="2" craft_area="workbench" craft_time="4" tags="learnable,workbenchCrafting,dhsCraftFarmAgri"><ingredient name="ammoShotgunShell" count="3"/><ingredient name="resourceGunPowder" count="4"/><ingredient name="resourceForgedIron" count="1"/></recipe>
+    <recipe name="dhsAmmoFarmerBuck" count="6" craft_area="workbench" craft_time="3" tags="learnable,workbenchCrafting,dhsCraftFarmAgri"><ingredient name="resourceGunPowder" count="4"/><ingredient name="resourceForgedIron" count="1"/></recipe>
+    <recipe name="dhsFoodPreserves" count="2" craft_area="campfire" craft_tool="toolCookingPot" craft_time="20" tags="learnable,dhsCraftFarmAgri"><ingredient name="foodGrilledMeat" count="3"/><ingredient name="foodCropPotato" count="2"/><ingredient name="drinkJarBoiledWater" count="1"/></recipe>
+    <recipe name="dhsFoodFeast" count="1" craft_area="campfire" craft_tool="toolCookingPot" craft_time="30" tags="learnable,dhsCraftFarmCook"><ingredient name="foodGrilledMeat" count="3"/><ingredient name="foodCropPotato" count="3"/><ingredient name="foodCropCorn" count="3"/><ingredient name="resourceAnimalFat" count="2"/><ingredient name="drinkJarBoiledWater" count="2"/></recipe>
+    <recipe name="dhsFoodFeastGrand" count="1" craft_area="campfire" craft_tool="toolCookingPot" craft_time="45" tags="learnable,dhsCraftFarmCook"><ingredient name="foodGrilledMeat" count="4"/><ingredient name="foodCropPotato" count="4"/><ingredient name="foodCropCorn" count="4"/><ingredient name="resourceAnimalFat" count="3"/><ingredient name="drinkJarBoiledWater" count="3"/></recipe>
+    <recipe name="dhsDrinkTonic" count="2" craft_area="campfire" craft_tool="toolCookingPot" craft_time="15" tags="learnable,dhsCraftFarmCook"><ingredient name="drinkJarBoiledWater" count="2"/><ingredient name="foodCropCorn" count="2"/></recipe>
+  </append>
+  <setattribute name="tags" xpath="/recipes/recipe[@name='gunBowT0PrimitiveBow']">learnable,perkArchery,packMuleCrafting</setattribute>
+  <setattribute name="tags" xpath="/recipes/recipe[@name='gunHandgunT0PipePistol']">learnable,perkGunslinger,packMuleCrafting</setattribute>
+  <setattribute name="tags" xpath="/recipes/recipe[@name='gunMGT0PipeMachineGun']">learnable,perkMachineGunner,packMuleCrafting</setattribute>
+  <setattribute name="tags" xpath="/recipes/recipe[@name='gunRifleT0PipeRifle']">learnable,perkDeadEye,packMuleCrafting</setattribute>
+  <setattribute name="tags" xpath="/recipes/recipe[@name='gunShotgunT0PipeShotgun']">learnable,perkBoomstick,packMuleCrafting</setattribute>
+  <setattribute name="tags" xpath="/recipes/recipe[@name='meleeWpnBatonT0PipeBaton']">learnable,perkElectrocutioner,packMuleCrafting</setattribute>
+  <setattribute name="tags" xpath="/recipes/recipe[@name='meleeWpnBladeT0BoneKnife']">learnable,perkDeepCuts,craftingBlades,packMuleCrafting</setattribute>
+  <setattribute name="tags" xpath="/recipes/recipe[@name='meleeWpnClubT0WoodenClub']">learnable,perkPummelPete,packMuleCrafting</setattribute>
+  <setattribute name="tags" xpath="/recipes/recipe[@name='meleeWpnKnucklesT0LeatherKnuckles']">learnable,perkBrawler,packMuleCrafting</setattribute>
+  <setattribute name="tags" xpath="/recipes/recipe[@name='meleeWpnSledgeT0StoneSledgehammer']">learnable,perkSkullCrusher,packMuleCrafting</setattribute>
+  <setattribute name="tags" xpath="/recipes/recipe[@name='meleeWpnSpearT0StoneSpear']">learnable,perkJavelinMaster,craftingSpears,packMuleCrafting</setattribute>
+</configs>

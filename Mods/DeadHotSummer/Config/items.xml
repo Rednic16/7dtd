@@ -1,0 +1,660 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- GENERE par tools/gen_axe1_classes.py — ne pas editer a la main. -->
+<configs>
+  <append xpath="/items">
+    <item name="dhsBookClassEngiMech">
+      <property name="Extends" value="schematicMaster"/>
+      <property name="CustomIcon" value="schematicMaster"/>
+      <property name="CustomIconTint" value="6699ff"/>
+      <property name="Stacknumber" value="1"/>
+      <property name="DescriptionKey" value="dhsBookClassEngiMechDesc"/>
+      <effect_group tiered="false">
+        <requirement name="CVarCompare" cvar="dhsClassSlotFree" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClsEngiMech" operation="set" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassSlotFree" operation="set" value="0"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassActiveForeign" operation="set" value="11"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsPtsEngiMech" operation="add" value="3"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
+      </effect_group>
+    </item>
+    <item name="dhsMagEngiMech">
+      <property name="Extends" value="schematicMaster"/>
+      <property name="CustomIcon" value="schematicMaster"/>
+      <property name="CustomIconTint" value="88cc88"/>
+      <property name="Stacknumber" value="20"/>
+      <property name="EconomicValue" value="120"/>
+      <property name="DescriptionKey" value="dhsMagEngiMechDesc"/>
+      <property name="Group" value="Books,BooksOnly,TCReading"/>
+      <property name="Tags" value="dhsCsmEngiMech,csm"/>
+      <effect_group tiered="false">
+        <requirement name="CVarCompare" cvar="dhsClsEngiMech" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsPtsEngiMech" operation="add" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
+      </effect_group>
+    </item>
+    <item name="dhsBookClassEngiElec">
+      <property name="Extends" value="schematicMaster"/>
+      <property name="CustomIcon" value="schematicMaster"/>
+      <property name="CustomIconTint" value="6699ff"/>
+      <property name="Stacknumber" value="1"/>
+      <property name="DescriptionKey" value="dhsBookClassEngiElecDesc"/>
+      <effect_group tiered="false">
+        <requirement name="CVarCompare" cvar="dhsClassSlotFree" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClsEngiElec" operation="set" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassSlotFree" operation="set" value="0"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassActiveForeign" operation="set" value="12"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsPtsEngiElec" operation="add" value="3"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
+      </effect_group>
+    </item>
+    <item name="dhsMagEngiElec">
+      <property name="Extends" value="schematicMaster"/>
+      <property name="CustomIcon" value="schematicMaster"/>
+      <property name="CustomIconTint" value="88cc88"/>
+      <property name="Stacknumber" value="20"/>
+      <property name="EconomicValue" value="120"/>
+      <property name="DescriptionKey" value="dhsMagEngiElecDesc"/>
+      <property name="Group" value="Books,BooksOnly,TCReading"/>
+      <property name="Tags" value="dhsCsmEngiElec,csm"/>
+      <effect_group tiered="false">
+        <requirement name="CVarCompare" cvar="dhsClsEngiElec" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsPtsEngiElec" operation="add" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
+      </effect_group>
+    </item>
+    <item name="dhsBookClassMedicSurg">
+      <property name="Extends" value="schematicMaster"/>
+      <property name="CustomIcon" value="schematicMaster"/>
+      <property name="CustomIconTint" value="6699ff"/>
+      <property name="Stacknumber" value="1"/>
+      <property name="DescriptionKey" value="dhsBookClassMedicSurgDesc"/>
+      <effect_group tiered="false">
+        <requirement name="CVarCompare" cvar="dhsClassSlotFree" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClsMedicSurg" operation="set" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassSlotFree" operation="set" value="0"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassActiveForeign" operation="set" value="21"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsPtsMedicSurg" operation="add" value="3"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
+      </effect_group>
+    </item>
+    <item name="dhsMagMedicSurg">
+      <property name="Extends" value="schematicMaster"/>
+      <property name="CustomIcon" value="schematicMaster"/>
+      <property name="CustomIconTint" value="88cc88"/>
+      <property name="Stacknumber" value="20"/>
+      <property name="EconomicValue" value="120"/>
+      <property name="DescriptionKey" value="dhsMagMedicSurgDesc"/>
+      <property name="Group" value="Books,BooksOnly,TCReading"/>
+      <property name="Tags" value="dhsCsmMedicSurg,csm"/>
+      <effect_group tiered="false">
+        <requirement name="CVarCompare" cvar="dhsClsMedicSurg" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsPtsMedicSurg" operation="add" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
+      </effect_group>
+    </item>
+    <item name="dhsBookClassMedicChem">
+      <property name="Extends" value="schematicMaster"/>
+      <property name="CustomIcon" value="schematicMaster"/>
+      <property name="CustomIconTint" value="6699ff"/>
+      <property name="Stacknumber" value="1"/>
+      <property name="DescriptionKey" value="dhsBookClassMedicChemDesc"/>
+      <effect_group tiered="false">
+        <requirement name="CVarCompare" cvar="dhsClassSlotFree" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClsMedicChem" operation="set" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassSlotFree" operation="set" value="0"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassActiveForeign" operation="set" value="22"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsPtsMedicChem" operation="add" value="3"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
+      </effect_group>
+    </item>
+    <item name="dhsMagMedicChem">
+      <property name="Extends" value="schematicMaster"/>
+      <property name="CustomIcon" value="schematicMaster"/>
+      <property name="CustomIconTint" value="88cc88"/>
+      <property name="Stacknumber" value="20"/>
+      <property name="EconomicValue" value="120"/>
+      <property name="DescriptionKey" value="dhsMagMedicChemDesc"/>
+      <property name="Group" value="Books,BooksOnly,TCReading"/>
+      <property name="Tags" value="dhsCsmMedicChem,csm"/>
+      <effect_group tiered="false">
+        <requirement name="CVarCompare" cvar="dhsClsMedicChem" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsPtsMedicChem" operation="add" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
+      </effect_group>
+    </item>
+    <item name="dhsBookClassSoldSnip">
+      <property name="Extends" value="schematicMaster"/>
+      <property name="CustomIcon" value="schematicMaster"/>
+      <property name="CustomIconTint" value="6699ff"/>
+      <property name="Stacknumber" value="1"/>
+      <property name="DescriptionKey" value="dhsBookClassSoldSnipDesc"/>
+      <effect_group tiered="false">
+        <requirement name="CVarCompare" cvar="dhsClassSlotFree" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClsSoldSnip" operation="set" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassSlotFree" operation="set" value="0"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassActiveForeign" operation="set" value="31"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsPtsSoldSnip" operation="add" value="3"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
+      </effect_group>
+    </item>
+    <item name="dhsMagSoldSnip">
+      <property name="Extends" value="schematicMaster"/>
+      <property name="CustomIcon" value="schematicMaster"/>
+      <property name="CustomIconTint" value="88cc88"/>
+      <property name="Stacknumber" value="20"/>
+      <property name="EconomicValue" value="120"/>
+      <property name="DescriptionKey" value="dhsMagSoldSnipDesc"/>
+      <property name="Group" value="Books,BooksOnly,TCReading"/>
+      <property name="Tags" value="dhsCsmSoldSnip,csm"/>
+      <effect_group tiered="false">
+        <requirement name="CVarCompare" cvar="dhsClsSoldSnip" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsPtsSoldSnip" operation="add" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
+      </effect_group>
+    </item>
+    <item name="dhsBookClassSoldAslt">
+      <property name="Extends" value="schematicMaster"/>
+      <property name="CustomIcon" value="schematicMaster"/>
+      <property name="CustomIconTint" value="6699ff"/>
+      <property name="Stacknumber" value="1"/>
+      <property name="DescriptionKey" value="dhsBookClassSoldAsltDesc"/>
+      <effect_group tiered="false">
+        <requirement name="CVarCompare" cvar="dhsClassSlotFree" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClsSoldAslt" operation="set" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassSlotFree" operation="set" value="0"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassActiveForeign" operation="set" value="32"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsPtsSoldAslt" operation="add" value="3"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
+      </effect_group>
+    </item>
+    <item name="dhsMagSoldAslt">
+      <property name="Extends" value="schematicMaster"/>
+      <property name="CustomIcon" value="schematicMaster"/>
+      <property name="CustomIconTint" value="88cc88"/>
+      <property name="Stacknumber" value="20"/>
+      <property name="EconomicValue" value="120"/>
+      <property name="DescriptionKey" value="dhsMagSoldAsltDesc"/>
+      <property name="Group" value="Books,BooksOnly,TCReading"/>
+      <property name="Tags" value="dhsCsmSoldAslt,csm"/>
+      <effect_group tiered="false">
+        <requirement name="CVarCompare" cvar="dhsClsSoldAslt" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsPtsSoldAslt" operation="add" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
+      </effect_group>
+    </item>
+    <item name="dhsBookClassSurvHunt">
+      <property name="Extends" value="schematicMaster"/>
+      <property name="CustomIcon" value="schematicMaster"/>
+      <property name="CustomIconTint" value="6699ff"/>
+      <property name="Stacknumber" value="1"/>
+      <property name="DescriptionKey" value="dhsBookClassSurvHuntDesc"/>
+      <effect_group tiered="false">
+        <requirement name="CVarCompare" cvar="dhsClassSlotFree" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClsSurvHunt" operation="set" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassSlotFree" operation="set" value="0"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassActiveForeign" operation="set" value="41"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsPtsSurvHunt" operation="add" value="3"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
+      </effect_group>
+    </item>
+    <item name="dhsMagSurvHunt">
+      <property name="Extends" value="schematicMaster"/>
+      <property name="CustomIcon" value="schematicMaster"/>
+      <property name="CustomIconTint" value="88cc88"/>
+      <property name="Stacknumber" value="20"/>
+      <property name="EconomicValue" value="120"/>
+      <property name="DescriptionKey" value="dhsMagSurvHuntDesc"/>
+      <property name="Group" value="Books,BooksOnly,TCReading"/>
+      <property name="Tags" value="dhsCsmSurvHunt,csm"/>
+      <effect_group tiered="false">
+        <requirement name="CVarCompare" cvar="dhsClsSurvHunt" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsPtsSurvHunt" operation="add" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
+      </effect_group>
+    </item>
+    <item name="dhsBookClassSurvHerb">
+      <property name="Extends" value="schematicMaster"/>
+      <property name="CustomIcon" value="schematicMaster"/>
+      <property name="CustomIconTint" value="6699ff"/>
+      <property name="Stacknumber" value="1"/>
+      <property name="DescriptionKey" value="dhsBookClassSurvHerbDesc"/>
+      <effect_group tiered="false">
+        <requirement name="CVarCompare" cvar="dhsClassSlotFree" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClsSurvHerb" operation="set" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassSlotFree" operation="set" value="0"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassActiveForeign" operation="set" value="42"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsPtsSurvHerb" operation="add" value="3"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
+      </effect_group>
+    </item>
+    <item name="dhsMagSurvHerb">
+      <property name="Extends" value="schematicMaster"/>
+      <property name="CustomIcon" value="schematicMaster"/>
+      <property name="CustomIconTint" value="88cc88"/>
+      <property name="Stacknumber" value="20"/>
+      <property name="EconomicValue" value="120"/>
+      <property name="DescriptionKey" value="dhsMagSurvHerbDesc"/>
+      <property name="Group" value="Books,BooksOnly,TCReading"/>
+      <property name="Tags" value="dhsCsmSurvHerb,csm"/>
+      <effect_group tiered="false">
+        <requirement name="CVarCompare" cvar="dhsClsSurvHerb" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsPtsSurvHerb" operation="add" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
+      </effect_group>
+    </item>
+    <item name="dhsBookClassBuilArch">
+      <property name="Extends" value="schematicMaster"/>
+      <property name="CustomIcon" value="schematicMaster"/>
+      <property name="CustomIconTint" value="6699ff"/>
+      <property name="Stacknumber" value="1"/>
+      <property name="DescriptionKey" value="dhsBookClassBuilArchDesc"/>
+      <effect_group tiered="false">
+        <requirement name="CVarCompare" cvar="dhsClassSlotFree" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClsBuilArch" operation="set" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassSlotFree" operation="set" value="0"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassActiveForeign" operation="set" value="51"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsPtsBuilArch" operation="add" value="3"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
+      </effect_group>
+    </item>
+    <item name="dhsMagBuilArch">
+      <property name="Extends" value="schematicMaster"/>
+      <property name="CustomIcon" value="schematicMaster"/>
+      <property name="CustomIconTint" value="88cc88"/>
+      <property name="Stacknumber" value="20"/>
+      <property name="EconomicValue" value="120"/>
+      <property name="DescriptionKey" value="dhsMagBuilArchDesc"/>
+      <property name="Group" value="Books,BooksOnly,TCReading"/>
+      <property name="Tags" value="dhsCsmBuilArch,csm"/>
+      <effect_group tiered="false">
+        <requirement name="CVarCompare" cvar="dhsClsBuilArch" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsPtsBuilArch" operation="add" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
+      </effect_group>
+    </item>
+    <item name="dhsBookClassBuilArti">
+      <property name="Extends" value="schematicMaster"/>
+      <property name="CustomIcon" value="schematicMaster"/>
+      <property name="CustomIconTint" value="6699ff"/>
+      <property name="Stacknumber" value="1"/>
+      <property name="DescriptionKey" value="dhsBookClassBuilArtiDesc"/>
+      <effect_group tiered="false">
+        <requirement name="CVarCompare" cvar="dhsClassSlotFree" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClsBuilArti" operation="set" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassSlotFree" operation="set" value="0"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassActiveForeign" operation="set" value="52"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsPtsBuilArti" operation="add" value="3"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
+      </effect_group>
+    </item>
+    <item name="dhsMagBuilArti">
+      <property name="Extends" value="schematicMaster"/>
+      <property name="CustomIcon" value="schematicMaster"/>
+      <property name="CustomIconTint" value="88cc88"/>
+      <property name="Stacknumber" value="20"/>
+      <property name="EconomicValue" value="120"/>
+      <property name="DescriptionKey" value="dhsMagBuilArtiDesc"/>
+      <property name="Group" value="Books,BooksOnly,TCReading"/>
+      <property name="Tags" value="dhsCsmBuilArti,csm"/>
+      <effect_group tiered="false">
+        <requirement name="CVarCompare" cvar="dhsClsBuilArti" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsPtsBuilArti" operation="add" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
+      </effect_group>
+    </item>
+    <item name="dhsBookClassScoutTrac">
+      <property name="Extends" value="schematicMaster"/>
+      <property name="CustomIcon" value="schematicMaster"/>
+      <property name="CustomIconTint" value="6699ff"/>
+      <property name="Stacknumber" value="1"/>
+      <property name="DescriptionKey" value="dhsBookClassScoutTracDesc"/>
+      <effect_group tiered="false">
+        <requirement name="CVarCompare" cvar="dhsClassSlotFree" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClsScoutTrac" operation="set" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassSlotFree" operation="set" value="0"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassActiveForeign" operation="set" value="61"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsPtsScoutTrac" operation="add" value="3"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
+      </effect_group>
+    </item>
+    <item name="dhsMagScoutTrac">
+      <property name="Extends" value="schematicMaster"/>
+      <property name="CustomIcon" value="schematicMaster"/>
+      <property name="CustomIconTint" value="88cc88"/>
+      <property name="Stacknumber" value="20"/>
+      <property name="EconomicValue" value="120"/>
+      <property name="DescriptionKey" value="dhsMagScoutTracDesc"/>
+      <property name="Group" value="Books,BooksOnly,TCReading"/>
+      <property name="Tags" value="dhsCsmScoutTrac,csm"/>
+      <effect_group tiered="false">
+        <requirement name="CVarCompare" cvar="dhsClsScoutTrac" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsPtsScoutTrac" operation="add" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
+      </effect_group>
+    </item>
+    <item name="dhsBookClassScoutInfi">
+      <property name="Extends" value="schematicMaster"/>
+      <property name="CustomIcon" value="schematicMaster"/>
+      <property name="CustomIconTint" value="6699ff"/>
+      <property name="Stacknumber" value="1"/>
+      <property name="DescriptionKey" value="dhsBookClassScoutInfiDesc"/>
+      <effect_group tiered="false">
+        <requirement name="CVarCompare" cvar="dhsClassSlotFree" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClsScoutInfi" operation="set" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassSlotFree" operation="set" value="0"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassActiveForeign" operation="set" value="62"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsPtsScoutInfi" operation="add" value="3"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
+      </effect_group>
+    </item>
+    <item name="dhsMagScoutInfi">
+      <property name="Extends" value="schematicMaster"/>
+      <property name="CustomIcon" value="schematicMaster"/>
+      <property name="CustomIconTint" value="88cc88"/>
+      <property name="Stacknumber" value="20"/>
+      <property name="EconomicValue" value="120"/>
+      <property name="DescriptionKey" value="dhsMagScoutInfiDesc"/>
+      <property name="Group" value="Books,BooksOnly,TCReading"/>
+      <property name="Tags" value="dhsCsmScoutInfi,csm"/>
+      <effect_group tiered="false">
+        <requirement name="CVarCompare" cvar="dhsClsScoutInfi" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsPtsScoutInfi" operation="add" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
+      </effect_group>
+    </item>
+    <item name="dhsBookClassFarmAgri">
+      <property name="Extends" value="schematicMaster"/>
+      <property name="CustomIcon" value="schematicMaster"/>
+      <property name="CustomIconTint" value="6699ff"/>
+      <property name="Stacknumber" value="1"/>
+      <property name="DescriptionKey" value="dhsBookClassFarmAgriDesc"/>
+      <effect_group tiered="false">
+        <requirement name="CVarCompare" cvar="dhsClassSlotFree" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClsFarmAgri" operation="set" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassSlotFree" operation="set" value="0"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassActiveForeign" operation="set" value="71"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsPtsFarmAgri" operation="add" value="3"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
+      </effect_group>
+    </item>
+    <item name="dhsMagFarmAgri">
+      <property name="Extends" value="schematicMaster"/>
+      <property name="CustomIcon" value="schematicMaster"/>
+      <property name="CustomIconTint" value="88cc88"/>
+      <property name="Stacknumber" value="20"/>
+      <property name="EconomicValue" value="120"/>
+      <property name="DescriptionKey" value="dhsMagFarmAgriDesc"/>
+      <property name="Group" value="Books,BooksOnly,TCReading"/>
+      <property name="Tags" value="dhsCsmFarmAgri,csm"/>
+      <effect_group tiered="false">
+        <requirement name="CVarCompare" cvar="dhsClsFarmAgri" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsPtsFarmAgri" operation="add" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
+      </effect_group>
+    </item>
+    <item name="dhsBookClassFarmCook">
+      <property name="Extends" value="schematicMaster"/>
+      <property name="CustomIcon" value="schematicMaster"/>
+      <property name="CustomIconTint" value="6699ff"/>
+      <property name="Stacknumber" value="1"/>
+      <property name="DescriptionKey" value="dhsBookClassFarmCookDesc"/>
+      <effect_group tiered="false">
+        <requirement name="CVarCompare" cvar="dhsClassSlotFree" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClsFarmCook" operation="set" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassSlotFree" operation="set" value="0"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsClassActiveForeign" operation="set" value="72"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsPtsFarmCook" operation="add" value="3"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
+      </effect_group>
+    </item>
+    <item name="dhsMagFarmCook">
+      <property name="Extends" value="schematicMaster"/>
+      <property name="CustomIcon" value="schematicMaster"/>
+      <property name="CustomIconTint" value="88cc88"/>
+      <property name="Stacknumber" value="20"/>
+      <property name="EconomicValue" value="120"/>
+      <property name="DescriptionKey" value="dhsMagFarmCookDesc"/>
+      <property name="Group" value="Books,BooksOnly,TCReading"/>
+      <property name="Tags" value="dhsCsmFarmCook,csm"/>
+      <effect_group tiered="false">
+        <requirement name="CVarCompare" cvar="dhsClsFarmCook" operation="Equals" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dhsPtsFarmCook" operation="add" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="DeadHotSummer.MinEventActionDhsClassEvent, DeadHotSummer"/>
+      </effect_group>
+    </item>
+    <item name="dhsAmmoTurretHV">
+      <property name="Extends" value="ammoJunkTurretShell"/>
+      <property name="CustomIcon" value="ammoJunkTurretShell"/>
+      <property name="CustomIconTint" value="ffcc66"/>
+      <property name="DescriptionKey" value="dhsAmmoTurretHVDesc"/>
+      <effect_group name="dhsTurretHV" tiered="false">
+        <passive_effect name="EntityDamage" operation="perc_add" value=".4" tags="perkTurrets"/>
+      </effect_group>
+    </item>
+    <item name="dhsBatteryHD">
+      <property name="Extends" value="carBattery"/>
+      <property name="CustomIcon" value="carBattery"/>
+      <property name="CustomIconTint" value="66e0ff"/>
+      <property name="DescriptionKey" value="dhsBatteryHDDesc"/>
+    </item>
+    <item name="dhsMedSurgeryKit">
+      <property name="Extends" value="medicalFirstAidKit"/>
+      <property name="CustomIcon" value="medicalFirstAidKit"/>
+      <property name="CustomIconTint" value="ff6688"/>
+      <property name="DescriptionKey" value="dhsMedSurgeryKitDesc"/>
+    </item>
+    <item name="dhsThrownFirebomb">
+      <property name="Extends" value="thrownAmmoMolotovCocktail"/>
+      <property name="CustomIcon" value="thrownAmmoMolotovCocktail"/>
+      <property name="CustomIconTint" value="ff6633"/>
+      <property name="DescriptionKey" value="dhsThrownFirebombDesc"/>
+      <effect_group name="dhsFirebomb" tiered="false">
+        <passive_effect name="EntityDamage" operation="perc_add" value=".4" tags="perkDemolitionsExpert"/>
+      </effect_group>
+    </item>
+    <item name="dhsAmmoMatchAP">
+      <property name="Extends" value="ammo762mmBulletAP"/>
+      <property name="CustomIcon" value="ammo762mmBulletAP"/>
+      <property name="CustomIconTint" value="cce066"/>
+      <property name="DescriptionKey" value="dhsAmmoMatchAPDesc"/>
+      <effect_group name="dhsMatchAP" tiered="false">
+        <passive_effect name="EntityDamage" operation="perc_add" value=".35" tags="perkDeadEye"/>
+        <passive_effect name="BlockDamage" operation="perc_add" value=".3" tags="perkDeadEye"/>
+      </effect_group>
+    </item>
+    <item name="dhsAmmoBattle">
+      <property name="Extends" value="ammo762mmBulletBall"/>
+      <property name="CustomIcon" value="ammo762mmBulletBall"/>
+      <property name="CustomIconTint" value="e09966"/>
+      <property name="DescriptionKey" value="dhsAmmoBattleDesc"/>
+      <effect_group name="dhsBattle" tiered="false">
+        <passive_effect name="EntityDamage" operation="perc_add" value=".30" tags="perkMachineGunner"/>
+      </effect_group>
+    </item>
+    <item name="dhsAmmoHuntArrow">
+      <property name="Extends" value="ammoArrowIron"/>
+      <property name="CustomIcon" value="ammoArrowIron"/>
+      <property name="CustomIconTint" value="66cc66"/>
+      <property name="DescriptionKey" value="dhsAmmoHuntArrowDesc"/>
+      <effect_group name="dhsHuntArrow" tiered="false">
+        <passive_effect name="EntityDamage" operation="perc_add" value=".5" tags="perkArchery"/>
+      </effect_group>
+    </item>
+    <item name="dhsDrinkDecoction">
+      <property name="Extends" value="drinkJarRedTea"/>
+      <property name="CustomIcon" value="drinkJarRedTea"/>
+      <property name="CustomIconTint" value="88dd88"/>
+      <property name="DescriptionKey" value="dhsDrinkDecoctionDesc"/>
+      <effect_group name="dhsDecoction" tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="dhsBuffHerbal"/>
+      </effect_group>
+    </item>
+    <item name="dhsRepairKitPro">
+      <property name="Extends" value="resourceRepairKit"/>
+      <property name="CustomIcon" value="resourceRepairKit"/>
+      <property name="CustomIconTint" value="ffdd66"/>
+      <property name="DescriptionKey" value="dhsRepairKitProDesc"/>
+    </item>
+    <item name="dhsAmmoLight">
+      <property name="Extends" value="ammo9mmBulletHP"/>
+      <property name="CustomIcon" value="ammo9mmBulletHP"/>
+      <property name="CustomIconTint" value="66cce0"/>
+      <property name="DescriptionKey" value="dhsAmmoLightDesc"/>
+      <effect_group name="dhsLight" tiered="false">
+        <passive_effect name="EntityDamage" operation="perc_add" value=".30" tags="perkGunslinger"/>
+      </effect_group>
+    </item>
+    <item name="dhsDrugProwler">
+      <property name="Extends" value="drugCovertCats"/>
+      <property name="CustomIcon" value="drugCovertCats"/>
+      <property name="CustomIconTint" value="aa88ff"/>
+      <property name="DescriptionKey" value="dhsDrugProwlerDesc"/>
+    </item>
+    <item name="dhsAmmoFarmerSlug">
+      <property name="Extends" value="ammoShotgunSlug"/>
+      <property name="CustomIcon" value="ammoShotgunSlug"/>
+      <property name="CustomIconTint" value="ffcc44"/>
+      <property name="DescriptionKey" value="dhsAmmoFarmerSlugDesc"/>
+      <property name="EconomicValue" value="40"/>
+      <effect_group name="dhsFarmerSlug" tiered="false">
+        <passive_effect name="EntityDamage" operation="perc_add" value=".6" tags="perkBoomstick"/>
+        <passive_effect name="BlockDamage" operation="perc_add" value=".5" tags="perkBoomstick"/>
+      </effect_group>
+    </item>
+    <item name="dhsAmmoFarmerBuck">
+      <property name="Extends" value="ammoShotgunShell"/>
+      <property name="CustomIcon" value="ammoShotgunShell"/>
+      <property name="CustomIconTint" value="ff8844"/>
+      <property name="DescriptionKey" value="dhsAmmoFarmerBuckDesc"/>
+      <property name="EconomicValue" value="30"/>
+      <effect_group name="dhsFarmerBuck" tiered="false">
+        <passive_effect name="EntityDamage" operation="perc_add" value=".5" tags="perkBoomstick"/>
+        <passive_effect name="BlockDamage" operation="perc_add" value=".4" tags="perkBoomstick"/>
+      </effect_group>
+    </item>
+    <item name="dhsFoodPreserves">
+      <property name="Tags" value="food,foodSkill,fitness"/>
+      <property name="HoldType" value="31"/>
+      <property name="DisplayType" value="foodWater"/>
+      <property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+      <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+      <property name="Material" value="Morganic"/>
+      <property name="Stacknumber" value="20"/>
+      <property name="EconomicValue" value="200"/>
+      <property name="CustomIcon" value="foodMeatStew"/>
+      <property name="CustomIconTint" value="cc8844"/>
+      <property name="DescriptionKey" value="dhsFoodPreservesDesc"/>
+      <property name="SoundPickup" value="food_bowl1_grab"/>
+      <property name="SoundPlace" value="food_bowl1_place"/>
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="1.0"/>
+        <property name="Sound_start" value="player_drinking"/>
+      </property>
+      <property name="Group" value="Food/Cooking"/>
+      <effect_group name="dhsFoodPreserves" tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="40"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="20"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="10"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+      </effect_group>
+    </item>
+    <item name="dhsFoodFeast">
+      <property name="Tags" value="food,foodSkill,fitness"/>
+      <property name="HoldType" value="31"/>
+      <property name="DisplayType" value="foodWater"/>
+      <property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+      <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+      <property name="Material" value="Morganic"/>
+      <property name="Stacknumber" value="20"/>
+      <property name="EconomicValue" value="200"/>
+      <property name="CustomIcon" value="foodMeatStew"/>
+      <property name="CustomIconTint" value="ff9933"/>
+      <property name="DescriptionKey" value="dhsFoodFeastDesc"/>
+      <property name="SoundPickup" value="food_bowl1_grab"/>
+      <property name="SoundPlace" value="food_bowl1_place"/>
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="1.0"/>
+        <property name="Sound_start" value="player_drinking"/>
+      </property>
+      <property name="Group" value="Food/Cooking"/>
+      <effect_group name="dhsFoodFeast" tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="60"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="30"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="25"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="dhsBuffFeast"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="dhsBuffFeast" target="otherAOE" range="25"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+      </effect_group>
+    </item>
+    <item name="dhsFoodFeastGrand">
+      <property name="Tags" value="food,foodSkill,fitness"/>
+      <property name="HoldType" value="31"/>
+      <property name="DisplayType" value="foodWater"/>
+      <property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+      <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+      <property name="Material" value="Morganic"/>
+      <property name="Stacknumber" value="20"/>
+      <property name="EconomicValue" value="200"/>
+      <property name="CustomIcon" value="foodMeatStew"/>
+      <property name="CustomIconTint" value="ffcc33"/>
+      <property name="DescriptionKey" value="dhsFoodFeastGrandDesc"/>
+      <property name="SoundPickup" value="food_bowl1_grab"/>
+      <property name="SoundPlace" value="food_bowl1_place"/>
+      <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="1.0"/>
+        <property name="Sound_start" value="player_drinking"/>
+      </property>
+      <property name="Group" value="Food/Cooking"/>
+      <effect_group name="dhsFoodFeastGrand" tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="80"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="40"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="30"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="dhsBuffFeastGrand"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="dhsBuffFeastGrand" target="otherAOE" range="25"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+      </effect_group>
+    </item>
+    <item name="dhsDrinkTonic">
+      <property name="Extends" value="drinkJarCoffee"/>
+      <property name="CustomIcon" value="drinkJarCoffee"/>
+      <property name="CustomIconTint" value="ffaa55"/>
+      <property name="DescriptionKey" value="dhsDrinkTonicDesc"/>
+      <property name="EconomicValue" value="120"/>
+      <effect_group name="dhsTonic" tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="dhsBuffTonic"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="dhsBuffTonic" target="otherAOE" range="25"/>
+      </effect_group>
+    </item>
+  </append>
+</configs>

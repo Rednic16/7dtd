@@ -1,0 +1,151 @@
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Scripting;
+
+namespace DeadHotSummer
+{
+    /// <summary>
+    /// AXE 1 — gestion serveur des classes :
+    ///  - J1.6 : au tout premier spawn, ouvre un slot de classe (dhsClassSlotFree=1) et remet
+    ///           les 14 livres de classe au joueur (il en lit un pour choisir sa voie).
+    ///  - J1.7 : détection périodique de complétion (tous les perks exclusifs d'une sous-classe
+    ///           au max) -> débloque la sous-classe sœur + un nouveau slot (séquentiel entre branches).
+    /// CVars joueur via player.Buffs (persistants, sync client). Voir docs/axe1.md.
+    /// </summary>
+    [Preserve]
+    public static class ClassManager
+    {
+        private const string CvInit = "dhsInit";
+        private const string CvSlotFree = "dhsClassSlotFree";
+        private const string CvDoneCount = "dhsClassDoneCount";
+        private const string CvBooksOut = "dhsBooksOut"; // 1 = les livres de choix sont en circulation
+
+        // 14 sous-classes : code -> sous-classe sœur (même branche principale).
+        private static readonly (string code, string sibling)[] Classes =
+        {
+            ("EngiMech","EngiElec"), ("EngiElec","EngiMech"),
+            ("MedicSurg","MedicChem"), ("MedicChem","MedicSurg"),
+            ("SoldSnip","SoldAslt"), ("SoldAslt","SoldSnip"),
+            ("SurvHunt","SurvHerb"), ("SurvHerb","SurvHunt"),
+            ("BuilArch","BuilArti"), ("BuilArti","BuilArch"),
+            ("ScoutTrac","ScoutInfi"), ("ScoutInfi","ScoutTrac"),
+            ("FarmAgri","FarmCook"), ("FarmCook","FarmAgri"),
+        };
+
+        // ---- Premier spawn : init slot + réconciliation des livres (événement) ----
+        public static void OnPlayerSpawned(int entityId)
+        {
+            World world = GameManager.Instance?.World;
+            if (world == null) return;
+            if (!(world.GetEntity(entityId) is EntityPlayer player)) return;
+
+            if (player.Buffs.GetCustomVar(CvInit) < 1f)
+            {
+                player.Buffs.SetCustomVar(CvInit, 1f);
+                player.Buffs.SetCustomVar(CvSlotFree, 1f);
+                ModLog.Out($"Joueur {entityId}: 1er spawn -> slot de classe ouvert");
+            }
+            OnClassEvent(player);
+        }
+
+        // ---- Point d'entrée ÉVÉNEMENTIEL (lecture livre/magazine de classe) ----
+        // Appelé directement sur la chaîne de l'action (pas de job périodique).
+        public static void OnClassEvent(EntityPlayer player)
+        {
+            if (player == null || player.Buffs == null) return;
+            CheckCompletion(player);  // une complétion peut rouvrir un slot...
+            ReconcileBooks(player);   // ...donc on réconcilie les livres juste après.
+        }
+
+        // Slot libre -> les livres de choix sont disponibles ; slot consommé -> on supprime
+        // les livres restants (inutilisables). Idempotent via le cvar dhsBooksOut.
+        private static void ReconcileBooks(EntityPlayer player)
+        {
+            if (player == null || player.Buffs == null || player.bag == null) return;
+            bool slotFree = player.Buffs.GetCustomVar(CvSlotFree) >= 1f;
+            bool booksOut = player.Buffs.GetCustomVar(CvBooksOut) >= 1f;
+            if (slotFree && !booksOut)
+            {
+                GiveClassBooks(player);
+                player.Buffs.SetCustomVar(CvBooksOut, 1f);
+            }
+            else if (!slotFree && booksOut)
+            {
+                RemoveClassBooks(player);
+                player.Buffs.SetCustomVar(CvBooksOut, 0f);
+                ModLog.Out($"Joueur {player.entityId}: livres de classe inutilisables supprimés");
+            }
+        }
+
+        private static void GiveClassBooks(EntityPlayer player)
+        {
+            if (player.bag == null) return;
+            foreach ((string code, string _) in Classes)
+            {
+                if (player.Buffs.GetCustomVar("dhsCls" + code) >= 1f) continue; // classe déjà débloquée
+                ItemValue iv = ItemClass.GetItem("dhsBookClass" + code);
+                if (iv == null || iv.IsEmpty()) continue;
+                // Directement dans le sac (bag.AddItem -> onBackpackChanged -> sync client),
+                // pas de drop au sol.
+                player.bag.AddItem(new ItemStack(iv, 1));
+            }
+        }
+
+        private static void RemoveClassBooks(EntityPlayer player)
+        {
+            foreach ((string code, string _) in Classes)
+            {
+                ItemValue iv = ItemClass.GetItem("dhsBookClass" + code);
+                if (iv == null || iv.IsEmpty()) continue;
+                player.bag.DecItem(iv, 999);
+            }
+        }
+
+        private static void CheckCompletion(EntityPlayer player)
+        {
+            if (player == null || player.Buffs == null) return;
+            foreach ((string code, string sibling) in Classes)
+            {
+                if (player.Buffs.GetCustomVar("dhsCls" + code) < 1f) continue;          // pas cette classe
+                if (player.Buffs.GetCustomVar("dhsCls" + code + "Done") >= 1f) continue; // déjà complétée
+                if (!AllPerksMaxed(player, code)) continue;
+
+                player.Buffs.SetCustomVar("dhsCls" + code + "Done", 1f);
+                player.Buffs.SetCustomVar("dhsCls" + sibling, 1f);   // débloque la sœur (perks + magazines)
+                player.Buffs.SetCustomVar(CvSlotFree, 1f);           // autorise une sous-classe d'une autre branche
+                player.Buffs.SetCustomVar(CvDoneCount, player.Buffs.GetCustomVar(CvDoneCount) + 1f);
+                ModLog.Out($"Joueur {player.entityId}: classe {code} complétée -> sœur {sibling} débloquée + slot libre");
+            }
+        }
+
+        // Une sous-classe est complète quand TOUS ses perks (toutes sous-branches confondues)
+        // sont au max. Les perks sont nommés perkClass<code><suffixe> ; on matche par préfixe
+        // (Name est en minuscules côté moteur). Couvre désormais les sous-branches multiples.
+        private static bool AllPerksMaxed(EntityPlayer player, string code)
+        {
+            string prefix = ("perkClass" + code).ToLowerInvariant();
+            bool any = false;
+            foreach (KeyValuePair<string, ProgressionClass> kvp in Progression.ProgressionClasses)
+            {
+                ProgressionClass pc = kvp.Value;
+                if (!pc.IsPerk || pc.Name == null || !pc.Name.StartsWith(prefix)) continue;
+                any = true;
+                ProgressionValue pv = player.Progression.GetProgressionValue(pc.Name);
+                if (pv == null || pv.Level < pc.MaxLevel) return false;
+            }
+            return any;
+        }
+
+        // Retrouve le code de classe à partir d'un nom de perk (minuscules), ou null si ce
+        // n'est pas un perk de classe. Utilisé par le patch d'achat (pool de points strict).
+        public static string CodeFromPerkName(string lowerPerkName)
+        {
+            if (string.IsNullOrEmpty(lowerPerkName) || !lowerPerkName.StartsWith("perkclass")) return null;
+            foreach ((string code, string _) in Classes)
+            {
+                if (lowerPerkName.StartsWith(("perkClass" + code).ToLowerInvariant())) return code;
+            }
+            return null;
+        }
+    }
+}
