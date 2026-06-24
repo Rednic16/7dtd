@@ -1406,6 +1406,7 @@ def gen_entityclasses():
     L.append('''    <entity_class name="dhsBanditTemplate">
       <property name="Class" value="EntityBandit"/>
       <property name="EntityType" value="Player"/>
+      <property name="UserSpawnType" value="Menu"/>
       <property name="Mesh" value="Player/Male/player_maleRagdoll"/>
       <property name="AvatarController" value="AvatarNpcController"/>
       <property name="ModelType" value="Npc"/>
