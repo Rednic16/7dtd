@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- GENERE par tools/gen_axe1_classes.py — ne pas editer a la main. -->
 <configs>
+  <!-- Verrouillage strict : on coupe le déblocage de recettes par les compétences
+       d'artisanat vanilla (magazines). Seuls NOS perks de classe débloquent les recettes
+       (RecipeTagUnlocked par nom). Toutes les recettes vanilla concernées sont routées
+       vers une classe (cf validate()). Les recettes verrouillées restent VISIBLES (grisées). -->
+  <remove xpath="/progression/crafting_skills/crafting_skill/effect_group/passive_effect[@name='RecipeTagUnlocked']"/>
   <append xpath="/progression/attributes">
-    <attribute name="attClassCommon" name_key="dhsAttClassCommonName" desc_key="dhsAttClassCommonDesc" icon="ui_game_symbol_modded" min_level="0" max_level="0" base_skill_point_cost="0"/>
-    <attribute name="attClassEngineer" name_key="dhsattClassEngineerName" desc_key="dhsattClassEngineerDesc" icon="ui_game_symbol_wrench" min_level="0" max_level="0" base_skill_point_cost="0"/>
-    <attribute name="attClassMedic" name_key="dhsattClassMedicName" desc_key="dhsattClassMedicDesc" icon="ui_game_symbol_medical" min_level="0" max_level="0" base_skill_point_cost="0"/>
-    <attribute name="attClassSoldier" name_key="dhsattClassSoldierName" desc_key="dhsattClassSoldierDesc" icon="ui_game_symbol_armor_iron" min_level="0" max_level="0" base_skill_point_cost="0"/>
-    <attribute name="attClassSurvivalist" name_key="dhsattClassSurvivalistName" desc_key="dhsattClassSurvivalistDesc" icon="ui_game_symbol_animal_tracker" min_level="0" max_level="0" base_skill_point_cost="0"/>
-    <attribute name="attClassBuilder" name_key="dhsattClassBuilderName" desc_key="dhsattClassBuilderDesc" icon="ui_game_symbol_hammer" min_level="0" max_level="0" base_skill_point_cost="0"/>
-    <attribute name="attClassScout" name_key="dhsattClassScoutName" desc_key="dhsattClassScoutDesc" icon="ui_game_symbol_stealth" min_level="0" max_level="0" base_skill_point_cost="0"/>
-    <attribute name="attClassFarmer" name_key="dhsattClassFarmerName" desc_key="dhsattClassFarmerDesc" icon="ui_game_symbol_crops" min_level="0" max_level="0" base_skill_point_cost="0"/>
+    <attribute name="attClassCommon" name_key="dhsAttClassCommonName" desc_key="dhsAttClassCommonDesc" icon="ui_game_symbol_modded" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></attribute>
+    <attribute name="attClassEngineer" name_key="dhsattClassEngineerName" desc_key="dhsattClassEngineerDesc" icon="ui_game_symbol_wrench" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></attribute>
+    <attribute name="attClassMedic" name_key="dhsattClassMedicName" desc_key="dhsattClassMedicDesc" icon="ui_game_symbol_medical" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></attribute>
+    <attribute name="attClassSoldier" name_key="dhsattClassSoldierName" desc_key="dhsattClassSoldierDesc" icon="ui_game_symbol_armor_iron" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></attribute>
+    <attribute name="attClassSurvivalist" name_key="dhsattClassSurvivalistName" desc_key="dhsattClassSurvivalistDesc" icon="ui_game_symbol_animal_tracker" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></attribute>
+    <attribute name="attClassBuilder" name_key="dhsattClassBuilderName" desc_key="dhsattClassBuilderDesc" icon="ui_game_symbol_hammer" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></attribute>
+    <attribute name="attClassScout" name_key="dhsattClassScoutName" desc_key="dhsattClassScoutDesc" icon="ui_game_symbol_stealth" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></attribute>
+    <attribute name="attClassFarmer" name_key="dhsattClassFarmerName" desc_key="dhsattClassFarmerDesc" icon="ui_game_symbol_crops" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></attribute>
   </append>
   <append xpath="/progression/skills">
     <skill name="skillClassCommonSurvie" parent="attClassCommon" name_key="dhsSkillClassCommonSurvieName" desc_key="dhsSkillClassCommonSurvieDesc" icon="ui_game_symbol_character"><effect_group/></skill>
@@ -257,13 +262,6 @@
         <effect_description level="1" desc_key="dhsPerkCommonUmeleeWpnBatonT0PipeBatonR1" long_desc_key="dhsPerkCommonUmeleeWpnBatonT0PipeBatonR1Long"/>
       </effect_group>
     </perk>
-    <perk name="perkClassCommonUarmorPrimitiveMaster" parent="skillClassCommonBArmure" name_key="dhsPerkCommonUarmorPrimitiveMasterName" desc_key="dhsPerkCommonUarmorPrimitiveMasterDesc" icon="ui_game_symbol_armor_iron" max_level="1" base_skill_point_cost="1">
-      <level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="dhsReqLvl1"/></level_requirements>
-      <effect_group>
-        <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="armorPrimitiveMaster"/>
-        <effect_description level="1" desc_key="dhsPerkCommonUarmorPrimitiveMasterR1" long_desc_key="dhsPerkCommonUarmorPrimitiveMasterR1Long"/>
-      </effect_group>
-    </perk>
     <perk name="perkClassCommonUarmorPrimitiveHelmet" parent="skillClassCommonBArmure" name_key="dhsPerkCommonUarmorPrimitiveHelmetName" desc_key="dhsPerkCommonUarmorPrimitiveHelmetDesc" icon="ui_game_symbol_armor_iron" max_level="1" base_skill_point_cost="1">
       <level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="dhsReqLvl1"/></level_requirements>
       <effect_group>
@@ -290,27 +288,6 @@
       <effect_group>
         <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="armorPrimitiveBoots"/>
         <effect_description level="1" desc_key="dhsPerkCommonUarmorPrimitiveBootsR1" long_desc_key="dhsPerkCommonUarmorPrimitiveBootsR1Long"/>
-      </effect_group>
-    </perk>
-    <perk name="perkClassCommonUarmorLightMaster" parent="skillClassCommonBArmure" name_key="dhsPerkCommonUarmorLightMasterName" desc_key="dhsPerkCommonUarmorLightMasterDesc" icon="ui_game_symbol_armor_iron" max_level="1" base_skill_point_cost="1">
-      <level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="dhsReqLvl1"/></level_requirements>
-      <effect_group>
-        <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="armorLightMaster"/>
-        <effect_description level="1" desc_key="dhsPerkCommonUarmorLightMasterR1" long_desc_key="dhsPerkCommonUarmorLightMasterR1Long"/>
-      </effect_group>
-    </perk>
-    <perk name="perkClassCommonUarmorMediumMaster" parent="skillClassCommonBArmure" name_key="dhsPerkCommonUarmorMediumMasterName" desc_key="dhsPerkCommonUarmorMediumMasterDesc" icon="ui_game_symbol_armor_iron" max_level="1" base_skill_point_cost="1">
-      <level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="dhsReqLvl1"/></level_requirements>
-      <effect_group>
-        <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="armorMediumMaster"/>
-        <effect_description level="1" desc_key="dhsPerkCommonUarmorMediumMasterR1" long_desc_key="dhsPerkCommonUarmorMediumMasterR1Long"/>
-      </effect_group>
-    </perk>
-    <perk name="perkClassCommonUarmorHeavyMaster" parent="skillClassCommonBArmure" name_key="dhsPerkCommonUarmorHeavyMasterName" desc_key="dhsPerkCommonUarmorHeavyMasterDesc" icon="ui_game_symbol_armor_iron" max_level="1" base_skill_point_cost="1">
-      <level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="dhsReqLvl1"/></level_requirements>
-      <effect_group>
-        <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="armorHeavyMaster"/>
-        <effect_description level="1" desc_key="dhsPerkCommonUarmorHeavyMasterR1" long_desc_key="dhsPerkCommonUarmorHeavyMasterR1Long"/>
       </effect_group>
     </perk>
     <perk name="perkClassCommonUforge" parent="skillClassCommonBAtelier" name_key="dhsPerkCommonUforgeName" desc_key="dhsPerkCommonUforgeDesc" icon="ui_game_symbol_workbench" max_level="1" base_skill_point_cost="1">

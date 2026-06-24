@@ -131,10 +131,6 @@ dhsPerkCommonUmeleeWpnBatonT0PipeBatonR1,Matraque en tuyau,Matraque en tuyau
 dhsPerkCommonUmeleeWpnBatonT0PipeBatonR1Long,Débloque la fabrication : Matraque en tuyau.,Débloque la fabrication : Matraque en tuyau.
 dhsSkillClassCommonBArmureName,Survivant — Armures de base,Survivant — Armures de base
 dhsSkillClassCommonBArmureDesc,Sous-branche Survivant : Armures de base.,Sous-branche Survivant : Armures de base.
-dhsPerkCommonUarmorPrimitiveMasterName,armorPrimitiveMaster,armorPrimitiveMaster
-dhsPerkCommonUarmorPrimitiveMasterDesc,Débloque la fabrication : armorPrimitiveMaster.,Débloque la fabrication : armorPrimitiveMaster.
-dhsPerkCommonUarmorPrimitiveMasterR1,armorPrimitiveMaster,armorPrimitiveMaster
-dhsPerkCommonUarmorPrimitiveMasterR1Long,Débloque la fabrication : armorPrimitiveMaster.,Débloque la fabrication : armorPrimitiveMaster.
 dhsPerkCommonUarmorPrimitiveHelmetName,Capuche primitive,Capuche primitive
 dhsPerkCommonUarmorPrimitiveHelmetDesc,Débloque la fabrication : Capuche primitive.,Débloque la fabrication : Capuche primitive.
 dhsPerkCommonUarmorPrimitiveHelmetR1,Capuche primitive,Capuche primitive
@@ -151,18 +147,6 @@ dhsPerkCommonUarmorPrimitiveBootsName,Chaussures primitives,Chaussures primitive
 dhsPerkCommonUarmorPrimitiveBootsDesc,Débloque la fabrication : Chaussures primitives.,Débloque la fabrication : Chaussures primitives.
 dhsPerkCommonUarmorPrimitiveBootsR1,Chaussures primitives,Chaussures primitives
 dhsPerkCommonUarmorPrimitiveBootsR1Long,Débloque la fabrication : Chaussures primitives.,Débloque la fabrication : Chaussures primitives.
-dhsPerkCommonUarmorLightMasterName,armorLightMaster,armorLightMaster
-dhsPerkCommonUarmorLightMasterDesc,Débloque la fabrication : armorLightMaster.,Débloque la fabrication : armorLightMaster.
-dhsPerkCommonUarmorLightMasterR1,armorLightMaster,armorLightMaster
-dhsPerkCommonUarmorLightMasterR1Long,Débloque la fabrication : armorLightMaster.,Débloque la fabrication : armorLightMaster.
-dhsPerkCommonUarmorMediumMasterName,armorMediumMaster,armorMediumMaster
-dhsPerkCommonUarmorMediumMasterDesc,Débloque la fabrication : armorMediumMaster.,Débloque la fabrication : armorMediumMaster.
-dhsPerkCommonUarmorMediumMasterR1,armorMediumMaster,armorMediumMaster
-dhsPerkCommonUarmorMediumMasterR1Long,Débloque la fabrication : armorMediumMaster.,Débloque la fabrication : armorMediumMaster.
-dhsPerkCommonUarmorHeavyMasterName,armorHeavyMaster,armorHeavyMaster
-dhsPerkCommonUarmorHeavyMasterDesc,Débloque la fabrication : armorHeavyMaster.,Débloque la fabrication : armorHeavyMaster.
-dhsPerkCommonUarmorHeavyMasterR1,armorHeavyMaster,armorHeavyMaster
-dhsPerkCommonUarmorHeavyMasterR1Long,Débloque la fabrication : armorHeavyMaster.,Débloque la fabrication : armorHeavyMaster.
 dhsSkillClassCommonBAtelierName,Survivant — Établis & stations,Survivant — Établis & stations
 dhsSkillClassCommonBAtelierDesc,Sous-branche Survivant : Établis & stations.,Sous-branche Survivant : Établis & stations.
 dhsPerkCommonUforgeName,Forge,Forge
@@ -4233,10 +4217,10 @@ dhsPerkFarmCookUfoodPumpkinPieName,Tarte à la citrouille,Tarte à la citrouille
 dhsPerkFarmCookUfoodPumpkinPieDesc,Débloque la fabrication : Tarte à la citrouille.,Débloque la fabrication : Tarte à la citrouille.
 dhsPerkFarmCookUfoodPumpkinPieR1,Tarte à la citrouille,Tarte à la citrouille
 dhsPerkFarmCookUfoodPumpkinPieR1Long,Débloque la fabrication : Tarte à la citrouille.,Débloque la fabrication : Tarte à la citrouille.
-dhsPerkFarmCookUdrinkJarHoneyTeaName,drinkJarHoneyTea,drinkJarHoneyTea
-dhsPerkFarmCookUdrinkJarHoneyTeaDesc,Débloque la fabrication : drinkJarHoneyTea.,Débloque la fabrication : drinkJarHoneyTea.
-dhsPerkFarmCookUdrinkJarHoneyTeaR1,drinkJarHoneyTea,drinkJarHoneyTea
-dhsPerkFarmCookUdrinkJarHoneyTeaR1Long,Débloque la fabrication : drinkJarHoneyTea.,Débloque la fabrication : drinkJarHoneyTea.
+dhsPerkFarmCookUdrinkJarHoneyTeaName,Thé au miel,Thé au miel
+dhsPerkFarmCookUdrinkJarHoneyTeaDesc,Débloque la fabrication : Thé au miel.,Débloque la fabrication : Thé au miel.
+dhsPerkFarmCookUdrinkJarHoneyTeaR1,Thé au miel,Thé au miel
+dhsPerkFarmCookUdrinkJarHoneyTeaR1Long,Débloque la fabrication : Thé au miel.,Débloque la fabrication : Thé au miel.
 dhsPerkFarmCookUfoodPumpkinCheesecakeName,Cheesecake à la citrouille,Cheesecake à la citrouille
 dhsPerkFarmCookUfoodPumpkinCheesecakeDesc,Débloque la fabrication : Cheesecake à la citrouille.,Débloque la fabrication : Cheesecake à la citrouille.
 dhsPerkFarmCookUfoodPumpkinCheesecakeR1,Cheesecake à la citrouille,Cheesecake à la citrouille
@@ -4273,10 +4257,10 @@ dhsPerkFarmCookUfoodShamChowderName,Soupe épaisse de jambon en conserve,Soupe �
 dhsPerkFarmCookUfoodShamChowderDesc,Débloque la fabrication : Soupe épaisse de jambon en conserve.,Débloque la fabrication : Soupe épaisse de jambon en conserve.
 dhsPerkFarmCookUfoodShamChowderR1,Soupe épaisse de jambon en conserve,Soupe épaisse de jambon en conserve
 dhsPerkFarmCookUfoodShamChowderR1Long,Débloque la fabrication : Soupe épaisse de jambon en conserve.,Débloque la fabrication : Soupe épaisse de jambon en conserve.
-dhsPerkFarmCookUfoodHoneyGlazedShamName,foodHoneyGlazedSham,foodHoneyGlazedSham
-dhsPerkFarmCookUfoodHoneyGlazedShamDesc,Débloque la fabrication : foodHoneyGlazedSham.,Débloque la fabrication : foodHoneyGlazedSham.
-dhsPerkFarmCookUfoodHoneyGlazedShamR1,foodHoneyGlazedSham,foodHoneyGlazedSham
-dhsPerkFarmCookUfoodHoneyGlazedShamR1Long,Débloque la fabrication : foodHoneyGlazedSham.,Débloque la fabrication : foodHoneyGlazedSham.
+dhsPerkFarmCookUfoodHoneyGlazedShamName,Sham glacé au miel,Sham glacé au miel
+dhsPerkFarmCookUfoodHoneyGlazedShamDesc,Débloque la fabrication : Sham glacé au miel.,Débloque la fabrication : Sham glacé au miel.
+dhsPerkFarmCookUfoodHoneyGlazedShamR1,Sham glacé au miel,Sham glacé au miel
+dhsPerkFarmCookUfoodHoneyGlazedShamR1Long,Débloque la fabrication : Sham glacé au miel.,Débloque la fabrication : Sham glacé au miel.
 dhsPerkFarmCookUfoodTunaFishGravyToastName,Tartine au thon et au jus de viande,Tartine au thon et au jus de viande
 dhsPerkFarmCookUfoodTunaFishGravyToastDesc,Débloque la fabrication : Tartine au thon et au jus de viande.,Débloque la fabrication : Tartine au thon et au jus de viande.
 dhsPerkFarmCookUfoodTunaFishGravyToastR1,Tartine au thon et au jus de viande,Tartine au thon et au jus de viande
@@ -4297,10 +4281,10 @@ dhsPerkFarmCookUdrinkJarGrandpasLearningElixirName,Élixir d'apprentissage de pa
 dhsPerkFarmCookUdrinkJarGrandpasLearningElixirDesc,Débloque la fabrication : Élixir d'apprentissage de papy.,Débloque la fabrication : Élixir d'apprentissage de papy.
 dhsPerkFarmCookUdrinkJarGrandpasLearningElixirR1,Élixir d'apprentissage de papy,Élixir d'apprentissage de papy
 dhsPerkFarmCookUdrinkJarGrandpasLearningElixirR1Long,Débloque la fabrication : Élixir d'apprentissage de papy.,Débloque la fabrication : Élixir d'apprentissage de papy.
-dhsPerkFarmCookUfoodHoneyBrisketName,foodHoneyBrisket,foodHoneyBrisket
-dhsPerkFarmCookUfoodHoneyBrisketDesc,Débloque la fabrication : foodHoneyBrisket.,Débloque la fabrication : foodHoneyBrisket.
-dhsPerkFarmCookUfoodHoneyBrisketR1,foodHoneyBrisket,foodHoneyBrisket
-dhsPerkFarmCookUfoodHoneyBrisketR1Long,Débloque la fabrication : foodHoneyBrisket.,Débloque la fabrication : foodHoneyBrisket.
+dhsPerkFarmCookUfoodHoneyBrisketName,Poitrine de bœuf au miel,Poitrine de bœuf au miel
+dhsPerkFarmCookUfoodHoneyBrisketDesc,Débloque la fabrication : Poitrine de bœuf au miel.,Débloque la fabrication : Poitrine de bœuf au miel.
+dhsPerkFarmCookUfoodHoneyBrisketR1,Poitrine de bœuf au miel,Poitrine de bœuf au miel
+dhsPerkFarmCookUfoodHoneyBrisketR1Long,Débloque la fabrication : Poitrine de bœuf au miel.,Débloque la fabrication : Poitrine de bœuf au miel.
 dhsPerkFarmCookUfoodSpaghettiName,Spaghetti,Spaghetti
 dhsPerkFarmCookUfoodSpaghettiDesc,Débloque la fabrication : Spaghetti.,Débloque la fabrication : Spaghetti.
 dhsPerkFarmCookUfoodSpaghettiR1,Spaghetti,Spaghetti

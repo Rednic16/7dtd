@@ -916,8 +916,14 @@ DHS_FR = {}
 for _cr in CRAFTABLES.values():
     for k, _e, f in _cr.get("loc", []):
         DHS_FR.setdefault(k, f)
+# Quelques items sans entrée FR dans Localization.txt (loc dans un autre fichier) -> override.
+NAME_FR_OVERRIDE = {
+    "drinkJarHoneyTea": "Thé au miel",
+    "foodHoneyBrisket": "Poitrine de bœuf au miel",
+    "foodHoneyGlazedSham": "Sham glacé au miel",
+}
 def name_fr(recipe):
-    return VANILLA_FR.get(recipe) or DHS_FR.get(recipe) or recipe
+    return NAME_FR_OVERRIDE.get(recipe) or VANILLA_FR.get(recipe) or DHS_FR.get(recipe) or recipe
 
 def _sig_recipe_names(cr):
     out = []
@@ -943,9 +949,8 @@ def collect_unlocks():
     for skill, lst in CRAFT_UNLOCKS.items():
         for recipe, cl in lst:
             if recipe.endswith("Master"):
-                add("Common", recipe, 1)         # catégorie d'armure (générique)
-            else:
-                add(route_recipe(recipe, skill), recipe, palier_from_craftlevel(cl))
+                continue  # tag de catégorie d'armure (pas une vraie recette) -> ignoré
+            add(route_recipe(recipe, skill), recipe, palier_from_craftlevel(cl))
     # 2) Munitions spécialisées (réparties manuellement) + munitions de base -> Survivant.
     for code, lst in AMMO_BY_CODE.items():
         for r in lst: add(code, r, ammo_palier(r))
@@ -1070,11 +1075,18 @@ def gen_progression():
     L = ['<?xml version="1.0" encoding="UTF-8"?>',
          '<!-- GENERE par tools/gen_axe1_classes.py — ne pas editer a la main. -->',
          '<configs>',
+         '  <!-- Verrouillage strict : on coupe le déblocage de recettes par les compétences',
+         '       d\'artisanat vanilla (magazines). Seuls NOS perks de classe débloquent les recettes',
+         '       (RecipeTagUnlocked par nom). Toutes les recettes vanilla concernées sont routées',
+         '       vers une classe (cf validate()). Les recettes verrouillées restent VISIBLES (grisées). -->',
+         '  <remove xpath="/progression/crafting_skills/crafting_skill/effect_group/passive_effect[@name=\'RecipeTagUnlocked\']"/>',
          '  <append xpath="/progression/attributes">']
-    L.append('    <attribute name="attClassCommon" name_key="dhsAttClassCommonName" desc_key="dhsAttClassCommonDesc" icon="ui_game_symbol_modded" min_level="0" max_level="0" base_skill_point_cost="0"/>')
+    # NB: <effect_group/> obligatoire, sinon ProgressionClass.Effects == null et l'UI
+    # (windowSkillAttributeInfo, binding "detailsdescription") plante en NullReference.
+    L.append('    <attribute name="attClassCommon" name_key="dhsAttClassCommonName" desc_key="dhsAttClassCommonDesc" icon="ui_game_symbol_modded" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></attribute>')
     for bk,_en,_fr,icon,_subs in BRANCHES:
         a = attr_of_branch(bk)
-        L.append(f'    <attribute name="{a}" name_key="dhs{a}Name" desc_key="dhs{a}Desc" icon="{icon}" min_level="0" max_level="0" base_skill_point_cost="0"/>')
+        L.append(f'    <attribute name="{a}" name_key="dhs{a}Name" desc_key="dhs{a}Desc" icon="{icon}" min_level="0" max_level="0" base_skill_point_cost="0"><effect_group/></attribute>')
     L.append('  </append>')
     # Skills : une sous-branche (skill) par sous-branche de Survivant + de chaque sous-classe.
     L.append('  <append xpath="/progression/skills">')
