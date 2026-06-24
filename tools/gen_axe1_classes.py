@@ -20,12 +20,61 @@ Modèle (J1.12) :
 Génère : progression.xml, items.xml, recipes.xml, buffs.xml, loot.xml, Localization.csv
 (NB: V3.0 charge Config/Localization.CSV, pas .txt). Loc catégories en MINUSCULES.
 """
-import os
+import os, re, csv
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CFG = os.path.join(ROOT, "Mods", "DeadHotSummer", "Config")
 
 LVL = [1, 12, 24, 36, 48]  # paliers PlayerLevel par rang
+PALIERS = [1, 12, 24, 36, 48]  # paliers de niveau pour les déblocages de craft
+
+# ---- Données vanilla (noms FR des items + recettes débloquées par niveau/livres) ----
+def _find_file(cands):
+    for c in cands:
+        if c and os.path.exists(c):
+            return c
+    return None
+VAN_LOC = _find_file(["/home/louis-quentin/7dtd/Data/Config/Localization.txt",
+                      os.path.join(ROOT, "Data", "Config", "Localization.txt")])
+VAN_PROG = _find_file([os.path.join(ROOT, "Data", "Config", "progression.xml"),
+                       "/home/louis-quentin/7dtd/Data/Config/progression.xml"])
+
+def _load_vanilla_fr():
+    d = {}
+    if not VAN_LOC:
+        return d
+    with open(VAN_LOC, encoding="utf-8") as f:
+        r = csv.reader(f); h = next(r); fi = h.index("french")
+        for row in r:
+            if row and len(row) > fi and row[0]:
+                d.setdefault(row[0], row[fi])
+    return d
+VANILLA_FR = _load_vanilla_fr()
+
+def _load_craft_unlocks():
+    """{nom_crafting_skill: [(recette, niveau_skill), ...]} d'après progression.xml vanilla.
+    Ce sont exactement les crafts qui se débloquaient par niveau/magazines dans l'Artisanat."""
+    out = {}
+    if not VAN_PROG:
+        return out
+    xml = open(VAN_PROG, encoding="utf-8").read()
+    for m in re.finditer(r'<crafting_skill name="([^"]+)".*?</crafting_skill>', xml, re.S):
+        nm, blk, lst = m.group(1), m.group(0), []
+        for lv, tags in re.findall(
+                r'RecipeTagUnlocked"\s+operation="base_set"\s+level="(\d+)[^"]*"\s+value="1"\s+tags="([^"]+)"', blk):
+            for t in tags.split(","):
+                lst.append((t, int(lv)))
+        out[nm] = lst
+    return out
+CRAFT_UNLOCKS = _load_craft_unlocks()
+
+def palier_from_craftlevel(cl):
+    """Niveau de compétence d'artisanat vanilla (1-100) -> palier de niveau joueur cohérent."""
+    if cl <= 9:  return 1
+    if cl <= 25: return 12
+    if cl <= 45: return 24
+    if cl <= 70: return 36
+    return 48
 
 # Template de perks par "kind" (sous-branche ARME des 12 sous-classes "domaine").
 # Chaque kind est AUTONOME : ensemble d'effets TOUS DISTINCTS (aucun doublon intra-classe).
@@ -160,13 +209,7 @@ FARM_AGRI = [
         stat("Aim","Choke","Précision","SpreadMultiplierAiming","perc_add","-.06","-.30",5,"perkBoomstick",
              "Tightens aimed shot spread.","Resserre la gerbe en visée.","ui_game_symbol_shotgun"),
         stat("Pierce","Slugger","Perforation","TargetArmor","perc_add","-.06","-.30",5,"perkBoomstick",
-             "Shotgun shots ignore more armor.","Les tirs ignorent davantage l'armure.","ui_game_symbol_shotgun"),
-        unlock("Slug","Farmer's Arsenal","Arsenal du fermier","ui_game_symbol_shotgun","dhsAmmoFarmerSlug",True,1,
-               "Unlocks crafting Farmer Slugs (heavy slugs) at a workbench.",
-               "Débloque la fabrication de Cartouches de fermier (balles lourdes) à l'établi."),
-        unlock("Buck","Field Loads","Cartouchière","ui_game_symbol_shotgun","dhsAmmoFarmerBuck",False,12,
-               "Unlocks crafting Farmer Buckshot (heavy buckshot) at a workbench.",
-               "Débloque la fabrication de Chevrotine de fermier (chevrotine lourde) à l'établi."),
+             "Les tirs au fusil ignorent davantage l'armure.","Les tirs au fusil ignorent davantage l'armure.","ui_game_symbol_shotgun"),
     ]),
     ("Farming","Farming","Agriculture","ui_game_symbol_crops", [
         stat("Green","Green Thumb","Main verte","HarvestCount","perc_add",".15",".75",5,"cropHarvest",
@@ -175,9 +218,6 @@ FARM_AGRI = [
              "Récolte plus de viande et de ressources sur les animaux.","Récolte plus de viande et de ressources sur les animaux.","ui_game_symbol_deep_cuts"),
         stat("FastCraft","Cadence agricole","Cadence agricole","CraftingTime","perc_add","-.10","-.50",5,"dhsCraftFarmAgri",
              "Fabrique vos recettes d'Agriculteur plus vite.","Fabrique vos recettes d'Agriculteur plus vite.","ui_game_symbol_workbench"),
-        unlock("Preserve","Cannery","Conserverie","ui_game_symbol_fork","dhsFoodPreserves",False,24,
-               "Débloque la cuisson des Conserves du fermier (nourriture copieuse qui se garde).",
-               "Débloque la cuisson des Conserves du fermier (nourriture copieuse qui se garde)."),
         stat("Cart","Charrette","Charrette","CarryCapacity","base_add","2","10",5,"",
              "Ajoute des emplacements pour transporter vos récoltes.","Ajoute des emplacements pour transporter vos récoltes.","ui_game_symbol_pack_mule"),
         stat("StamRegen","Field Stamina","Souffle paysan","StaminaChangeOT","perc_add",".05",".25",5,"",
@@ -212,15 +252,6 @@ FARM_COOK = [
     ("Kitchen","Kitchen","Cuisine","ui_game_symbol_fork", [
         stat("FastCook","Sous-Chef","Marmiton","CraftingTime","perc_add","-.10","-.50",5,"dhsCraftFarmCook",
              "Cuisine vos recettes de Cuisinier plus vite.","Cuisine vos recettes de Cuisinier plus vite.","ui_game_symbol_fork"),
-        unlock("Feast","Cook's Kitchen","Cuisine du chef","ui_game_symbol_fork","dhsFoodFeast",True,1,
-               "Débloque la cuisson du Festin d'équipe : un plat qui buff les alliés proches.",
-               "Débloque la cuisson du Festin d'équipe : un plat qui buff les alliés proches."),
-        unlock("Tonic","Mixology","Mixologie","ui_game_symbol_fork","dhsDrinkTonic",False,12,
-               "Débloque la préparation du Tonique du chef : une boisson d'endurance partagée.",
-               "Débloque la préparation du Tonique du chef : une boisson d'endurance partagée."),
-        unlock("Grand","Grand Chef","Grand chef","ui_game_symbol_fork","dhsFoodFeastGrand",False,36,
-               "Débloque la cuisson du Grand festin : un repas d'équipe renforcé.",
-               "Débloque la cuisson du Grand festin : un repas d'équipe renforcé."),
         stat("Butcher","Butcher","Boucher","HarvestCount","perc_add",".10",".50",5,"butcherHarvest",
              "Récolte plus de viande sur les animaux.","Récolte plus de viande sur les animaux.","ui_game_symbol_deep_cuts"),
         stat("Pantry","Garde-manger","Garde-manger","CarryCapacity","base_add","2","10",5,"",
@@ -340,6 +371,56 @@ MODS_BY_CODE = {
 }
 MODS_ALL = sorted({m for v in MODS_BY_CODE.values() for m in v})
 
+# Panoplie d'armure -> code de sous-classe (pour router les recettes craftingArmor vanilla).
+ARMORSET2CODE = {}
+for _c, (_p, _l) in list(ARMOR_BY_CODE.items()) + list(ARMOR_EXTRA.items()):
+    ARMORSET2CODE[_p] = _c
+# Compétence d'artisanat vanilla -> notre sous-classe (migration des crafts level/livres).
+CRAFTSKILL2CLASS = {
+    "craftingHandguns": "ScoutTrac", "craftingRifles": "SoldSnip", "craftingShotguns": "FarmAgri",
+    "craftingMachineGuns": "SoldAslt", "craftingBows": "SurvHunt", "craftingExplosives": "MedicChem",
+    "craftingBlades": "MedicSurg", "craftingClubs": "FarmCook", "craftingKnuckles": "ScoutInfi",
+    "craftingSpears": "SurvHerb", "craftingSledgehammers": "BuilArch", "craftingHarvestingTools": "BuilArti",
+    "craftingRepairTools": "BuilArti", "craftingSalvageTools": "EngiMech", "craftingRobotics": "EngiMech",
+    "craftingElectrician": "EngiElec", "craftingVehicles": "EngiMech", "craftingMedical": "MedicSurg",
+    "craftingFood": "FarmCook", "craftingSeeds": "FarmAgri", "craftingTraps": "EngiElec",
+    "craftingWorkstations": "Common", "craftingArmor": "Common",  # armor routé par panoplie ci-dessous
+}
+
+def route_recipe(recipe, skill):
+    """Recette vanilla -> code de classe. Les bases (T0, primitive, plats de base) -> Survivant."""
+    if "T0" in recipe:
+        return "Common"
+    if recipe.startswith("armor"):
+        if recipe.startswith("armorPrimitive") or recipe.endswith("Master"):
+            return "Common"
+        for pref, code in ARMORSET2CODE.items():
+            if recipe.startswith(pref):
+                return code
+        return "Common"
+    if recipe in BASE_FOODS:
+        return "Common"
+    return CRAFTSKILL2CLASS.get(skill, "Common")
+
+def ammo_palier(r):
+    if any(k in r for k in ("Exploding", "Flaming", "SteelAP", "RocketHE", "RocketFrag", "Breaching")):
+        return 24
+    return 12
+
+# Sous-branche d'accueil d'un déblocage (regroupement UI). Survivant = découpage fin.
+def unlock_bucket(code, recipe):
+    if code == "Common":
+        if recipe.startswith(("gun", "meleeWpn", "meleeTool")): return ("BArme", "Armes de base", "ui_game_symbol_knife")
+        if recipe.startswith("armor"):                          return ("BArmure", "Armures de base", "ui_game_symbol_armor_iron")
+        if recipe.startswith(("food", "drink")):                return ("BCuisine", "Cuisine de survie", "ui_game_symbol_fork")
+        if recipe.startswith(("ammo", "thrown")):               return ("BMuns", "Munitions de base", "ui_game_symbol_rifle")
+        if recipe.startswith("resource"):                       return ("BMat", "Matériaux", "ui_game_symbol_smelt")
+        return ("BAtelier", "Établis & stations", "ui_game_symbol_workbench")
+    if recipe.startswith(("gun", "meleeWpn", "meleeTool")):     return ("FArme", "Fabrication d'armes", "ui_game_symbol_knife")
+    if recipe.startswith(("armor", "mod")):                     return ("FEquip", "Équipement", "ui_game_symbol_armor_iron")
+    if recipe.startswith(("ammo", "thrown")):                   return ("FMuns", "Munitions", "ui_game_symbol_rifle")
+    return ("FFab", "Fabrication", "ui_game_symbol_workbench")
+
 # Domaine de craft par sous-classe : (tag de catégorie pour CraftingTime/déblocage, libellé FR).
 DOMAIN = {
     "SoldSnip": ("perkDeadEye","fusils de précision"),
@@ -362,29 +443,14 @@ DOMAIN = {
 # sont RÉPARTIS dans les sous-classes (cf RESERVED_SURVIVOR + validate()). Aucun TYPE d'effet
 # de Survivant n'apparaît dans une sous-classe -> zéro doublon général<->sous-classe.
 RESERVED_SURVIVOR = {"HealthMax", "FoodMax", "PlayerExpGain", "GeneralDamageResist"}
-SURVIVOR = [
+# Survivant = stats vitales (branche "Survie"). Les déblocages de craft (armes T0, armure
+# primitive, établis, cuisine, munitions de base, matériaux) sont générés en PER-RECETTE
+# par collect_unlocks() (1 point chacun, gatés par niveau) -> classe "bien plus développée".
+SURVIVOR_STATS = [
     sp("Vitalite","Vitalité","Augmente votre santé maximale.","HealthMax","base_add","5","25",5,"","ui_game_symbol_healing_factor"),
     sp("Metab","Métabolisme","Augmente votre nourriture maximale.","FoodMax","base_add","5","25",5,"","ui_game_symbol_stomach"),
     sp("Consti","Constitution","Réduit légèrement tous les dégâts subis.","GeneralDamageResist","base_add","1","3",3,"","ui_game_symbol_armor_iron"),
     sp("Survie","Instinct de survie","Augmente toute l'expérience gagnée.","PlayerExpGain","perc_add",".02",".10",5,"","ui_game_symbol_adventure"),
-    unlock("Gear","Débrouillardise","Débrouillardise","ui_game_symbol_workbench", ",".join(T0_ALL), True, 1,
-           "Débloque la fabrication des armes et outils de base (tuyau, pierre) pour tous.",
-           "Débloque la fabrication des armes et outils de base (tuyau, pierre) pour tous."),
-    unlock("Cuisine","Cuisine de survie","Cuisine de survie","ui_game_symbol_fork", ",".join(BASE_FOODS), True, 1,
-           "Débloque la préparation des plats et boissons de base pour tous.",
-           "Débloque la préparation des plats et boissons de base pour tous."),
-    unlock("Atelier","Atelier de survie","Atelier de survie","ui_game_symbol_workbench", ",".join(SURV_STATIONS), True, 1,
-           "Débloque la fabrication des établis et stations (forge, établi, station chimique, bétonnière, récupérateur de rosée, creuset, enclume, marmite, gril) pour tous.",
-           "Débloque la fabrication des établis et stations (forge, établi, station chimique, bétonnière, récupérateur de rosée, creuset, enclume, marmite, gril) pour tous."),
-    unlock("ArmureBase","Armure de base","Armure de base","ui_game_symbol_armor_iron", ",".join(SURV_ARMOR_BASIC), True, 1,
-           "Débloque la confection de l'armure primitive (de base) pour tous. Les panoplies avancées s'apprennent dans les sous-classes.",
-           "Débloque la confection de l'armure primitive (de base) pour tous. Les panoplies avancées s'apprennent dans les sous-classes."),
-    unlock("MunsBase","Munitions de base","Munitions de base","ui_game_symbol_rifle", ",".join(SURV_AMMO_BASIC), True, 1,
-           "Débloque la fabrication en lot des munitions de base (balles standard, flèches/carreaux, cartouches, munitions de tourelle) pour tous. Les munitions spécialisées s'apprennent dans les sous-classes.",
-           "Débloque la fabrication en lot des munitions de base (balles standard, flèches/carreaux, cartouches, munitions de tourelle) pour tous. Les munitions spécialisées s'apprennent dans les sous-classes."),
-    unlock("Materiaux","Récupération & matériaux","Récupération & matériaux","ui_game_symbol_smelt", ",".join(SURV_RESOURCES), True, 1,
-           "Débloque la fabrication des matériaux et munitions intermédiaires de base (poudre, crochets, lots de ressources, etc.) pour tous.",
-           "Débloque la fabrication des matériaux et munitions intermédiaires de base (poudre, crochets, lots de ressources, etc.) pour tous."),
 ]
 
 # ---- Spécialité UNIQUE par sous-classe (perks thématiques, pas de générique répété) ----
@@ -507,21 +573,8 @@ def build_domain_subbranches(code):
                            f"Améliore la qualité de ce que vous fabriquez ({domFR}).","ui_game_symbol_workbench"))
     metier.append(stat("Speed","Production rapide","Production rapide","CraftingTime","perc_add","-.10","-.50",5, catTag,
                        f"Fabrique plus vite ({domFR}).",f"Fabrique plus vite ({domFR}).","ui_game_symbol_workbench"))
-    t1 = tiers[:1]; rest = tiers[1:]
-    atelier_tags = ",".join([t for t in (t1 + [catTag]) if t])
-    metier.append(unlock("AtelierI",f"Atelier : {domFR}",f"Atelier : {domFR}","ui_game_symbol_workbench", atelier_tags, True, 1,
-                         f"Débloque la fabrication de votre spécialité : {domFR}.",
-                         f"Débloque la fabrication de votre spécialité : {domFR}."))
-    if rest:
-        metier.append(unlock("AtelierII",f"Maîtrise : {domFR}",f"Maîtrise : {domFR}","ui_game_symbol_workbench", ",".join(rest), False, 24,
-                             f"Débloque la fabrication avancée de votre spécialité : {domFR}.",
-                             f"Débloque la fabrication avancée de votre spécialité : {domFR}."))
-    # (Apprentissage/PlayerExpGain retiré : type réservé à Survivant -> zéro doublon.)
-    # Perks de déblocage des crafts SIGNATURE exclusifs (depuis CRAFTABLES), si définis.
-    cr = CRAFTABLES.get(code)
-    if cr:
-        for sp in cr.get("sigperks", []):
-            metier.append(sp)
+    # NB: les déblocages de recettes (tiers d'armes, items de domaine, signature) sont désormais
+    # générés en PER-RECETTE et gatés par niveau par collect_unlocks() -> sous-branches dédiées.
     # --- Sous-branche SPÉCIALITÉ (stats thématiques) ---
     # Spécialité UNIQUE par sous-classe (plus aucun générique : ils sont chez Survivant).
     spec = list(THEME_SPEC.get(code, []))
@@ -529,54 +582,8 @@ def build_domain_subbranches(code):
             ("Metier", "Métier", "Métier", "ui_game_symbol_workbench", metier),
             ("Spec", "Spécialité", "Spécialité", "ui_game_symbol_character", spec)]
 
-def equip_subbranch(code):
-    """Sous-branche ÉQUIPEMENT : déblocages (auto = identité) de la panoplie d'armure, des
-    munitions spécifiques et des mods adaptés à la sous-classe. None si rien à débloquer."""
-    perks = []
-    arm = ARMOR_BY_CODE.get(code)
-    if arm:
-        pref, label = arm
-        recipes = list(armor_set(pref))
-        ex = ARMOR_EXTRA.get(code)
-        labels = label
-        if ex:
-            recipes += armor_set(ex[0]); labels = f"{label} et {ex[1]}"
-        perks.append(unlock("Armure", f"Panoplie {labels}", f"Panoplie {labels}", "ui_game_symbol_armor_iron",
-                            ",".join(recipes), True, 1,
-                            f"Débloque la confection de la panoplie d'armure {labels} (casque, torse, gants, bottes).",
-                            f"Débloque la confection de la panoplie d'armure {labels} (casque, torse, gants, bottes)."))
-    am = AMMO_BY_CODE.get(code)
-    if am:
-        perks.append(unlock("Muns", "Munitions spécialisées", "Munitions spécialisées", "ui_game_symbol_rifle",
-                            ",".join(am), True, 1,
-                            "Débloque la fabrication des munitions spécialisées de votre arme (perforantes, à pointe creuse, explosives, etc.).",
-                            "Débloque la fabrication des munitions spécialisées de votre arme (perforantes, à pointe creuse, explosives, etc.)."))
-    md = MODS_BY_CODE.get(code)
-    if md:
-        perks.append(unlock("Mods", "Modifications", "Modifications", "ui_game_symbol_wrench",
-                            ",".join(md), True, 1,
-                            "Débloque la fabrication des modifications adaptées à votre spécialité.",
-                            "Débloque la fabrication des modifications adaptées à votre spécialité."))
-    if not perks:
-        return None
-    return ("Equip", "Équipement", "Équipement", "ui_game_symbol_armor_iron", perks)
-
-def subbranches_for(code):
-    """Sous-branches d'une sous-classe : Fermier = détaillé à la main, les 12 autres = domaine ;
-    plus une sous-branche Équipement (armure/munitions/mods) commune à toutes."""
-    base = list(SUBCLASS_DEF[code]) if code in SUBCLASS_DEF else build_domain_subbranches(code)
-    eq = equip_subbranch(code)
-    if eq:
-        base = base + [eq]
-    return base
-
-def auto_unlock_perks(code):
-    out = []
-    for _sk,_en,_fr,_ic,perks in subbranches_for(code):
-        for p in perks:
-            if p["k"] == "unlock" and p["auto"]:
-                out.append(f"perkClass{code}{p['suf']}")
-    return out
+# NB: le système de déblocages per-recette (collect_unlocks/subbranches_for) est défini APRÈS
+# CRAFTABLES (il en a besoin), plus bas dans le fichier.
 
 # ============================================================================
 # CRAFTABLES signature (items + recettes + buffs + loc), référencés par les unlocks.
@@ -901,6 +908,91 @@ CRAFTABLES = {
 
 def craft(code): return CRAFTABLES.get(code)
 
+# ============================================================================
+# Déblocages PER-RECETTE (1 point, gatés par niveau) — défini après CRAFTABLES.
+# ============================================================================
+# Noms FR des items : vanilla d'abord, puis nos items signature (CRAFTABLES), sinon la clé brute.
+DHS_FR = {}
+for _cr in CRAFTABLES.values():
+    for k, _e, f in _cr.get("loc", []):
+        DHS_FR.setdefault(k, f)
+def name_fr(recipe):
+    return VANILLA_FR.get(recipe) or DHS_FR.get(recipe) or recipe
+
+def _sig_recipe_names(cr):
+    out = []
+    for r in cr.get("recipes", []):
+        m = re.search(r'name="([^"]+)"', r)
+        if m: out.append(m.group(1))
+    return out
+
+def collect_unlocks():
+    """Construit les déblocages PER-RECETTE (1 point, gatés par niveau) par code de classe,
+    regroupés en sous-branches. Sources : crafting_skills vanilla (armes/outils/armures/domaines),
+    munitions & mods (répartition manuelle J1.21), matériaux de base, crafts signature."""
+    out = {}  # code -> {bsuf: [bfr, bicon, [(recipe, palier), ...]]}
+    seen = set()
+    def add(code, recipe, lvl):
+        if (code, recipe) in seen:  # une recette ne se débloque qu'une fois par classe
+            return
+        seen.add((code, recipe))
+        bsuf, bfr, bicon = unlock_bucket(code, recipe)
+        d = out.setdefault(code, {})
+        d.setdefault(bsuf, [bfr, bicon, []])[2].append((recipe, lvl))
+    # 1) Crafts qui se débloquaient par niveau/livres dans l'Artisanat vanilla.
+    for skill, lst in CRAFT_UNLOCKS.items():
+        for recipe, cl in lst:
+            if recipe.endswith("Master"):
+                add("Common", recipe, 1)         # catégorie d'armure (générique)
+            else:
+                add(route_recipe(recipe, skill), recipe, palier_from_craftlevel(cl))
+    # 2) Munitions spécialisées (réparties manuellement) + munitions de base -> Survivant.
+    for code, lst in AMMO_BY_CODE.items():
+        for r in lst: add(code, r, ammo_palier(r))
+    for r in SURV_AMMO_BASIC: add("Common", r, 1)
+    # 3) Mods (répartis manuellement).
+    for code, lst in MODS_BY_CODE.items():
+        for r in lst: add(code, r, 24)
+    # 4) Matériaux/intermédiaires de base -> Survivant.
+    for r in SURV_RESOURCES: add("Common", r, 1)
+    # 5) Crafts signature exclusifs (items dhs*) -> leur classe, dès le niveau 1 (identité).
+    for code, cr in CRAFTABLES.items():
+        for r in _sig_recipe_names(cr): add(code, r, 1)
+    return out
+UNLOCKS = collect_unlocks()
+
+# Ordre d'affichage des sous-branches de déblocage.
+_BUCKET_ORDER = ["BArme","BArmure","BAtelier","BCuisine","BMuns","BMat","FArme","FEquip","FMuns","FFab"]
+
+def unlock_subbranches(code):
+    """Sous-branches de déblocage (per-recette) d'un code, prêtes à rendre."""
+    coll = UNLOCKS.get(code, {})
+    out = []
+    for bsuf in _BUCKET_ORDER:
+        if bsuf not in coll: continue
+        bfr, bicon, items = coll[bsuf]
+        perks = []
+        for recipe, lvl in items:
+            suf = "U" + re.sub(r'[^A-Za-z0-9]', '', recipe)
+            fr = name_fr(recipe)
+            perks.append(unlock(suf, fr, fr, bicon, recipe, False, lvl,
+                                f"Débloque la fabrication : {fr}.", f"Débloque la fabrication : {fr}."))
+        out.append((bsuf, bfr, bfr, bicon, perks))
+    return out
+
+def stat_subbranches(code):
+    """Sous-branches de STATS (Arme/Métier/Spécialité, ou Survie pour Survivant)."""
+    if code == "Common":
+        return [("Survie", "Survie", "Survie", "ui_game_symbol_character", SURVIVOR_STATS)]
+    return list(SUBCLASS_DEF[code]) if code in SUBCLASS_DEF else build_domain_subbranches(code)
+
+def subbranches_for(code):
+    """Toutes les sous-branches d'un code : stats puis déblocages per-recette."""
+    return stat_subbranches(code) + unlock_subbranches(code)
+
+def auto_unlock_perks(code):
+    return []  # plus aucun déblocage automatique : tout s'achète par point, gaté par niveau.
+
 # ---------- progression.xml ----------
 def _palier(i):
     return LVL[i] if i < len(LVL) else LVL[-1]
@@ -984,9 +1076,10 @@ def gen_progression():
         a = attr_of_branch(bk)
         L.append(f'    <attribute name="{a}" name_key="dhs{a}Name" desc_key="dhs{a}Desc" icon="{icon}" min_level="0" max_level="0" base_skill_point_cost="0"/>')
     L.append('  </append>')
-    # Skills : Survivant + une sous-branche (skill) par sous-branche de chaque sous-classe.
+    # Skills : une sous-branche (skill) par sous-branche de Survivant + de chaque sous-classe.
     L.append('  <append xpath="/progression/skills">')
-    L.append('    <skill name="skillClassCommon" parent="attClassCommon" name_key="dhsSkillClassCommonName" desc_key="dhsSkillClassCommonDesc" icon="ui_game_symbol_modded"><effect_group/></skill>')
+    for sk,_ben,_bfr,bicon,_perks in subbranches_for("Common"):
+        L.append(f'    <skill name="skillClassCommon{sk}" parent="attClassCommon" name_key="dhsSkillClassCommon{sk}Name" desc_key="dhsSkillClassCommon{sk}Desc" icon="{bicon}"><effect_group/></skill>')
     for code,_sen,_sfr,_tag,_kind,_fid,_sicon,_efl,_ffl in SUBS:
         a = attr_of_branch(CODE2BRANCH[code])
         for sk,_ben,_bfr,bicon,_perks in subbranches_for(code):
@@ -994,9 +1087,11 @@ def gen_progression():
     L.append('  </append>')
     # Perks
     L.append('  <append xpath="/progression/perks">')
-    # Survivant (commun, pour TOUS) : arbre de survie générique + déblocages de base. Non gaté.
-    for p in SURVIVOR:
-        _perk_xml(L, "Common", "skillClassCommon", p, gated=False)
+    # Survivant (commun, pour TOUS) : stats vitales + déblocages de base (per-recette). Non gaté.
+    for sk,_ben,_bfr,_bicon,perks in subbranches_for("Common"):
+        skill = f"skillClassCommon{sk}"
+        for p in perks:
+            _perk_xml(L, "Common", skill, p, gated=False)
     for code,_sen,_sfr,_tag,_kind,_fid,_sicon,_efl,_ffl in SUBS:
         for sk,_ben,_bfr,_bicon,perks in subbranches_for(code):
             skill = f"skillClass{code}{sk}"
@@ -1107,29 +1202,27 @@ def gen_loc():
     rows.append(("dhsAttClassCommonDesc","Common skills for everyone","Compétences communes à tous"))
     rows.append(("dhsClassPointsLabel","Class points","Points de classe"))
     # Libellés FR des prérequis de niveau (sinon l'UI affiche « Player level GTE N » en anglais).
-    for v in sorted(set(LVL) | {p_["palier"] for p_ in SURVIVOR if p_["k"] == "unlock"}
-                    | {1, 12, 24, 36, 48}):
+    for v in sorted(set(LVL) | set(PALIERS)):
         txt = "Aucun prérequis de niveau" if v <= 1 else f"Niveau {v} requis"
         rows.append((f"dhsReqLvl{v}", txt, txt))
     for bk,en,fr,_ic,_subs in BRANCHES:
         a = attr_of_branch(bk)
         rows.append((f"dhs{a}Name", en, fr))
         rows.append((f"dhs{a}Desc", f"{en} branch", f"Branche {fr}"))
-    rows += [
-        ("dhsSkillClassCommonName","Survivor","Survivant"),
-        ("dhsSkillClassCommonDesc","Common skills available to everyone","Compétences communes à tous"),
-    ]
-    # Loc des perks Survivant (générés depuis SURVIVOR)
-    for p in SURVIVOR:
-        rows.append((f"dhsPerkCommon{p['suf']}Name", p["en"], p["fr"]))
-        rows.append((f"dhsPerkCommon{p['suf']}Desc", p["ed"], p["fd"]))
-        rows += rank_rows("Common", p)
+    # Loc des sous-branches + perks de Survivant (stats + déblocages per-recette).
+    for sk,ben,bfr,_bicon,perks in subbranches_for("Common"):
+        rows.append((f"dhsSkillClassCommon{sk}Name", f"Survivor — {ben}", f"Survivant — {bfr}"))
+        rows.append((f"dhsSkillClassCommon{sk}Desc", f"Survivor sub-branch: {ben}.", f"Sous-branche Survivant : {bfr}."))
+        for p in perks:
+            rows.append((f"dhsPerkCommon{p['suf']}Name", p["en"], p["fr"]))
+            rows.append((f"dhsPerkCommon{p['suf']}Desc", p["ed"], p["fd"]))
+            rows += rank_rows("Common", p)
     for code,en,fr,_tag,_kind,_fid,_sicon,efl,ffl in SUBS:
         rows.append((f"dhsReqClass{code}", f"Requires the {en} class", f"Nécessite la classe {fr}"))
         rows.append((f"dhsBookClass{code}", f"Class Manual: {en}", f"Manuel de classe : {fr}"))
         rows.append((f"dhsBookClass{code}Desc",
-                     f"Become a {en}: master {efl}. Reading it picks the {en} class, unlocks its signature craft and grants a few class points.",
-                     f"Devenez {fr} : maîtrisez {ffl}. La lecture choisit la classe {fr}, débloque son craft signature et octroie quelques points de classe."))
+                     f"Become a {en}: master {efl}. Reading it picks the {en} class and grants a few class points to spend in its tree (perks and crafts unlock by level).",
+                     f"Devenez {fr} : maîtrisez {ffl}. La lecture choisit la classe {fr} et octroie quelques points de classe à dépenser dans son arbre (perks et crafts se débloquent par niveau)."))
         rows.append((f"dhsMag{code}", f"{en} Manual", f"Manuel : {fr}"))
         rows.append((f"dhsMag{code}Desc",
                      f"A {en} magazine. Reading it grants 1 {en} class point to spend in the {en} tree. Useful only to members of this class.",
@@ -1172,9 +1265,9 @@ def validate():
          (même effet ET mêmes tags) -> chaque perk a un gameplay distinct.
     Lève AssertionError listant toutes les violations."""
     errors = []
-    # Survivant : pas de doublon interne + recense ses types réservés.
+    # 1) Stats : pas de doublon (effet,tags) intra-classe + types réservés disjoints.
     surv_sigs = {}
-    for p in SURVIVOR:
+    for p in SURVIVOR_STATS:
         sig = _perk_sig(p)
         if sig in surv_sigs:
             errors.append(f"Survivant : doublon {sig} ({p['suf']} == {surv_sigs[sig]})")
@@ -1183,36 +1276,34 @@ def validate():
         seen = {}
         for sk, _en, _fr, _ic, perks in subbranches_for(code):
             for p in perks:
-                if p["k"] == "stat" and p["eff"] in RESERVED_SURVIVOR:
+                if p["k"] != "stat":
+                    continue
+                if p["eff"] in RESERVED_SURVIVOR:
                     errors.append(f"{code}/{sk}/{p['suf']} : effet '{p['eff']}' réservé à Survivant")
                 sig = _perk_sig(p)
                 if sig in seen:
                     errors.append(f"{code} : doublon {sig} ({sk}/{p['suf']} == {seen[sig]})")
                 seen[sig] = f"{sk}/{p['suf']}"
-    # Couverture armures / mods / munitions : aucune recette assignée à deux classes, tout couvert.
-    def _flat(pairs):
-        seen = {}
-        for code, items in pairs:
-            for x in items:
-                if x in seen:
-                    errors.append(f"recette '{x}' assignée 2x ({code} & {seen[x]})")
-                seen[x] = code
-        return seen
-    arm = _flat([(c, armor_set(p)) for c, (p, _l) in ARMOR_BY_CODE.items()]
-                + [(c, armor_set(p)) for c, (p, _l) in ARMOR_EXTRA.items()]
-                + [("Survivant", SURV_ARMOR_BASIC)])
-    mods = _flat(list(MODS_BY_CODE.items()))
-    am = _flat([(c, v) for c, v in AMMO_BY_CODE.items()] + [("Survivant", SURV_AMMO_BASIC)])
-    if len(arm) != 64:  # 16 panoplies × 4 pièces
-        errors.append(f"armures couvertes={len(arm)} (attendu 64)")
-    if len(mods) != 76:
-        errors.append(f"mods couverts={len(mods)} (attendu 76)")
-    if set(am) != set(AMMO_ALL):
-        errors.append(f"munitions: écart de couverture (couvert {len(am)}, attendu {len(AMMO_ALL)})")
+    # 2) Déblocages : un nom de perk unique partout, une recette débloquée une seule fois par classe.
+    perk_names = {}
+    for code in ["Common"] + [c for c, *_ in SUBS]:
+        for sk, _en, _fr, _ic, perks in subbranches_for(code):
+            for p in perks:
+                nm = f"perkClass{code}{p['suf']}"
+                if nm in perk_names:
+                    errors.append(f"nom de perk dupliqué : {nm}")
+                perk_names[nm] = code
+    # 3) Toutes les recettes craftées par niveau dans l'Artisanat vanilla sont bien routées.
+    routed = {r for d in UNLOCKS.values() for b in d.values() for r, _l in b[2]}
+    craft_recipes = {r for lst in CRAFT_UNLOCKS.values() for r, _l in lst if not r.endswith("Master")}
+    missing = craft_recipes - routed
+    if missing:
+        errors.append(f"{len(missing)} recettes vanilla non routées (ex: {sorted(missing)[:5]})")
     if errors:
-        raise AssertionError("Violations d'unicité de perks :\n  - " + "\n  - ".join(errors))
-    print(f"validate(): OK — {len(SUBS)} sous-classes, aucun doublon ; "
-          f"armures={len(arm)}, mods={len(mods)}, munitions={len(am)} réparties")
+        raise AssertionError("Violations de génération :\n  - " + "\n  - ".join(errors))
+    n_unlocks = len(routed)
+    print(f"validate(): OK — {len(SUBS)} sous-classes + Survivant, {len(perk_names)} perks, "
+          f"{n_unlocks} recettes débloquables réparties, aucun doublon")
 
 def main():
     validate()
