@@ -4309,3 +4309,7 @@ dhsBuffFeastGrandName,Grand festin,Grand festin
 dhsBuffFeastGrandDesc,"Festoyé par un Cuisinier : dégâts subis et endurance fortement réduits, récupération accélérée.","Festoyé par un Cuisinier : dégâts subis et endurance fortement réduits, récupération accélérée."
 dhsBuffTonicName,Tonique du chef,Tonique du chef
 dhsBuffTonicDesc,"Revigoré par le tonique du chef : récupération d'endurance accélérée, moins d'endurance dépensée.","Revigoré par le tonique du chef : récupération d'endurance accélérée, moins d'endurance dépensée."
+dhsBanditMarauderName,Maraudeur,Maraudeur
+dhsBanditMotorName,Bandit motorisé,Bandit motorisé
+dhsBanditMilitiaName,Milicien pillard,Milicien pillard
+dhsBanditSectName,Fanatique de la Congrégation,Fanatique de la Congrégation

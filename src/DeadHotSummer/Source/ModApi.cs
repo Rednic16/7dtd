@@ -34,8 +34,9 @@ namespace DeadHotSummer
 
         private static void OnGameStartDone(ref ModEvents.SGameStartDoneData _data)
         {
-            ModLog.Out("GameStartDone — monde prêt");
-            // J3+ : initialiser TerritoryManager / CampManager / RaidManager ici (AXE 2).
+            int gs = BanditManager.GlobalGameStage();
+            ModLog.Out($"GameStartDone — monde prêt (GS global pillards={gs}, tier={BanditManager.TierForGameStage(gs)})");
+            // J2.2+ : CampManager / patrouilles / RaidManager s'appuieront sur BanditManager.
         }
 
         private static void OnPlayerSpawnedInWorld(ref ModEvents.SPlayerSpawnedInWorldData _data)

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- GENERE par tools/gen_axe1_classes.py — AXE 2 factions de pillards. -->
+<configs>
+  <append xpath="/npc/factions">
+    <faction name="banditMarauder"><relationship name="*" value="hate"/></faction>
+    <faction name="banditMotor"><relationship name="*" value="hate"/></faction>
+    <faction name="banditMilitia"><relationship name="*" value="hate"/></faction>
+    <faction name="banditSect"><relationship name="*" value="hate"/></faction>
+  </append>
+</configs>

@@ -1287,6 +1287,9 @@ def gen_loc():
         if cr:
             for (k,e,f) in cr["loc"]:
                 rows.append((k, e, f))
+    # AXE 2 — noms FR des pillards.
+    for suf, _faction, fr, _hp, _aggro, _loadout, _fl in BANDIT_TIERS:
+        rows.append((f"dhsBandit{suf}Name", fr, fr))
     # L'utilisateur veut TOUT en français (client en anglais) -> on met le français dans les
     # DEUX colonnes (english+french) pour garantir l'affichage FR quelle que soit la langue.
     rows = [rows[0]] + [(k, f, f) for (k, _e, f) in rows[1:]]
@@ -1352,9 +1355,106 @@ def validate():
     print(f"validate(): OK — {len(SUBS)} sous-classes + Survivant, {len(perk_names)} perks, "
           f"{n_unlocks} recettes débloquables réparties, aucun doublon")
 
+# ============================================================================
+# AXE 2 — Pillards (J2.1) : factions par tier + entités EntityBandit.
+# Tiers pilotés par le GS GLOBAL (sélection du tier = C# BanditManager).
+# Chaque tier = sa faction (toutes mutuellement hostiles + hostiles joueurs/zombies).
+# ============================================================================
+# (suf, faction, FR, hp, moveAggro, [loadout items], flavorFR)
+BANDIT_TIERS = [
+    ("Marauder", "banditMarauder", "Maraudeur", 150, "1.1, 1.3",
+     ["meleeWpnClubT0WoodenClub"],
+     "Pillard désespéré armé de bric et de broc."),
+    ("Motor", "banditMotor", "Bandit motorisé", 200, "1.2, 1.5",
+     ["gunHandgunT1Pistol", "ammo9mmBulletBall"],
+     "Pillard mobile et mieux armé, écumeur des routes."),
+    ("Militia", "banditMilitia", "Milicien pillard", 260, "1.15, 1.45",
+     ["gunMGT1AK47", "ammo762mmBulletBall"],
+     "Ex-militaire organisé, armes à feu et tactique de groupe."),
+    ("Sect", "banditSect", "Fanatique de la Congrégation", 340, "1.2, 1.5",
+     ["gunRifleT2LeverActionRifle", "ammo762mmBulletBall"],
+     "Élite fanatique, la pire engeance des terres désolées."),
+]
+BANDIT_FACTIONS = [t[1] for t in BANDIT_TIERS]
+
+def _bandit_ai():
+    """IA style ennemi V3.0 (propriétés AITask/AITarget, comme les zombies). Cible joueurs,
+    zombies, autres pillards (la relation de faction filtre l'agro intra-faction) et animaux."""
+    task = ("\n\tTerritorial|\n\tApproachDistraction|"
+            "\n\tApproachAndAttackTarget class=EntityPlayer,0,EntityZombie,0,EntityBandit,0,EntityEnemyAnimal,0|"
+            "\n\tApproachSpot|\n\tLook|\n\tWander|\n\t")
+    target = ("\n\tSetAsTargetIfHurt class=EntityPlayer,EntityZombie,EntityBandit,EntityEnemyAnimal|"
+              "\n\tBlockingTargetTask|"
+              "\n\tSetNearestEntityAsTarget class=EntityPlayer,0,0,EntityZombie,0,0,EntityBandit,0,0,EntityEnemyAnimal,0,0|\n\t")
+    return task, target
+
+def gen_npc():
+    L = ['<?xml version="1.0" encoding="UTF-8"?>',
+         '<!-- GENERE par tools/gen_axe1_classes.py — AXE 2 factions de pillards. -->',
+         '<configs>', '  <append xpath="/npc/factions">']
+    for f in BANDIT_FACTIONS:
+        # *=hate -> hostile à TOUT (joueurs, zombies, et les AUTRES factions de pillards).
+        L.append(f'    <faction name="{f}"><relationship name="*" value="hate"/></faction>')
+    L += ['  </append>', '</configs>']
+    return "\n".join(L) + "\n"
+
+def gen_entityclasses():
+    task, target = _bandit_ai()
+    L = ['<?xml version="1.0" encoding="UTF-8"?>',
+         '<!-- GENERE par tools/gen_axe1_classes.py — AXE 2 entités pillards. -->',
+         '<configs>', '  <append xpath="/entity_classes">']
+    L.append('''    <entity_class name="dhsBanditTemplate">
+      <property name="Class" value="EntityBandit"/>
+      <property name="EntityType" value="Player"/>
+      <property name="Mesh" value="Player/Male/player_maleRagdoll"/>
+      <property name="AvatarController" value="AvatarNpcController"/>
+      <property name="ModelType" value="Npc"/>
+      <property name="HasRagdoll" value="false"/>
+      <property name="Prefab" value="NPC"/>
+      <property name="Parent" value="Players"/>
+      <property name="PhysicsBody" value="Player"/>
+      <property name="HandItem" value="meleeHandPlayer"/>
+      <property name="MaxViewAngle" value="180"/>
+      <property name="Weight" value="70"/>
+      <property name="MoveSpeed" value="0.75"/>
+      <property name="MoveSpeedAggro" value="1.1, 1.4"/>
+      <property name="CanClimbLadders" value="true"/>
+      <property name="CanOpenDoors" value="true"/>
+      <property name="IsEnemyEntity" value="true"/>
+      <property name="SurfaceCategory" value="organic"/>
+      <property name="WalkType" value="7"/>
+      <property name="ParticleOnDeath" value="blood_death"/>
+      <property name="SoundHurt" value="Player_Male/player1painlg"/>
+      <property name="SoundDeath" value="Player_Male/player1death"/>
+      <property name="TimeStayAfterDeath" value="30"/>
+      <property name="HasDeathAnim" value="true"/>
+      <property name="AITask" value="''' + task + '''"/>
+      <property name="AITarget" value="''' + target + '''"/>
+    </entity_class>''')
+    for suf, faction, fr, hp, aggro, loadout, _fl in BANDIT_TIERS:
+        items = ",".join(loadout)
+        L.append(f'''    <entity_class name="dhsBandit{suf}" extends="dhsBanditTemplate">
+      <property name="Faction" value="{faction}"/>
+      <property name="EntityName" value="dhsBandit{suf}Name"/>
+      <property name="MaxHealth" value="{hp}"/>
+      <property name="MoveSpeedAggro" value="{aggro}"/>
+      <property class="ItemsOnEnterGame">
+        <property name="GameModeSurvival" value="{items}"/>
+        <property name="GameModeSurvivalSP" value="{items}"/>
+        <property name="GameModeSurvivalMP" value="{items}"/>
+      </property>
+      <effect_group name="Base Effects">
+        <passive_effect name="HealthMax" operation="base_set" value="{hp}"/>
+      </effect_group>
+    </entity_class>''')
+    L += ['  </append>', '</configs>']
+    return "\n".join(L) + "\n"
+
 def main():
     validate()
     files = {
+        "npc.xml": gen_npc(),
+        "entityclasses.xml": gen_entityclasses(),
         "progression.xml": gen_progression(),
         "items.xml": gen_items(),
         "recipes.xml": gen_recipes(),
