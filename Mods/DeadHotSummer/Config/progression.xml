@@ -171,20 +171,6 @@
         <effect_description level="5" desc_key="dhsPerkCommonSurvieR5" long_desc_key="dhsPerkCommonSurvieR5Long"/>
       </effect_group>
     </perk>
-    <perk name="perkClassCommonUmeleeToolRepairT0StoneAxe" parent="skillClassCommonBArme" name_key="dhsPerkCommonUmeleeToolRepairT0StoneAxeName" desc_key="dhsPerkCommonUmeleeToolRepairT0StoneAxeDesc" icon="ui_game_symbol_knife" max_level="1" base_skill_point_cost="1">
-      <level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="dhsReqLvl1"/></level_requirements>
-      <effect_group>
-        <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="meleeToolRepairT0StoneAxe"/>
-        <effect_description level="1" desc_key="dhsPerkCommonUmeleeToolRepairT0StoneAxeR1" long_desc_key="dhsPerkCommonUmeleeToolRepairT0StoneAxeR1Long"/>
-      </effect_group>
-    </perk>
-    <perk name="perkClassCommonUmeleeToolShovelT0StoneShovel" parent="skillClassCommonBArme" name_key="dhsPerkCommonUmeleeToolShovelT0StoneShovelName" desc_key="dhsPerkCommonUmeleeToolShovelT0StoneShovelDesc" icon="ui_game_symbol_knife" max_level="1" base_skill_point_cost="1">
-      <level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="dhsReqLvl1"/></level_requirements>
-      <effect_group>
-        <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="meleeToolShovelT0StoneShovel"/>
-        <effect_description level="1" desc_key="dhsPerkCommonUmeleeToolShovelT0StoneShovelR1" long_desc_key="dhsPerkCommonUmeleeToolShovelT0StoneShovelR1Long"/>
-      </effect_group>
-    </perk>
     <perk name="perkClassCommonUmeleeWpnKnucklesT0LeatherKnuckles" parent="skillClassCommonBArme" name_key="dhsPerkCommonUmeleeWpnKnucklesT0LeatherKnucklesName" desc_key="dhsPerkCommonUmeleeWpnKnucklesT0LeatherKnucklesDesc" icon="ui_game_symbol_knife" max_level="1" base_skill_point_cost="1">
       <level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="dhsReqLvl1"/></level_requirements>
       <effect_group>

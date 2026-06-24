@@ -34,7 +34,8 @@ def _find_file(cands):
         if c and os.path.exists(c):
             return c
     return None
-VAN_LOC = _find_file(["/home/louis-quentin/7dtd/Data/Config/Localization.txt",
+VAN_LOC = _find_file([os.path.join(ROOT, "Data", "Config", "Localization.csv"),  # b257 (à jour)
+                      "/home/louis-quentin/7dtd/Data/Config/Localization.txt",
                       os.path.join(ROOT, "Data", "Config", "Localization.txt")])
 VAN_PROG = _find_file([os.path.join(ROOT, "Data", "Config", "progression.xml"),
                        "/home/louis-quentin/7dtd/Data/Config/progression.xml"])
@@ -50,6 +51,26 @@ def _load_vanilla_fr():
                 d.setdefault(row[0], row[fi])
     return d
 VANILLA_FR = _load_vanilla_fr()
+
+VAN_RECIPES = _find_file([os.path.join(ROOT, "Data", "Config", "recipes.xml"),
+                          "/home/louis-quentin/7dtd/Data/Config/recipes.xml"])
+RECIPE_TAGS, RECIPE_OCC, RECIPE_LEARN = {}, {}, set()
+def _load_recipe_tags():
+    """Renseigne RECIPE_TAGS (1re occurrence), RECIPE_OCC (nb d'entrées), RECIPE_LEARN
+    (recettes ayant au moins une entrée 'learnable'). Sert à savoir lesquelles forcer learnable."""
+    import xml.etree.ElementTree as ET
+    if not VAN_RECIPES:
+        return
+    for r in ET.parse(VAN_RECIPES).getroot().findall("recipe"):
+        nm = r.get("name"); tags = r.get("tags") or ""
+        RECIPE_TAGS.setdefault(nm, tags)
+        RECIPE_OCC[nm] = RECIPE_OCC.get(nm, 0) + 1
+        if "learnable" in tags.split(","):
+            RECIPE_LEARN.add(nm)
+_load_recipe_tags()
+
+# Recettes qui DOIVENT rester craftables par tous dès le départ (survie de base) -> pas de perk.
+EXCLUDE_RECIPES = {"meleeToolRepairT0StoneAxe", "meleeToolShovelT0StoneShovel"}
 
 def _load_craft_unlocks():
     """{nom_crafting_skill: [(recette, niveau_skill), ...]} d'après progression.xml vanilla.
@@ -939,6 +960,8 @@ def collect_unlocks():
     out = {}  # code -> {bsuf: [bfr, bicon, [(recipe, palier), ...]]}
     seen = set()
     def add(code, recipe, lvl):
+        if recipe in EXCLUDE_RECIPES:  # survie de base : craftable par tous, aucun perk
+            return
         if (code, recipe) in seen:  # une recette ne se débloque qu'une fois par classe
             return
         seen.add((code, recipe))
@@ -1177,7 +1200,19 @@ def gen_recipes():
         if not cr: continue
         for r in cr["recipes"]:
             L.append("    " + r)
-    L += ['  </append>', '</configs>']
+    L.append('  </append>')
+    # Rend "learnable" (donc gatées par nos perks) les recettes routées qui ne l'étaient pas
+    # (ex: armes T0). Sans ça, elles sont craftables sans avoir débloqué le perk correspondant.
+    routed = sorted({r for d in UNLOCKS.values() for b in d.values() for r, _l in b[2]})
+    for r in routed:
+        tags = RECIPE_TAGS.get(r)
+        if tags is None or r in RECIPE_LEARN:     # custom (dhs*) ou déjà learnable
+            continue
+        if RECIPE_OCC.get(r, 0) != 1:             # multi-occurrence : ne pas clobber les variantes
+            continue
+        newtags = ("learnable," + tags) if tags else "learnable"
+        L.append(f'  <setattribute name="tags" xpath="/recipes/recipe[@name=\'{r}\']">{newtags}</setattribute>')
+    L.append('</configs>')
     return "\n".join(L)+"\n"
 
 # ---------- buffs.xml ----------
@@ -1308,7 +1343,7 @@ def validate():
     # 3) Toutes les recettes craftées par niveau dans l'Artisanat vanilla sont bien routées.
     routed = {r for d in UNLOCKS.values() for b in d.values() for r, _l in b[2]}
     craft_recipes = {r for lst in CRAFT_UNLOCKS.values() for r, _l in lst if not r.endswith("Master")}
-    missing = craft_recipes - routed
+    missing = craft_recipes - routed - EXCLUDE_RECIPES
     if missing:
         errors.append(f"{len(missing)} recettes vanilla non routées (ex: {sorted(missing)[:5]})")
     if errors:

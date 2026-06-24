@@ -77,14 +77,6 @@ dhsPerkCommonSurvieR5,Instinct de survie,Instinct de survie
 dhsPerkCommonSurvieR5Long,Niveau 5 : +10 %. Augmente toute l'expérience gagnée.,Niveau 5 : +10 %. Augmente toute l'expérience gagnée.
 dhsSkillClassCommonBArmeName,Survivant — Armes de base,Survivant — Armes de base
 dhsSkillClassCommonBArmeDesc,Sous-branche Survivant : Armes de base.,Sous-branche Survivant : Armes de base.
-dhsPerkCommonUmeleeToolRepairT0StoneAxeName,Hache de pierre,Hache de pierre
-dhsPerkCommonUmeleeToolRepairT0StoneAxeDesc,Débloque la fabrication : Hache de pierre.,Débloque la fabrication : Hache de pierre.
-dhsPerkCommonUmeleeToolRepairT0StoneAxeR1,Hache de pierre,Hache de pierre
-dhsPerkCommonUmeleeToolRepairT0StoneAxeR1Long,Débloque la fabrication : Hache de pierre.,Débloque la fabrication : Hache de pierre.
-dhsPerkCommonUmeleeToolShovelT0StoneShovelName,Pelle en pierre,Pelle en pierre
-dhsPerkCommonUmeleeToolShovelT0StoneShovelDesc,Débloque la fabrication : Pelle en pierre.,Débloque la fabrication : Pelle en pierre.
-dhsPerkCommonUmeleeToolShovelT0StoneShovelR1,Pelle en pierre,Pelle en pierre
-dhsPerkCommonUmeleeToolShovelT0StoneShovelR1Long,Débloque la fabrication : Pelle en pierre.,Débloque la fabrication : Pelle en pierre.
 dhsPerkCommonUmeleeWpnKnucklesT0LeatherKnucklesName,Bandages de boxe en cuir,Bandages de boxe en cuir
 dhsPerkCommonUmeleeWpnKnucklesT0LeatherKnucklesDesc,Débloque la fabrication : Bandages de boxe en cuir.,Débloque la fabrication : Bandages de boxe en cuir.
 dhsPerkCommonUmeleeWpnKnucklesT0LeatherKnucklesR1,Bandages de boxe en cuir,Bandages de boxe en cuir
@@ -153,10 +145,10 @@ dhsPerkCommonUforgeName,Forge,Forge
 dhsPerkCommonUforgeDesc,Débloque la fabrication : Forge.,Débloque la fabrication : Forge.
 dhsPerkCommonUforgeR1,Forge,Forge
 dhsPerkCommonUforgeR1Long,Débloque la fabrication : Forge.,Débloque la fabrication : Forge.
-dhsPerkCommonUcntChickenCoopName,cntChickenCoop,cntChickenCoop
-dhsPerkCommonUcntChickenCoopDesc,Débloque la fabrication : cntChickenCoop.,Débloque la fabrication : cntChickenCoop.
-dhsPerkCommonUcntChickenCoopR1,cntChickenCoop,cntChickenCoop
-dhsPerkCommonUcntChickenCoopR1Long,Débloque la fabrication : cntChickenCoop.,Débloque la fabrication : cntChickenCoop.
+dhsPerkCommonUcntChickenCoopName,Poulailler,Poulailler
+dhsPerkCommonUcntChickenCoopDesc,Débloque la fabrication : Poulailler.,Débloque la fabrication : Poulailler.
+dhsPerkCommonUcntChickenCoopR1,Poulailler,Poulailler
+dhsPerkCommonUcntChickenCoopR1Long,Débloque la fabrication : Poulailler.,Débloque la fabrication : Poulailler.
 dhsPerkCommonUtoolBellowsName,Soufflet avancé,Soufflet avancé
 dhsPerkCommonUtoolBellowsDesc,Débloque la fabrication : Soufflet avancé.,Débloque la fabrication : Soufflet avancé.
 dhsPerkCommonUtoolBellowsR1,Soufflet avancé,Soufflet avancé
@@ -165,34 +157,34 @@ dhsPerkCommonUworkbenchName,Établi,Établi
 dhsPerkCommonUworkbenchDesc,Débloque la fabrication : Établi.,Débloque la fabrication : Établi.
 dhsPerkCommonUworkbenchR1,Établi,Établi
 dhsPerkCommonUworkbenchR1Long,Débloque la fabrication : Établi.,Débloque la fabrication : Établi.
-dhsPerkCommonUtoolChickenCoopLampName,toolChickenCoopLamp,toolChickenCoopLamp
-dhsPerkCommonUtoolChickenCoopLampDesc,Débloque la fabrication : toolChickenCoopLamp.,Débloque la fabrication : toolChickenCoopLamp.
-dhsPerkCommonUtoolChickenCoopLampR1,toolChickenCoopLamp,toolChickenCoopLamp
-dhsPerkCommonUtoolChickenCoopLampR1Long,Débloque la fabrication : toolChickenCoopLamp.,Débloque la fabrication : toolChickenCoopLamp.
+dhsPerkCommonUtoolChickenCoopLampName,Lampe de couveuse,Lampe de couveuse
+dhsPerkCommonUtoolChickenCoopLampDesc,Débloque la fabrication : Lampe de couveuse.,Débloque la fabrication : Lampe de couveuse.
+dhsPerkCommonUtoolChickenCoopLampR1,Lampe de couveuse,Lampe de couveuse
+dhsPerkCommonUtoolChickenCoopLampR1Long,Débloque la fabrication : Lampe de couveuse.,Débloque la fabrication : Lampe de couveuse.
 dhsPerkCommonUcntDewCollectorName,Ramasseur de rosée,Ramasseur de rosée
 dhsPerkCommonUcntDewCollectorDesc,Débloque la fabrication : Ramasseur de rosée.,Débloque la fabrication : Ramasseur de rosée.
 dhsPerkCommonUcntDewCollectorR1,Ramasseur de rosée,Ramasseur de rosée
 dhsPerkCommonUcntDewCollectorR1Long,Débloque la fabrication : Ramasseur de rosée.,Débloque la fabrication : Ramasseur de rosée.
-dhsPerkCommonUtoolChickenCoopRunName,toolChickenCoopRun,toolChickenCoopRun
-dhsPerkCommonUtoolChickenCoopRunDesc,Débloque la fabrication : toolChickenCoopRun.,Débloque la fabrication : toolChickenCoopRun.
-dhsPerkCommonUtoolChickenCoopRunR1,toolChickenCoopRun,toolChickenCoopRun
-dhsPerkCommonUtoolChickenCoopRunR1Long,Débloque la fabrication : toolChickenCoopRun.,Débloque la fabrication : toolChickenCoopRun.
+dhsPerkCommonUtoolChickenCoopRunName,Enclos de poulet,Enclos de poulet
+dhsPerkCommonUtoolChickenCoopRunDesc,Débloque la fabrication : Enclos de poulet.,Débloque la fabrication : Enclos de poulet.
+dhsPerkCommonUtoolChickenCoopRunR1,Enclos de poulet,Enclos de poulet
+dhsPerkCommonUtoolChickenCoopRunR1Long,Débloque la fabrication : Enclos de poulet.,Débloque la fabrication : Enclos de poulet.
 dhsPerkCommonUtoolAnvilName,Enclume,Enclume
 dhsPerkCommonUtoolAnvilDesc,Débloque la fabrication : Enclume.,Débloque la fabrication : Enclume.
 dhsPerkCommonUtoolAnvilR1,Enclume,Enclume
 dhsPerkCommonUtoolAnvilR1Long,Débloque la fabrication : Enclume.,Débloque la fabrication : Enclume.
-dhsPerkCommonUtoolChickenCoopNestingBoxName,toolChickenCoopNestingBox,toolChickenCoopNestingBox
-dhsPerkCommonUtoolChickenCoopNestingBoxDesc,Débloque la fabrication : toolChickenCoopNestingBox.,Débloque la fabrication : toolChickenCoopNestingBox.
-dhsPerkCommonUtoolChickenCoopNestingBoxR1,toolChickenCoopNestingBox,toolChickenCoopNestingBox
-dhsPerkCommonUtoolChickenCoopNestingBoxR1Long,Débloque la fabrication : toolChickenCoopNestingBox.,Débloque la fabrication : toolChickenCoopNestingBox.
+dhsPerkCommonUtoolChickenCoopNestingBoxName,Couveuse,Couveuse
+dhsPerkCommonUtoolChickenCoopNestingBoxDesc,Débloque la fabrication : Couveuse.,Débloque la fabrication : Couveuse.
+dhsPerkCommonUtoolChickenCoopNestingBoxR1,Couveuse,Couveuse
+dhsPerkCommonUtoolChickenCoopNestingBoxR1Long,Débloque la fabrication : Couveuse.,Débloque la fabrication : Couveuse.
 dhsPerkCommonUtoolDewGathererName,Collecteur,Collecteur
 dhsPerkCommonUtoolDewGathererDesc,Débloque la fabrication : Collecteur.,Débloque la fabrication : Collecteur.
 dhsPerkCommonUtoolDewGathererR1,Collecteur,Collecteur
 dhsPerkCommonUtoolDewGathererR1Long,Débloque la fabrication : Collecteur.,Débloque la fabrication : Collecteur.
-dhsPerkCommonUcntApiaryName,cntApiary,cntApiary
-dhsPerkCommonUcntApiaryDesc,Débloque la fabrication : cntApiary.,Débloque la fabrication : cntApiary.
-dhsPerkCommonUcntApiaryR1,cntApiary,cntApiary
-dhsPerkCommonUcntApiaryR1Long,Débloque la fabrication : cntApiary.,Débloque la fabrication : cntApiary.
+dhsPerkCommonUcntApiaryName,Rucher,Rucher
+dhsPerkCommonUcntApiaryDesc,Débloque la fabrication : Rucher.,Débloque la fabrication : Rucher.
+dhsPerkCommonUcntApiaryR1,Rucher,Rucher
+dhsPerkCommonUcntApiaryR1Long,Débloque la fabrication : Rucher.,Débloque la fabrication : Rucher.
 dhsPerkCommonUtoolDewTarpName,Bâche,Bâche
 dhsPerkCommonUtoolDewTarpDesc,Débloque la fabrication : Bâche.,Débloque la fabrication : Bâche.
 dhsPerkCommonUtoolDewTarpR1,Bâche,Bâche
@@ -201,14 +193,14 @@ dhsPerkCommonUcementMixerName,Bétonnière,Bétonnière
 dhsPerkCommonUcementMixerDesc,Débloque la fabrication : Bétonnière.,Débloque la fabrication : Bétonnière.
 dhsPerkCommonUcementMixerR1,Bétonnière,Bétonnière
 dhsPerkCommonUcementMixerR1Long,Débloque la fabrication : Bétonnière.,Débloque la fabrication : Bétonnière.
-dhsPerkCommonUtoolApiaryExtractorName,toolApiaryExtractor,toolApiaryExtractor
-dhsPerkCommonUtoolApiaryExtractorDesc,Débloque la fabrication : toolApiaryExtractor.,Débloque la fabrication : toolApiaryExtractor.
-dhsPerkCommonUtoolApiaryExtractorR1,toolApiaryExtractor,toolApiaryExtractor
-dhsPerkCommonUtoolApiaryExtractorR1Long,Débloque la fabrication : toolApiaryExtractor.,Débloque la fabrication : toolApiaryExtractor.
-dhsPerkCommonUtoolApiaryBroodBoxName,toolApiaryBroodBox,toolApiaryBroodBox
-dhsPerkCommonUtoolApiaryBroodBoxDesc,Débloque la fabrication : toolApiaryBroodBox.,Débloque la fabrication : toolApiaryBroodBox.
-dhsPerkCommonUtoolApiaryBroodBoxR1,toolApiaryBroodBox,toolApiaryBroodBox
-dhsPerkCommonUtoolApiaryBroodBoxR1Long,Débloque la fabrication : toolApiaryBroodBox.,Débloque la fabrication : toolApiaryBroodBox.
+dhsPerkCommonUtoolApiaryExtractorName,Extracteur de miel,Extracteur de miel
+dhsPerkCommonUtoolApiaryExtractorDesc,Débloque la fabrication : Extracteur de miel.,Débloque la fabrication : Extracteur de miel.
+dhsPerkCommonUtoolApiaryExtractorR1,Extracteur de miel,Extracteur de miel
+dhsPerkCommonUtoolApiaryExtractorR1Long,Débloque la fabrication : Extracteur de miel.,Débloque la fabrication : Extracteur de miel.
+dhsPerkCommonUtoolApiaryBroodBoxName,Boîte à couvain,Boîte à couvain
+dhsPerkCommonUtoolApiaryBroodBoxDesc,Débloque la fabrication : Boîte à couvain.,Débloque la fabrication : Boîte à couvain.
+dhsPerkCommonUtoolApiaryBroodBoxR1,Boîte à couvain,Boîte à couvain
+dhsPerkCommonUtoolApiaryBroodBoxR1Long,Débloque la fabrication : Boîte à couvain.,Débloque la fabrication : Boîte à couvain.
 dhsPerkCommonUtoolDewFilterName,Filtre à eau,Filtre à eau
 dhsPerkCommonUtoolDewFilterDesc,Débloque la fabrication : Filtre à eau.,Débloque la fabrication : Filtre à eau.
 dhsPerkCommonUtoolDewFilterR1,Filtre à eau,Filtre à eau
@@ -217,10 +209,10 @@ dhsPerkCommonUchemistryStationName,Atelier de chimie,Atelier de chimie
 dhsPerkCommonUchemistryStationDesc,Débloque la fabrication : Atelier de chimie.,Débloque la fabrication : Atelier de chimie.
 dhsPerkCommonUchemistryStationR1,Atelier de chimie,Atelier de chimie
 dhsPerkCommonUchemistryStationR1Long,Débloque la fabrication : Atelier de chimie.,Débloque la fabrication : Atelier de chimie.
-dhsPerkCommonUtoolApiarySmokerName,toolApiarySmoker,toolApiarySmoker
-dhsPerkCommonUtoolApiarySmokerDesc,Débloque la fabrication : toolApiarySmoker.,Débloque la fabrication : toolApiarySmoker.
-dhsPerkCommonUtoolApiarySmokerR1,toolApiarySmoker,toolApiarySmoker
-dhsPerkCommonUtoolApiarySmokerR1Long,Débloque la fabrication : toolApiarySmoker.,Débloque la fabrication : toolApiarySmoker.
+dhsPerkCommonUtoolApiarySmokerName,Enfumoir,Enfumoir
+dhsPerkCommonUtoolApiarySmokerDesc,Débloque la fabrication : Enfumoir.,Débloque la fabrication : Enfumoir.
+dhsPerkCommonUtoolApiarySmokerR1,Enfumoir,Enfumoir
+dhsPerkCommonUtoolApiarySmokerR1Long,Débloque la fabrication : Enfumoir.,Débloque la fabrication : Enfumoir.
 dhsPerkCommonUtoolForgeCrucibleName,Creuset,Creuset
 dhsPerkCommonUtoolForgeCrucibleDesc,Débloque la fabrication : Creuset.,Débloque la fabrication : Creuset.
 dhsPerkCommonUtoolForgeCrucibleR1,Creuset,Creuset
@@ -1017,10 +1009,10 @@ dhsPerkEngiElecUautoTurretName,Tourelle à mitraillette automatique,Tourelle à 
 dhsPerkEngiElecUautoTurretDesc,Débloque la fabrication : Tourelle à mitraillette automatique.,Débloque la fabrication : Tourelle à mitraillette automatique.
 dhsPerkEngiElecUautoTurretR1,Tourelle à mitraillette automatique,Tourelle à mitraillette automatique
 dhsPerkEngiElecUautoTurretR1Long,Débloque la fabrication : Tourelle à mitraillette automatique.,Débloque la fabrication : Tourelle à mitraillette automatique.
-dhsPerkEngiElecUm60TurretName,m60Turret,m60Turret
-dhsPerkEngiElecUm60TurretDesc,Débloque la fabrication : m60Turret.,Débloque la fabrication : m60Turret.
-dhsPerkEngiElecUm60TurretR1,m60Turret,m60Turret
-dhsPerkEngiElecUm60TurretR1Long,Débloque la fabrication : m60Turret.,Débloque la fabrication : m60Turret.
+dhsPerkEngiElecUm60TurretName,Tourelle M60 automatique,Tourelle M60 automatique
+dhsPerkEngiElecUm60TurretDesc,Débloque la fabrication : Tourelle M60 automatique.,Débloque la fabrication : Tourelle M60 automatique.
+dhsPerkEngiElecUm60TurretR1,Tourelle M60 automatique,Tourelle M60 automatique
+dhsPerkEngiElecUm60TurretR1Long,Débloque la fabrication : Tourelle M60 automatique.,Débloque la fabrication : Tourelle M60 automatique.
 dhsPerkEngiElecUdhsBatteryHDName,Cellule d'énergie renforcée,Cellule d'énergie renforcée
 dhsPerkEngiElecUdhsBatteryHDDesc,Débloque la fabrication : Cellule d'énergie renforcée.,Débloque la fabrication : Cellule d'énergie renforcée.
 dhsPerkEngiElecUdhsBatteryHDR1,Cellule d'énergie renforcée,Cellule d'énergie renforcée
@@ -3035,18 +3027,18 @@ dhsPerkBuilArtiUmodArmorBandolierName,Modification de bandoulière,Modification 
 dhsPerkBuilArtiUmodArmorBandolierDesc,Débloque la fabrication : Modification de bandoulière.,Débloque la fabrication : Modification de bandoulière.
 dhsPerkBuilArtiUmodArmorBandolierR1,Modification de bandoulière,Modification de bandoulière
 dhsPerkBuilArtiUmodArmorBandolierR1Long,Débloque la fabrication : Modification de bandoulière.,Débloque la fabrication : Modification de bandoulière.
-dhsPerkBuilArtiUmodArmorCigarName,Cigare,Cigare
-dhsPerkBuilArtiUmodArmorCigarDesc,Débloque la fabrication : Cigare.,Débloque la fabrication : Cigare.
-dhsPerkBuilArtiUmodArmorCigarR1,Cigare,Cigare
-dhsPerkBuilArtiUmodArmorCigarR1Long,Débloque la fabrication : Cigare.,Débloque la fabrication : Cigare.
+dhsPerkBuilArtiUmodArmorCigarName,Modification de cigare,Modification de cigare
+dhsPerkBuilArtiUmodArmorCigarDesc,Débloque la fabrication : Modification de cigare.,Débloque la fabrication : Modification de cigare.
+dhsPerkBuilArtiUmodArmorCigarR1,Modification de cigare,Modification de cigare
+dhsPerkBuilArtiUmodArmorCigarR1Long,Débloque la fabrication : Modification de cigare.,Débloque la fabrication : Modification de cigare.
 dhsPerkBuilArtiUmodArmorCoolingMeshName,Modification de maille aérée,Modification de maille aérée
 dhsPerkBuilArtiUmodArmorCoolingMeshDesc,Débloque la fabrication : Modification de maille aérée.,Débloque la fabrication : Modification de maille aérée.
 dhsPerkBuilArtiUmodArmorCoolingMeshR1,Modification de maille aérée,Modification de maille aérée
 dhsPerkBuilArtiUmodArmorCoolingMeshR1Long,Débloque la fabrication : Modification de maille aérée.,Débloque la fabrication : Modification de maille aérée.
-dhsPerkBuilArtiUmodArmorCustomizedFittingsName,Modification de raccords sur mesure,Modification de raccords sur mesure
-dhsPerkBuilArtiUmodArmorCustomizedFittingsDesc,Débloque la fabrication : Modification de raccords sur mesure.,Débloque la fabrication : Modification de raccords sur mesure.
-dhsPerkBuilArtiUmodArmorCustomizedFittingsR1,Modification de raccords sur mesure,Modification de raccords sur mesure
-dhsPerkBuilArtiUmodArmorCustomizedFittingsR1Long,Débloque la fabrication : Modification de raccords sur mesure.,Débloque la fabrication : Modification de raccords sur mesure.
+dhsPerkBuilArtiUmodArmorCustomizedFittingsName,Modification de raccords d'armure avancée,Modification de raccords d'armure avancée
+dhsPerkBuilArtiUmodArmorCustomizedFittingsDesc,Débloque la fabrication : Modification de raccords d'armure avancée.,Débloque la fabrication : Modification de raccords d'armure avancée.
+dhsPerkBuilArtiUmodArmorCustomizedFittingsR1,Modification de raccords d'armure avancée,Modification de raccords d'armure avancée
+dhsPerkBuilArtiUmodArmorCustomizedFittingsR1Long,Débloque la fabrication : Modification de raccords d'armure avancée.,Débloque la fabrication : Modification de raccords d'armure avancée.
 dhsPerkBuilArtiUmodArmorDoubleStoragePocketName,Modification de double poche d'armure,Modification de double poche d'armure
 dhsPerkBuilArtiUmodArmorDoubleStoragePocketDesc,Débloque la fabrication : Modification de double poche d'armure.,Débloque la fabrication : Modification de double poche d'armure.
 dhsPerkBuilArtiUmodArmorDoubleStoragePocketR1,Modification de double poche d'armure,Modification de double poche d'armure
@@ -3059,10 +3051,10 @@ dhsPerkBuilArtiUmodArmorImpactBracingName,Modification d'amorti d'impact,Modific
 dhsPerkBuilArtiUmodArmorImpactBracingDesc,Débloque la fabrication : Modification d'amorti d'impact.,Débloque la fabrication : Modification d'amorti d'impact.
 dhsPerkBuilArtiUmodArmorImpactBracingR1,Modification d'amorti d'impact,Modification d'amorti d'impact
 dhsPerkBuilArtiUmodArmorImpactBracingR1Long,Débloque la fabrication : Modification d'amorti d'impact.,Débloque la fabrication : Modification d'amorti d'impact.
-dhsPerkBuilArtiUmodArmorImprovedFittingsName,Modification de raccords améliorés,Modification de raccords améliorés
-dhsPerkBuilArtiUmodArmorImprovedFittingsDesc,Débloque la fabrication : Modification de raccords améliorés.,Débloque la fabrication : Modification de raccords améliorés.
-dhsPerkBuilArtiUmodArmorImprovedFittingsR1,Modification de raccords améliorés,Modification de raccords améliorés
-dhsPerkBuilArtiUmodArmorImprovedFittingsR1Long,Débloque la fabrication : Modification de raccords améliorés.,Débloque la fabrication : Modification de raccords améliorés.
+dhsPerkBuilArtiUmodArmorImprovedFittingsName,Modification de raccords d'armure,Modification de raccords d'armure
+dhsPerkBuilArtiUmodArmorImprovedFittingsDesc,Débloque la fabrication : Modification de raccords d'armure.,Débloque la fabrication : Modification de raccords d'armure.
+dhsPerkBuilArtiUmodArmorImprovedFittingsR1,Modification de raccords d'armure,Modification de raccords d'armure
+dhsPerkBuilArtiUmodArmorImprovedFittingsR1Long,Débloque la fabrication : Modification de raccords d'armure.,Débloque la fabrication : Modification de raccords d'armure.
 dhsPerkBuilArtiUmodArmorInsulatedLinerName,Modification de doublure isolante,Modification de doublure isolante
 dhsPerkBuilArtiUmodArmorInsulatedLinerDesc,Débloque la fabrication : Modification de doublure isolante.,Débloque la fabrication : Modification de doublure isolante.
 dhsPerkBuilArtiUmodArmorInsulatedLinerR1,Modification de doublure isolante,Modification de doublure isolante
@@ -3075,10 +3067,10 @@ dhsPerkBuilArtiUmodArmorPlatingBasicName,Modification de blindage d'armure,Modif
 dhsPerkBuilArtiUmodArmorPlatingBasicDesc,Débloque la fabrication : Modification de blindage d'armure.,Débloque la fabrication : Modification de blindage d'armure.
 dhsPerkBuilArtiUmodArmorPlatingBasicR1,Modification de blindage d'armure,Modification de blindage d'armure
 dhsPerkBuilArtiUmodArmorPlatingBasicR1Long,Débloque la fabrication : Modification de blindage d'armure.,Débloque la fabrication : Modification de blindage d'armure.
-dhsPerkBuilArtiUmodArmorPlatingReinforcedName,Modification de bandage d'armure,Modification de bandage d'armure
-dhsPerkBuilArtiUmodArmorPlatingReinforcedDesc,Débloque la fabrication : Modification de bandage d'armure.,Débloque la fabrication : Modification de bandage d'armure.
-dhsPerkBuilArtiUmodArmorPlatingReinforcedR1,Modification de bandage d'armure,Modification de bandage d'armure
-dhsPerkBuilArtiUmodArmorPlatingReinforcedR1Long,Débloque la fabrication : Modification de bandage d'armure.,Débloque la fabrication : Modification de bandage d'armure.
+dhsPerkBuilArtiUmodArmorPlatingReinforcedName,Modification de blindage d'armure avancée,Modification de blindage d'armure avancée
+dhsPerkBuilArtiUmodArmorPlatingReinforcedDesc,Débloque la fabrication : Modification de blindage d'armure avancée.,Débloque la fabrication : Modification de blindage d'armure avancée.
+dhsPerkBuilArtiUmodArmorPlatingReinforcedR1,Modification de blindage d'armure avancée,Modification de blindage d'armure avancée
+dhsPerkBuilArtiUmodArmorPlatingReinforcedR1Long,Débloque la fabrication : Modification de blindage d'armure avancée.,Débloque la fabrication : Modification de blindage d'armure avancée.
 dhsPerkBuilArtiUmodArmorQuadStoragePocketName,Modification de quadruple poche d'armure,Modification de quadruple poche d'armure
 dhsPerkBuilArtiUmodArmorQuadStoragePocketDesc,Débloque la fabrication : Modification de quadruple poche d'armure.,Débloque la fabrication : Modification de quadruple poche d'armure.
 dhsPerkBuilArtiUmodArmorQuadStoragePocketR1,Modification de quadruple poche d'armure,Modification de quadruple poche d'armure

@@ -20,4 +20,15 @@
     <recipe name="dhsFoodFeastGrand" count="1" craft_area="campfire" craft_tool="toolCookingPot" craft_time="45" tags="learnable,dhsCraftFarmCook"><ingredient name="foodGrilledMeat" count="4"/><ingredient name="foodCropPotato" count="4"/><ingredient name="foodCropCorn" count="4"/><ingredient name="resourceAnimalFat" count="3"/><ingredient name="drinkJarBoiledWater" count="3"/></recipe>
     <recipe name="dhsDrinkTonic" count="2" craft_area="campfire" craft_tool="toolCookingPot" craft_time="15" tags="learnable,dhsCraftFarmCook"><ingredient name="drinkJarBoiledWater" count="2"/><ingredient name="foodCropCorn" count="2"/></recipe>
   </append>
+  <setattribute name="tags" xpath="/recipes/recipe[@name='gunBowT0PrimitiveBow']">learnable,perkArchery,packMuleCrafting</setattribute>
+  <setattribute name="tags" xpath="/recipes/recipe[@name='gunHandgunT0PipePistol']">learnable,perkGunslinger,packMuleCrafting</setattribute>
+  <setattribute name="tags" xpath="/recipes/recipe[@name='gunMGT0PipeMachineGun']">learnable,perkMachineGunner,packMuleCrafting</setattribute>
+  <setattribute name="tags" xpath="/recipes/recipe[@name='gunRifleT0PipeRifle']">learnable,perkDeadEye,packMuleCrafting</setattribute>
+  <setattribute name="tags" xpath="/recipes/recipe[@name='gunShotgunT0PipeShotgun']">learnable,perkBoomstick,packMuleCrafting</setattribute>
+  <setattribute name="tags" xpath="/recipes/recipe[@name='meleeWpnBatonT0PipeBaton']">learnable,perkElectrocutioner,packMuleCrafting</setattribute>
+  <setattribute name="tags" xpath="/recipes/recipe[@name='meleeWpnBladeT0BoneKnife']">learnable,perkDeepCuts,craftingBlades,packMuleCrafting</setattribute>
+  <setattribute name="tags" xpath="/recipes/recipe[@name='meleeWpnClubT0WoodenClub']">learnable,perkPummelPete,packMuleCrafting</setattribute>
+  <setattribute name="tags" xpath="/recipes/recipe[@name='meleeWpnKnucklesT0LeatherKnuckles']">learnable,perkBrawler,packMuleCrafting</setattribute>
+  <setattribute name="tags" xpath="/recipes/recipe[@name='meleeWpnSledgeT0StoneSledgehammer']">learnable,perkSkullCrusher,packMuleCrafting</setattribute>
+  <setattribute name="tags" xpath="/recipes/recipe[@name='meleeWpnSpearT0StoneSpear']">learnable,perkJavelinMaster,craftingSpears,packMuleCrafting</setattribute>
 </configs>
